@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DracoLearn</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap" rel="stylesheet">
+
+<!---aplicando css tabla modulo 1 seccion 2--->
+<style>
+table, th, td {
+    border: 0.5px solid black;
+    border-collapse: collapse
+}
+th, td {
+    padding: 0.8px;
+}
+th, td {
+    text-align: center
+}
+</style>
+</head>
+
+<body>
+<div id="introScreen" class="intro-screen">
+  <h1>DracoLearn</h1>
+  <p> Bienvenido a DracoLearn Academy<br>
+    Tu camino para convertirte en Programador comienza aquí. </p>
+  <button onclick="startApp()">🎮 Comenzar</button>
+</div>
+<header class="navbar"> DRACOLEARN (Aprende desde 0) </header>
+<section class="hud">
+  <div class="xp-box"> Nivel <span id="level">1</span>
+    <div class="xp-bar">
+      <div class="xp-fill" id="xp"></div>
+    </div>
+    <button id="resetBtn" class="reset-btn">Reiniciar progreso</button>
+  </div>
+  <div class="achievements" id="achievements"> Logros: 0 </div>
+</section>
+<div class="badges" id="badges"></div>
+<section class="roadmap"> 
+  
+  <!-- MODULO 1--->
+  <div class="module active" data-id="1">
+    <div class="module-header" onclick="toggleModule(this)"> 🧠 Primeros Pasos en la programacion </div>
+    <div class="module-content"> 
+      
+      <!-- Seccion 1 -->
+      <div class="topic">
+        <div class="topic-header" onclick="toggleTopic(this)"> 📘 <strong>ENTENDIENDO LAS BASES: COMO PIENSA UNA COMPUTADORA</strong> </div>
+        <div class="topic-content">
+          <p> Programar es darle instrucciones a una computadora para que haga algo. </p>
+          <p> Es como darle órdenes a un robot:
+            “Suma estos números”
+            “Muestra este mensaje”
+            “Si pasa esto, haz esto otro” </p>
+          <strong>Ejemplo de la vida real:</strong>
+          <p> Imagínate que haces un sándwich:
+            Agarrar pan.
+            Poner jamón.
+            Poner queso.
+            Cerrar pan.
+            Eso es un algoritmo (una lista de pasos). </p>
+          <p>La computadora no entiende intenciones, solo ejecuta instrucciones exactas en el orden que se le indican.<br>
+            Llevando la idea a programación: <br>
+          <p>La computadora NO piensa, solo hace exactamente lo que tú le dices.</p>
+          </p>
+          <code> // Usaremos el lenguaje de Programacion Java <br>
+          System.out.println("Paso 1: Tomar pan"); <br>
+          System.out.println("Paso 2: Poner jamón"); <br>
+          System.out.println("Paso 3: Poner queso"); <br>
+          System.out.println("Paso 4: Cerrar pan");</code><br>
+          <p> Errores comunes: <br>
+            Asegúrate de cerrar correctamente los paréntesis y llaves {}, los usaremos mas adelante <br>
+            Usa comillas dobles para los textos y lo mas importante, NO OLVIDES EL PUNTO Y COMA!! . <br>
+          <p></p>
+          <br>
+          Este sencillo programa es el primer paso para aprender Java y entender su estructura básica. <br>
+          </p>
+          <strong>Nuevo Reto!</strong>
+          <p>CODE PANDA: ¡Programa al Panda! <br>
+            Prepárate para una aventura donde tu lógica es el superpoder!<br>
+            En Code Panda, no solo juegas… ¡piensas como programador! <br>
+            Tu misión es ayudar a un adorable panda 🐼 a encontrar el camino correcto usando instrucciones como todo un crack del código. <br>
+            Pero ojo… no es solo moverlo, es planear cada paso con estrategia. <br>
+            ¿Qué aprenderás jugando? <br>
+            Pensamiento lógico,
+            Resolución de problemas y
+            Bases de programación sin darte cuenta.<br>
+            Este juego demuestra que programar no es difícil…
+            ¡solo es cuestión de pensar como un pro! <br>
+            ¿Serás capaz de completar todos los niveles sin equivocarte?</p>
+          <p> Juegalo Aqui! <a href="https://www.cokitos.com/programar-al-panda/play/" target="_blank"> Code Panda Play! </a> </p>
+          
+          <!--- Implementacion del Quiz--->
+          <div class="topic-header" > 🧠 Quiz Básico </div>
+          <div class="topic-content">
+            <div class="quiz-box">
+              <p>¿Qué es programar?</p>
+              <button onclick="answerQuiz(1,false)"> Jugar en la PC </button>
+              <button onclick="answerQuiz(1,true)"> Dar instrucciones a la computadora </button>
+              <p>¿Qué es un algoritmo?</p>
+              <button onclick="answerQuiz(2,false)"> Un programa </button>
+              <button onclick="answerQuiz(2,true)"> Una lista de pasos </button>
+              <button onclick="finishQuiz()"> 🎯 Finalizar Quiz </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Seccion 2 -->
+      <div class="topic">
+        <div class="topic-header" onclick="toggleTopic(this)"> <strong>🧩 VARIABLES: LA MEMORIA DE LA COMPUTADORA</strong> </div>
+        <div class="topic-content">
+          <p>Una variable es como una cajita donde guardas datos.</p>
+          <p><strong>Ejemplo:</strong> <br>
+            Caja llamada “edad” → guarda 18 <br>
+            Caja llamada “nombre” → guarda “Sebastian”</p>
+          <code> int edad = 18; <br>
+          String nombre = "Sebastian"; </code><br>
+            <strong>Tipos de Datos Fundamentales</strong>
+          
+          <!--- Tabla modulo 1 seccion 2 --->
+          <table style = "width: 100%;">
+            <tr>
+              <th>Tipo</th>
+              <th>Que Guarda</th>
+              <th>Ejemplo</th>
+            </tr>
+            <tr>
+              <td>int</td>
+              <td>Numeros Enteros</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>double</td>
+              <td>Numeros Decimales</td>
+              <td>5.5</td>
+            </tr>
+            <tr>
+              <td>String</td>
+              <td>Texto</td>
+              <td>"Hola"</td>
+            </tr>
+            <tr>
+              <td>boolean</td>
+              <td>Verdadero/Falso</td>
+              <td>true</td>
+            </tr>
+          </table>
+          <div class="quiz-box">
+            <div class="topic-header" onclick="toggleTopic(this)"> 🧠 Quiz Basico
+              <p>¿Qué es una variable?</p>
+              <button onclick="answerQuiz(1,true)"> Un espacio para guardar datos </button>
+              <button onclick="answerQuiz(1,false)"> Un error del sistema </button>
+              <p>¿Qué hace un if?</p>
+              <button onclick="answerQuiz(2,true)"> Tomar decisiones </button>
+              <button onclick="answerQuiz(2,false)"> Recorre un bucle for </button>
+            </div>
+            <button onclick="finishQuiz()">Finalizar Quiz</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- TEMA 3 -->
+      <div class="topic">
+        <div class="topic-header" onclick="toggleTopic(this)"> <strong>🔁 CONDICIONALES: CUANDO TU PROGRAMA PIENSA</strong> </div>
+        <div class="topic-content">
+          <p>Los condicionales son estructuras que permiten que un programa tome decisiones. <br>
+            Funcionan con una lógica simple: <br>
+            evaluar una condición y, según si se cumple o no, ejecutar ciertas instrucciones. <br>
+            En otras palabras, un condicional le dice a la computadora: “si pasa esto, haz esto; si no, haz otra cosa”.</p>
+          <strong>Ejemplo de la vida real</strong> <br>
+          Imagina esta situación: <br>
+          Si tienes dinero, compras comida.
+          Si no tienes dinero, no compras.
+          Aquí hay una decisión basada en una condición. <br>
+          <p></p>
+          <strong>Ejemplo en programación (Java)</strong>
+          <pre><code>int dinero = 10;
+
+if (dinero &gt; 5) {
+    System.out.println("Puedes comprar comida");
+ } else {
+    System.out.println("No te alcanza");
+}        </code></pre> <br>
+            <li><code>int dinero = 10;</code>
+                Se crea una variable que guarda cuánto dinero tienes</li>
+            <li><code>if (dinero &gt; 5)</code></li>
+            Se evalúa la condición: ¿10 es mayor que 5?, Si!
+            <br> → Como la condición es verdadera, se ejecuta: "Puedes comprar comida". <br>
+            <li><code>else {}</code></li>
+            solo se ejecuta si la condición es falsa <br>
+            <br>
+            
+            <strong>Operadores importantes</strong>
+            
+           <table width="80%" border="5">
+          <tbody>
+            <tr>
+              <th scope="row">&nbsp; Mayor que</th>
+              <td>&nbsp;&gt;</td>
+            </tr>
+            <tr>
+              <th scope="row">&nbsp; Menor que</th>
+              <td>&nbsp;&lt;</td>
+            </tr>
+            <tr>
+              <th scope="row">&nbsp; Mayor o igual</th>
+              <td>&nbsp;&gt;=</td>
+            </tr>
+            <tr>
+              <th scope="row">&nbsp;Menor o igual</th>
+              <td>&nbsp;&lt;=</td>
+            </tr>
+            <tr>
+              <th scope="row">&nbsp;Igual</th>
+              <td>&nbsp;==</td>
+            </tr>
+            <tr>
+              <th scope="row">&nbsp;Diferente de</th>
+              <td>&nbsp;!=</td>
+            </tr>
+          </tbody>
+        </table>
+
+        </div>
+      </div>
+      
+      <!-- BOTÓN FINAL -->
+      <button class="start-btn" onclick="completeModule(1)"> 🎯 Terminar módulo </button>
+    </div>
+  </div>
+  
+  <!-- OTROS MODULOS -->
+  <div class="module locked" data-id="2">
+    <div class="module-header" onclick="toggleModule(this)"> Proximamente </div>
+    <div class="module-content">
+      <div class="topic">
+        <div class="topic-header" onclick="toggleTopic(this)"> Proximamente </div>
+        <div class="topic-content">
+          <p> Proximamente.</p>
+        </div>
+      </div>
+      <button class="start-btn" onclick="completeModule(2)"> Terminar módulo </button>
+    </div>
+  </div>
+  <div class="module locked" data-id="2">
+    <div class="module-header" onclick="toggleModule(this)"> Proximamente </div>
+    <div class="module-content">
+      <div class="topic">
+        <div class="topic-header" onclick="toggleTopic(this)"> Proximamente </div>
+        <div class="topic-content">
+          <p> Proximamente</p>
+        </div>
+      </div>
+      <button class="start-btn" onclick="completeModule(3)"> Terminar módulo </button>
+    </div>
+  </div>
+  <div class="module locked" data-id="4">
+    <div class="module-header" onclick="toggleModule(this)"> Proximamente </div>
+    <div class="module-content">
+      <div class="topic">
+        <div class="topic-header" onclick="toggleTopic(this)"> Proximamente </div>
+        <div class="topic-content">
+          <p> Proximamente</p>
+        </div>
+      </div>
+      <button class="start-btn" onclick="completeModule(4)"> Terminar módulo </button>
+    </div>
+  </div>
+  <div class="module locked" data-id="5">
+    <div class="module-header" onclick="toggleModule(this)"> 🎨 Proyecto Final de Modulo </div>
+    <div class="module-content">
+      <div class="topic">
+        <div class="topic-header" onclick="toggleTopic(this)"> Proximamente </div>
+        <div class="topic-content">
+          <p> Proximamente</p>
+        </div>
+      </div>
+      <button class="start-btn" onclick="completeModule(5)"> Terminar módulo </button>
+    </div>
+  </div>
+</section>
+<div id="popup" class="popup"></div>
+<div id="levelUp" class="levelup">LEVEL UP 🔥</div>
+<div id="winScreen" class="win-screen">
+  <h2>🎉 MÓDULO COMPLETADO</h2>
+  <p>+25 XP ganado</p>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

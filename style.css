@@ -1,0 +1,362 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Inter;
+  background: linear-gradient(180deg, #ffffff, #ffeaea, #ffffff);
+  color: #222;
+  overflow-x: hidden;
+}
+/* ================== NAVBAR ================== */
+.navbar {
+  text-align: center;
+  padding: 20px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #c1121f;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+/* ================== HUD ================== */
+.hud {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+/* ================== XP ================== */
+.xp-box {
+  width: 300px;
+}
+.xp-bar {
+  height: 10px;
+  background: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+.xp-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(135deg, #9d0208, #c1121f);
+  transition: 0.4s;
+}
+/* ================== LOGROS ================== */
+.achievements {
+  font-size: 14px;
+  color: #555;
+}
+/* ================== ROADMAP ================== */
+.roadmap {
+  display: grid;
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+/* ================== MODULE ================== */
+.module {
+  background: white;
+  padding: 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s forwards;
+  transition: all 0.3s ease;
+}
+.module:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.module:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.module:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.module:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.module:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.module:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(193, 18, 31, 0.2);
+}
+.locked {
+  opacity: 0.5;
+  pointer-events: none;
+}
+/* ================== MODULE HEADER ================== */
+.module-header {
+  background: linear-gradient(135deg, #9d0208, #c1121f);
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+/* ================== MODULE CONTENT ================== */
+.module-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  padding: 0 10px;
+}
+.module.active .module-content {
+  max-height: none;
+  overflow: visible;
+  margin-top: 10px;
+}
+/* ================== TOPIC ================== */
+.topic {
+  margin-top: 10px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+.topic:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(193, 18, 31, 0.15);
+}
+.topic-header {
+  padding: 12px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.topic-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  padding: 0 12px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.topic.active .topic-content {
+  max-height: none;
+  overflow: visible;
+  padding: 10px 12px;
+}
+/* ================== TEXT ================== */
+.topic-content p {
+  margin-bottom: 10px;
+}
+.topic-content h4, .topic-content strong {
+  color: #c1121f;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.topic-content ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+.topic-content hr {
+  margin: 15px 0;
+  border: none;
+  border-top: 1px solid #eee;
+}
+/* ================== CODE ================== */
+code {
+  display: block;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+/* ================== BOTONES ================== */
+.start-btn {
+  margin-top: 20px;
+  background: linear-gradient(135deg, #9d0208, #c1121f);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(193, 18, 31, 0.4);
+}
+.start-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(193, 18, 31, 0.8);
+}
+.start-btn:active {
+  transform: scale(0.95);
+}
+.start-btn.completed {
+  background: #2ecc71;
+  box-shadow: 0 0 20px #2ecc71;
+}
+/* ================== QUIZ ================== */
+.quiz-box {
+  margin-top: 0;
+  padding: 0;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+.quiz-box button {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
+  background: #eee;
+  cursor: pointer;
+}
+.quiz-box button:hover {
+  background: #c1121f;
+  color: white;
+}
+/* ================== QUIZ STATES ================== */
+.quiz-btn {
+  background: #eee;
+  transition: 0.2s;
+}
+.correct {
+  background: #2ecc71 !important;
+  color: white;
+}
+.wrong {
+  background: #e74c3c !important;
+  color: white;
+}
+.quiz-btn.disabled {
+  pointer-events: none;
+  opacity: 0.7;
+}
+/* ================== POPUP ================== */
+.popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #c1121f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: 0.4s;
+  z-index: 1000;
+}
+.popup.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ================== LEVEL UP ================== */
+.levelup {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  font-size: 40px;
+  font-weight: 700;
+  color: #c1121f;
+  text-shadow: 0 0 20px rgba(193, 18, 31, 0.5);
+  transition: 0.4s;
+  z-index: 1000;
+}
+.levelup.show {
+  transform: translate(-50%, -50%) scale(1.3);
+}
+/* ================== WIN SCREEN ================== */
+.win-screen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+  transition: 0.4s;
+}
+.win-screen.show {
+  transform: translate(-50%, -50%) scale(1);
+}
+/* ================== INTRO ================== */
+.intro-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #ffffff, #ffeaea, #ffffff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 5000;
+  transition: 0.6s;
+}
+.intro-screen h1 {
+  font-size: 50px;
+  color: #c1121f;
+  margin-bottom: 10px;
+}
+.intro-screen p {
+  color: #555;
+  margin-bottom: 20px;
+}
+.intro-screen button {
+  background: linear-gradient(135deg, #9d0208, #c1121f);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+}
+/* ================== BADGES ================== */
+.badges {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 10px;
+  flex-wrap: wrap;
+}
+.badge {
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+}
+/* ================== RESET BTN ================== */
+.reset-btn {
+  margin-left: 10px;
+  background: #eee;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+/* ================== ANIMACIÓN ================== */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ================== MOBILE ================== */
+@media(max-width:600px) {
+  .hud {
+    flex-direction: column;
+  }
+  .xp-box {
+    width: 100%;
+  }
+}
