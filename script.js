@@ -209,6 +209,35 @@ function toggleTopic(el) {
 }
 
 
+
+/* Input quiz */
+function checkAnswer(inputId, correctAnswer, resultId){
+
+let input = document.getElementById(inputId).value.trim().toLowerCase()
+let result = document.getElementById(resultId)
+
+let correct = correctAnswer.toLowerCase()
+
+if(input === correct){
+
+    result.innerHTML = "\u2705 Correcto"
+    result.style.color = "green"
+
+    showPopup("\uD83C\uDF89 Bien hecho +10 XP")
+
+    data.xp += 10
+    save()
+    updateUI()
+
+}else{
+
+    result.innerHTML = "\u274C Incorrecto"
+    result.style.color = "red"
+
+}
+
+}
+
 /* ================== QUIZ ================== */
 
 var quizScore = 0
@@ -228,7 +257,7 @@ function finishQuiz() {
 
   if (quizScore >= 2) {
 
-    showPopup("\uD83C\uDF89 Quiz aprobado!")
+    showPopup("\uD83C\uDF89 Quiz aprobado! + 25 XP!")
     data.xp += 20
 
   } else {

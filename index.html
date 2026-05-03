@@ -77,13 +77,10 @@ th, td {
             Asegúrate de cerrar correctamente los paréntesis y llaves {}, los usaremos mas adelante <br>
             Usa comillas dobles para los textos y lo mas importante, NO OLVIDES EL PUNTO Y COMA!! . <br>
           <p></p>
-          <br>
           Este sencillo programa es el primer paso para aprender Java y entender su estructura básica. <br>
           </p>
           <strong>Nuevo Reto!</strong>
           <p>CODE PANDA: ¡Programa al Panda! <br>
-            Prepárate para una aventura donde tu lógica es el superpoder!<br>
-            En Code Panda, no solo juegas… ¡piensas como programador! <br>
             Tu misión es ayudar a un adorable panda 🐼 a encontrar el camino correcto usando instrucciones como todo un crack del código. <br>
             Pero ojo… no es solo moverlo, es planear cada paso con estrategia. <br>
             ¿Qué aprenderás jugando? <br>
@@ -121,7 +118,7 @@ th, td {
             Caja llamada “nombre” → guarda “Sebastian”</p>
           <code> int edad = 18; <br>
           String nombre = "Sebastian"; </code><br>
-            <strong>Tipos de Datos Fundamentales:</strong>
+          <strong>Tipos de Datos Fundamentales:</strong> 
           
           <!--- Tabla modulo 1 seccion 2 --->
           <table style = "width: 100%;">
@@ -162,6 +159,23 @@ th, td {
             </div>
             <button onclick="finishQuiz()">Finalizar Quiz</button>
           </div>
+          
+          <!--- Reto Practico --->
+          <div class="challenge-box">
+            <h4>🎯 Reto</h4>
+            <p>¿Qué imprimiría este código?</p>
+            <pre><code>class Main {
+    public static void main(String[] args) {
+        String name = "juan";
+        System.out.println(name);
+    }
+}
+</code></pre>
+            <input type="text" id="answer1" placeholder="Escribe aqui!">
+            <button onclick="checkAnswer('answer1','juan','result1')" class="challenge-btn"> Verificar </button>
+            <p id="result1"></p>
+          </div>
+            
         </div>
       </div>
       
@@ -177,8 +191,14 @@ th, td {
           Imagina esta situación: <br>
           Si tienes dinero, compras comida.
           Si no tienes dinero, no compras.
-          Aquí hay una decisión basada en una condición. <br>
+          Aquí hay una decisión basada en una condición, la idea es esta: <br>
           <p></p>
+          <p>
+            <p>Si (condición) entonces<br>
+              hacer algo<br>
+              si no<br>
+            hacer otra cosa</p>
+          </p>
           <strong>Ejemplo en programación (Java):</strong>
           <pre><code>int dinero = 10;
 
@@ -186,47 +206,158 @@ if (dinero &gt; 5) {
     System.out.println("Puedes comprar comida");
  } else {
     System.out.println("No te alcanza");
-}        </code></pre> <br>
-            <li><code>int dinero = 10;</code>
-                Se crea una variable que guarda cuánto dinero tienes</li>
-            <li><code>if (dinero &gt; 5)</code></li>
-            Se evalúa la condición: ¿10 es mayor que 5?, Si!
-            <br> → Como la condición es verdadera, se ejecuta: "Puedes comprar comida". <br>
-            <li><code>else {}</code></li>
-            solo se ejecuta si la condición es falsa <br>
-            <br>
-            
-            <strong>Operadores importantes:</strong>
-            
-           <table width="80%" border="5">
-          <tbody>
-            <tr>
-              <th scope="row">&nbsp; Mayor que</th>
-              <td>&nbsp;&gt;</td>
-            </tr>
-            <tr>
-              <th scope="row">&nbsp; Menor que</th>
-              <td>&nbsp;&lt;</td>
-            </tr>
-            <tr>
-              <th scope="row">&nbsp; Mayor o igual</th>
-              <td>&nbsp;&gt;=</td>
-            </tr>
-            <tr>
-              <th scope="row">&nbsp;Menor o igual</th>
-              <td>&nbsp;&lt;=</td>
-            </tr>
-            <tr>
-              <th scope="row">&nbsp;Igual</th>
-              <td>&nbsp;==</td>
-            </tr>
-            <tr>
-              <th scope="row">&nbsp;Diferente de</th>
-              <td>&nbsp;!=</td>
-            </tr>
-          </tbody>
-        </table>
+}        </code></pre>
+          <br>
+          <code>int dinero = 10;</code> Se crea una variable que guarda cuánto dinero tienes
+          <code>if (dinero &gt; 5)</code>
+          Se evalúa la condición: ¿10 es mayor que 5?, Si! <br>
+          → Como la condición es verdadera, se ejecuta: "Puedes comprar comida". <br>
+          <code>else {}</code>
+          solo se ejecuta si la condición es falsa <br>
+          <br>
+          <strong>Operadores importantes:</strong>
+          <table width="80%" border="5">
+            <tbody>
+              <tr>
+                <th scope="row">&nbsp; Mayor que</th>
+                <td>&nbsp;&gt;</td>
+              </tr>
+              <tr>
+                <th scope="row">&nbsp; Menor que</th>
+                <td>&nbsp;&lt;</td>
+              </tr>
+              <tr>
+                <th scope="row">&nbsp; Mayor o igual</th>
+                <td>&nbsp;&gt;=</td>
+              </tr>
+              <tr>
+                <th scope="row">&nbsp;Menor o igual</th>
+                <td>&nbsp;&lt;=</td>
+              </tr>
+              <tr>
+                <th scope="row">&nbsp;Igual</th>
+                <td>&nbsp;==</td>
+              </tr>
+              <tr>
+                <th scope="row">&nbsp;Diferente de</th>
+                <td>&nbsp;!=</td>
+              </tr>
+            </tbody>
+          </table>
+          <br>
+          <strong>Operadores Logicos:</strong>
+          <p><strong>(&&, ||, !)</strong> Estos operadores se usan dentro de los condicionales para combinar o modificar condiciones. Piensa que trabajas con respuestas de tipo verdadero o falso.</p>
+          <strong>&&</strong>
+          <p>
+verdadero && verdadero → verdadero <br>
+verdadero && falso → falso <br>
+falso && verdadero → falso <br>
+falso && falso → falso</p>
+          
+          <strong>||</strong>
+          <p>
+verdadero || verdadero → verdadero <br>
+verdadero || falso → verdadero <br>
+falso || verdadero → verdadero <br>
+falso || falso → falso
+          </p>
+          
+          <strong>! (Negacion)</strong>
+          <p>Si era falso, se vuelve verdadero y viceversa.</p>
+          <br>
+          <strong>🔀 else if (múltiples decisiones)</strong>
+          <p>Se usa cuando tienes varias opciones posibles, pero solo una se ejecuta.</p>
+          <code><pre>int nota = 75;
 
+if (nota &nbsp;&gt;= 90) {
+    System.out.println("Excelente");
+} else if (nota &nbsp;&gt;= 70) {
+    System.out.println("Aprobado");
+} else if (nota &nbsp;&gt;= 50) {
+    System.out.println("Regular");
+} else {
+    System.out.println("Reprobado");
+}</pre></code>         
+          <p>Se evalúa de arriba hacia abajo <br>
+Cuando una condición es verdadera, se ejecuta y se detiene <br>
+Las demás ya no se revisan</p>
+          
+          <strong>🧠 if anidados (if dentro de otro if)</strong>
+          <p>Se usan cuando necesitas validar algo dentro de otra condición.</p>
+          <code><pre>int edad = 20;
+boolean pago = true;
+
+if (edad &nbsp;&gt;= 18) {
+    if (pago == true) {
+        System.out.println("Puede entrar");
+    } else {
+        System.out.println("Debe pagar");
+    }
+} else {
+    System.out.println("Menor de edad");
+}</pre></code>
+          <p><pre>Primero se evalúa:
+¿Es mayor de edad?
+Si sí:
+¿Pagó?
+Dependiendo de eso, decide.</pre></p>
+          
+          <!--- Reto Practico --->
+          <div class="challenge-box">
+            <h4>🎯 Reto 1</h4>
+              <p></p>
+            <p>¿Qué imprimiría este código?</p>
+            <pre><code>class Main {
+    public static void main(String[] args) {
+        int numero = 4;
+
+if (numero % 2 == 0) {
+    System.out.println("par");
+} else {
+    System.out.println("impar");
+   }
+  }
+}
+</code></pre>
+            <input type="text" id="answer2" placeholder="Escribe aqui!">
+            <button onclick="checkAnswer('answer2','par','result2')" class="challenge-btn"> Verificar </button>
+            <p id="result2"></p>
+          </div>
+            <p><pre></pre></p>
+          <div class="challenge-box">
+            <h4>🎯 Reto 2 <strong>PRO</strong></h4>
+              <p>
+Si un usuario cumple dos condiciones especiales al mismo tiempo, recibe una promoción VIP <br>
+Apartir de ello se quiere clasificar usuarios según su actividad: <br>
+Si un usuario hizo compras múltiplos de 3 y múltiplos de 5 → cliente VIP <br>
+Si solo cumple múltiplos de 3 → cliente frecuente <br>
+Si solo cumple múltiplos de 5 → cliente ocasional
+              </p>
+            <p>¿Qué imprimiría este código?</p>
+            <pre><code>class Main {
+    public static void main(String[] args) {
+      int num = 15;
+
+if (num % 3 == 0 && num % 5 == 0) {
+    System.out.println("cliente vip");
+} else if (num % 3 == 0) {
+    System.out.println("cliente frecuente");
+} else if (num % 5 == 0) {
+    System.out.println("cliente ocasional");
+    }
+   }
+  }
+</code></pre>
+            <input type="text" id="answer3" placeholder="Escribe aqui!">
+            <button onclick="checkAnswer('answer3','cliente vip','result3')" class="challenge-btn"> Verificar </button>
+            <p id="result3"></p>
+          </div>
+            <p>
+<code>num % 3 == 0 // significa que el número es divisible entre 3 <br>
+num % 5 == 0 // divisible entre 5 <br>
+&& //exige que ambas se cumplan</code></p>
+          
+          
         </div>
       </div>
       
