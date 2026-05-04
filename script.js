@@ -12,7 +12,7 @@ var data = JSON.parse(localStorage.getItem("draco")) || {
 }
 
 
-/* ================== MODULOS ================== */
+/*MODULOS*/
 
 function completeModule(id) {
 
@@ -43,7 +43,7 @@ function completeModule(id) {
 }
 
 
-/* ================== DESBLOQUEO ================== */
+/*DESBLOQUEO*/
 
 function unlockNext(id) {
 
@@ -56,7 +56,7 @@ function unlockNext(id) {
 }
 
 
-/* ================== NIVEL ================== */
+/*NIVEL*/
 
 function checkLevel() {
 
@@ -69,14 +69,14 @@ function checkLevel() {
 }
 
 
-/* ================== LOGROS ================== */
+/*LOGROS*/
 
 function checkAchievements() {
   data.achievements = data.completed.length
 }
 
 
-/* ================== UI ================== */
+/*UI*/
 
 function updateUI() {
 
@@ -99,7 +99,7 @@ function updateUI() {
 }
 
 
-/* ================== BADGES ================== */
+/*BADGES*/
 
 function updateBadges() {
 
@@ -123,7 +123,7 @@ function updateBadges() {
 }
 
 
-/* ================== POPUP ================== */
+/*POPUP*/
 
 function showPopup(text) {
 
@@ -139,7 +139,7 @@ function showPopup(text) {
 }
 
 
-/* ================== WIN SCREEN ================== */
+/*WIN SCREEN*/
 
 function showWinScreen() {
 
@@ -155,14 +155,14 @@ function showWinScreen() {
 }
 
 
-/* ================== GUARDAR ================== */
+/*GUARDAR*/
 
 function save() {
   localStorage.setItem("draco", JSON.stringify(data))
 }
 
 
-/* ================== RESET ================== */
+/*RESET*/
 
 var resetBtn = document.getElementById("resetBtn")
 
@@ -174,7 +174,7 @@ if (resetBtn) {
 }
 
 
-/* ================== INTRO ================== */
+/*INTRO */
 
 function startApp() {
 
@@ -190,7 +190,7 @@ function startApp() {
 }
 
 
-/* ================== ACORDEON ================== */
+/*ACORDEON*/
 
 function toggleModule(el) {
 
@@ -209,16 +209,15 @@ function toggleTopic(el) {
 }
 
 
-
 /* Input quiz */
-function checkAnswer(inputId, correctAnswer, resultId){
+function checkAnswer(inputId, correctAnswer, resultId) {
 
-let input = document.getElementById(inputId).value.trim().toLowerCase()
-let result = document.getElementById(resultId)
+  let input = document.getElementById(inputId).value.trim().toLowerCase()
+  let result = document.getElementById(resultId)
 
-let correct = correctAnswer.toLowerCase()
+  let correct = correctAnswer.toLowerCase()
 
-if(input === correct){
+  if (input === correct) {
 
     result.innerHTML = "\u2705 Correcto"
     result.style.color = "green"
@@ -229,16 +228,16 @@ if(input === correct){
     save()
     updateUI()
 
-}else{
+  } else {
 
     result.innerHTML = "\u274C Incorrecto"
     result.style.color = "red"
 
-}
+  }
 
 }
 
-/* ================== QUIZ ================== */
+/*QUIZ*/
 
 var quizScore = 0
 
