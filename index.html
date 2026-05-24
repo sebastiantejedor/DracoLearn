@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!---DracoLearn uwu--->
+<!---DracoLearn Plataforma Educativa--->
 
 <html lang="es">
 <head>
@@ -176,7 +176,6 @@ th, td {
             <button onclick="checkAnswer('answer1','juan','result1')" class="challenge-btn"> Verificar </button>
             <p id="result1"></p>
           </div>
-            
         </div>
       </div>
       
@@ -351,23 +350,21 @@ if (num % 3 == 0 && num % 5 == 0) {
         </div>
       </div>
       
-       <!-- Seccion 4 -->
+      <!-- Seccion 4 -->
       <div class="topic">
         <div class="topic-header" onclick="toggleTopic(this)"><strong>ESTRUCTURAS DE CONTROL: AUTOMATIZA PROCESOS </strong></div>
         <div class="topic-content">
-
           <p> Las estructuras de control son fundamentales en la programación, ya que permiten controlar el flujo de ejecución de un programa. <br>
-              Gracias a ellas, es posible repetir instrucciones, tomar decisiones y automatizar procesos. <br>
-              En esta seccion aprenderás a utilizar los ciclos repetitivos más importantes: for, while y do while, además de comprender el uso de contadores y acumuladores,
-              herramientas esenciales para resolver problemas de manera eficiente.</p>
+            Gracias a ellas, es posible repetir instrucciones, tomar decisiones y automatizar procesos. <br>
+            En esta seccion aprenderás a utilizar los ciclos repetitivos más importantes: for, while y do while, además de comprender el uso de contadores y acumuladores,
+            herramientas esenciales para resolver problemas de manera eficiente.</p>
           <strong>Ciclo FOR</strong>
           <p>El ciclo for se utiliza cuando sabemos cuántas veces queremos repetir una instrucción.</p>
-          
-            <pre><code>for (inicialización; condición; incremento) {
+          <pre><code>for (inicialización; condición; incremento) {
    // instrucciones
 }</code></pre>
-            <strong>Ejemplo Practico</strong>
-            <p>Se desea contar del 1 al 10 usando un blucle for</p>
+          <strong>Ejemplo Practico</strong>
+          <p>Se desea contar del 1 al 10 usando un blucle for</p>
           <pre><code>public class Main {
     public static void main(String[] args) {
         for (int i = 1; i &nbsp;&lt;= 10; i++) {
@@ -375,14 +372,12 @@ if (num % 3 == 0 && num % 5 == 0) {
         }
     }
 }</code></pre>
-            
-            <pre>int i = 1 → inicia el contador.
+          <pre>int i = 1 → inicia el contador.
 i &nbsp;&lt;= 10 → condición para seguir.
 i++ → incrementa en 1.</pre>
-            <p></p>
-            
-            <p>Resultado en Terminal:</p>
-            <pre>1
+          <p></p>
+          <p>Resultado en Terminal:</p>
+          <pre>1
 2
 3
 4
@@ -392,9 +387,9 @@ i++ → incrementa en 1.</pre>
 8
 9
 10</pre>
-            <br>
+          <br>
           <strong>Video Recomendado!</strong> <br>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/V7U96RG6MPE?si=QPdJ8uebTE5G2yin&amp;start=58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/V7U96RG6MPE?si=QPdJ8uebTE5G2yin&amp;start=58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           <br>
           <!--- Implementacion del Quiz--->
           <div class="topic-header" > 🧠 Quiz Básico </div>
@@ -403,7 +398,7 @@ i++ → incrementa en 1.</pre>
               <p>Que quiere decir i++</p>
               <button onclick="answerQuiz(1,false)"> Ejecuta instrucciones una sola vez</button>
               <button onclick="answerQuiz(1,true)"> El contador Aumenta en 1 </button>
-                <p>Que imprime el siguiente Codigo Java?</p>
+              <p>Que imprime el siguiente Codigo Java?</p>
               <pre><code>public class Main {
     public static void main(String[] args) {
         
@@ -414,20 +409,19 @@ i++ → incrementa en 1.</pre>
 }</code></pre>
               <button onclick="answerQuiz(2,false)"> La tabla del 5 </button>
               <button onclick="answerQuiz(2,true)"> La tabla del 7 del 0 hasta el 5</button>
-                <button onclick="answerQuiz(2,false)"> La tabla del 7 completa </button>
+              <button onclick="answerQuiz(2,false)"> La tabla del 7 completa </button>
               <button onclick="finishQuiz()"> 🎯 Finalizar Quiz </button>
-                
             </div>
           </div>
-            <br>
-        <strong>CICLO WHILE</strong>
-            <p>El ciclo while repite instrucciones mientras una condición sea verdadera.</p>
-            <pre><code>while (condición) {
+          <br>
+          <strong>CICLO WHILE</strong>
+          <p>El ciclo while repite instrucciones mientras una condición sea verdadera.</p>
+          <pre><code>while (condición) {
    // instrucciones
 }</code></pre>
-            <strong>Ejemplo Prectico</strong>
-            <p>Se desea contar de 1 al 5 usando el bucle while</p>
-            <pre><code>public class Main {
+          <strong>Ejemplo Prectico</strong>
+          <p>Se desea contar de 1 al 5 usando el bucle while</p>
+          <pre><code>public class Main {
     public static void main(String[] args) {
         int i = 1;
 
@@ -437,41 +431,37 @@ i++ → incrementa en 1.</pre>
         }
     } 
 }</code></pre>
-            <br>
-            <strong>Explicacion del Ejemplo: </strong>
-            <p>1. Se crea una variable llamada contador con valor 1. <br>
-2. El ciclo verifica si contador &nbsp;&lt;= 5. <br>
-3. Si se cumple, imprime el número. <br>
-4. Luego aumenta el contador con contador++. <br>
-Cuando contador llega a 6, la condición ya no se cumple y el ciclo termina.</p>
-            <p>El programa seguirá ejecutándose mientras i sea menor o igual a 5.</p>
-            Se usa cuando no sabemos exactamente cuántas veces se repetirá una acción, ya que depende de que una condición se cumpla. <br>
-<strong>Idea clave: </strong>
-            Primero evalúa la condición y, si es verdadera, ejecuta el bloque de instrucciones. <br>
-            <p></p>
-            <strong>NO OLVIDES ESTO!</strong>
-            <p>Es un error muy comun en los Principiantes "Olvidar actualizar la variable."</p>
-            <p>Esto esta incorrecto: </p>
-            <pre><code>int i = 1;
+          <br>
+          <strong>Explicacion del Ejemplo: </strong>
+          <p>1. Se crea una variable llamada contador con valor 1. <br>
+            2. El ciclo verifica si contador &nbsp;&lt;= 5. <br>
+            3. Si se cumple, imprime el número. <br>
+            4. Luego aumenta el contador con contador++. <br>
+            Cuando contador llega a 6, la condición ya no se cumple y el ciclo termina.</p>
+          <p>El programa seguirá ejecutándose mientras i sea menor o igual a 5.</p>
+          Se usa cuando no sabemos exactamente cuántas veces se repetirá una acción, ya que depende de que una condición se cumpla. <br>
+          <strong>Idea clave: </strong> Primero evalúa la condición y, si es verdadera, ejecuta el bloque de instrucciones. <br>
+          <p></p>
+          <strong>NO OLVIDES ESTO!</strong>
+          <p>Es un error muy comun en los Principiantes "Olvidar actualizar la variable."</p>
+          <p>Esto esta incorrecto: </p>
+          <pre><code>int i = 1;
 
 while (i &nbsp;&lt;= 5) {
    System.out.println(i);
 }</code></pre>
-            <p>Esto genera un bucle infinito porque i nunca cambia, lo q podria petar tu pc 😂.</p>
-            lo correcto es usar la variable
-            <code>i++;</code>
-            
-             <!--- Implementacion del Quiz--->
+          <p>Esto genera un bucle infinito porque i nunca cambia, lo q podria petar tu pc 😂.</p>
+          lo correcto es usar la variable <code>i++;</code> 
+          
+          <!--- Implementacion del Quiz--->
           <div class="topic-header" > 🧠 Quiz Básico </div>
           <div class="topic-content">
             <div class="quiz-box">
               <p>¿Qué hace el ciclo while?</p>
               <button onclick="answerQuiz(1,false)">Solo sirve para sumar números </button>
               <button onclick="answerQuiz(1,true)">Repite instrucciones mientras una condición sea verdadera</button>
-            <button onclick="answerQuiz(1,false)">Ejecuta instrucciones una sola vez </button>
-                
-                
-                <p>Que imprime el siguiente Codigo?</p>
+              <button onclick="answerQuiz(1,false)">Ejecuta instrucciones una sola vez </button>
+              <p>Que imprime el siguiente Codigo?</p>
               <pre><code>public class Main {
     public static void main(String[] args) {
     int i = 1;
@@ -482,15 +472,15 @@ while (i &nbsp;&lt;= 3) {
   }
  }
 }</code></pre>
-              <button onclick="answerQuiz(2,true)">1 2 3  </button>
+              <button onclick="answerQuiz(2,true)">1 2 3 </button>
               <button onclick="answerQuiz(2,flase)">1 2 3 4 5</button>
-                <button onclick="answerQuiz(2,false)"> Bucle Infinito</button>
+              <button onclick="answerQuiz(2,false)"> Bucle Infinito</button>
               <button onclick="finishQuiz()"> 🎯 Finalizar Quiz </button>
-                <p></p>
-                <strong>RETO PRO</strong>
-                <p>Demuestra todo lo q has aprendido en esta seccion por ahora como todo un pro de Java!</p>
-                <p>Que Imprime el siguiente Codigo?</p>
-                <pre><code>public class Main {
+              <p></p>
+              <strong>RETO PRO</strong>
+              <p>Demuestra todo lo q has aprendido en esta seccion por ahora como todo un pro de Java!</p>
+              <p>Que Imprime el siguiente Codigo?</p>
+              <pre><code>public class Main {
     public static void main(String[] args) {
         int i = 1;
         int suma = 0
@@ -507,18 +497,13 @@ while (i &nbsp;&lt;= 3) {
 }</code></pre>
               <button onclick="answerQuiz(3,false)">6</button>
               <button onclick="answerQuiz(3,true)">No compila</button>
-            <button onclick="answerQuiz(3,false)">10</button>
-                <button onclick="finishQuiz()"> 🎯 Finalizar Quiz </button>
- 
-                
+              <button onclick="answerQuiz(3,false)">10</button>
+              <button onclick="finishQuiz()"> 🎯 Finalizar Quiz </button>
             </div>
           </div>
-            
         </div>
-     </div>
-    
-            
-            
+      </div>
+      
       <!-- BOTÓN FINAL -->
       <button class="start-btn" onclick="completeModule(1)"> 🎯 Terminar módulo </button>
     </div>
