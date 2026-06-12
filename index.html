@@ -25,7 +25,7 @@ th, td {
 </head>
 
 <body>
-<div id="introScreen" class="intro-screen">
+<!-- <div id="introScreen" class="intro-screen"> --->
   <h1>DracoLearn</h1>
   <p> Bienvenido a DracoLearn Academy<br>
     Tu camino para convertirte en Programador comienza aquí. </p>
@@ -521,10 +521,76 @@ while (i &nbsp;&lt;= 3) {
               mediante atributos y comportamientos.</p>
             <strong>Que es un Objeto?</strong>
             <p>Un objeto es una instancia de una clase.</p>
-            <strong>Por ejemplo:</strong>
-            <li>Un carro tiene atributos: color, marca, velocidad.</li>
-            <li>Un carro tiene comportamientos: acelerar, frenar, encender.</li>
-        </div>
+            <strong>Por ejemplo:</strong> <br>
+            Un carro tiene atributos: color, marca, velocidad. <br>
+            Un carro tiene comportamientos: acelerar, frenar, encender. <br>
+            <strong>En Programacion: </strong>
+            <pre><code>Carro miCarro = new Carro();</code></pre>
+            <p>Carro: Clase <br>
+            miCarro: Objeto </p><br>
+            <strong>Que es una Clase</strong>
+            <p>Una clase es un molde o plantilla que define las características y comportamientos de un tipo de objeto. <br>
+              Es como un plano que describe cómo se ve y qué puede hacer un objeto, pero no es el objeto en sí.</p>
+              <strong>Ejemplo:</strong> <br>
+              La clase "Perro" podría tener atributos como "raza", "edad" y "color", y métodos como "ladrar()" o "comer()". <br>
+              Cuando creas un objeto a partir de esta clase, como "miPerro", ese
+              objeto tendrá sus propios valores para esos atributos y podrá usar los métodos definidos en la clase. <br>
+              <strong>Ejemplo en Java:</strong>
+              <pre><code>
+public class Perro {
+// 1. Definimos la clase "Perro" (El molde)
+class Perro {
+    // Atributos (Características)
+    String raza;
+    int edad;
+    String color;
+
+    // Métodos (Acciones)
+    void ladrar() {
+        System.out.println("¡Guau! ¡Guau!");
+    }
+
+    void comer() {
+        System.out.println("El perro está comiendo sus croquetas.");
+    }
+}
+
+// 2. Clase principal para ejecutar el programa y crear el objeto
+public class Main {
+    public static void main(String[] args) {
+        
+        // Creamos el objeto "miPerro" a partir de la clase "Perro"
+        Perro miPerro = new Perro();
+
+        // Le asignamos valores propios a sus atributos
+        miPerro.raza = "Labrador";
+        miPerro.edad = 3;
+        miPerro.color = "Dorado";
+
+        // Mostramos las características del objeto en la consola
+        System.out.println("Mi perro es un " + miPerro.raza + " de color " + miPerro.color + " y tiene " + miPerro.edad + " años.");
+
+        // Ponemos al objeto a usar sus métodos
+        miPerro.ladrar();
+        miPerro.comer();
+    }
+   }
+  }</code></pre>
+                  <div class="topic-header" > 🧠 Quiz Básico </div>
+          <div class="topic-content">
+            <div class="quiz-box">
+              <p>Que es una Clase?</p>
+              <button onclick="answerQuiz(1,false)">Es una variable especial que almacena datos en la memoria del computador</button>
+              <button onclick="answerQuiz(1,true)">Es un molde, plantilla o plano (blueprint) en la programación orientada a objetos</button>
+              <p>Que es un Objeto </p>
+              <button onclick="answerQuiz(2,false)">Es la estructura de código donde se programan las funciones principales</button>
+              <button onclick="answerQuiz(2,true)">Es una instancia concreta de una clase que tiene sus propios valores para los atributos y puede ejecutar los métodos definidos en su molde.</button>
+              <button onclick="answerQuiz(2,false)">Ninguna de las anteriores</button>
+              <button onclick="finishQuiz()"> 🎯 Finalizar Quiz </button>
+            </div>
+          </div>
+
+        </div> 
       </div>
       <button class="start-btn" onclick="completeModule(2)"> Terminar módulo </button>
     </div>
@@ -566,6 +632,7 @@ while (i &nbsp;&lt;= 3) {
     </div>
   </div>
 </section>
+
 <div id="popup" class="popup"></div>
 <div id="levelUp" class="levelup">LEVEL UP 🔥</div>
 <div id="winScreen" class="win-screen">
