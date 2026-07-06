@@ -405,13 +405,18 @@ pre {
 
   border-radius: 12px;
 }
+code {
+  white-space: pre-wrap;
+
+  word-break: break-word;
+}
 
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
   .navbar {
-    font-size: 24px;
-    padding: 20px;
+    font-size: 20px;
+    padding: 18px;
   }
 
   .hud {
@@ -433,24 +438,28 @@ pre {
   }
 
   .module-header {
-    font-size: 18px;
-    padding: 18px;
+    font-size: 16px;
   }
 
   .topic-header {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   .topic-content {
-    font-size: 16px;
-    line-height: 1.7;
+    font-size: 14px;
   }
 
-  .start-btn,
-  .challenge-btn,
+  .start-btn {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .challenge-btn {
+    width: 100%;
+  }
+
   .quiz-box button {
-    font-size: 16px;
-    padding: 15px 18px;
+    padding: 14px;
   }
 
   .popup {
@@ -465,10 +474,10 @@ pre {
   }
 
   .intro-screen h1 {
-    font-size: 42px;
+    font-size: 36px;
   }
 
   .intro-screen p {
-    font-size: 18px;
+    font-size: 15px;
   }
 }
