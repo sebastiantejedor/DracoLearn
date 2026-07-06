@@ -393,142 +393,73 @@ code {
   }
 }
 
-/* ------------------------------------------------------------
-   15. RESPONSIVE (mobile-first)
-   ------------------------------------------------------------
-   El grueso del layout ya es fluido gracias a clamp()/%/rem,
-   así que estos breakpoints solo afinan detalles puntuales
-   en vez de reescribir toda la hoja. Se probó especialmente
-   en anchos de celulares modernos (360–430px).
-------------------------------------------------------------- */
+/* ================= RESPONSIVE ================= */
 
-/* Tablets y celulares grandes en horizontal */
 @media (max-width: 768px) {
+  .navbar {
+    font-size: 20px;
+    padding: 18px;
+  }
+
   .hud {
     flex-direction: column;
     align-items: center;
+    gap: 18px;
   }
 
-  .xp-box,
-  .achievements {
-    max-width: 100%;
+  .xp-box {
+    width: 100%;
   }
 
   .roadmap {
-    padding: 16px 12px 50px;
+    padding: 15px;
   }
 
   .module {
     padding: 16px;
-    border-radius: var(--radius-md);
-  }
-}
-
-/* Celulares estándar (la mayoría de smartphones modernos) */
-@media (max-width: 480px) {
-  .navbar {
-    padding: 14px 10px;
-    letter-spacing: 0.01em;
   }
 
   .module-header {
-    padding: 14px;
-    font-size: 14px;
-    gap: 8px;
-  }
-
-  .module-header::before {
-    font-size: 10px;
-    padding: 3px 6px;
+    font-size: 16px;
   }
 
   .topic-header {
-    font-size: 13.5px;
-    padding: 12px 14px;
+    font-size: 15px;
   }
 
   .topic-content {
-    font-size: 13.5px;
-    padding: 0 14px;
+    font-size: 14px;
   }
 
-  .topic.active > .topic-content {
-    padding: 4px 14px 16px;
+  .start-btn {
+    width: 100%;
+    padding: 14px;
   }
 
-  code {
-    font-size: 12px;
-    padding: 10px 12px;
+  .challenge-btn {
+    width: 100%;
   }
 
-  table {
-    font-size: 12px;
-  }
-
-  th,
-  td {
-    padding: 6px 8px !important;
-  }
-
-  .quiz-box,
-  .challenge-box {
-    padding: 12px;
+  .quiz-box button {
+    padding: 14px;
   }
 
   .popup {
-    left: 12px;
-    right: 12px;
-    max-width: none;
-    top: 12px;
+    left: 15px;
+    right: 15px;
+    top: 15px;
   }
 
   .win-screen {
-    padding: 28px 20px;
+    width: 90%;
+    padding: 25px;
   }
-}
 
-/* Celulares muy angostos (iPhone SE y similares, ~360px) */
-@media (max-width: 360px) {
   .intro-screen h1 {
-    font-size: 34px;
+    font-size: 36px;
   }
 
-  .module-header::before {
-    content: attr(
-      data-num
-    ); /* se omite el prefijo "MOD_" para ahorrar espacio */
-  }
-}
-
-/* Pantallas grandes: se limita el ancho de lectura para que
-   los párrafos no se vean demasiado largos */
-@media (min-width: 1100px) {
-  .roadmap {
-    max-width: 960px;
-  }
-}
-
-/* ------------------------------------------------------------
-   16. ACCESIBILIDAD
-   ------------------------------------------------------------
-   Foco visible para navegación por teclado y respeto a la
-   preferencia de "reducir movimiento" del sistema operativo,
-   necesario en cualquier UI moderna y responsive.
-------------------------------------------------------------- */
-button:focus-visible,
-input:focus-visible,
-a:focus-visible {
-  outline: 2px solid var(--accent-bright);
-  outline-offset: 2px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
+  .intro-screen p {
+    font-size: 15px;
   }
 }
