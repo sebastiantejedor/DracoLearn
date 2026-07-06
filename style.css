@@ -396,25 +396,22 @@ code {
 
 @media (max-width: 768px) {
   body {
+    background: red !important;
     font-size: 16px;
   }
-
   .navbar {
     font-size: 22px;
     padding: 16px;
   }
-
   .hud {
     flex-direction: column;
     align-items: stretch;
     gap: 18px;
     padding: 16px;
   }
-
   .xp-box {
     width: 100%;
   }
-
   .roadmap {
     padding: 20px 15px;
   }
@@ -422,16 +419,13 @@ code {
   .module {
     padding: 16px;
   }
-
   .module-header {
     padding: 14px;
     font-size: 17px;
   }
-
   .topic-header {
     font-size: 15px;
   }
-
   .topic-content {
     font-size: 15px;
   }
@@ -440,40 +434,28 @@ code {
     width: 100%;
     padding: 14px;
   }
-
   .challenge-btn {
     width: 100%;
   }
-
   .quiz-box button {
     padding: 14px;
   }
-
   .popup {
     left: 15px;
     right: 15px;
     top: 15px;
   }
-
   .win-screen {
     width: 90%;
     padding: 25px;
   }
-
   .intro-screen h1 {
     font-size: 34px;
   }
-
   .intro-screen p {
     font-size: 16px;
   }
-
   .intro-screen button {
     width: 80%;
-  }
-}
-@media (hover: hover) {
-  .module:hover {
-    transform: translateY(-5px) scale(1.02);
   }
 }
