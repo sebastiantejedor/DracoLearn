@@ -7,8 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DracoLearn</title>
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <!---aplicando css tabla modulo 1 seccion 2--->
 <style>
 table, th, td {
@@ -25,13 +24,14 @@ th, td {
 </head>
 
 <body>
+<!-- Pantalla splash de bienvenida -->
 <div id="introScreen" class="intro-screen"> 
-  <h1>DracoLearn</h1>
-  <p> Bienvenido a DracoLearn Academy<br>
-    Tu camino para convertirte en Programador comienza aquí. 
-  Plataforma Educativa para el Sena</p>
+  <h2>Bienvenido Futuro Developer</h2>
+  <h1>DracoLearn Academy</h1>
+  <p>Tu camino para convertirte en Programador comienza aquí.</p>
   <button onclick="startApp()">🎮 Comenzar</button>
 </div>
+
 <header class="navbar"> DRACOLEARN (Aprende desde 0) </header>
 <section class="hud">
   <div class="xp-box"> Nivel <span id="level">1</span>
@@ -40,7 +40,7 @@ th, td {
     </div>
     <button id="resetBtn" class="reset-btn">Reiniciar progreso</button>
   </div>
-  <div class="achievements" id="achievements"> Logros: 0 </div>
+  <div class="achievements" id="achievements"> Modulos Completados: 0 </div>
 </section>
 <div class="badges" id="badges"></div>
 <section class="roadmap"> 
@@ -180,7 +180,7 @@ th, td {
         </div>
       </div>
       
-      <!-- TEMA 3 -->
+      <!-- Seccion 3 -->
       <div class="topic">
         <div class="topic-header" onclick="toggleTopic(this)"> <strong>CONDICIONALES: CUANDO TU PROGRAMA PIENSA</strong> </div>
         <div class="topic-content">
@@ -454,7 +454,7 @@ while (i &nbsp;&lt;= 5) {
           <p>Esto genera un bucle infinito porque i nunca cambia, lo q podria petar tu pc 😂.</p>
           lo correcto es usar la variable <code>i++;</code> 
           
-          <!--- Implementacion del Quiz--->
+          <!--- Implementacion del Quiz 2--->
           <div class="topic-header" > 🧠 Quiz Básico </div>
           <div class="topic-content">
             <div class="quiz-box">
@@ -510,7 +510,7 @@ while (i &nbsp;&lt;= 3) {
     </div>
   </div>
   
-  <!-- OTROS MODULOS -->
+  <!-- Modulo 2 -->
   <div class="module locked" data-id="2">
     <div class="module-header" onclick="toggleModule(this)"> Programacion Orientada a Objetos (POO) </div>
     <div class="module-content">
@@ -596,11 +596,13 @@ public class Main {
       <button class="start-btn" onclick="completeModule(2)"> Terminar módulo </button>
     </div>
   </div>
-  <div class="module locked" data-id="2">
-    <div class="module-header" onclick="toggleModule(this)"> Proximamente </div>
+
+<!-- Modulo 3 -->
+  <div class="module locked" data-id="3">
+    <div class="module-header" onclick="toggleModule(this)"> Tu Primera Pagina WEB </div>
     <div class="module-content">
       <div class="topic">
-        <div class="topic-header" onclick="toggleTopic(this)"> Proximamente </div>
+        <div class="topic-header" onclick="toggleTopic(this)"> Que es una Pagina WEB? </div>
         <div class="topic-content">
           <p> Proximamente</p>
         </div>
@@ -638,7 +640,7 @@ public class Main {
 <div id="levelUp" class="levelup">LEVEL UP 🔥</div>
 <div id="winScreen" class="win-screen">
   <h2>🎉 MÓDULO COMPLETADO</h2>
-  <p>+25 XP ganado</p>
+  <p> +80 XP ganado</p>
 </div>
 <script src="script.js"></script>
 </body>

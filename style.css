@@ -1,15 +1,15 @@
-/* ================== CSS file ================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: Inter;
+  font-family: "Plus Jakarta Sans", sans-serif;
   background: linear-gradient(180deg, #ffffff, #ffeaea, #ffffff);
   color: #222;
   overflow-x: hidden;
 }
+
 /* NAVBAR */
 .navbar {
   text-align: center;
@@ -151,7 +151,8 @@ body {
 .topic-content p {
   margin-bottom: 10px;
 }
-.topic-content h4, .topic-content strong {
+.topic-content h4,
+.topic-content strong {
   color: #c1121f;
   margin-top: 15px;
   margin-bottom: 5px;
@@ -392,7 +393,7 @@ code {
   }
 }
 /*MOBILE*/
-@media(max-width:600px) {
+@media (max-width: 600px) {
   .hud {
     flex-direction: column;
   }
