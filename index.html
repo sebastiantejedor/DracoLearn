@@ -1,288 +1,361 @@
-<!DOCTYPE html>
-<!---DracoLearn Plataforma Educativa--->
+<!doctype html>
+<!-- DracoLearn Plataforma Educativa -->
 
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DracoLearn</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<!---aplicando css tabla modulo 1 seccion 2--->
-<style>
-table, th, td {
-    border: 0.5px solid black;
-    border-collapse: collapse
-}
-th, td {
-    padding: 0.8px;
-}
-th, td {
-    text-align: center
-}
-</style>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DracoLearn</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-<!-- Pantalla splash de bienvenida -->
-<div id="introScreen" class="intro-screen"> 
-  <h2>Bienvenido Futuro Developer</h2>
-  <h1>DracoLearn Academy</h1>
-  <p>Tu camino para convertirte en Programador comienza aquí.</p>
-  <button onclick="startApp()">🎮 Comenzar</button>
-</div>
-
-<header class="navbar"> DRACOLEARN (Aprende desde 0) </header>
-<section class="hud">
-  <div class="xp-box"> Nivel <span id="level">1</span>
-    <div class="xp-bar">
-      <div class="xp-fill" id="xp"></div>
+  <body>
+    <!-- Pantalla splash de bienvenida -->
+    <div id="introScreen" class="intro-screen">
+      <h2>Bienvenido Futuro Developer</h2>
+      <h1>DracoLearn Academy</h1>
+      <p>Tu camino para convertirte en Programador comienza aquí.</p>
+      <h3>¡Estamos en proceso de desarrollo!</h3>
+      <br />
+      <button onclick="startApp()">Comenzar</button>
     </div>
-    <button id="resetBtn" class="reset-btn">Reiniciar progreso</button>
-  </div>
-  <div class="achievements" id="achievements"> Modulos Completados: 0 </div>
-</section>
-<div class="badges" id="badges"></div>
-<section class="roadmap"> 
-  
-  <!-- MODULO 1--->
-  <div class="module active" data-id="1">
-    <div class="module-header" onclick="toggleModule(this)"> Primeros Pasos en la programacion </div>
-    <div class="module-content"> 
-      
-      <!-- Seccion 1 -->
-      <div class="topic">
-        <div class="topic-header" onclick="toggleTopic(this)"> <strong>ENTENDIENDO LAS BASES: COMO PIENSA UNA COMPUTADORA</strong> </div>
-        <div class="topic-content">
-          <p> Programar es darle instrucciones a una computadora para que haga algo. </p>
-          <p> Es como darle órdenes a un robot:
-            “Suma estos números”
-            “Muestra este mensaje”
-            “Si pasa esto, haz esto otro” </p>
-          <strong>Ejemplo de la vida real:</strong>
-          <p> Imagínate que haces un sándwich:
-            Agarrar pan.
-            Poner jamón.
-            Poner queso.
-            Cerrar pan.
-            Eso es un algoritmo (una lista de pasos). </p>
-          <p>La computadora no entiende intenciones, solo ejecuta instrucciones exactas en el orden que se le indican.<br>
-          Llevando la idea a programación: <br>
-          La computadora NO piensa, solo hace exactamente lo que tú le dices.
-          </p>
-          <code> // Usaremos el lenguaje de Programacion Java <br>
-System.out.println("Paso 1: Tomar pan"); <br>
-System.out.println("Paso 2: Poner jamón"); <br>
-System.out.println("Paso 3: Poner queso"); <br>
-System.out.println("Paso 4: Cerrar pan");</code><br>
-          <p> Errores comunes: <br>
-            Asegúrate de cerrar correctamente los paréntesis y llaves {}, los usaremos mas adelante <br>
-            Usa comillas dobles para los textos y lo mas importante, NO OLVIDES EL PUNTO Y COMA!! . <br>
-          <p></p>
-          Este sencillo programa es el primer paso para aprender Java y entender su estructura básica. <br>
-          </p>
-          <strong>Nuevo Reto!</strong>
-          <p>CODE PANDA: ¡Programa al Panda! <br>
-            Tu misión es ayudar a un adorable panda 🐼 a encontrar el camino correcto usando instrucciones como todo un crack del código. <br>
-            Pero ojo… no es solo moverlo, es planear cada paso con estrategia. <br>
-            ¿Qué aprenderás jugando? <br>
-            Pensamiento lógico,
-            Resolución de problemas y
-            Bases de programación sin darte cuenta.<br>
-            Este juego demuestra que programar no es difícil…
-            ¡solo es cuestión de pensar como un pro! <br>
-            ¿Serás capaz de completar todos los niveles sin equivocarte?</p>
-          <p> Juegalo Aqui! <a href="https://www.cokitos.com/programar-al-panda/play/" target="_blank"> Code Panda Play! </a> </p>
-          
-          <!--- Implementacion del Quiz--->
-          <div class="topic-header" > 🧠 Quiz Básico </div>
-          <div class="topic-content">
-            <div class="quiz-box">
-              <p>¿Qué es programar?</p>
-              <button onclick="answerQuiz(1,false)"> Jugar en la PC </button>
-              <button onclick="answerQuiz(1,true)"> Dar instrucciones a la computadora </button>
-              <p>¿Qué es un algoritmo?</p>
-              <button onclick="answerQuiz(2,false)"> Un programa </button>
-              <button onclick="answerQuiz(2,true)"> Una lista de pasos </button>
-              <button onclick="finishQuiz()"> 🎯 Finalizar Quiz </button>
-            </div>
-          </div>
+
+    <header class="navbar">DRACOLEARN (Aprende desde 0)</header>
+    <section class="hud">
+      <div class="xp-box">
+        Nivel <span id="level">1</span>
+        <div class="xp-bar">
+          <div class="xp-fill" id="xp"></div>
         </div>
+        <button id="resetBtn" class="reset-btn">Reiniciar progreso</button>
       </div>
-      
-      <!-- Seccion 2 -->
-      <div class="topic">
-        <div class="topic-header" onclick="toggleTopic(this)"> <strong>VARIABLES: LA MEMORIA DE LA COMPUTADORA</strong> </div>
-        <div class="topic-content">
-          <p>Una variable es como una cajita donde guardas datos.</p>
-          <p><strong>Ejemplo:</strong> <br>
-            Caja llamada “edad” → guarda 18 <br>
-            Caja llamada “nombre” → guarda “Sebastian”</p>
-          <code> int edad = 18; <br>
-String nombre = "Sebastian"; </code><br>
-          <strong>Tipos de Datos Fundamentales:</strong> 
-          
-          <!--- Tabla modulo 1 seccion 2 --->
-          <table style = "width: 100%;">
-            <tr>
-              <th>Tipo</th>
-              <th>Que Guarda</th>
-              <th>Ejemplo</th>
-            </tr>
-            <tr>
-              <td>int</td>
-              <td>Numeros Enteros</td>
-              <td>10</td>
-            </tr>
-            <tr>
-              <td>double</td>
-              <td>Numeros Decimales</td>
-              <td>5.5</td>
-            </tr>
-            <tr>
-              <td>String</td>
-              <td>Texto</td>
-              <td>"Hola"</td>
-            </tr>
-            <tr>
-              <td>boolean</td>
-              <td>Verdadero/Falso</td>
-              <td>true</td>
-            </tr>
-          </table>
-          <div class="quiz-box">
-            <div class="topic-header" onclick="toggleTopic(this)"> Quiz Basico
-              <p>¿Qué es una variable?</p>
-              <button onclick="answerQuiz(1,true)"> Un espacio para guardar datos </button>
-              <button onclick="answerQuiz(1,false)"> Un error del sistema </button>
-              <p>Da un ejemplo de dato tipo Double</p>
-              <button onclick="answerQuiz(2,true)"> 2,5 </button>
-              <button onclick="answerQuiz(2,false)"> 456 </button>
+      <div class="achievements" id="achievements">Modulos Completados: 0</div>
+    </section>
+    <div class="badges" id="badges"></div>
+    <section class="roadmap">
+      <!-- MODULO 1 -->
+      <div class="module active" data-id="1">
+        <div class="module-header" onclick="toggleModule(this)">
+          Primeros Pasos en la programacion
+        </div>
+        <div class="module-content">
+          <!-- Seccion 1 -->
+          <div class="topic">
+            <div class="topic-header" onclick="toggleTopic(this)">
+              <strong
+                >ENTENDIENDO LAS BASES: COMO PIENSA UNA COMPUTADORA</strong
+              >
             </div>
-            <button onclick="finishQuiz()">Finalizar Quiz</button>
+            <div class="topic-content">
+              <p>
+                Programar es darle instrucciones a una computadora para que haga
+                algo.
+              </p>
+              <p>
+                Es como darle órdenes a un robot: "Suma estos números" "Muestra
+                este mensaje" "Si pasa esto, haz esto otro"
+              </p>
+              <strong>Ejemplo de la vida real:</strong>
+              <p>
+                Imagínate que haces un sándwich: Agarrar pan. Poner jamón. Poner
+                queso. Cerrar pan. Eso es un algoritmo (una lista de pasos).
+              </p>
+              <p>
+                La computadora no entiende intenciones, solo ejecuta
+                instrucciones exactas en el orden que se le indican.<br />
+                Llevando la idea a programación: <br />
+                La computadora NO piensa, solo hace exactamente lo que tú le
+                dices.
+              </p>
+              <pre><code>// Usaremos el lenguaje de Programacion Java
+System.out.println("Paso 1: Tomar pan");
+System.out.println("Paso 2: Poner jamón");
+System.out.println("Paso 3: Poner queso");
+System.out.println("Paso 4: Cerrar pan");</code></pre>
+              <hr />
+              <p>
+                Errores comunes: Asegúrate de cerrar correctamente los
+                paréntesis y llaves {}, los usaremos mas adelante <br />
+                Usa comillas dobles para los textos y lo mas importante, NO
+                OLVIDES EL PUNTO Y COMA!! . <br />
+              </p>
+              <p>
+                Este sencillo programa es el primer paso para aprender Java y
+                entender su estructura básica. <br />
+              </p>
+              <strong>Nuevo Reto!</strong>
+              <p>
+                CODE PANDA: ¡Programa al Panda! <br />
+                Tu misión es ayudar a un adorable panda 🐼 a encontrar el camino
+                correcto usando instrucciones como todo un crack del código.
+                <br />
+                Pero ojo… no es solo moverlo, es planear cada paso con
+                estrategia. <br />
+                ¿Qué aprenderás jugando? <br />
+                Pensamiento lógico, Resolución de problemas y Bases de
+                programación sin darte cuenta.<br />
+                Este juego demuestra que programar no es difícil… ¡solo es
+                cuestión de pensar como un pro! <br />
+                ¿Serás capaz de completar todos los niveles sin equivocarte?
+              </p>
+              <p>
+                Juegalo Aqui!
+                <a
+                  href="https://www.cokitos.com/programar-al-panda/play/"
+                  target="_blank"
+                >
+                  Code Panda Play!
+                </a>
+              </p>
+
+              <!-- Implementacion del Quiz -->
+              <div class="topic-header" onclick="toggleTopic(this)">
+                🧠 Quiz Básico
+              </div>
+              <div class="topic-content">
+                <div class="quiz-box">
+                  <p>¿Qué es programar?</p>
+                  <button onclick="answerQuiz(1, false)">Jugar en la PC</button>
+                  <button onclick="answerQuiz(1, true)">
+                    Dar instrucciones a la computadora
+                  </button>
+                  <p>¿Qué es un algoritmo?</p>
+                  <button onclick="answerQuiz(2, false)">Un programa</button>
+                  <button onclick="answerQuiz(2, true)">
+                    Una lista de pasos
+                  </button>
+                  <button onclick="finishQuiz()">🎯 Finalizar Quiz</button>
+                </div>
+              </div>
+            </div>
           </div>
-          
-          <!--- Reto Practico --->
-          <div class="challenge-box">
-            <h4>🎯 Reto</h4>
-            <p>¿Qué imprimiría este código?</p>
-            <pre><code>class Main {
+
+          <!-- Seccion 2 -->
+          <div class="topic">
+            <div class="topic-header" onclick="toggleTopic(this)">
+              <strong>VARIABLES: LA MEMORIA DE LA COMPUTADORA</strong>
+            </div>
+            <div class="topic-content">
+              <p>Una variable es como una cajita donde guardas datos.</p>
+              <p>
+                <strong>Ejemplo:</strong> <br />
+                Caja llamada "edad" → guarda 18 <br />
+                Caja llamada "nombre" → guarda "Sebastian"
+              </p>
+              <pre><code>int edad = 18;
+String nombre = "Sebastian";</code></pre>
+              <strong>Tipos de Datos Fundamentales:</strong>
+
+              <!-- Tabla modulo 1 seccion 2 -->
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Tipo</th>
+                    <th>Que Guarda</th>
+                    <th>Ejemplo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>int</td>
+                    <td>Numeros Enteros</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <td>double</td>
+                    <td>Numeros Decimales</td>
+                    <td>5.5</td>
+                  </tr>
+                  <tr>
+                    <td>String</td>
+                    <td>Texto</td>
+                    <td>"Hola"</td>
+                  </tr>
+                  <tr>
+                    <td>boolean</td>
+                    <td>Verdadero/Falso</td>
+                    <td>true</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="quiz-box">
+                <div class="topic-header" onclick="toggleTopic(this)">
+                  Quiz Basico
+                </div>
+                <div class="topic-content">
+                  <p>¿Qué es una variable?</p>
+                  <button onclick="answerQuiz(1, true)">
+                    Un espacio para guardar datos
+                  </button>
+                  <button onclick="answerQuiz(1, false)">
+                    Un error del sistema
+                  </button>
+                  <p>Da un ejemplo de dato tipo Double</p>
+                  <button onclick="answerQuiz(2, true)">2,5</button>
+                  <button onclick="answerQuiz(2, false)">456</button>
+                  <button onclick="finishQuiz()">Finalizar Quiz</button>
+                </div>
+              </div>
+
+              <!-- Reto Practico -->
+              <div class="challenge-box">
+                <h4>🎯 Reto</h4>
+                <p>¿Qué imprimiría este código?</p>
+                <pre><code>class Main {
     public static void main(String[] args) {
         String name = "juan";
         System.out.println(name);
     }
 }
 </code></pre>
-            <input type="text" id="answer1" placeholder="Escribe aqui!">
-            <button onclick="checkAnswer('answer1','juan','result1')" class="challenge-btn"> Verificar </button>
-            <p id="result1"></p>
+                <input type="text" id="answer1" placeholder="Escribe aqui!" />
+                <button
+                  onclick="checkAnswer('answer1', 'juan', 'result1')"
+                  class="challenge-btn"
+                >
+                  Verificar
+                </button>
+                <p id="result1"></p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      
-      <!-- Seccion 3 -->
-      <div class="topic">
-        <div class="topic-header" onclick="toggleTopic(this)"> <strong>CONDICIONALES: CUANDO TU PROGRAMA PIENSA</strong> </div>
-        <div class="topic-content">
-          <p>Los condicionales son estructuras que permiten que un programa tome decisiones. <br>
-            Funcionan con una lógica simple: <br>
-            evaluar una condición y, según si se cumple o no, ejecutar ciertas instrucciones. <br>
-            En otras palabras, un condicional le dice a la computadora: “si pasa esto, haz esto; si no, haz otra cosa”.</p>
-          <strong>Ejemplo de la vida real:</strong> <br>
-          Imagina esta situación: <br>
-          Si tienes dinero, compras comida.
-          Si no tienes dinero, no compras.
-          Aquí hay una decisión basada en una condición, la idea es esta: <br>
-          <p></p>
-          <p>
-          <p>Si (condición) entonces<br>
-            hacer algo<br>
-            si no<br>
-            hacer otra cosa</p>
-          </p>
-          <strong>Ejemplo en programación (Java):</strong>
-          <pre><code>int dinero = 10;
 
-if (dinero &gt; 5) {
+          <!-- Seccion 3 -->
+          <div class="topic">
+            <div class="topic-header" onclick="toggleTopic(this)">
+              <strong>CONDICIONALES: CUANDO TU PROGRAMA PIENSA</strong>
+            </div>
+            <div class="topic-content">
+              <p>
+                Los condicionales son estructuras que permiten que un programa
+                tome decisiones. <br />
+                Funcionan con una lógica simple: <br />
+                evaluar una condición y, según si se cumple o no, ejecutar
+                ciertas instrucciones. <br />
+                En otras palabras, un condicional le dice a la computadora: "si
+                pasa esto, haz esto; si no, haz otra cosa".
+              </p>
+              <strong>Ejemplo de la vida real:</strong> <br />
+              Imagina esta situación: <br />
+              Si tienes dinero, compras comida. Si no tienes dinero, no compras.
+              Aquí hay una decisión basada en una condición, la idea es esta:
+              <br />
+              <p>
+                Si (condición) entonces<br />
+                hacer algo<br />
+                si no<br />
+                hacer otra cosa
+              </p>
+              <strong>Ejemplo en programación (Java):</strong>
+              <pre><code>int dinero = 10;
+
+if (dinero > 5) {
     System.out.println("Puedes comprar comida");
  } else {
     System.out.println("No te alcanza");
-}        </code></pre>
-          <br>
-          <code>int dinero = 10;</code> Se crea una variable que guarda cuánto dinero tienes <code>if (dinero &gt; 5)</code> Se evalúa la condición: ¿10 es mayor que 5?, Si! <br>
-          → Como la condición es verdadera, se ejecuta: "Puedes comprar comida". <br>
-          <code>else {}</code> solo se ejecuta si la condición es falsa <br>
-          <br>
-          <strong>Operadores importantes:</strong>
-          <table width="80%" border="5">
-            <tbody>
-              <tr>
-                <th scope="row">&nbsp; Mayor que</th>
-                <td>&nbsp;&gt;</td>
-              </tr>
-              <tr>
-                <th scope="row">&nbsp; Menor que</th>
-                <td>&nbsp;&lt;</td>
-              </tr>
-              <tr>
-                <th scope="row">&nbsp; Mayor o igual</th>
-                <td>&nbsp;&gt;=</td>
-              </tr>
-              <tr>
-                <th scope="row">&nbsp;Menor o igual</th>
-                <td>&nbsp;&lt;=</td>
-              </tr>
-              <tr>
-                <th scope="row">&nbsp;Igual</th>
-                <td>&nbsp;==</td>
-              </tr>
-              <tr>
-                <th scope="row">&nbsp;Diferente de</th>
-                <td>&nbsp;!=</td>
-              </tr>
-            </tbody>
-          </table>
-          <br>
-          <strong>Operadores Logicos:</strong>
-          <p><strong>(&&, ||, !)</strong> Estos operadores se usan dentro de los condicionales para combinar o modificar condiciones. Piensa que trabajas con respuestas de tipo verdadero o falso.</p>
-          <strong>&&</strong>
-          <p> verdadero && verdadero → verdadero <br>
-            verdadero && falso → falso <br>
-            falso && verdadero → falso <br>
-            falso && falso → falso</p>
-          <strong>||</strong>
-          <p> verdadero || verdadero → verdadero <br>
-            verdadero || falso → verdadero <br>
-            falso || verdadero → verdadero <br>
-            falso || falso → falso </p>
-          <strong>! (Negacion)</strong>
-          <p>Si era falso, se vuelve verdadero y viceversa.</p>
-          <br>
-          <strong>else if (múltiples decisiones)</strong>
-          <p>Se usa cuando tienes varias opciones posibles, pero solo una se ejecuta.</p>
-          <code>
-          <pre>int nota = 75;
+}</code></pre>
+              <br />
+              <code>int dinero = 10;</code> Se crea una variable que guarda
+              cuánto dinero tienes <code>if (dinero &gt; 5)</code> Se evalúa la
+              condición: ¿10 es mayor que 5?, Si! <br />
+              → Como la condición es verdadera, se ejecuta: "Puedes comprar
+              comida". <br />
+              <code>else {}</code> solo se ejecuta si la condición es falsa
+              <br />
+              <br />
+              <strong>Operadores importantes:</strong>
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Operador</th>
+                    <th>Simbolo</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mayor que</td>
+                    <td>&gt;</td>
+                  </tr>
+                  <tr>
+                    <td>Menor que</td>
+                    <td>&lt;</td>
+                  </tr>
+                  <tr>
+                    <td>Mayor o igual</td>
+                    <td>&gt;=</td>
+                  </tr>
+                  <tr>
+                    <td>Menor o igual</td>
+                    <td>&lt;=</td>
+                  </tr>
+                  <tr>
+                    <td>Igual</td>
+                    <td>==</td>
+                  </tr>
+                  <tr>
+                    <td>Diferente de</td>
+                    <td>!=</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br />
+              <strong>Operadores Logicos:</strong>
+              <p>
+                <strong>(&&, ||, !)</strong> Estos operadores se usan dentro de
+                los condicionales para combinar o modificar condiciones. Piensa
+                que trabajas con respuestas de tipo verdadero o falso.
+              </p>
+              <strong>&&</strong>
+              <p>
+                verdadero && verdadero → verdadero <br />
+                verdadero && falso → falso <br />
+                falso && verdadero → falso <br />
+                falso && falso → falso
+              </p>
+              <strong>||</strong>
+              <p>
+                verdadero || verdadero → verdadero <br />
+                verdadero || falso → verdadero <br />
+                falso || verdadero → verdadero <br />
+                falso || falso → falso
+              </p>
+              <strong>! (Negacion)</strong>
+              <p>Si era falso, se vuelve verdadero y viceversa.</p>
+              <br />
+              <strong>else if (múltiples decisiones)</strong>
+              <p>
+                Se usa cuando tienes varias opciones posibles, pero solo una se
+                ejecuta.
+              </p>
+              <pre><code>int nota = 75;
 
-if (nota &nbsp;&gt;= 90) {
+if (nota >= 90) {
     System.out.println("Excelente");
-} else if (nota &nbsp;&gt;= 70) {
+} else if (nota >= 70) {
     System.out.println("Aprobado");
-} else if (nota &nbsp;&gt;= 50) {
+} else if (nota >= 50) {
     System.out.println("Regular");
 } else {
     System.out.println("Reprobado");
-}</pre>
-          </code>
-          <p>Se evalúa de arriba hacia abajo <br>
-            Cuando una condición es verdadera, se ejecuta y se detiene <br>
-            Las demás ya no se revisan</p>
-          <strong>🧠 if anidados (if dentro de otro if)</strong>
-          <p>Se usan cuando necesitas validar algo dentro de otra condición.</p>
-          <code>
-          <pre>int edad = 20;
+}</code></pre>
+              <p>
+                Se evalúa de arriba hacia abajo <br />
+                Cuando una condición es verdadera, se ejecuta y se detiene
+                <br />
+                Las demás ya no se revisan
+              </p>
+              <strong>🧠 if anidados (if dentro de otro if)</strong>
+              <p>
+                Se usan cuando necesitas validar algo dentro de otra condición.
+              </p>
+              <pre><code>int edad = 20;
 boolean pago = true;
 
-if (edad &nbsp;&gt;= 18) {
+if (edad >= 18) {
     if (pago == true) {
         System.out.println("Puede entrar");
     } else {
@@ -291,16 +364,17 @@ if (edad &nbsp;&gt;= 18) {
 } else {
     System.out.println("Menor de edad");
 }
-</pre>
-          </code>
-          <p>Primero se evalúa una condición. Si es verdadera, entonces se evalúa otra dentro.</p>
-          
-          <!--- Reto Practico --->
-          <div class="challenge-box">
-            <h4>🎯 Reto 1</h4>
-            <p></p>
-            <p>¿Qué imprimiría este código?</p>
-            <pre><code>class Main {
+</code></pre>
+              <p>
+                Primero se evalúa una condición. Si es verdadera, entonces se
+                evalúa otra dentro.
+              </p>
+
+              <!-- Reto Practico -->
+              <div class="challenge-box">
+                <h4>🎯 Reto 1</h4>
+                <p>¿Qué imprimiría este código?</p>
+                <pre><code>class Main {
     public static void main(String[] args) {
         int numero = 4;
 
@@ -312,22 +386,29 @@ if (numero % 2 == 0) {
   }
 }
 </code></pre>
-            <input type="text" id="answer2" placeholder="Escribe aqui!">
-            <button onclick="checkAnswer('answer2','par','result2')" class="challenge-btn"> Verificar </button>
-            <p id="result2"></p>
-          </div>
-          <p>
-          <pre></pre>
-          </p>
-          <div class="challenge-box">
-            <h4>🎯 Reto 2 <strong>PRO</strong></h4>
-            <p> Si un usuario cumple dos condiciones especiales al mismo tiempo, recibe una promoción VIP <br>
-              Apartir de ello se quiere clasificar usuarios según su actividad: <br>
-              Si un usuario hizo compras múltiplos de 3 y múltiplos de 5 → cliente VIP <br>
-              Si solo cumple múltiplos de 3 → cliente frecuente <br>
-              Si solo cumple múltiplos de 5 → cliente ocasional </p>
-            <p>¿Qué imprimiría este código?</p>
-            <pre><code>class Main {
+                <input type="text" id="answer2" placeholder="Escribe aqui!" />
+                <button
+                  onclick="checkAnswer('answer2', 'par', 'result2')"
+                  class="challenge-btn"
+                >
+                  Verificar
+                </button>
+                <p id="result2"></p>
+              </div>
+              <div class="challenge-box">
+                <h4>🎯 Reto 2 <strong>PRO</strong></h4>
+                <p>
+                  Si un usuario cumple dos condiciones especiales al mismo
+                  tiempo, recibe una promoción VIP <br />
+                  Apartir de ello se quiere clasificar usuarios según su
+                  actividad: <br />
+                  Si un usuario hizo compras múltiplos de 3 y múltiplos de 5 →
+                  cliente VIP <br />
+                  Si solo cumple múltiplos de 3 → cliente frecuente <br />
+                  Si solo cumple múltiplos de 5 → cliente ocasional
+                </p>
+                <p>¿Qué imprimiría este código?</p>
+                <pre><code>class Main {
     public static void main(String[] args) {
       int num = 15;
 
@@ -341,44 +422,69 @@ if (num % 3 == 0 && num % 5 == 0) {
    }
   }
 </code></pre>
-            <input type="text" id="answer3" placeholder="Escribe aqui!">
-            <button onclick="checkAnswer('answer3','cliente vip','result3')" class="challenge-btn"> Verificar </button>
-            <p id="result3"></p>
+                <input type="text" id="answer3" placeholder="Escribe aqui!" />
+                <button
+                  onclick="checkAnswer('answer3', 'cliente vip', 'result3')"
+                  class="challenge-btn"
+                >
+                  Verificar
+                </button>
+                <p id="result3"></p>
+              </div>
+              <p>
+                <code
+                  >num % 3 == 0 // significa que el número es divisible entre
+                  3</code
+                >
+                <br />
+                <code>num % 5 == 0 // divisible entre 5</code> <br />
+                <code>&& //exige que ambas se cumplan</code>
+              </p>
+            </div>
           </div>
-          <p> <code>num % 3 == 0 // significa que el número es divisible entre 3 <br>
-            num % 5 == 0 // divisible entre 5 <br>
-            && //exige que ambas se cumplan</code></p>
-        </div>
-      </div>
-      
-      <!-- Seccion 4 -->
-      <div class="topic">
-        <div class="topic-header" onclick="toggleTopic(this)"><strong>ESTRUCTURAS DE CONTROL: AUTOMATIZA PROCESOS </strong></div>
-        <div class="topic-content">
-          <p> Las estructuras de control son fundamentales en la programación, ya que permiten controlar el flujo de ejecución de un programa. <br>
-            Gracias a ellas, es posible repetir instrucciones, tomar decisiones y automatizar procesos. <br>
-            En esta seccion aprenderás a utilizar los ciclos repetitivos más importantes: for, while y do while, además de comprender el uso de contadores y acumuladores,
-            herramientas esenciales para resolver problemas de manera eficiente.</p>
-          <strong>Ciclo FOR</strong>
-          <p>El ciclo for se utiliza cuando sabemos cuántas veces queremos repetir una instrucción.</p>
-          <pre><code>for (inicialización; condición; incremento) {
+
+          <!-- Seccion 4 -->
+          <div class="topic">
+            <div class="topic-header" onclick="toggleTopic(this)">
+              <strong>ESTRUCTURAS DE CONTROL: AUTOMATIZA PROCESOS </strong>
+            </div>
+            <div class="topic-content">
+              <p>
+                Las estructuras de control son fundamentales en la programación,
+                ya que permiten controlar el flujo de ejecución de un programa.
+                <br />
+                Gracias a ellas, es posible repetir instrucciones, tomar
+                decisiones y automatizar procesos. <br />
+                En esta seccion aprenderás a utilizar los ciclos repetitivos más
+                importantes: for, while y do while, además de comprender el uso
+                de contadores y acumuladores, herramientas esenciales para
+                resolver problemas de manera eficiente.
+              </p>
+              <strong>Ciclo FOR</strong>
+              <p>
+                El ciclo for se utiliza cuando sabemos cuántas veces queremos
+                repetir una instrucción.
+              </p>
+              <pre><code>for (inicialización; condición; incremento) {
    // instrucciones
 }</code></pre>
-          <strong>Ejemplo Practico</strong>
-          <p>Se desea contar del 1 al 10 usando un blucle for</p>
-          <pre><code>public class Main {
+              <strong>Ejemplo Practico</strong>
+              <p>Se desea contar del 1 al 10 usando un blucle for</p>
+              <pre><code>public class Main {
     public static void main(String[] args) {
-        for (int i = 1; i &nbsp;&lt;= 10; i++) {
+        for (int i = 1; i <= 10; i++) {
             System.out.println(i);
         }
     }
 }</code></pre>
-          <pre>int i = 1 → inicia el contador.
-i &nbsp;&lt;= 10 → condición para seguir.
-i++ → incrementa en 1.</pre>
-          <p></p>
-          <p>Resultado en Terminal:</p>
-          <pre>1
+              <pre>
+int i = 1 → inicia el contador.
+i <= 10 → condición para seguir.
+i++ → incrementa en 1.</pre
+              >
+              <p>Resultado en Terminal:</p>
+              <pre>
+1
 2
 3
 4
@@ -387,106 +493,160 @@ i++ → incrementa en 1.</pre>
 7
 8
 9
-10</pre>
-          <br>
-          <strong>Video Recomendado!</strong> <br>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/V7U96RG6MPE?si=QPdJ8uebTE5G2yin&amp;start=58" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <br>
-          <!--- Implementacion del Quiz--->
-          <div class="topic-header" > 🧠 Quiz Básico </div>
-          <div class="topic-content">
-            <div class="quiz-box">
-              <p>Que quiere decir i++</p>
-              <button onclick="answerQuiz(1,false)"> Ejecuta instrucciones una sola vez</button>
-              <button onclick="answerQuiz(1,true)"> El contador Aumenta en 1 </button>
-              <p>Que imprime el siguiente Codigo Java?</p>
-              <pre><code>public class Main {
+10</pre
+              >
+              <br />
+              <strong>Video Recomendado!</strong> <br />
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/V7U96RG6MPE?si=QPdJ8uebTE5G2yin&amp;start=58"
+                title="YouTube video player"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+              <br />
+              <!-- Implementacion del Quiz -->
+              <div class="topic-header" onclick="toggleTopic(this)">
+                🧠 Quiz Básico
+              </div>
+              <div class="topic-content">
+                <div class="quiz-box">
+                  <p>Que quiere decir i++</p>
+                  <button onclick="answerQuiz(1, false)">
+                    Ejecuta instrucciones una sola vez
+                  </button>
+                  <button onclick="answerQuiz(1, true)">
+                    El contador Aumenta en 1
+                  </button>
+                  <p>Que imprime el siguiente Codigo Java?</p>
+                  <pre><code>public class Main {
     public static void main(String[] args) {
         
-        for (int i = 1; i &nbsp;&lt;= 5; i++) {
+        for (int i = 1; i <= 5; i++) {
             System.out.println("7 x " + i + " = " + (7 * i));
         }
     }
 }</code></pre>
-              <button onclick="answerQuiz(2,false)"> La tabla del 5 </button>
-              <button onclick="answerQuiz(2,true)"> La tabla del 7 del 0 hasta el 5</button>
-              <button onclick="answerQuiz(2,false)"> La tabla del 7 completa </button>
-              <button onclick="finishQuiz()"> 🎯 Finalizar Quiz </button>
-            </div>
-          </div>
-          <br>
-          <strong>CICLO WHILE</strong>
-          <p>El ciclo while repite instrucciones mientras una condición sea verdadera.</p>
-          <pre><code>while (condición) {
+                  <button onclick="answerQuiz(2, false)">La tabla del 5</button>
+                  <button onclick="answerQuiz(2, true)">
+                    La tabla del 7 del 0 hasta el 5
+                  </button>
+                  <button onclick="answerQuiz(2, false)">
+                    La tabla del 7 completa
+                  </button>
+                  <button onclick="finishQuiz()">🎯 Finalizar Quiz</button>
+                </div>
+              </div>
+              <br />
+              <strong>CICLO WHILE</strong>
+              <p>
+                El ciclo while repite instrucciones mientras una condición sea
+                verdadera.
+              </p>
+              <pre><code>while (condición) {
    // instrucciones
 }</code></pre>
-          <strong>Ejemplo Prectico</strong>
-          <p>Se desea contar de 1 al 5 usando el bucle while</p>
-          <pre><code>public class Main {
+              <strong>Ejemplo Prectico</strong>
+              <p>Se desea contar de 1 al 5 usando el bucle while</p>
+              <pre><code>public class Main {
     public static void main(String[] args) {
         int i = 1;
 
-        while (i &nbsp;&lt;= 5) {
+        while (i <= 5) {
             System.out.println(i);
             i++;
         }
     } 
 }</code></pre>
-          <br>
-          <strong>Explicacion del Ejemplo: </strong>
-          <p>1. Se crea una variable llamada contador con valor 1. <br>
-            2. El ciclo verifica si contador &nbsp;&lt;= 5. <br>
-            3. Si se cumple, imprime el número. <br>
-            4. Luego aumenta el contador con contador++. <br>
-            Cuando contador llega a 6, la condición ya no se cumple y el ciclo termina.</p>
-          <p>El programa seguirá ejecutándose mientras i sea menor o igual a 5.</p>
-          Se usa cuando no sabemos exactamente cuántas veces se repetirá una acción, ya que depende de que una condición se cumpla. <br>
-          <strong>Idea clave: </strong> Primero evalúa la condición y, si es verdadera, ejecuta el bloque de instrucciones. <br>
-          <p></p>
-          <strong>NO OLVIDES ESTO!</strong>
-          <p>Es un error muy comun en los Principiantes "Olvidar actualizar la variable."</p>
-          <p>Esto esta incorrecto: </p>
-          <pre><code>int i = 1;
+              <br />
+              <strong>Explicacion del Ejemplo: </strong>
+              <p>
+                1. Se crea una variable llamada contador con valor 1. <br />
+                2. El ciclo verifica si contador <= 5. <br />
+                3. Si se cumple, imprime el número. <br />
+                4. Luego aumenta el contador con contador++. <br />
+                Cuando contador llega a 6, la condición ya no se cumple y el
+                ciclo termina.
+              </p>
+              <p>
+                El programa seguirá ejecutándose mientras i sea menor o igual a
+                5.
+              </p>
+              Se usa cuando no sabemos exactamente cuántas veces se repetirá una
+              acción, ya que depende de que una condición se cumpla. <br />
+              <strong>Idea clave: </strong> Primero evalúa la condición y, si es
+              verdadera, ejecuta el bloque de instrucciones. <br />
+              <strong>NO OLVIDES ESTO!</strong>
+              <p>
+                Es un error muy comun en los Principiantes "Olvidar actualizar
+                la variable."
+              </p>
+              <p>Esto esta incorrecto:</p>
+              <pre><code>int i = 1;
 
-while (i &nbsp;&lt;= 5) {
+while (i <= 5) {
    System.out.println(i);
 }</code></pre>
-          <p>Esto genera un bucle infinito porque i nunca cambia, lo q podria petar tu pc 😂.</p>
-          lo correcto es usar la variable <code>i++;</code> 
-          
-          <!--- Implementacion del Quiz 2--->
-          <div class="topic-header" > 🧠 Quiz Básico </div>
-          <div class="topic-content">
-            <div class="quiz-box">
-              <p>¿Qué hace el ciclo while?</p>
-              <button onclick="answerQuiz(1,false)">Solo sirve para sumar números </button>
-              <button onclick="answerQuiz(1,true)">Repite instrucciones mientras una condición sea verdadera</button>
-              <button onclick="answerQuiz(1,false)">Ejecuta instrucciones una sola vez </button>
-              <p>Que imprime el siguiente Codigo?</p>
-              <pre><code>public class Main {
+              <p>
+                Esto genera un bucle infinito porque i nunca cambia, lo q podria
+                petar tu pc 😂.
+              </p>
+              lo correcto es usar la variable <code>i++;</code>
+
+              <!-- Implementacion del Quiz 2 -->
+              <div class="topic-header" onclick="toggleTopic(this)">
+                🧠 Quiz Básico
+              </div>
+              <div class="topic-content">
+                <div class="quiz-box">
+                  <p>¿Qué hace el ciclo while?</p>
+                  <button onclick="answerQuiz(1, false)">
+                    Solo sirve para sumar números
+                  </button>
+                  <button onclick="answerQuiz(1, true)">
+                    Repite instrucciones mientras una condición sea verdadera
+                  </button>
+                  <button onclick="answerQuiz(1, false)">
+                    Ejecuta instrucciones una sola vez
+                  </button>
+                  <p>Que imprime el siguiente Codigo?</p>
+                  <pre><code>public class Main {
     public static void main(String[] args) {
     int i = 1;
 
-while (i &nbsp;&lt;= 3) {
+while (i <= 3) {
     System.out.println(i);
     i++;
   }
  }
 }</code></pre>
-              <button onclick="answerQuiz(2,true)">1 2 3 </button>
-              <button onclick="answerQuiz(2,flase)">1 2 3 4 5</button>
-              <button onclick="answerQuiz(2,false)"> Bucle Infinito</button>
-              <button onclick="finishQuiz()"> 🎯 Finalizar Quiz </button>
-              <p></p>
-              <strong>RETO PRO</strong>
-              <p>Demuestra todo lo q has aprendido en esta seccion por ahora como todo un pro de Java!</p>
-              <p>Que Imprime el siguiente Codigo?</p>
-              <pre><code>public class Main {
+                  <button onclick="answerQuiz(2, true)">1 2 3</button>
+                  <button onclick="answerQuiz(2, false)">1 2 3 4 5</button>
+                  <button onclick="answerQuiz(2, false)">Bucle Infinito</button>
+                  <button onclick="finishQuiz()">🎯 Finalizar Quiz</button>
+                  <strong>RETO PRO</strong>
+                  <p>
+                    Demuestra todo lo q has aprendido en esta seccion por ahora
+                    como todo un pro de Java!
+                  </p>
+                  <p>Que Imprime el siguiente Codigo?</p>
+                  <pre><code>public class Main {
     public static void main(String[] args) {
         int i = 1;
-        int suma = 0
+        int suma = 0;
 
-        while (i &nbsp;&lt;= 5) {
+        while (i <= 5) {
             if (i % 2 == 0) {
                 suma += i;
             }
@@ -496,50 +656,66 @@ while (i &nbsp;&lt;= 3) {
         System.out.println(suma);
     }
 }</code></pre>
-              <button onclick="answerQuiz(3,false)">6</button>
-              <button onclick="answerQuiz(3,true)">No compila</button>
-              <button onclick="answerQuiz(3,false)">10</button>
-              <button onclick="finishQuiz()"> 🎯 Finalizar Quiz </button>
+                  <button onclick="answerQuiz(3, false)">6</button>
+                  <button onclick="answerQuiz(3, true)">No compila</button>
+                  <button onclick="answerQuiz(3, false)">10</button>
+                  <button onclick="finishQuiz()">🎯 Finalizar Quiz</button>
+                </div>
+              </div>
             </div>
           </div>
+
+          <!-- BOTÓN FINAL -->
+          <button class="start-btn" onclick="completeModule(1)">
+            🎯 Terminar módulo
+          </button>
         </div>
       </div>
-      
-      <!-- BOTÓN FINAL -->
-      <button class="start-btn" onclick="completeModule(1)"> 🎯 Terminar módulo </button>
-    </div>
-  </div>
-  
-  <!-- Modulo 2 -->
-  <div class="module locked" data-id="2">
-    <div class="module-header" onclick="toggleModule(this)"> Programacion Orientada a Objetos (POO) </div>
-    <div class="module-content">
-      <div class="topic">
-        <div class="topic-header" onclick="toggleTopic(this)"> <strong>ENTENDIENDO LAS BASES</strong> </div>
-        <div class="topic-content">
-          <p> La Programación Orientada a Objetos (POO) es un paradigma de programación
-              que organiza el software en objetos, los cuales representan entidades del mundo real 
-              mediante atributos y comportamientos.</p>
-            <strong>Que es un Objeto?</strong>
-            <p>Un objeto es una instancia de una clase.</p>
-            <strong>Por ejemplo:</strong> <br>
-            Un carro tiene atributos: color, marca, velocidad. <br>
-            Un carro tiene comportamientos: acelerar, frenar, encender. <br>
-            <strong>En Programacion: </strong>
-            <pre><code>Carro miCarro = new Carro();</code></pre>
-            <p>Carro: Clase <br>
-            miCarro: Objeto </p><br>
-            <strong>Que es una Clase</strong>
-            <p>Una clase es un molde o plantilla que define las características y comportamientos de un tipo de objeto. <br>
-              Es como un plano que describe cómo se ve y qué puede hacer un objeto, pero no es el objeto en sí.</p>
-              <strong>Ejemplo:</strong> <br>
-              La clase "Perro" podría tener atributos como "raza", "edad" y "color", y métodos como "ladrar()" o "comer()". <br>
+
+      <!-- Modulo 2 -->
+      <div class="module locked" data-id="2">
+        <div class="module-header" onclick="toggleModule(this)">
+          Programacion Orientada a Objetos (POO)
+        </div>
+        <div class="module-content">
+          <div class="topic">
+            <div class="topic-header" onclick="toggleTopic(this)">
+              <strong>ENTENDIENDO LAS BASES</strong>
+            </div>
+            <div class="topic-content">
+              <p>
+                La Programación Orientada a Objetos (POO) es un paradigma de
+                programación que organiza el software en objetos, los cuales
+                representan entidades del mundo real mediante atributos y
+                comportamientos.
+              </p>
+              <strong>Que es un Objeto?</strong>
+              <p>Un objeto es una instancia de una clase.</p>
+              <strong>Por ejemplo:</strong> <br />
+              Un carro tiene atributos: color, marca, velocidad. <br />
+              Un carro tiene comportamientos: acelerar, frenar, encender. <br />
+              <strong>En Programacion: </strong>
+              <pre><code>Carro miCarro = new Carro();</code></pre>
+              <p>
+                Carro: Clase <br />
+                miCarro: Objeto
+              </p>
+              <br />
+              <strong>Que es una Clase</strong>
+              <p>
+                Una clase es un molde o plantilla que define las características
+                y comportamientos de un tipo de objeto. <br />
+                Es como un plano que describe cómo se ve y qué puede hacer un
+                objeto, pero no es el objeto en sí.
+              </p>
+              <strong>Ejemplo:</strong> <br />
+              La clase "Perro" podría tener atributos como "raza", "edad" y
+              "color", y métodos como "ladrar()" o "comer()". <br />
               Cuando creas un objeto a partir de esta clase, como "miPerro", ese
-              objeto tendrá sus propios valores para esos atributos y podrá usar los métodos definidos en la clase. <br>
+              objeto tendrá sus propios valores para esos atributos y podrá usar
+              los métodos definidos en la clase. <br />
               <strong>Ejemplo en Java:</strong>
-              <pre><code>
-public class Perro {
-// 1. Definimos la clase "Perro" (El molde)
+              <pre><code>// 1. Definimos la clase "Perro" (El molde)
 class Perro {
     // Atributos (Características)
     String raza;
@@ -575,73 +751,108 @@ public class Main {
         miPerro.ladrar();
         miPerro.comer();
     }
-   }
-  }</code></pre>
-                  <div class="topic-header" > 🧠 Quiz Básico </div>
-          <div class="topic-content">
-            <div class="quiz-box">
-              <p>Que es una Clase?</p>
-              <button onclick="answerQuiz(1,false)">Es una variable especial que almacena datos en la memoria del computador</button>
-              <button onclick="answerQuiz(1,true)">Es un molde, plantilla o plano (blueprint) en la programación orientada a objetos</button>
-              <p>Que es un Objeto </p>
-              <button onclick="answerQuiz(2,false)">Es la estructura de código donde se programan las funciones principales</button>
-              <button onclick="answerQuiz(2,true)">Es una instancia concreta de una clase que tiene sus propios valores para los atributos y puede ejecutar los métodos definidos en su molde.</button>
-              <button onclick="answerQuiz(2,false)">Ninguna de las anteriores</button>
-              <button onclick="finishQuiz()"> 🎯 Finalizar Quiz </button>
+}</code></pre>
+              <div class="topic-header" onclick="toggleTopic(this)">
+                🧠 Quiz Básico
+              </div>
+              <div class="topic-content">
+                <div class="quiz-box">
+                  <p>Que es una Clase?</p>
+                  <button onclick="answerQuiz(1, false)">
+                    Es una variable especial que almacena datos en la memoria
+                    del computador
+                  </button>
+                  <button onclick="answerQuiz(1, true)">
+                    Es un molde, plantilla o plano (blueprint) en la
+                    programación orientada a objetos
+                  </button>
+                  <p>Que es un Objeto</p>
+                  <button onclick="answerQuiz(2, false)">
+                    Es la estructura de código donde se programan las funciones
+                    principales
+                  </button>
+                  <button onclick="answerQuiz(2, true)">
+                    Es una instancia concreta de una clase que tiene sus propios
+                    valores para los atributos y puede ejecutar los métodos
+                    definidos en su molde.
+                  </button>
+                  <button onclick="answerQuiz(2, false)">
+                    Ninguna de las anteriores
+                  </button>
+                  <button onclick="finishQuiz()">🎯 Finalizar Quiz</button>
+                </div>
+              </div>
             </div>
           </div>
-
-        </div> 
-      </div>
-      <button class="start-btn" onclick="completeModule(2)"> Terminar módulo </button>
-    </div>
-  </div>
-
-<!-- Modulo 3 -->
-  <div class="module locked" data-id="3">
-    <div class="module-header" onclick="toggleModule(this)"> Tu Primera Pagina WEB </div>
-    <div class="module-content">
-      <div class="topic">
-        <div class="topic-header" onclick="toggleTopic(this)"> Que es una Pagina WEB? </div>
-        <div class="topic-content">
-          <p> Proximamente</p>
+          <button class="start-btn" onclick="completeModule(2)">
+            Terminar módulo
+          </button>
         </div>
       </div>
-      <button class="start-btn" onclick="completeModule(3)"> Terminar módulo </button>
-    </div>
-  </div>
-  <div class="module locked" data-id="4">
-    <div class="module-header" onclick="toggleModule(this)"> Proximamente </div>
-    <div class="module-content">
-      <div class="topic">
-        <div class="topic-header" onclick="toggleTopic(this)"> Proximamente </div>
-        <div class="topic-content">
-          <p> Proximamente</p>
-        </div>
-      </div>
-      <button class="start-btn" onclick="completeModule(4)"> Terminar módulo </button>
-    </div>
-  </div>
-  <div class="module locked" data-id="5">
-    <div class="module-header" onclick="toggleModule(this)"> 🎨 Proyecto Final de Modulo </div>
-    <div class="module-content">
-      <div class="topic">
-        <div class="topic-header" onclick="toggleTopic(this)"> Proximamente </div>
-        <div class="topic-content">
-          <p> Proximamente</p>
-        </div>
-      </div>
-      <button class="start-btn" onclick="completeModule(5)"> Terminar módulo </button>
-    </div>
-  </div>
-</section>
 
-<div id="popup" class="popup"></div>
-<div id="levelUp" class="levelup">LEVEL UP 🔥</div>
-<div id="winScreen" class="win-screen">
-  <h2>🎉 MÓDULO COMPLETADO</h2>
-  <p> +80 XP ganado</p>
-</div>
-<script src="script.js"></script>
-</body>
+      <!-- Modulo 3 -->
+      <div class="module locked" data-id="3">
+        <div class="module-header" onclick="toggleModule(this)">
+          Tu Primera Pagina WEB
+        </div>
+        <div class="module-content">
+          <div class="topic">
+            <div class="topic-header" onclick="toggleTopic(this)">
+              Que es una Pagina WEB?
+            </div>
+            <div class="topic-content">
+              <p>Proximamente</p>
+            </div>
+          </div>
+          <button class="start-btn" onclick="completeModule(3)">
+            Terminar módulo
+          </button>
+        </div>
+      </div>
+      <div class="module locked" data-id="4">
+        <div class="module-header" onclick="toggleModule(this)">
+          Proximamente
+        </div>
+        <div class="module-content">
+          <div class="topic">
+            <div class="topic-header" onclick="toggleTopic(this)">
+              Proximamente
+            </div>
+            <div class="topic-content">
+              <p>Proximamente</p>
+            </div>
+          </div>
+          <button class="start-btn" onclick="completeModule(4)">
+            Terminar módulo
+          </button>
+        </div>
+      </div>
+      <div class="module locked" data-id="5">
+        <div class="module-header" onclick="toggleModule(this)">
+          Proyecto Final de Modulo
+        </div>
+        <div class="module-content">
+          <div class="topic">
+            <div class="topic-header" onclick="toggleTopic(this)">
+              Proximamente
+            </div>
+            <div class="topic-content">
+              <p>Proximamente</p>
+            </div>
+          </div>
+          <button class="start-btn" onclick="completeModule(5)">
+            Terminar módulo
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div id="popup" class="popup"></div>
+    <div id="levelUp" class="levelup">LEVEL UP 🔥</div>
+    <div id="winScreen" class="win-screen">
+      <h2>🎉 MÓDULO COMPLETADO</h2>
+      <p>+80 XP ganado</p>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

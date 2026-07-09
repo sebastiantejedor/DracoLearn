@@ -9,6 +9,21 @@ body {
   color: #222;
   overflow-x: hidden;
 }
+/* Tabla */
+table,
+th,
+td {
+  border: 0.5px solid black;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 0.8px;
+}
+th,
+td {
+  text-align: center;
+}
 
 /* NAVBAR */
 .navbar {
