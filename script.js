@@ -118,6 +118,15 @@ function showNextPopup() {
   }, 1000);
 }
 
+// poppup en Mantenimiento
+function showDevPopup() {
+  document.getElementById("devPopup").classList.add("show");
+}
+
+function closeDevPopup() {
+  document.getElementById("devPopup").classList.remove("show");
+}
+
 /*WIN SCREEN*/
 
 function showWinScreen() {

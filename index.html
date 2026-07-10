@@ -13,9 +13,38 @@
     />
   </head>
 
+  <div id="devPopup" class="dev-popup-overlay">
+    <div class="dev-popup-box">
+      <p>🚧 Esta opción está en desarrollo.</p>
+      <button onclick="closeDevPopup()">Cerrar</button>
+    </div>
+  </div>
+
   <body>
     <!-- Pantalla splash de bienvenida -->
     <div id="introScreen" class="intro-screen">
+      <div
+        aria-label="Orange and tan hamster running in a metal wheel"
+        role="img"
+        class="wheel-and-hamster"
+      >
+        <div class="wheel"></div>
+        <div class="hamster">
+          <div class="hamster__body">
+            <div class="hamster__head">
+              <div class="hamster__ear"></div>
+              <div class="hamster__eye"></div>
+              <div class="hamster__nose"></div>
+            </div>
+            <div class="hamster__limb hamster__limb--fr"></div>
+            <div class="hamster__limb hamster__limb--fl"></div>
+            <div class="hamster__limb hamster__limb--br"></div>
+            <div class="hamster__limb hamster__limb--bl"></div>
+            <div class="hamster__tail"></div>
+          </div>
+        </div>
+        <div class="spoke"></div>
+      </div>
       <h2>Bienvenido Futuro Developer</h2>
       <h1>DracoLearn Academy</h1>
       <p>Tu camino para convertirte en Programador comienza aquí.</p>
@@ -24,7 +53,17 @@
       <button onclick="startApp()">Comenzar</button>
     </div>
 
-    <header class="navbar">DRACOLEARN (Aprende desde 0)</header>
+    <header class="navbar">
+      DRACOLEARN (Aprende desde 0)
+
+      <!-- Bton de plan pro -->
+      <button class="button" onclick="showDevPopup()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24">
+          <path d="m18 0 8 12 10-8-4 20H4L0 4l10 8 8-12z"></path>
+        </svg>
+        Desbloquear Todo
+      </button>
+    </header>
     <section class="hud">
       <div class="xp-box">
         Nivel <span id="level">1</span>
@@ -36,6 +75,7 @@
       <div class="achievements" id="achievements">Modulos Completados: 0</div>
     </section>
     <div class="badges" id="badges"></div>
+
     <section class="roadmap">
       <!-- MODULO 1 -->
       <div class="module active" data-id="1">
