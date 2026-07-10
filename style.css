@@ -868,73 +868,188 @@ code {
   }
 }
 
-/* RESPONSIVE  */
+/* Responsive para celulares */
 
 @media (max-width: 768px) {
-  .navbar {
-    font-size: 20px;
-    padding: 18px;
+  body {
+    font-size: 16px;
   }
 
+  /* NAVBAR */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 14px 10px;
+    font-size: 20px;
+  }
+
+  .navbar .button {
+    font-size: 0.8rem;
+    padding: 0.5em 0.8rem;
+  }
+
+  /* HUD */
   .hud {
     flex-direction: column;
-    align-items: center;
-    gap: 18px;
+    padding: 12px;
+    gap: 12px;
   }
 
   .xp-box {
     width: 100%;
   }
 
+  /* ROADMAP */
   .roadmap {
-    padding: 15px;
+    padding: 20px 12px;
+    gap: 14px;
   }
 
+  /* MODULE */
   .module {
-    padding: 16px;
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .module:hover {
+    transform: none;
   }
 
   .module-header {
-    font-size: 16px;
-  }
-
-  .topic-header {
+    padding: 12px;
     font-size: 15px;
   }
 
-  .topic-content {
+  /* TOPIC */
+  .topic-header {
+    padding: 10px;
     font-size: 14px;
   }
 
-  .start-btn {
-    width: 100%;
-    padding: 14px;
+  .topic-content {
+    font-size: 13px;
+    padding: 0 8px;
   }
 
-  .challenge-btn {
+  .topic.active .topic-content {
+    padding: 8px;
+  }
+
+  .topic:hover {
+    transform: none;
+  }
+
+  /* CODE */
+  code,
+  pre {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  pre code {
+    font-size: 12px;
+  }
+
+  /* TABLAS */
+  @media (max-width: 768px) {
+    .data-table {
+      display: table;
+      width: 100%;
+      font-size: 11px;
+    }
+
+    .data-table th,
+    .data-table td {
+      padding: 5px 4px;
+      white-space: normal;
+      word-break: break-word;
+    }
+
+    .data-table-wrapper {
+      overflow-x: auto;
+    }
+  }
+
+  /* IFRAME (video) */
+  iframe {
     width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* BOTONES */
+  .start-btn,
+  .challenge-btn,
+  .reset-btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 14px;
   }
 
   .quiz-box button {
-    padding: 14px;
+    font-size: 13px;
+    padding: 10px;
   }
 
-  .popup {
-    left: 15px;
-    right: 15px;
-    top: 15px;
+  .challenge-box input {
+    font-size: 13px;
+    padding: 10px;
   }
 
+  /* POPUPS */
+  .dev-popup-box,
   .win-screen {
-    width: 90%;
-    padding: 25px;
+    width: 85%;
+    max-width: 280px;
+    padding: 1.5rem;
   }
 
   .intro-screen h1 {
-    font-size: 36px;
+    font-size: 32px;
   }
 
-  .intro-screen p {
-    font-size: 15px;
+  .intro-screen h2 {
+    font-size: 18px;
+  }
+
+  .intro-screen p,
+  .intro-screen h3 {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+
+  @media (max-width: 768px) {
+    .wheel-and-hamster {
+      transform: scale(0.75);
+      margin-bottom: -10px;
+    }
+  }
+  .levelup {
+    font-size: 28px;
+  }
+
+  .badges {
+    gap: 6px;
+  }
+
+  .badge {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    font-size: 17px;
+  }
+
+  .intro-screen h1 {
+    font-size: 26px;
+  }
+
+  .module-header {
+    font-size: 14px;
   }
 }
