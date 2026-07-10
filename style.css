@@ -366,6 +366,24 @@ code {
 #varResult {
   font-weight: 600;
 }
+
+.topic-header {
+  cursor: default;
+}
+
+.quiz-title {
+  display: block;
+  text-align: center;
+  color: #c1121f;
+  font-weight: bold;
+}
+
+.quiz-title-final {
+  display: block;
+  font-weight: bold;
+  font-size: 16px;
+}
+
 /*POPUP*/
 .popup {
   position: fixed;
@@ -491,7 +509,6 @@ code {
   }
 }
 
-/* pruba de responsive */
 pre {
   overflow-x: auto;
 
@@ -510,7 +527,6 @@ code {
 }
 
 /* Hamaster popup screen */
-/* From Uiverse.io by Nawsome */
 .wheel-and-hamster {
   --dur: 1s;
   position: relative;
