@@ -994,7 +994,7 @@ public class Main {
                 "
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
-              ></iframe>
+              ></iframe> <br />
               <strong>Ejemplo Real:</strong> <br />
               <p> 
                 Un automóvil es un buen ejemplo de abstracción. <br />
@@ -1003,7 +1003,7 @@ public class Main {
                 - Frenar <br />
                 - Girar <br />
                 - Encender <br /> <br />
-                Pero no necesitas saber exactamente cómo funciona el motor, cómo se inyecta el combustible o cómo funciona el sistema de frenos. Solo utilizas las funciones que necesitas y el automóvil se encarga de los procesos internos.
+                Pero no necesitas saber exactamente cómo funciona el motor, cómo se inyecta el combustible o cómo funciona el sistema de frenos. Solo utilizas las funciones que necesitas y el automóvil se encarga de los procesos internos. <br /> <br />
                 <strong>Ejemplo en Java:</strong> <br />
                 <pre><code>abstract class Automovil {
 // Métodos abstractos
@@ -1028,9 +1028,54 @@ class carro extends Automovil {
     public void encender() {
         System.out.println("El carro está encendido.");
     }
-}
-                </code></pre>
+} </code></pre>
               </p>
+              <strong>HERENCIA:</strong> <br />
+              <p>
+                La herencia es un principio de la programación orientada a objetos
+                que permite crear nuevas clases basadas en clases existentes,
+                heredando sus atributos y métodos. <br />
+                Esto facilita la reutilización del código, ya que las clases
+                derivadas pueden aprovechar la funcionalidad de las clases base
+                y agregar o modificar comportamientos según sea necesario. <br />
+                La herencia promueve la organización jerárquica de las clases y
+                fomenta la creación de relaciones entre objetos, lo que mejora
+                la estructura y mantenibilidad del software.
+              </p>
+              <strong>Ventajas de la herencia:</strong> <br />
+              - Reutilización de código: Las clases derivadas pueden aprovechar 
+              la funcionalidad de las clases base, evitando la duplicación de
+                código. <br />
+              - Organización jerárquica: Permite estructurar las clases en una
+                jerarquía, facilitando la comprensión y el mantenimiento del
+                software. <br />
+              - Extensibilidad: Las clases derivadas pueden agregar o modificar
+                comportamientos según sea necesario, adaptándose a nuevas
+                necesidades sin afectar la clase base. <br /> <br />
+              <strong>Ejemplo en Java:</strong> <br />
+              <pre><code>class Animal {
+    void comer() {
+        System.out.println("El animal está comiendo.");
+    }
+}
+</code></pre>
+              <p>
+                En este ejemplo, la clase Animal tiene un método comer() que
+                imprime un mensaje indicando que el animal está comiendo.
+              </p>
+              <pre><code>class Perro extends Animal {
+    void ladrar() {
+        System.out.println("El perro está ladrando.");
+    }
+}
+</code></pre>
+              <p>
+                En este ejemplo, la clase Perro hereda de la clase Animal y agrega un método ladrar() que imprime un mensaje indicando que el perro está ladrando.
+              </p>
+
+              <strong>Videos Recomendados:</strong> <br />
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/VsdxCQofUl0?si=IdewVdNnyYOGTDKk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/9NynVRpZzv4?si=Oz_5u6yw0YRKUX-D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
           <button class="start-btn" onclick="completeModule(3)">
