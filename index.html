@@ -392,7 +392,7 @@ if (nota >= 90) {
                 <br />
                 Las demás ya no se revisan
               </p>
-              <strong>🧠 if anidados (if dentro de otro if)</strong>
+              <strong>if anidados (if dentro de otro if)</strong>
               <p>
                 Se usan cuando necesitas validar algo dentro de otra condición.
               </p>
@@ -562,7 +562,7 @@ i++ → incrementa en 1.</pre
               <br />
               <!-- Implementacion del Quiz -->
               <div class="topic-header" onclick="toggleTopic(this)">
-                <span class="quiz-title">🧠 Quiz Básico</span>
+                <span class="quiz-title">Quiz Básico</span>
               </div>
               <div class="topic-content">
                 <div class="quiz-box">
@@ -716,7 +716,7 @@ while (i <= 3) {
 
           <!-- BOTÓN FINAL -->
           <button class="start-btn" onclick="completeModule(1)">
-            🎯 Terminar módulo
+            Terminar módulo
           </button>
         </div>
       </div>
@@ -810,7 +810,7 @@ public class Main {
     }
 }</code></pre>
               <div class="topic-header" onclick="toggleTopic(this)">
-                🧠 Quiz Básico
+                Quiz Básico
               </div>
               <div class="topic-content">
                 <div class="quiz-box">
@@ -836,7 +836,7 @@ public class Main {
                   <button onclick="answerQuiz(2, false)">
                     Ninguna de las anteriores
                   </button>
-                  <button onclick="finishQuiz()">🎯 Finalizar Quiz</button>
+                  <button onclick="finishQuiz()">Finalizar Quiz</button>
                 </div>
               </div>
 
@@ -861,7 +861,7 @@ public class Main {
                 creación de aplicaciones de mayor complejidad <br />
                 Estos pilares son: <br />
                 <br />
-                <strong>Encapsulamiento:</strong> <br />
+                <strong>ENCAPSULAMIENTO:</strong> <br />
                 El encapsulamiento consiste en proteger los datos internos de un
                 objeto, restringiendo el acceso directo y controlándolo mediante
                 métodos. <br />
@@ -873,7 +873,32 @@ public class Main {
                 - getters <br />
                 - setters <br />
                 <br />
+                <strong>Ejemplo en Java:</strong> <br />
+
+                <pre><code>public class Cuenta {
+    private double saldo;
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+}</code></pre><br />
+              </p>
+              <p>
+                1. La variable saldo es privada, lo que significa que no puede
+                ser accedida directamente desde fuera de la clase. <br />
+                2. Se proporcionan métodos públicos (setSaldo y getSaldo) para
+                permitir el acceso controlado al saldo. <br />
+                3. Esto protege la integridad de los datos y permite validar o
+                controlar cómo se accede y modifica el saldo, evitando cambios
+                no deseados o inconsistentes.
+              </p>
+              
                 <strong>Videos recomendados:</strong> <br />
+
                 <iframe
                   width="560"
                   height="315"
@@ -911,6 +936,100 @@ public class Main {
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen
                 ></iframe>
+              </p>
+              <strong>ABSTRACCION:</strong> <br />
+              <p>
+                La abstracción es un principio de la programación orientada a
+                objetos que permite simplificar la complejidad de un sistema al
+                enfocarse en los aspectos esenciales y relevantes de un objeto,
+                ignorando los detalles innecesarios. <br />
+                Se logra mediante el uso de clases abstractas e interfaces,
+                permitiendo definir comportamientos y características comunes
+                sin necesidad de implementar todos los detalles, lo que facilita
+                la reutilización del código y mejora la organización del
+                software. <br />
+                ventajas: <br />
+                - Facilita la comprensión del sistema al centrarse en lo
+                esencial.
+                <br />
+                - Permite la creación de jerarquías de clases y relaciones entre
+                objetos.
+                <br />
+                - Fomenta la reutilización del código al definir comportamientos
+                comunes en clases abstractas e interfaces.
+              </p>
+              <strong>Video recomendado:</strong> <br />
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/oBO01Cx_YwQ?si=za8D9pv1LGbljNKc"
+                title="YouTube video player"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/LhXfUiTFCZw?si=_PE6zMoueXIbDR1Z"
+                title="YouTube video player"
+                frameborder="0"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+              <strong>Ejemplo Real:</strong> <br />
+              <p> 
+                Un automóvil es un buen ejemplo de abstracción. <br />
+                Cuando conduces, utilizas elementos como: <br />
+                - Acelerar <br />
+                - Frenar <br />
+                - Girar <br />
+                - Encender <br /> <br />
+                Pero no necesitas saber exactamente cómo funciona el motor, cómo se inyecta el combustible o cómo funciona el sistema de frenos. Solo utilizas las funciones que necesitas y el automóvil se encarga de los procesos internos.
+                <strong>Ejemplo en Java:</strong> <br />
+                <pre><code>abstract class Automovil {
+// Métodos abstractos
+public abstract void acelerar();
+public abstract void frenar();
+public abstract void girar();
+public abstract void encender();
+}
+
+class carro extends Automovil {
+
+    @Override
+    public void acelerar() {
+        System.out.println("El carro está acelerando.");
+    }
+    public void frenar() {
+        System.out.println("El carro está frenando.");
+    }
+    public void girar() {
+        System.out.println("El carro está girando.");
+    }
+    public void encender() {
+        System.out.println("El carro está encendido.");
+    }
+}
+                </code></pre>
               </p>
             </div>
           </div>
