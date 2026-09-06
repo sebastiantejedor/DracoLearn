@@ -839,11 +839,28 @@ public class Main {
                   <button onclick="finishQuiz()">🎯 Finalizar Quiz</button>
                 </div>
               </div>
+
+              <!-- Seccion2 -->
+                <button class="start-btn" onclick="completeModule(3)">
+                  Terminar módulo
+                </button>
+              </div>
             </div>
           </div>
-          <button class="start-btn" onclick="completeModule(2)">
-            Terminar módulo
-          </button>
+
+          <div class="module-content">
+            <div class="topic">
+              <div class="topic-header" onclick="toggleTopic(this)">
+                <strong>PILARES FUNDAMENTALES</strong>
+              </div>
+              <div class="topic-content">
+                <p>Proximamente</p>
+              </div>
+            </div>
+            <button class="start-btn" onclick="completeModule(3)">
+              Terminar módulo
+            </button>
+          </div>
         </div>
       </div>
 
@@ -916,3 +933,19 @@ public class Main {
     <p>&copy; 2026 DracoSoft. Todos los derechos reservados.</p>
   </footer>
 </html>
+
+<!--               <div class="topic">
+                <div class="module-content">
+                
+                  <div class="topic-header" onclick="toggleTopic(this)">
+                    <strong>Subtema Principal</strong>
+                  </div>
+                  <div class="topic-content">
+                    <p>Proximamente</p>
+
+
+                  </div>
+                </div>
+              </div>
+              
+              -->
