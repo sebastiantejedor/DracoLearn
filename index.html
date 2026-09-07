@@ -757,7 +757,6 @@ while (i <= 3) {
                 Carro: Clase <br />
                 miCarro: Objeto
               </p>
-              <br />
               <strong>Que es una Clase</strong>
               <p>
                 Una clase es un molde o plantilla que define las características
@@ -1076,8 +1075,45 @@ class carro extends Automovil {
               <strong>Videos Recomendados:</strong> <br />
               <iframe width="560" height="315" src="https://www.youtube.com/embed/VsdxCQofUl0?si=IdewVdNnyYOGTDKk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               <iframe width="560" height="315" src="https://www.youtube.com/embed/9NynVRpZzv4?si=Oz_5u6yw0YRKUX-D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <p>
+                Es una buena práctica usar la herencia para modelar relaciones "es un" entre clases. Por ejemplo, un Perro "es un" Animal, por lo que tiene sentido que la clase Perro herede de la clase Animal. <br />
+                Es muy importante tener en cuenta que la herencia debe usarse con cuidado, ya que un uso excesivo o inapropiado puede llevar a una jerarquía de clases complicada y difícil de mantener. <br />
+                Es una de las características más poderosas de la programación orientada a objetos, pero también requiere un buen diseño y comprensión de las relaciones entre clases.
+              </p> <br />
+              <strong>POLIMORFISMO:</strong> <br />
+              <p>
+                El polimorfismo es un principio de la programación orientada a
+                objetos que permite que un objeto pueda tomar diferentes formas
+                o comportamientos según el contexto en el que se utilice. <br />
+                Esto significa que una misma interfaz o método puede ser
+                implementado de distintas maneras por diferentes clases, lo que
+                permite tratar a los objetos de manera uniforme y flexible. <br />
+                El polimorfismo facilita la reutilización del código, mejora la
+                extensibilidad del software y permite crear sistemas más
+                dinámicos y adaptables a cambios futuros.
+              </p>
+              <strong>Ejemplo en Java:</strong> <br />
+              <pre><code>class Animal {
+    void hacerSonido() {
+        System.out.println("El animal hace un sonido.");
+    }
+}
+class Perro extends Animal {
+    @Override
+    void hacerSonido() {
+        System.out.println("El perro ladra: ¡Guau! ¡Guau!");
+    }
+}
+class Gato extends Animal {
+    @Override
+    void hacerSonido() {
+        System.out.println("El gato maúlla: ¡Miau! ¡Miau!");
+    } 
+}
+</code></pre>
             </div>
           </div>
+
           <button class="start-btn" onclick="completeModule(3)">
             Terminar módulo
           </button>
