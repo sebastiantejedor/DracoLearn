@@ -1111,6 +1111,71 @@ class Gato extends Animal {
     } 
 }
 </code></pre>
+
+<!-- Implementacion del Quiz modulo 2 seccion 2 -->
+              <div class="topic-header" onclick="toggleTopic(this)">
+                <span class="quiz-title">Quiz Básico</span>
+              </div>
+              <div class="topic-content">
+                <div class="quiz-box">
+                  <p>¿Cuantos Pilares Fundamentales tiene la Programación Orientada a Objetos?</p>
+                  <button onclick="answerQuiz(1, false)">
+                    5
+                  </button>
+                  <button onclick="answerQuiz(1, true)">
+                    4
+                  </button>
+                  <button onclick="answerQuiz(1, false)">
+                    3
+                  </button>
+                  <p>Que imprime el siguiente Codigo?</p>
+                  <pre><code>public class Estudiante {
+    String nombre;
+    String codigo;
+    int semestre;
+
+    void mostrarInfo() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Código: " + codigo);
+        System.out.println("Semestre: " + semestre);
+    }
+}
+</code></pre> <br />
+
+<pre><code>public class Main {
+    public static void main(String[] args) {
+        Estudiante estudiante1 = new Estudiante();
+        estudiante1.nombre = "Esmerejildo Perez Loro";
+        estudiante1.codigo = "89046352";
+        estudiante1.semestre = 8;
+
+        estudiante1.mostrarInfo();
+
+    }
+}
+</code></pre>
+                  <button onclick="answerQuiz(2, false)">
+                  Nombre: Nombre <br/> 
+                  Codigo: Codigo <br/>
+                  Semestre: Semestre <br/>
+                  </button>
+
+                  <button onclick="answerQuiz(2, false)">
+                  No Compila
+                  </button>
+
+                  <button onclick="answerQuiz(2, true)">
+                  Nombre: Esmerejildo Perez Loro <br/>
+                  Codigo: 89046352 <br/>
+                  Semestre: 8 <br/>
+                </button>
+
+                  <button onclick="finishQuiz()">
+                    <span class="quiz-title-final">¡Finalizar Quiz!</span> <br/>
+                  </button>
+                  
+                </div>
+              </div>
             </div>
           </div>
 
