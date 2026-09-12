@@ -1185,736 +1185,297 @@ class Gato extends Animal {
         </div>
               <div class="topic-content">
                 <p>
-                    <strong>Programación Orientada a Objetos (POO):</strong> Es un paradigma de programación que organiza el código alrededor de objetos. Los objetos representan entidades que tienen datos y comportamientos. La POO permite crear programas más organizados, reutilizables, fáciles de mantener y ampliar. <br />
-                    <strong>Paradigma de programación:</strong> Es una forma o estilo de organizar y desarrollar programas. La Programación Orientada a Objetos es uno de los paradigmas más utilizados. <br />
-                    <strong>Clase:</strong> Es una plantilla o molde que define cómo serán los objetos. Una clase puede contener atributos, métodos y constructores. Por ejemplo, una clase Persona puede definir que todas las personas tendrán un nombre y una edad. <br />
-                    <strong>Objeto:</strong> Es una instancia concreta de una clase. Si Persona es el molde, un objeto puede ser una persona específica llamada "Carlos" con 20 años. Cada objeto puede tener sus propios valores. <br />
-                    <strong>Instancia:</strong> Es un objeto creado a partir de una clase. Cuando usamos new en Java normalmente estamos creando una nueva instancia de una clase. <br />
-                    <strong>Estado:</strong> Es la información que tiene un objeto en un momento determinado. Está representado principalmente por sus atributos. Por ejemplo, una persona puede tener el estado: nombre = "Carlos", edad = 20. <br />
-                    <strong>Comportamiento:</strong> Son las acciones que un objeto puede realizar. En Java, estas acciones normalmente se representan mediante métodos. <br />
-                    <strong>Identidad:</strong> Es lo que permite distinguir un objeto de otro. Dos objetos pueden tener los mismos datos, pero seguir siendo objetos diferentes. <br />
-                    <strong>Atributo:</strong> Es una variable declarada dentro de una clase que representa una característica o dato de los objetos. Por ejemplo, nombre, edad y precio pueden ser atributos. <br />
-                    <strong>Variable de instancia:</strong> Es un atributo que pertenece a cada objeto individualmente. Cada objeto puede tener un valor diferente para esa variable. <br />
-                    <strong>Variable de clase:</strong> Es una variable declarada con <code>static</code>. Pertenece a la clase y es compartida por las instancias de esa clase. <br />
-                    <strong>Método:</strong> Es un bloque de código que representa una acción o comportamiento de un objeto o de una clase. Puede recibir datos mediante parámetros y puede devolver un resultado. <br />
-                    <strong>Parámetro:</strong>
-                    Es una variable que aparece en la declaración de un método y recibe un valor cuando el método es llamado. <br />
-                    <strong>Argumento:</strong>
-                    Es el valor que realmente enviamos a un método cuando lo llamamos. <br />
-                    <strong>Valor de retorno:</strong>
-                    Es el resultado que un método devuelve mediante la palabra <code>return</code>. <br />
-                    <strong>void:</strong>
-                    Indica que un método no devuelve ningún valor. <br />
-                    <strong>Firma de un método:</strong>
-                    Está relacionada con el nombre del método y sus parámetros. En Java permite distinguir métodos sobrecargados. <br />
-                    <strong>Constructor:</strong>
-                    Es un método especial utilizado para inicializar objetos. Tiene el mismo nombre de la clase y no tiene tipo de retorno. Se ejecuta cuando se utiliza <code>new</code>. <br />
-                    <strong>Constructor por defecto:</strong>
-                    Es el constructor sin parámetros que el compilador puede proporcionar automáticamente cuando la clase no declara ningún constructor. <br />
-                    <strong>Constructor personalizado:</strong>
-                    Es un constructor creado por el programador para inicializar el objeto con los datos que necesite. <br />
-                    <strong>this:</strong>
-                    Es una referencia al objeto actual. Se utiliza, entre otras cosas, para diferenciar atributos de parámetros cuando tienen el mismo nombre. <br />
-                    <strong>new:</strong>
-                    Es una palabra clave utilizada para crear objetos o instancias de clases. <br />
-                    <strong>Referencia:</strong>
-                    Es una variable que permite acceder a un objeto almacenado en memoria. La variable no contiene directamente todo el objeto, sino una referencia al mismo. <br />
-                    <strong>null:</strong>
-                    Representa la ausencia de una referencia a un objeto. Una variable de tipo objeto puede tener el valor <code>null</code>. <br />
-                    <strong>Memoria:</strong>
-                    Es el espacio donde el programa almacena temporalmente datos y objetos mientras se está ejecutando. <br />
-                    <strong>Heap:</strong>
-                    Es una zona de memoria donde Java almacena principalmente los objetos creados dinámicamente. <br />
-                    <strong>Stack:</strong>
-                    Es una zona de memoria utilizada para almacenar información relacionada con las llamadas a métodos, como variables locales y referencias. <br />
-                    <strong>Garbage Collector:</strong>
-                    Es el mecanismo automático de Java encargado de identificar y liberar memoria ocupada por objetos que ya no pueden ser utilizados por el programa. <br />
-                    <strong>Encapsulamiento:</strong>
-                    Es el principio que protege los datos internos de un objeto, evitando que sean modificados directamente sin control. Normalmente se logra utilizando atributos privados y métodos públicos para acceder a ellos. <br />
-                    <strong>Abstracción:</strong>
-                    Permite representar solamente las características importantes de un objeto y ocultar detalles internos que no son necesarios para utilizarlo. <br />
-                    <strong>Herencia:</strong>
-                    Permite crear una clase nueva a partir de otra clase existente. La nueva clase puede reutilizar atributos y métodos de la clase padre. <br />
-                    <strong>Polimorfismo:</strong>
-                    Permite que una misma referencia pueda utilizar objetos de diferentes clases y que el comportamiento ejecutado dependa del objeto real. <br />
-                    <strong>Clase padre:</strong>
-                    Es la clase de la que otra clase hereda características y comportamientos. También puede llamarse superclase. <br />
-                    <strong>Clase hija:</strong>
-                    Es una clase que hereda de otra clase. También se conoce como subclase. <br />
-                    <strong>Superclase:</strong>
-                    Es otra forma de llamar a la clase padre dentro de una relación de herencia. <br />
-                    <strong>Subclase:</strong>
-                    Es otra forma de llamar a la clase hija dentro de una relación de herencia. <br />
-                    <strong>super:</strong>
-                    Es una palabra clave utilizada para acceder a elementos de la clase padre, como constructores o métodos. <br />
-                    <strong>extends:</strong>
-                    Es la palabra clave utilizada en Java para indicar que una clase hereda de otra clase. <br />
-                    <strong>implements:</strong>
-                    Es la palabra clave utilizada cuando una clase implementa una o más interfaces. <br />
-                    <strong>Interface:</strong>
-                    Es una estructura que define un contrato que las clases pueden implementar. Permite establecer comportamientos que una clase debe proporcionar. <br />
-                    <strong>Contrato:</strong>
-                    Es el conjunto de reglas que una clase debe cumplir cuando implementa una interfaz. <br />
-                    <strong>Clase abstracta:</strong>
-                    Es una clase que sirve como base para otras clases y que no puede ser instanciada directamente. Puede contener métodos normales y métodos abstractos. <br />
-                    <strong>Método abstracto:</strong>
-                    Es un método declarado sin implementación dentro de una clase abstracta. Las clases hijas deben proporcionar su implementación cuando corresponda. <br />
-                    <strong>abstract:</strong>
-                    Es una palabra clave utilizada para declarar clases y métodos abstractos. <br />
-                    <strong>public:</strong>
-                    Es un modificador de acceso que permite que un elemento sea accesible desde cualquier clase que tenga acceso a él. <br />
-                    <strong>private:</strong>
-                    Es un modificador de acceso que limita el acceso directo al elemento únicamente a la clase donde fue declarado. Es muy utilizado para aplicar encapsulamiento. <br />
-                    <strong>protected:</strong>
-                    Permite acceder a un elemento desde la misma clase, clases del mismo paquete y clases hijas según las reglas de acceso de Java. <br />
-                    <strong>default:</strong>
-                    Cuando no se escribe un modificador de acceso, el elemento tiene acceso de paquete. Puede utilizarse desde clases que pertenecen al mismo paquete. <br />
-                    <strong>Modificador de acceso:</strong>
-                    Determina desde dónde puede utilizarse una clase, atributo, método o constructor. Los principales son <code>public</code>, <code>private</code> y <code>protected</code>, además del acceso de paquete. <br />
-                    <strong>static:</strong>
-                    Indica que un atributo o método pertenece a la clase y no a una instancia específica. Puede utilizarse sin crear un objeto. <br />
-                    <strong>Método estático:</strong>
-                    Es un método declarado con <code>static</code>. Se puede llamar utilizando el nombre de la clase. <br />
-                    <strong>Atributo estático:</strong>
-                    Es un atributo compartido por todas las instancias de una clase. <br />
-                    <strong>final:</strong>
-                    Indica que algo no puede modificarse de la misma manera que un elemento normal. Una variable <code>final</code> no puede recibir otro valor después de ser inicializada, un método <code>final</code> no puede sobrescribirse y una clase <code>final</code> no puede heredarse. <br />
-                    <strong>Constante:</strong>
-                    Es un valor que no debe cambiar durante la ejecución del programa. En Java normalmente se representa utilizando <code>static final</code>. <br />
-                    <strong>this():</strong>
-                    Permite llamar a otro constructor de la misma clase. Debe utilizarse como primera instrucción del constructor. <br />
-                    <strong>super():</strong>
-                    Permite llamar al constructor de la clase padre. Debe utilizarse como primera instrucción del constructor cuando se utiliza explícitamente. <br />
-                    <strong>Sobrecarga de métodos (Overloading):</strong>
-                    Ocurre cuando una misma clase tiene varios métodos con el mismo nombre pero diferentes parámetros. Permite realizar operaciones similares con diferentes tipos o cantidades de datos. <br />
-                    <strong>Sobrescritura de métodos (Overriding):</strong>
-                    Ocurre cuando una clase hija proporciona su propia implementación de un método heredado de la clase padre. <br />
-                    <strong>@Override:</strong>
-                    Es una anotación que indica que un método está sobrescribiendo un método heredado. Ayuda a detectar errores en el código. <br />
-                    <strong>@Overload:</strong>
-                    No es una anotación estándar necesaria en Java para sobrecarga. La sobrecarga se identifica automáticamente mediante diferentes listas de parámetros. <br />
-                    <strong>Binding:</strong>
-                    Es el proceso mediante el cual Java determina qué implementación de un método debe utilizar. Puede ocurrir en diferentes momentos dependiendo del tipo de llamada. <br />
-                    <strong>Enlace estático:</strong>
-                    También llamado early binding. Se determina durante la compilación en situaciones como la sobrecarga de métodos. <br />
-                    <strong>Enlace dinámico:</strong>
-                    También llamado late binding. En métodos sobrescritos, Java determina durante la ejecución qué implementación debe utilizar según el objeto real. <br />
-                    <strong>Polimorfismo de compilación:</strong>
-                    Se relaciona principalmente con la sobrecarga de métodos, donde el compilador determina qué método utilizar según los parámetros. <br />
-                    <strong>Polimorfismo de ejecución:</strong>
-                    Se produce principalmente mediante herencia e interfaces y permite que una referencia de un tipo general ejecute el comportamiento específico del objeto real. <br />
-                    <strong>Upcasting:</strong>
-                    Es convertir o tratar un objeto de una clase hija como si fuera una referencia de su clase padre. Generalmente es seguro y puede realizarse automáticamente. <br />
-                    <strong>Downcasting:</strong>
-                    Es convertir una referencia de una clase padre hacia una clase hija. Debe hacerse con cuidado porque el objeto realmente debe ser una instancia de la clase hija. <br />
-                    <strong>instanceof:</strong>
-                    Es un operador que permite comprobar si un objeto pertenece a una determinada clase o implementa una determinada interfaz. <br />
-                    <strong>Clase Object:</strong>
-                    Es la clase raíz de la jerarquía de clases de Java. Todas las clases heredan directa o indirectamente de <code>Object</code>. <br />
-                    <strong>toString():</strong>
-                    Es un método heredado de <code>Object</code> que permite obtener una representación textual de un objeto. Puede sobrescribirse para mostrar información útil. <br />
-                    <strong>equals():</strong>
-                    Es un método utilizado para comparar objetos según una definición de igualdad. Puede sobrescribirse para establecer qué significa que dos objetos sean iguales. <br />
-                    <strong>==:</strong>
-                    Cuando se utiliza con referencias de objetos, normalmente compara si ambas referencias apuntan al mismo objeto. No debe confundirse con <code>equals()</code>. <br />
-                    <strong>hashCode():</strong>
-                    Devuelve un valor entero asociado al objeto. Es especialmente importante cuando los objetos se utilizan en estructuras como <code>HashMap</code> y <code>HashSet</code>. <br />
-                    <strong>Contrato equals-hashCode:</strong>
-                    Si dos objetos son considerados iguales mediante <code>equals()</code>, deben devolver el mismo valor mediante <code>hashCode()</code>. <br />
-                    <strong>Composición:</strong>
-                    Es una relación fuerte entre objetos donde un objeto contiene o está formado por otros objetos. Cuando el objeto principal desaparece, los objetos que forman parte de él normalmente dejan de tener sentido dentro de esa relación. <br />
-                    <strong>Agregación:</strong>
-                    Es una relación entre objetos en la que un objeto contiene otros objetos, pero estos pueden existir independientemente del objeto que los agrupa. <br />
-                    <strong>Asociación:</strong>
-                    Representa una relación general entre dos clases. Por ejemplo, un profesor puede estar relacionado con varios estudiantes. <br />
-                    <strong>Dependencia:</strong>
-                    Ocurre cuando una clase utiliza temporalmente otra clase para realizar una tarea. <br />
-                    <strong>Relación "es un":</strong>
-                    Representa normalmente una relación de herencia. Por ejemplo, un perro "es un" animal. <br />
-                    <strong>Relación "tiene un":</strong>
-                    Representa normalmente composición o agregación. Por ejemplo, un automóvil "tiene un" motor. <br />
-                    <strong>Acoplamiento:</strong>
-                    Representa el nivel de dependencia entre diferentes clases o componentes. Un bajo acoplamiento facilita modificar una parte del sistema sin afectar demasiado a las demás. <br />
-                    <strong>Cohesión:</strong>
-                    Indica qué tan relacionadas están las responsabilidades de una clase. Una clase con alta cohesión normalmente tiene responsabilidades relacionadas y bien definidas. <br />
-                    <strong>Responsabilidad:</strong>
-                    Es aquello que una clase debe conocer o hacer dentro de un sistema. Una buena POO busca asignar responsabilidades de manera clara. <br />
-                    <strong>Inmutabilidad:</strong>
-                    Significa que el estado de un objeto no puede cambiar después de haber sido creado. Las clases inmutables suelen utilizar atributos privados y finales y no proporcionan métodos que permitan modificar su estado. <br />
-                    <strong>Mutabilidad:</strong>
-                    Significa que el estado interno de un objeto puede cambiar después de haber sido creado. <br />
-                    <strong>Clase inmutable:</strong>
-                    Es una clase cuyos objetos no pueden cambiar su estado después de ser creados. <br />
-                    <strong>Getter:</strong>
-                    Es un método utilizado para obtener el valor de un atributo privado. Normalmente comienza con <code>get</code>. <br />
-                    <strong>Setter:</strong>
-                    Es un método utilizado para modificar el valor de un atributo privado. Normalmente comienza con <code>set</code>. <br />
-                    <strong>Encapsulamiento mediante getters y setters:</strong>
-                    Permite controlar cómo se consultan y modifican los atributos de una clase en lugar de permitir acceso directo a ellos. <br />
-                    <strong>Validación:</strong>
-                    Es el proceso de comprobar que los datos recibidos cumplen determinadas reglas antes de almacenarlos o utilizarlos. <br />
-                    <strong>Inyección de dependencias:</strong>
-                    Es una técnica en la que una clase recibe desde fuera los objetos que necesita en lugar de crearlos directamente. Esto ayuda a reducir el acoplamiento y facilita las pruebas. <br />
-                    <strong>Clase interna:</strong>
-                    Es una clase declarada dentro de otra clase. Puede utilizarse cuando una clase auxiliar solo tiene sentido dentro de la clase que la contiene. <br />
-                    <strong>Clase anidada estática:</strong>
-                    Es una clase declarada dentro de otra clase utilizando <code>static</code>. No necesita una instancia de la clase externa para ser utilizada. <br />
-                    <strong>Clase interna no estática:</strong>
-                    Es una clase declarada dentro de otra clase que está asociada a una instancia de la clase externa. <br />
-                    <strong>Clase local:</strong>
-                    Es una clase declarada dentro de un método o bloque de código. <br />
-                    <strong>Clase anónima:</strong>
-                    Es una clase sin nombre que se crea y utiliza normalmente en el mismo lugar donde se necesita. Fue muy utilizada antes de la popularización de las expresiones lambda. <br />
-                    <strong>Enum:</strong>
-                    Es un tipo especial utilizado para representar un conjunto fijo de constantes. Por ejemplo, los días de la semana o estados de un pedido. <br />
-                    <strong>enumeración:</strong>
-                    Es el concepto que representa un conjunto limitado y conocido de valores posibles. En Java se implementa mediante <code>enum</code>. <br />
-                    <strong>Record:</strong>
-                    Es una característica de Java diseñada para representar principalmente datos inmutables de forma compacta. El compilador genera automáticamente elementos como constructor, accesores, <code>equals()</code>, <code>hashCode()</code> y <code>toString()</code>. <br />
-                    <strong>Sealed class:</strong>
-                    Es una clase que permite controlar qué clases pueden heredarse de ella. Se utiliza para limitar una jerarquía de herencia. <br />
-                    <strong>Permits:</strong>
-                    Se utiliza junto con clases selladas para indicar qué clases tienen permitido extender o implementar una determinada clase o interfaz. <br />
-                    <strong>Modularidad:</strong>
-                    Consiste en dividir un sistema grande en partes más pequeñas y organizadas que pueden desarrollarse y mantenerse de forma independiente. <br />
-                    <strong>Paquete (Package):</strong>
-                    Es una forma de organizar clases e interfaces relacionadas. También ayuda a controlar el acceso y evitar conflictos entre nombres. <br />
-                    <strong>import:</strong>
-                    Permite utilizar clases de otros paquetes sin tener que escribir su nombre completamente calificado. <br />
-                    <strong>package:</strong>
-                    Indica a qué paquete pertenece una clase. Normalmente aparece al inicio del archivo Java. <br />
-                    <strong>Nombre completamente calificado:</strong>
-                    Es el nombre completo de una clase incluyendo su paquete. Por ejemplo, <code>java.util.ArrayList</code>. <br />
-                    <strong>Interfaz funcional:</strong>
-                    Es una interfaz que contiene exactamente un método abstracto. Puede utilizarse con expresiones lambda. <br />
-                    <strong>@FunctionalInterface:</strong>
-                    Es una anotación que indica que una interfaz está diseñada para tener un único método abstracto. <br />
-                    <strong>Expresión lambda:</strong>
-                    Es una forma compacta de representar una función o comportamiento que puede utilizarse especialmente con interfaces funcionales. <br />
-                    <strong>Referencia a método:</strong>
-                    Permite utilizar un método existente como una implementación de una interfaz funcional mediante una sintaxis más corta. <br />
-                    <strong>Método default:</strong>
-                    Es un método dentro de una interfaz que puede tener una implementación. Permite agregar comportamiento a interfaces sin obligar inmediatamente a todas las clases implementadoras a definirlo. <br />
-                    <strong>Método static en una interfaz:</strong>
-                    Es un método que pertenece a la interfaz y puede ser llamado mediante el nombre de la interfaz. <br />
-                    <strong>Herencia múltiple:</strong>
-                    Es la posibilidad de heredar directamente de varias clases. Java no permite que una clase extienda múltiples clases, pero sí permite implementar múltiples interfaces. <br />
-                    <strong>Implementación múltiple:</strong>
-                    Una clase puede implementar varias interfaces, obteniendo diferentes contratos de comportamiento. <br />
-                    <strong>Interfaz vs clase abstracta:</strong>
-                    Una interfaz representa principalmente un contrato de comportamiento, mientras que una clase abstracta puede proporcionar una base común con estado y comportamiento compartido. <br />
-                    <strong>Principio de responsabilidad única:</strong>
-                    Indica que una clase debería tener una responsabilidad principal bien definida y una razón clara para cambiar. <br />
-                    <strong>Principio abierto/cerrado:</strong>
-                    Indica que el software debería estar abierto para extensión pero cerrado para modificaciones innecesarias. <br />
-                    <strong>Principio de sustitución de Liskov:</strong>
-                    Indica que los objetos de una clase hija deberían poder utilizarse donde se espera un objeto de la clase padre sin romper el comportamiento esperado del programa. <br />
-                    <strong>Principio de segregación de interfaces:</strong>
-                    Indica que es preferible utilizar interfaces pequeñas y específicas en lugar de obligar a las clases a implementar métodos que no necesitan. <br />
-                    <strong>Principio de inversión de dependencias:</strong>
-                    Indica que las partes importantes de un sistema deberían depender de abstracciones y no directamente de implementaciones concretas. <br />
-                    <strong>SOLID:</strong>
-                    Es un conjunto de cinco principios de diseño orientado a objetos: responsabilidad única, abierto/cerrado, sustitución de Liskov, segregación de interfaces e inversión de dependencias. <br />
-                    <strong>DRY (Don't Repeat Yourself):</strong>
-                    Principio que busca evitar repetir la misma lógica innecesariamente. La reutilización mediante métodos, clases y otras estructuras ayuda a mantener el código. <br />
-                    <strong>KISS (Keep It Simple):</strong>
-                    Principio que recomienda mantener las soluciones lo más simples y claras posible, evitando complejidad innecesaria. <br />
-                    <strong>YAGNI (You Aren't Gonna Need It):</strong>
-                    Principio que recomienda no desarrollar funcionalidades que actualmente no son necesarias. <br />
-                    <strong>Reutilización de código:</strong>
-                    Consiste en utilizar código existente nuevamente en diferentes partes del programa en lugar de escribir la misma solución desde cero. La POO facilita esto mediante clases, métodos, herencia y composición. <br />
-                    <strong>Modularización:</strong>
-                    Consiste en dividir un programa en componentes más pequeños y organizados para facilitar su comprensión y mantenimiento. <br />
-                    <strong>Acoplamiento bajo:</strong>
-                    Significa que las clases dependen poco unas de otras. Esto facilita los cambios y el mantenimiento. <br />
-                    <strong>Cohesión alta:</strong>
-                    Significa que los elementos de una clase están muy relacionados con una responsabilidad común. <br />
-                    <strong>Delegación:</strong>
-                    Consiste en hacer que un objeto encargue una tarea a otro objeto especializado en realizarla. <br />
-                    <strong>Composición sobre herencia:</strong>
-                    Es una recomendación de diseño que propone utilizar relaciones de composición cuando sea más adecuado, en lugar de crear jerarquías de herencia innecesariamente profundas. <br />
-
-                    <strong>Diseño orientado a objetos:</strong>
-                    Es el proceso de identificar objetos, responsabilidades y relaciones para construir un sistema utilizando principios de POO. <br />
-
-                    <strong>Modelo:</strong>
-                    Es una representación de una parte del sistema que contiene los datos y reglas necesarias para representar un concepto. <br />
-                    <strong>Entidad:</strong>
-                    Es un objeto que representa algo importante dentro del dominio de una aplicación, normalmente con identidad propia. <br />
-
-                    <strong>Objeto de valor:</strong>
-                    Es un objeto cuyo significado depende principalmente de sus valores y no de una identidad individual. <br />
-
-                    <strong>DTO (Data Transfer Object):</strong>
-                    Es un objeto utilizado principalmente para transportar datos entre diferentes partes de una aplicación. <br />
-
-                    <strong>POJO:</strong>
-                    Significa Plain Old Java Object. Es un objeto Java sencillo que no necesita heredar de una clase especial ni seguir un framework específico para representar sus datos y comportamiento. <br />
-
-                    <strong>Bean:</strong>
-                    Es un término utilizado para objetos Java que siguen determinadas convenciones, como tener constructor sin argumentos y métodos de acceso. El significado exacto depende del contexto. <br />
-
-                    <strong>JavaBean:</strong>
-                    Es una clase Java que tradicionalmente sigue convenciones como tener un constructor público sin argumentos, atributos privados y métodos getters/setters apropiados. <br />
-
-                    <strong>Objeto anémico:</strong>
-                    Es un objeto que contiene principalmente datos y muy poco comportamiento. Puede ser apropiado en algunos casos, pero puede ser problemático si las reglas del dominio quedan completamente fuera del objeto. <br />
-
-                    <strong>Clase utilitaria:</strong>
-                    Es una clase utilizada para agrupar métodos relacionados, normalmente estáticos, que realizan operaciones auxiliares. <br />
-
-                    <strong>Clase singleton:</strong>
-                    Es un patrón de diseño que busca garantizar que exista una única instancia de una clase y proporcionar un punto de acceso a ella. Debe utilizarse con cuidado porque puede introducir acoplamiento global. <br />
-
-                    <strong>Patrón de diseño:</strong>
-                    Es una solución general y reutilizable para problemas frecuentes de diseño de software. No es código que se copia literalmente, sino una idea de organización. <br />
-
-                    <strong>Singleton:</strong>
-                    Es un patrón creacional que restringe una clase a una única instancia en un determinado contexto. <br />
-
-                    <strong>Factory:</strong>
-                    Es un patrón utilizado para centralizar o encapsular la creación de objetos. <br />
-
-                    <strong>Factory Method:</strong>
-                    Es un patrón que permite delegar la creación de objetos a métodos especializados o a subclases. <br />
-
-                    <strong>Abstract Factory:</strong>
-                    Es un patrón que permite crear familias de objetos relacionados sin especificar directamente sus clases concretas. <br />
-
-                    <strong>Builder:</strong>
-                    Es un patrón utilizado para construir objetos complejos paso a paso, especialmente cuando tienen muchos parámetros opcionales. <br />
-
-                    <strong>Prototype:</strong>
-                    Es un patrón que crea nuevos objetos a partir de otros objetos existentes, normalmente mediante clonación o copia controlada. <br />
-
-                    <strong>Adapter:</strong>
-                    Es un patrón estructural que permite que dos componentes con interfaces incompatibles puedan trabajar juntos. <br />
-
-                    <strong>Decorator:</strong>
-                    Es un patrón que permite agregar responsabilidades o comportamientos a un objeto sin modificar directamente su clase. <br />
-
-                    <strong>Facade:</strong>
-                    Es un patrón que proporciona una interfaz sencilla para utilizar un sistema o conjunto de clases más complejo. <br />
-
-                    <strong>Proxy:</strong>
-                    Es un objeto que actúa como intermediario para controlar o gestionar el acceso a otro objeto. <br />
-
-                    <strong>Composite:</strong>
-                    Es un patrón que permite tratar objetos individuales y grupos de objetos de una manera uniforme. <br />
-
-                    <strong>Observer:</strong>
-                    Es un patrón que permite que varios objetos sean notificados cuando cambia el estado de otro objeto. <br />
-
-                    <strong>Strategy:</strong>
-                    Es un patrón que permite definir diferentes algoritmos o comportamientos y elegir cuál utilizar durante la ejecución. <br />
-
-                    <strong>State:</strong>
-                    Es un patrón que permite que el comportamiento de un objeto cambie dependiendo de su estado interno. <br />
-
-                    <strong>Command:</strong>
-                    Es un patrón que convierte una acción o solicitud en un objeto, permitiendo almacenarla, ejecutarla o deshacerla. <br />
-
-                    <strong>Template Method:</strong>
-                    Es un patrón que define la estructura general de un algoritmo y permite que las subclases personalicen determinados pasos. <br />
-
-                    <strong>MVC:</strong>
-                    Es un patrón arquitectónico que separa una aplicación en Modelo, Vista y Controlador. El modelo gestiona los datos y lógica, la vista presenta información y el controlador coordina las acciones. <br />
-
-                    <strong>Excepción:</strong>
-                    Es un evento que ocurre durante la ejecución y que puede interrumpir el flujo normal del programa. Java permite manejar excepciones mediante estructuras como <code>try</code>, <code>catch</code> y <code>finally</code>. <br />
-
-                    <strong>Exception:</strong>
-                    Es una clase de Java utilizada como base para muchas excepciones que pueden manejarse durante la ejecución de un programa. <br />
-
-                    <strong>RuntimeException:</strong>
-                    Es una categoría de excepciones que ocurren durante la ejecución y que no requieren obligatoriamente ser declaradas o capturadas por el compilador. <br />
-
-                    <strong>Checked Exception:</strong>
-                    Es una excepción que el compilador obliga a manejar o declarar en determinados casos. <br />
-
-                    <strong>Unchecked Exception:</strong>
-                    Es una excepción que no necesita ser obligatoriamente capturada o declarada. Generalmente pertenece a <code>RuntimeException</code>. <br />
-
-                    <strong>try:</strong>
-                    Define un bloque de código donde puede ocurrir una excepción. <br />
-
-                    <strong>catch:</strong>
-                    Permite capturar y manejar una excepción producida dentro de un bloque <code>try</code>. <br />
-
-                    <strong>finally:</strong>
-                    Es un bloque que normalmente se ejecuta después del procesamiento de <code>try</code> y <code>catch</code>, independientemente de si ocurrió una excepción, con algunas excepciones relacionadas con la terminación de la JVM. <br />
-
-                    <strong>throw:</strong>
-                    Permite lanzar manualmente una excepción desde el programa. <br />
-
-                    <strong>throws:</strong>
-                    Se utiliza en la declaración de un método para indicar que este puede lanzar determinadas excepciones. <br />
-
-                    <strong>Excepción personalizada:</strong>
-                    Es una clase de excepción creada por el programador para representar errores específicos de una aplicación o dominio. <br />
-
-                    <strong>Encadenamiento de excepciones:</strong>
-                    Consiste en conservar la causa original de una excepción cuando se lanza otra excepción, ayudando a conocer el origen del problema. <br />
-
-                    <strong>Genéricos:</strong>
-                    Permiten crear clases, interfaces y métodos que trabajan con diferentes tipos de datos manteniendo seguridad de tipos. <br />
-
-                    <strong>Tipo genérico:</strong>
-                    Es un tipo parametrizado que permite especificar qué tipo de dato manejará una estructura. Por ejemplo, <code>ArrayList&lt;String&gt;</code>. <br />
-
-                    <strong>Clase genérica:</strong>
-                    Es una clase que recibe uno o más tipos como parámetros. <br />
-
-                    <strong>Método genérico:</strong>
-                    Es un método que define sus propios parámetros de tipo y puede trabajar con diferentes tipos de datos. <br />
-
-                    <strong>List:</strong>
-                    Es una colección ordenada que permite almacenar elementos y puede contener elementos repetidos. <br />
-
-                    <strong>ArrayList:</strong>
-                    Es una implementación de <code>List</code> basada en un arreglo dinámico. Permite almacenar y acceder fácilmente a elementos mediante posiciones. <br />
-
-                    <strong>Set:</strong>
-                    Es una colección que normalmente no permite elementos duplicados según las reglas de igualdad de los objetos. <br />
-
-                    <strong>HashSet:</strong>
-                    Es una implementación de <code>Set</code> que utiliza una estructura basada en hashing para almacenar elementos. <br />
-
-                    <strong>Map:</strong>
-                    Es una estructura que almacena asociaciones entre claves y valores. Cada clave se utiliza para localizar un valor. <br />
-
-                    <strong>HashMap:</strong>
-                    Es una implementación de <code>Map</code> que almacena pares clave-valor utilizando hashing. <br />
-
-                    <strong>Collection:</strong>
-                    Es una interfaz de Java que representa una agrupación de objetos y sirve como base para varias estructuras de colecciones. <br />
-
-                    <strong>Iterable:</strong>
-                    Es una interfaz que permite recorrer objetos mediante mecanismos como el ciclo <code>for-each</code>. <br />
-
-                    <strong>Iterator:</strong>
-                    Es un objeto utilizado para recorrer elementos de una colección de manera controlada. <br />
-
-                    <strong>Comparable:</strong>
-                    Es una interfaz que permite definir un orden natural para objetos de una clase mediante el método <code>compareTo()</code>. <br />
-
-                    <strong>Comparator:</strong>
-                    Es una interfaz que permite definir diferentes formas de comparar y ordenar objetos sin modificar necesariamente la clase de los objetos. <br />
-
-                    <strong>compareTo():</strong>
-                    Es el método utilizado por <code>Comparable</code> para comparar un objeto con otro. <br />
-
-                    <strong>Orden natural:</strong>
-                    Es la forma predeterminada en que una clase define cómo deben ordenarse sus objetos. <br />
-
-                    <strong>Encapsulación de colecciones:</strong>
-                    Consiste en controlar el acceso a las colecciones internas de una clase para evitar modificaciones no deseadas desde fuera. <br />
-
-                    <strong>Inyección de dependencias:</strong>
-                    Es una técnica en la que los objetos necesarios para una clase se proporcionan desde el exterior, reduciendo la responsabilidad de crear directamente esas dependencias. <br />
-
-                    <strong>Acoplamiento:</strong>
-                    Es el grado de dependencia entre componentes. Un diseño con menor acoplamiento suele ser más flexible y fácil de mantener. <br />
-
-                    <strong>Cohesión:</strong>
-                    Es el grado en que los elementos de una clase trabajan juntos para cumplir una responsabilidad relacionada. <br />
-
-                    <strong>API:</strong>
-                    Es un conjunto de clases, métodos, interfaces y reglas que permite que diferentes partes de un software interactúen entre sí. <br />
-
-                    <strong>JDK:</strong>
-                    Es el Java Development Kit. Contiene herramientas necesarias para desarrollar aplicaciones Java, incluyendo el compilador. <br />
-
-                    <strong>JRE:</strong>
-                    Es el entorno necesario para ejecutar aplicaciones Java. En versiones modernas de Java, el concepto está integrado de forma diferente dentro de la distribución del JDK. <br />
-
-                    <strong>JVM:</strong>
-                    Es la Java Virtual Machine, encargada de ejecutar el bytecode de Java. Permite que los programas Java puedan ejecutarse sobre diferentes sistemas operativos que tengan una JVM compatible. <br />
-
-                    <strong>Bytecode:</strong>
-                    Es el código intermedio generado por el compilador de Java a partir del código fuente. La JVM interpreta o compila este código para ejecutarlo. <br />
-
-                    <strong>Compilador:</strong>
-                    Es el programa que transforma el código fuente Java en bytecode. El compilador principal de Java es <code>javac</code>. <br />
-
-                    <strong>Código fuente:</strong>
-                    Es el código escrito por el programador en un lenguaje como Java antes de ser compilado. <br />
-
-                    <strong>Archivo .java:</strong>
-                    Es un archivo que contiene código fuente Java. <br />
-
-                    <strong>Archivo .class:</strong>
-                    Es un archivo que contiene bytecode Java generado después de la compilación. <br />
-
-                    <strong>Main:</strong>
-                    Es el método que tradicionalmente sirve como punto de entrada para ejecutar una aplicación Java independiente. <br />
-
-                    <strong>public static void main:</strong>
-                    Es la declaración tradicional del método principal que permite iniciar la ejecución de muchas aplicaciones Java. <br />
-
-                    <strong>Tipo de dato:</strong>
-                    Indica qué clase de información puede almacenar una variable. Puede ser primitivo o de referencia. <br />
-
-                    <strong>Tipo primitivo:</strong>
-                    Es uno de los tipos básicos de Java que no son objetos, como <code>int</code>, <code>double</code>, <code>char</code> y <code>boolean</code>. <br />
-
-                    <strong>Tipo de referencia:</strong>
-                    Es un tipo que permite almacenar una referencia a un objeto. Las clases, interfaces, arreglos y enums se manejan como tipos de referencia. <br />
-
-                    <strong>Wrapper:</strong>
-                    Es una clase que representa un tipo primitivo como objeto. Por ejemplo, <code>Integer</code> representa <code>int</code>. <br />
-
-                    <strong>Autoboxing:</strong>
-                    Es la conversión automática de un tipo primitivo a su clase wrapper correspondiente. <br />
-
-                    <strong>Unboxing:</strong>
-                    Es la conversión automática de un objeto wrapper a su tipo primitivo correspondiente. <br />
-
-                    <strong>String:</strong>
-                    Es una clase de Java utilizada para representar cadenas de texto. Los objetos <code>String</code> son inmutables. <br />
-
-                    <strong>Inmutabilidad de String:</strong>
-                    Significa que una vez creado un objeto <code>String</code>, su contenido no puede cambiar. Las operaciones que parecen modificarlo realmente producen nuevos objetos. <br />
-
-                    <strong>StringBuilder:</strong>
-                    Es una clase utilizada para construir y modificar cadenas de texto de manera eficiente cuando se realizan muchas modificaciones. <br />
-
-                    <strong>Clase utilitaria Arrays:</strong>
-                    Proporciona métodos para trabajar con arreglos, como ordenar, buscar y comparar. <br />
-
-                    <strong>Clase utilitaria Objects:</strong>
-                    Proporciona métodos auxiliares para trabajar con objetos, incluyendo comprobaciones de igualdad y valores nulos. <br />
-
-                    <strong>Programación modular:</strong>
-                    Consiste en separar el sistema en componentes con responsabilidades específicas que puedan trabajar juntos. <br />
-
-                    <strong>Arquitectura:</strong>
-                    Es la estructura general de un sistema de software y la forma en que sus componentes se relacionan. <br />
-
-                    <strong>Capa:</strong>
-                    Es una división lógica de una aplicación según responsabilidades. Por ejemplo, presentación, lógica de negocio y acceso a datos. <br />
-
-                    <strong>Modelo de dominio:</strong>
-                    Es la representación de los conceptos, reglas y relaciones importantes del problema que el software intenta resolver. <br />
-
-                    <strong>Lógica de negocio:</strong>
-                    Son las reglas y procesos que determinan cómo funciona una aplicación según el problema que intenta solucionar. <br />
-
-                    <strong>Responsabilidad de una clase:</strong>
-                    Es la tarea o conjunto de tareas relacionadas que una clase debe realizar dentro del sistema. <br />
-
-                    <strong>Principio de mínima sorpresa:</strong>
-                    Busca que las clases y métodos se comporten de una manera coherente y esperada para quien utiliza el código. <br />
-
-                    <strong>Refactorización:</strong>
-                    Es el proceso de mejorar la estructura interna del código sin cambiar su comportamiento externo esperado. <br />
-
-                    <strong>Legibilidad:</strong>
-                    Es qué tan fácil resulta para otra persona comprender el código. Los nombres claros, responsabilidades bien definidas y estructuras simples mejoran la legibilidad. <br />
-
-                    <strong>Mantenibilidad:</strong>
-                    Es la facilidad con la que un programa puede modificarse, corregirse o ampliarse. <br />
-
-                    <strong>Escalabilidad:</strong>
-                    Es la capacidad de un sistema para crecer sin que su estructura se vuelva inmanejable. <br />
-
-                    <strong>Test unitario:</strong>
-                    Es una prueba que verifica una parte pequeña y específica del programa, como un método o una clase. <br />
-
-                    <strong>Mock:</strong>
-                    Es un objeto simulado utilizado durante pruebas para reemplazar temporalmente una dependencia real. <br />
-
-                    <strong>Stub:</strong>
-                    Es un objeto o implementación simplificada que proporciona respuestas controladas durante una prueba. <br />
-
-                    <strong>Debug:</strong>
-                    Es el proceso de encontrar y corregir errores en un programa. <br />
-
-                    <strong>Bug:</strong>
-                    Es un error o comportamiento incorrecto dentro de un programa. <br />
-
-                    <strong>Buenas prácticas de POO:</strong>
-                    Consisten en utilizar nombres claros, encapsular los datos, asignar responsabilidades correctamente, evitar duplicación, reducir dependencias innecesarias y utilizar abstracciones cuando realmente aporten valor. <br />
-
-                    <strong>Clase concreta:</strong>
-                    Es una clase que puede ser instanciada directamente porque no es abstracta. <br />
-
-                    <strong>Clase final:</strong>
-                    Es una clase declarada con <code>final</code> que no puede ser extendida por otras clases. <br />
-
-                    <strong>Método final:</strong>
-                    Es un método que una subclase no puede sobrescribir. <br />
-
-                    <strong>Variable final:</strong>
-                    Es una variable a la que solo se puede asignar un valor una vez. <br />
-
-                    <strong>Constructor privado:</strong>
-                    Es un constructor declarado como <code>private</code>. Impide que otras clases creen directamente objetos utilizando ese constructor. Puede utilizarse en determinados patrones o clases utilitarias. <br />
-
-                    <strong>Clase abstracta vs clase concreta:</strong>
-                    Una clase abstracta sirve como base y no puede instanciarse directamente, mientras que una clase concreta sí puede utilizarse para crear objetos. <br />
-
-                    <strong>Objeto mutable vs inmutable:</strong>
-                    Un objeto mutable puede cambiar su estado después de crearse. Un objeto inmutable conserva el mismo estado durante toda su vida. <br />
-
-                    <strong>Herencia directa:</strong>
-                    Ocurre cuando una clase extiende directamente otra clase. <br />
-
-                    <strong>Herencia indirecta:</strong>
-                    Ocurre cuando una clase hereda de una clase que a su vez hereda de otra. <br />
-
-                    <strong>Jerarquía de clases:</strong>
-                    Es la estructura formada por clases relacionadas mediante herencia. <br />
-
-                    <strong>Clase base:</strong>
-                    Es una clase utilizada como punto de partida para otras clases mediante herencia. <br />
-
-                    <strong>Especialización:</strong>
-                    Consiste en crear una clase más específica a partir de una clase general. <br />
-
-                    <strong>Generalización:</strong>
-                    Consiste en identificar características comunes de varias clases y colocarlas en una clase más general. <br />
-
-                    <strong>Delegación de responsabilidades:</strong>
-                    Consiste en permitir que el objeto que tiene el conocimiento adecuado sea quien realice una determinada tarea. <br />
-
-                    <strong>Dependencia fuerte:</strong>
-                    Ocurre cuando una clase está muy ligada a una implementación específica, dificultando los cambios. <br />
-
-                    <strong>Dependencia débil:</strong>
-                    Ocurre cuando una clase depende de abstracciones o contratos y puede trabajar con diferentes implementaciones. <br />
-
-                    <strong>Abstracción de datos:</strong>
-                    Consiste en mostrar las operaciones importantes sobre los datos y ocultar la forma interna en que estos son almacenados o procesados. <br />
-
-                    <strong>Abstracción de comportamiento:</strong>
-                    Consiste en definir qué puede hacer un objeto sin obligar al usuario a conocer cómo internamente realiza esa acción. <br />
-
-                    <strong>Encapsulamiento vs abstracción:</strong>
-                    El encapsulamiento se enfoca en proteger y controlar el acceso al estado interno, mientras que la abstracción se enfoca en ocultar complejidad y mostrar solamente lo importante. <br />
-
-                    <strong>Herencia vs composición:</strong>
-                    La herencia representa normalmente una relación "es un", mientras que la composición representa una relación "tiene un". La composición suele ofrecer mayor flexibilidad cuando no existe una verdadera relación de especialización. <br />
-
-                    <strong>Polimorfismo por interfaz:</strong>
-                    Permite que diferentes clases implementen la misma interfaz y puedan ser utilizadas mediante una referencia del tipo de esa interfaz. <br />
-
-                    <strong>Polimorfismo por herencia:</strong>
-                    Permite que objetos de diferentes subclases sean tratados mediante una referencia de su clase padre y respondan según su implementación concreta. <br />
-
-                    <strong>Contrato de comportamiento:</strong>
-                    Es el conjunto de acciones que un objeto promete poder realizar mediante una interfaz o abstracción. <br />
-
-                    <strong>Programar contra una interfaz:</strong>
-                    Significa declarar dependencias utilizando tipos abstractos como interfaces en lugar de clases concretas cuando sea apropiado. Esto facilita cambiar implementaciones. <br />
-
-                    <strong>Principio de sustitución:</strong>
-                    Indica que una implementación concreta debería poder utilizarse en cualquier lugar donde se espera la abstracción que implementa, respetando el contrato establecido. <br />
-
-                    <strong>Acoplamiento temporal:</strong>
-                    Ocurre cuando una clase necesita que otra realice ciertas operaciones en un orden específico para funcionar correctamente. <br />
-
-                    <strong>Acoplamiento lógico:</strong>
-                    Ocurre cuando varias clases están relacionadas porque utilizan decisiones o estructuras internas similares, aunque no exista una relación clara de dominio. <br />
-
-                    <strong>Diseño limpio:</strong>
-                    Busca crear software fácil de comprender, modificar, probar y mantener mediante responsabilidades claras, dependencias controladas y abstracciones adecuadas. <br />
-
-                    <strong>Clean Code:</strong>
-                    Es un conjunto de prácticas y principios orientados a escribir código claro, simple, expresivo y mantenible. <br />
-
-                    <strong>Nombre significativo:</strong>
-                    Es un nombre de variable, método o clase que comunica claramente qué representa o qué hace. <br />
-
-                    <strong>Método pequeño:</strong>
-                    Es un método que tiene una responsabilidad clara y limitada, facilitando su comprensión y prueba. <br />
-
-                    <strong>Clase con demasiadas responsabilidades:</strong>
-                    Es una clase que intenta encargarse de muchas tareas diferentes. Puede ser una señal de baja cohesión y violación del principio de responsabilidad única. <br />
-
-                    <strong>God Object:</strong>
-                    Es una clase que concentra demasiadas responsabilidades y conocimiento del sistema. Generalmente dificulta el mantenimiento y aumenta el acoplamiento. <br />
-
-                    <strong>Refactorización de una clase:</strong>
-                    Consiste en reorganizar una clase para mejorar su estructura, responsabilidades y legibilidad sin cambiar el comportamiento esperado. <br />
-
-                    <strong>Acoplamiento y cohesión:</strong>
-                    Un buen diseño orientado a objetos normalmente busca bajo acoplamiento entre clases y alta cohesión dentro de cada clase. <br />
-
-                    <strong>API pública:</strong>
-                    Es el conjunto de elementos de una clase o componente que están disponibles para ser utilizados desde fuera. <br />
-
-                    <strong>Interfaz pública:</strong>
-                    Es la parte visible de una clase que otras partes del programa pueden utilizar sin conocer sus detalles internos. <br />
-
-                    <strong>Implementación:</strong>
-                    Es el código interno que hace posible el comportamiento definido por una interfaz, clase o método. <br />
-
-                    <strong>Detalle de implementación:</strong>
-                    Es una parte interna de cómo funciona una clase que no debería ser necesaria para quien solamente utiliza su interfaz pública. <br />
-
-                    <strong>Ocultamiento de información:</strong>
-                    Consiste en esconder detalles internos que no deberían ser conocidos ni modificados directamente desde otras partes del sistema. <br />
-
-                    <strong>API vs implementación:</strong>
-                    La API indica cómo utilizar un componente, mientras que la implementación contiene la lógica interna que hace posible su funcionamiento. <br />
-
-                    <strong>Constructor y método:</strong>
-                    Un constructor inicializa objetos y tiene el mismo nombre de la clase sin tipo de retorno. Un método representa una operación y puede tener cualquier nombre válido y un tipo de retorno. <br />
-
-                    <strong>Atributo y variable local:</strong>
-                    Un atributo pertenece a una clase u objeto, mientras que una variable local existe dentro de un método, constructor o bloque específico. <br />
-
-                    <strong>Objeto y referencia:</strong>
-                    El objeto es la instancia real creada en memoria; la referencia es la variable mediante la cual podemos acceder a ese objeto. <br />
-
-                    <strong>Clase y objeto:</strong>
-                    La clase es el molde; el objeto es una instancia concreta creada a partir de ese molde. <br />
-
-                    <strong>Estado y comportamiento:</strong>
-                    El estado representa los datos actuales del objeto, mientras que el comportamiento representa las acciones que puede realizar. <br />
-
-                    <strong>Mensaje:</strong>
-                    En el contexto de POO, puede entenderse como una solicitud enviada a un objeto para que realice una operación, normalmente mediante una llamada a un método. <br />
-
-                    <strong>Pasar mensajes:</strong>
-                    Es el concepto de que los objetos interactúan solicitándose acciones mediante sus métodos. <br />
-
-                    <strong>Colaboración entre objetos:</strong>
-                    Es la interacción entre diferentes objetos para cumplir una tarea mayor dentro del sistema. <br />
-
-                    <strong>Delegación:</strong>
-                    Un objeto puede pedirle a otro objeto que realice una tarea específica en lugar de hacerla directamente. <br />
-
-                    <strong>Acoplamiento entre objetos:</strong>
-                    Representa cuánto necesita un objeto conocer o depender de otros objetos para funcionar. <br />
-
-                    <strong>Polimorfismo:</strong>
-                    Permite utilizar diferentes objetos mediante una misma abstracción y obtener comportamientos diferentes dependiendo del objeto concreto. <br />
-
-                    <strong>Abstracción:</strong>
-                    Permite trabajar con una representación simplificada de un concepto sin preocuparse por todos sus detalles internos. <br />
-
-                    <strong>Encapsulamiento:</strong>
-                    Protege el estado interno de los objetos y controla cómo otras partes del programa pueden interactuar con él. <br />
-
-                    <strong>Herencia:</strong>
-                    Permite reutilizar y especializar comportamiento mediante una relación entre una clase general y una clase más específica. <br />
-
-                    <strong>Los cuatro pilares de la POO:</strong>
-                    Son encapsulamiento, abstracción, herencia y polimorfismo. Estos principios forman una parte fundamental del pensamiento orientado a objetos. <br />
-
-                    <strong>Encapsulamiento + abstracción + herencia + polimorfismo:</strong>
-                    En conjunto permiten construir sistemas donde los datos están protegidos, la complejidad se oculta, el comportamiento puede reutilizarse y diferentes objetos pueden responder de distintas formas ante una misma operación. <br />
-
-                    <strong>Programación orientada a objetos en Java:</strong>
-                    Es el uso de las características de Java para representar entidades mediante clases y objetos, organizando sus datos y comportamientos y aplicando principios como encapsulamiento, abstracción, herencia y polimorfismo. <br />
-
-                    <strong>Objetivo de la POO:</strong>
-                    El objetivo no es simplemente crear muchas clases, sino organizar el software de manera que sus responsabilidades, datos y comportamientos estén correctamente distribuidos, facilitando la reutilización, mantenimiento, comprensión y evolución del programa. <br />
-                    ```
-
-              </p>
+                <strong>Programación Orientada a Objetos (POO):</strong> Es un paradigma de programación que organiza el código alrededor de objetos. Los objetos representan entidades que tienen datos y comportamientos. La POO permite crear programas más organizados, reutilizables, fáciles de mantener y ampliar. <br />
+                <strong>Paradigma de programación:</strong> Es una forma o estilo de organizar y desarrollar programas. La Programación Orientada a Objetos es uno de los paradigmas más utilizados. <br />
+                <strong>Clase:</strong> Es una plantilla o molde que define cómo serán los objetos. Una clase puede contener atributos, métodos y constructores. Por ejemplo, una clase Persona puede definir que todas las personas tendrán un nombre y una edad. <br />
+                <strong>Objeto:</strong> Es una instancia concreta de una clase. Si Persona es el molde, un objeto puede ser una persona específica llamada "Carlos" con 20 años. Cada objeto puede tener sus propios valores. <br />
+                <strong>Instancia:</strong> Es un objeto creado a partir de una clase. Cuando usamos new en Java normalmente estamos creando una nueva instancia de una clase. <br />
+                <strong>Estado:</strong> Es la información que tiene un objeto en un momento determinado. Está representado principalmente por sus atributos. Por ejemplo, una persona puede tener el estado: nombre = "Carlos", edad = 20. <br />
+                <strong>Comportamiento:</strong> Son las acciones que un objeto puede realizar. En Java, estas acciones normalmente se representan mediante métodos. <br />
+                <strong>Identidad:</strong> Es lo que permite distinguir un objeto de otro. Dos objetos pueden tener los mismos datos, pero seguir siendo objetos diferentes. <br />
+                <strong>Atributo:</strong> Es una variable declarada dentro de una clase que representa una característica o dato de los objetos. Por ejemplo, nombre, edad y precio pueden ser atributos. <br />
+                <strong>Variable de instancia:</strong> Es un atributo que pertenece a cada objeto individualmente. Cada objeto puede tener un valor diferente para esa variable. <br />
+                <strong>Variable de clase:</strong> Es una variable declarada con static. Pertenece a la clase y es compartida por las instancias de esa clase. <br />
+                <strong>Método:</strong> Es un bloque de código que representa una acción o comportamiento de un objeto o de una clase. Puede recibir datos mediante parámetros y puede devolver un resultado. <br />
+                <strong>Parámetro:</strong> Es una variable que aparece en la declaración de un método y recibe un valor cuando el método es llamado. <br />
+                <strong>Argumento:</strong> Es el valor que realmente enviamos a un método cuando lo llamamos. <br />
+                <strong>Valor de retorno:</strong> Es el resultado que un método devuelve mediante la palabra return. <br />
+                <strong>void:</strong> Indica que un método no devuelve ningún valor. <br />
+                <strong>Firma de un método:</strong> Está relacionada con el nombre del método y sus parámetros. En Java permite distinguir métodos sobrecargados. <br />
+                <strong>Constructor:</strong> Es un método especial utilizado para inicializar objetos. Tiene el mismo nombre de la clase y no tiene tipo de retorno. Se ejecuta cuando se utiliza new. <br />
+                <strong>Constructor por defecto:</strong> Es el constructor sin parámetros que el compilador puede proporcionar automáticamente cuando la clase no declara ningún constructor. <br />
+                <strong>Constructor personalizado:</strong> Es un constructor creado por el programador para inicializar el objeto con los datos que necesite. <br />
+                <strong>this:</strong> Es una referencia al objeto actual. Se utiliza, entre otras cosas, para diferenciar atributos de parámetros cuando tienen el mismo nombre. <br />
+                <strong>new:</strong> Es una palabra clave utilizada para crear objetos o instancias de clases. <br />
+                <strong>Referencia:</strong> Es una variable que permite acceder a un objeto almacenado en memoria. La variable no contiene directamente todo el objeto, sino una referencia al mismo. <br />
+                <strong>null:</strong> Representa la ausencia de una referencia a un objeto. Una variable de tipo objeto puede tener el valor null. <br />
+                <strong>Memoria:</strong> Es el espacio donde el programa almacena temporalmente datos y objetos mientras se está ejecutando. <br />
+                <strong>Heap:</strong> Es una zona de memoria donde Java almacena principalmente los objetos creados dinámicamente. <br />
+                <strong>Stack:</strong> Es una zona de memoria utilizada para almacenar información relacionada con las llamadas a métodos, como variables locales y referencias. <br />
+                <strong>Garbage Collector:</strong> Es el mecanismo automático de Java encargado de identificar y liberar memoria ocupada por objetos que ya no pueden ser utilizados por el programa. <br />
+                <strong>Encapsulamiento:</strong> Es el principio que protege los datos internos de un objeto, evitando que sean modificados directamente sin control. Normalmente se logra utilizando atributos privados y métodos públicos para acceder a ellos. <br />
+                <strong>Abstracción:</strong> Permite representar solamente las características importantes de un objeto y ocultar detalles internos que no son necesarios para utilizarlo. <br />
+                <strong>Herencia:</strong> Permite crear una clase nueva a partir de otra clase existente. La nueva clase puede reutilizar atributos y métodos de la clase padre. <br />
+                <strong>Polimorfismo:</strong> Permite que una misma referencia pueda utilizar objetos de diferentes clases y que el comportamiento ejecutado dependa del objeto real. <br />
+                <strong>Clase padre:</strong> Es la clase de la que otra clase hereda características y comportamientos. También puede llamarse superclase. <br />
+                <strong>Clase hija:</strong> Es una clase que hereda de otra clase. También se conoce como subclase. <br />
+                <strong>Superclase:</strong> Es otra forma de llamar a la clase padre dentro de una relación de herencia. <br />
+                <strong>Subclase:</strong> Es otra forma de llamar a la clase hija dentro de una relación de herencia. <br />
+                <strong>super:</strong> Es una palabra clave utilizada para acceder a elementos de la clase padre, como constructores o métodos. <br />
+                <strong>extends:</strong> Es la palabra clave utilizada en Java para indicar que una clase hereda de otra clase. <br />
+                <strong>implements:</strong> Es la palabra clave utilizada cuando una clase implementa una o más interfaces. <br />
+                <strong>Interface:</strong> Es una estructura que define un contrato que las clases pueden implementar. Permite establecer comportamientos que una clase debe proporcionar. <br />
+                <strong>Contrato:</strong> Es el conjunto de reglas que una clase debe cumplir cuando implementa una interfaz. <br />
+                <strong>Clase abstracta:</strong> Es una clase que sirve como base para otras clases y que no puede ser instanciada directamente. Puede contener métodos normales y métodos abstractos. <br />
+                <strong>Método abstracto:</strong> Es un método declarado sin implementación dentro de una clase abstracta. Las clases hijas deben proporcionar su implementación cuando corresponda. <br />
+                <strong>abstract:</strong> Es una palabra clave utilizada para declarar clases y métodos abstractos. <br />
+                <strong>public:</strong> Es un modificador de acceso que permite que un elemento sea accesible desde cualquier clase que tenga acceso a él. <br />
+                <strong>private:</strong> Es un modificador de acceso que limita el acceso directo al elemento únicamente a la clase donde fue declarado. Es muy utilizado para aplicar encapsulamiento. <br />
+                <strong>protected:</strong> Permite acceder a un elemento desde la misma clase, clases del mismo paquete y clases hijas según las reglas de acceso de Java. <br />
+                <strong>default:</strong> Cuando no se escribe un modificador de acceso, el elemento tiene acceso de paquete. Puede utilizarse desde clases que pertenecen al mismo paquete. <br />
+                <strong>Modificador de acceso:</strong> Determina desde dónde puede utilizarse una clase, atributo, método o constructor. Los principales son public, private y protected, además del acceso de paquete. <br />
+                <strong>static:</strong> Indica que un atributo o método pertenece a la clase y no a una instancia específica. Puede utilizarse sin crear un objeto. <br />
+                <strong>Método estático:</strong> Es un método declarado con static. Se puede llamar utilizando el nombre de la clase. <br />
+                <strong>Atributo estático:</strong> Es un atributo compartido por todas las instancias de una clase. <br />
+                <strong>final:</strong> Indica que algo no puede modificarse de la misma manera que un elemento normal. Una variable final no puede recibir otro valor después de ser inicializada, un método final no puede sobrescribirse y una clase final no puede heredarse. <br />
+                <strong>Constante:</strong> Es un valor que no debe cambiar durante la ejecución del programa. En Java normalmente se representa utilizando static final. <br />
+                <strong>this():</strong> Permite llamar a otro constructor de la misma clase. Debe utilizarse como primera instrucción del constructor. <br />
+                <strong>super():</strong> Permite llamar al constructor de la clase padre. Debe utilizarse como primera instrucción del constructor cuando se utiliza explícitamente. <br />
+                <strong>Sobrecarga de métodos (Overloading):</strong> Ocurre cuando una misma clase tiene varios métodos con el mismo nombre pero diferentes parámetros. Permite realizar operaciones similares con diferentes tipos o cantidades de datos. <br />
+                <strong>Sobrescritura de métodos (Overriding):</strong> Ocurre cuando una clase hija proporciona su propia implementación de un método heredado de la clase padre. <br />
+                <strong>@Override:</strong> Es una anotación que indica que un método está sobrescribiendo un método heredado. Ayuda a detectar errores en el código. <br />
+                <strong>@Overload:</strong> No es una anotación estándar necesaria en Java para sobrecarga. La sobrecarga se identifica automáticamente mediante diferentes listas de parámetros. <br />
+                <strong>Binding:</strong> Es el proceso mediante el cual Java determina qué implementación de un método debe utilizar. Puede ocurrir en diferentes momentos dependiendo del tipo de llamada. <br />
+                <strong>Enlace estático:</strong> También llamado early binding. Se determina durante la compilación en situaciones como la sobrecarga de métodos. <br />
+                <strong>Enlace dinámico:</strong> También llamado late binding. En métodos sobrescritos, Java determina durante la ejecución qué implementación debe utilizar según el objeto real. <br />
+                <strong>Polimorfismo de compilación:</strong> Se relaciona principalmente con la sobrecarga de métodos, donde el compilador determina qué método utilizar según los parámetros. <br />
+                <strong>Polimorfismo de ejecución:</strong> Se produce principalmente mediante herencia e interfaces y permite que una referencia de un tipo general ejecute el comportamiento específico del objeto real. <br />
+                <strong>Upcasting:</strong> Es convertir o tratar un objeto de una clase hija como si fuera una referencia de su clase padre. Generalmente es seguro y puede realizarse automáticamente. <br />
+                <strong>Downcasting:</strong> Es convertir una referencia de una clase padre hacia una clase hija. Debe hacerse con cuidado porque el objeto realmente debe ser una instancia de la clase hija. <br />
+                <strong>instanceof:</strong> Es un operador que permite comprobar si un objeto pertenece a una determinada clase o implementa una determinada interfaz. <br />
+                <strong>Clase Object:</strong> Es la clase raíz de la jerarquía de clases de Java. Todas las clases heredan directa o indirectamente de Object. <br />
+                <strong>toString():</strong> Es un método heredado de Object que permite obtener una representación textual de un objeto. Puede sobrescribirse para mostrar información útil. <br />
+                <strong>equals():</strong> Es un método utilizado para comparar objetos según una definición de igualdad. Puede sobrescribirse para establecer qué significa que dos objetos sean iguales. <br />
+                <strong>==:</strong> Cuando se utiliza con referencias de objetos, normalmente compara si ambas referencias apuntan al mismo objeto. No debe confundirse con equals(). <br />
+                <strong>hashCode():</strong> Devuelve un valor entero asociado al objeto. Es especialmente importante cuando los objetos se utilizan en estructuras como HashMap y HashSet. <br />
+                <strong>Contrato equals-hashCode:</strong> Si dos objetos son considerados iguales mediante equals(), deben devolver el mismo valor mediante hashCode(). <br />
+                <strong>Composición:</strong> Es una relación fuerte entre objetos donde un objeto contiene o está formado por otros objetos. Cuando el objeto principal desaparece, los objetos que forman parte de él normalmente dejan de tener sentido dentro de esa relación. <br />
+                <strong>Agregación:</strong> Es una relación entre objetos en la que un objeto contiene otros objetos, pero estos pueden existir independientemente del objeto que los agrupa. <br />
+                <strong>Asociación:</strong> Representa una relación general entre dos clases. Por ejemplo, un profesor puede estar relacionado con varios estudiantes. <br />
+                <strong>Dependencia:</strong> Ocurre cuando una clase utiliza temporalmente otra clase para realizar una tarea. <br />
+                <strong>Relación "es un":</strong> Representa normalmente una relación de herencia. Por ejemplo, un perro "es un" animal. <br />
+                <strong>Relación "tiene un":</strong> Representa normalmente composición o agregación. Por ejemplo, un automóvil "tiene un" motor. <br />
+                <strong>Acoplamiento:</strong> Representa el nivel de dependencia entre diferentes clases o componentes. Un bajo acoplamiento facilita modificar una parte del sistema sin afectar demasiado a las demás. <br />
+                <strong>Cohesión:</strong> Indica qué tan relacionadas están las responsabilidades de una clase. Una clase con alta cohesión normalmente tiene responsabilidades relacionadas y bien definidas. <br />
+                <strong>Responsabilidad:</strong> Es aquello que una clase debe conocer o hacer dentro de un sistema. Una buena POO busca asignar responsabilidades de manera clara. <br />
+                <strong>Inmutabilidad:</strong> Significa que el estado de un objeto no puede cambiar después de haber sido creado. Las clases inmutables suelen utilizar atributos privados y finales y no proporcionan métodos que permitan modificar su estado. <br />
+                <strong>Mutabilidad:</strong> Significa que el estado interno de un objeto puede cambiar después de haber sido creado. <br />
+                <strong>Clase inmutable:</strong> Es una clase cuyos objetos no pueden cambiar su estado después de ser creados. <br />
+                <strong>Getter:</strong> Es un método utilizado para obtener el valor de un atributo privado. Normalmente comienza con get. <br />
+                <strong>Setter:</strong> Es un método utilizado para modificar el valor de un atributo privado. Normalmente comienza con set. <br />
+                <strong>Encapsulamiento mediante getters y setters:</strong> Permite controlar cómo se consultan y modifican los atributos de una clase en lugar de permitir acceso directo a ellos. <br />
+                <strong>Validación:</strong> Es el proceso de comprobar que los datos recibidos cumplen determinadas reglas antes de almacenarlos o utilizarlos. <br />
+                <strong>Inyección de dependencias:</strong> Es una técnica en la que una clase recibe desde fuera los objetos que necesita en lugar de crearlos directamente. Esto ayuda a reducir el acoplamiento y facilita las pruebas. <br />
+                <strong>Clase interna:</strong> Es una clase declarada dentro de otra clase. Puede utilizarse cuando una clase auxiliar solo tiene sentido dentro de la clase que la contiene. <br />
+                <strong>Clase anidada estática:</strong> Es una clase declarada dentro de otra clase utilizando static. No necesita una instancia de la clase externa para ser utilizada. <br />
+                <strong>Clase interna no estática:</strong> Es una clase declarada dentro de otra clase que está asociada a una instancia de la clase externa. <br />
+                <strong>Clase local:</strong> Es una clase declarada dentro de un método o bloque de código. <br />
+                <strong>Clase anónima:</strong> Es una clase sin nombre que se crea y utiliza normalmente en el mismo lugar donde se necesita. Fue muy utilizada antes de la popularización de las expresiones lambda. <br />
+                <strong>Enum:</strong> Es un tipo especial utilizado para representar un conjunto fijo de constantes. Por ejemplo, los días de la semana o estados de un pedido. <br />
+                <strong>enumeración:</strong> Es el concepto que representa un conjunto limitado y conocido de valores posibles. En Java se implementa mediante enum. <br />
+                <strong>Record:</strong> Es una característica de Java diseñada para representar principalmente datos inmutables de forma compacta. El compilador genera automáticamente elementos como constructor, accesores, equals(), hashCode() y toString(). <br />
+                <strong>Sealed class:</strong> Es una clase que permite controlar qué clases pueden heredarse de ella. Se utiliza para limitar una jerarquía de herencia. <br />
+                <strong>Permits:</strong> Se utiliza junto con clases selladas para indicar qué clases tienen permitido extender o implementar una determinada clase o interfaz. <br />
+                <strong>Modularidad:</strong> Consiste en dividir un sistema grande en partes más pequeñas y organizadas que pueden desarrollarse y mantenerse de forma independiente. <br />
+                <strong>Paquete (Package):</strong> Es una forma de organizar clases e interfaces relacionadas. También ayuda a controlar el acceso y evitar conflictos entre nombres. <br />
+                <strong>import:</strong> Permite utilizar clases de otros paquetes sin tener que escribir su nombre completamente calificado. <br />
+                <strong>package:</strong> Indica a qué paquete pertenece una clase. Normalmente aparece al inicio del archivo Java. <br />
+                <strong>Nombre completamente calificado:</strong> Es el nombre completo de una clase incluyendo su paquete. Por ejemplo, java.util.ArrayList. <br />
+                <strong>Interfaz funcional:</strong> Es una interfaz que contiene exactamente un método abstracto. Puede utilizarse con expresiones lambda. <br />
+                <strong>@FunctionalInterface:</strong> Es una anotación que indica que una interfaz está diseñada para tener un único método abstracto. <br />
+                <strong>Expresión lambda:</strong> Es una forma compacta de representar una función o comportamiento que puede utilizarse especialmente con interfaces funcionales. <br />
+                <strong>Referencia a método:</strong> Permite utilizar un método existente como una implementación de una interfaz funcional mediante una sintaxis más corta. <br />
+                <strong>Método default:</strong> Es un método dentro de una interfaz que puede tener una implementación. Permite agregar comportamiento a interfaces sin obligar inmediatamente a todas las clases implementadoras a definirlo. <br />
+                <strong>Método static en una interfaz:</strong> Es un método que pertenece a la interfaz y puede ser llamado mediante el nombre de la interfaz. <br />
+                <strong>Herencia múltiple:</strong> Es la posibilidad de heredar directamente de varias clases. Java no permite que una clase extienda múltiples clases, pero sí permite implementar múltiples interfaces. <br />
+                <strong>Implementación múltiple:</strong> Una clase puede implementar varias interfaces, obteniendo diferentes contratos de comportamiento. <br />
+                <strong>Interfaz vs clase abstracta:</strong> Una interfaz representa principalmente un contrato de comportamiento, mientras que una clase abstracta puede proporcionar una base común con estado y comportamiento compartido. <br />
+                <strong>Principio de responsabilidad única:</strong> Indica que una clase debería tener una responsabilidad principal bien definida y una razón clara para cambiar. <br />
+                <strong>Principio abierto/cerrado:</strong> Indica que el software debería estar abierto para extensión pero cerrado para modificaciones innecesarias. <br />
+                <strong>Principio de sustitución de Liskov:</strong> Indica que los objetos de una clase hija deberían poder utilizarse donde se espera un objeto de la clase padre sin romper el comportamiento esperado del programa. <br />
+                <strong>Principio de segregación de interfaces:</strong> Indica que es preferible utilizar interfaces pequeñas y específicas en lugar de obligar a las clases a implementar métodos que no necesitan. <br />
+                <strong>Principio de inversión de dependencias:</strong> Indica que las partes importantes de un sistema deberían depender de abstracciones y no directamente de implementaciones concretas. <br />
+                <strong>SOLID:</strong> Es un conjunto de cinco principios de diseño orientado a objetos: responsabilidad única, abierto/cerrado, sustitución de Liskov, segregación de interfaces e inversión de dependencias. <br />
+                <strong>DRY (Don't Repeat Yourself):</strong> Principio que busca evitar repetir la misma lógica innecesariamente. La reutilización mediante métodos, clases y otras estructuras ayuda a mantener el código. <br />
+                <strong>KISS (Keep It Simple):</strong> Principio que recomienda mantener las soluciones lo más simples y claras posible, evitando complejidad innecesaria. <br />
+                <strong>YAGNI (You Aren't Gonna Need It):</strong> Principio que recomienda no desarrollar funcionalidades que actualmente no son necesarias. <br />
+                <strong>Reutilización de código:</strong> Consiste en utilizar código existente nuevamente en diferentes partes del programa en lugar de escribir la misma solución desde cero. La POO facilita esto mediante clases, métodos, herencia y composición. <br />
+                <strong>Modularización:</strong> Consiste en dividir un programa en componentes más pequeños y organizados para facilitar su comprensión y mantenimiento. <br />
+                <strong>Acoplamiento bajo:</strong> Significa que las clases dependen poco unas de otras. Esto facilita los cambios y el mantenimiento. <br />
+                <strong>Cohesión alta:</strong> Significa que los elementos de una clase están muy relacionados con una responsabilidad común. <br />
+                <strong>Delegación:</strong> Consiste en hacer que un objeto encargue una tarea a otro objeto especializado en realizarla. <br />
+                <strong>Composición sobre herencia:</strong> Es una recomendación de diseño que propone utilizar relaciones de composición cuando sea más adecuado, en lugar de crear jerarquías de herencia innecesariamente profundas. <br />
+                <strong>Diseño orientado a objetos:</strong> Es el proceso de identificar objetos, responsabilidades y relaciones para construir un sistema utilizando principios de POO. <br />
+                <strong>Modelo:</strong> Es una representación de una parte del sistema que contiene los datos y reglas necesarias para representar un concepto. <br />
+                <strong>Entidad:</strong> Es un objeto que representa algo importante dentro del dominio de una aplicación, normalmente con identidad propia. <br />
+                <strong>Objeto de valor:</strong> Es un objeto cuyo significado depende principalmente de sus valores y no de una identidad individual. <br />
+                <strong>DTO (Data Transfer Object):</strong> Es un objeto utilizado principalmente para transportar datos entre diferentes partes de una aplicación. <br />
+                <strong>POJO:</strong> Significa Plain Old Java Object. Es un objeto Java sencillo que no necesita heredar de una clase especial ni seguir un framework específico para representar sus datos y comportamiento. <br />
+                <strong>Bean:</strong> Es un término utilizado para objetos Java que siguen determinadas convenciones, como tener constructor sin argumentos y métodos de acceso. El significado exacto depende del contexto. <br />
+                <strong>JavaBean:</strong> Es una clase Java que tradicionalmente sigue convenciones como tener un constructor público sin argumentos, atributos privados y métodos getters/setters apropiados. <br />
+                <strong>Objeto anémico:</strong> Es un objeto que contiene principalmente datos y muy poco comportamiento. Puede ser apropiado en algunos casos, pero puede ser problemático si las reglas del dominio quedan completamente fuera del objeto. <br />
+                <strong>Clase utilitaria:</strong> Es una clase utilizada para agrupar métodos relacionados, normalmente estáticos, que realizan operaciones auxiliares. <br />
+                <strong>Clase singleton:</strong> Es un patrón de diseño que busca garantizar que exista una única instancia de una clase y proporcionar un punto de acceso a ella. Debe utilizarse con cuidado porque puede introducir acoplamiento global. <br />
+                <strong>Patrón de diseño:</strong> Es una solución general y reutilizable para problemas frecuentes de diseño de software. No es código que se copia literalmente, sino una idea de organización. <br />
+                <strong>Singleton:</strong> Es un patrón creacional que restringe una clase a una única instancia en un determinado contexto. <br />
+                <strong>Factory:</strong> Es un patrón utilizado para centralizar o encapsular la creación de objetos. <br />
+                <strong>Factory Method:</strong> Es un patrón que permite delegar la creación de objetos a métodos especializados o a subclases. <br />
+                <strong>Abstract Factory:</strong> Es un patrón que permite crear familias de objetos relacionados sin especificar directamente sus clases concretas. <br />
+                <strong>Builder:</strong> Es un patrón utilizado para construir objetos complejos paso a paso, especialmente cuando tienen muchos parámetros opcionales. <br />
+                <strong>Prototype:</strong> Es un patrón que crea nuevos objetos a partir de otros objetos existentes, normalmente mediante clonación o copia controlada. <br />
+                <strong>Adapter:</strong> Es un patrón estructural que permite que dos componentes con interfaces incompatibles puedan trabajar juntos. <br />
+                <strong>Decorator:</strong> Es un patrón que permite agregar responsabilidades o comportamientos a un objeto sin modificar directamente su clase. <br />
+                <strong>Facade:</strong> Es un patrón que proporciona una interfaz sencilla para utilizar un sistema o conjunto de clases más complejo. <br />
+                <strong>Proxy:</strong> Es un objeto que actúa como intermediario para controlar o gestionar el acceso a otro objeto. <br />
+                <strong>Composite:</strong> Es un patrón que permite tratar objetos individuales y grupos de objetos de una manera uniforme. <br />
+                <strong>Observer:</strong> Es un patrón que permite que varios objetos sean notificados cuando cambia el estado de otro objeto. <br />
+                <strong>Strategy:</strong> Es un patrón que permite definir diferentes algoritmos o comportamientos y elegir cuál utilizar durante la ejecución. <br />
+                <strong>State:</strong> Es un patrón que permite que el comportamiento de un objeto cambie dependiendo de su estado interno. <br />
+                <strong>Command:</strong> Es un patrón que convierte una acción o solicitud en un objeto, permitiendo almacenarla, ejecutarla o deshacerla. <br />
+                <strong>Template Method:</strong> Es un patrón que define la estructura general de un algoritmo y permite que las subclases personalicen determinados pasos. <br />
+                <strong>MVC:</strong> Es un patrón arquitectónico que separa una aplicación en Modelo, Vista y Controlador. El modelo gestiona los datos y lógica, la vista presenta información y el controlador coordina las acciones. <br />
+                <strong>Excepción:</strong> Es un evento que ocurre durante la ejecución y que puede interrumpir el flujo normal del programa. Java permite manejar excepciones mediante estructuras como try, catch y finally. <br />
+                <strong>Exception:</strong> Es una clase de Java utilizada como base para muchas excepciones que pueden manejarse durante la ejecución de un programa. <br />
+                <strong>RuntimeException:</strong> Es una categoría de excepciones que ocurren durante la ejecución y que no requieren obligatoriamente ser declaradas o capturadas por el compilador. <br />
+                <strong>Checked Exception:</strong> Es una excepción que el compilador obliga a manejar o declarar en determinados casos. <br />
+                <strong>Unchecked Exception:</strong> Es una excepción que no necesita ser obligatoriamente capturada o declarada. Generalmente pertenece a RuntimeException. <br />
+                <strong>try:</strong> Define un bloque de código donde puede ocurrir una excepción. <br />
+                <strong>catch:</strong> Permite capturar y manejar una excepción producida dentro de un bloque try. <br />
+                <strong>finally:</strong> Es un bloque que normalmente se ejecuta después del procesamiento de try y catch, independientemente de si ocurrió una excepción, con algunas excepciones relacionadas con la terminación de la JVM. <br />
+                <strong>throw:</strong> Permite lanzar manualmente una excepción desde el programa. <br />
+                <strong>throws:</strong> Se utiliza en la declaración de un método para indicar que este puede lanzar determinadas excepciones. <br />
+                <strong>Excepción personalizada:</strong> Es una clase de excepción creada por el programador para representar errores específicos de una aplicación o dominio. <br />
+                <strong>Encadenamiento de excepciones:</strong> Consiste en conservar la causa original de una excepción cuando se lanza otra excepción, ayudando a conocer el origen del problema. <br />
+                <strong>Genéricos:</strong> Permiten crear clases, interfaces y métodos que trabajan con diferentes tipos de datos manteniendo seguridad de tipos. <br />
+                <strong>Tipo genérico:</strong> Es un tipo parametrizado que permite especificar qué tipo de dato manejará una estructura. Por ejemplo, ArrayList&lt;String&gt;. <br />
+                <strong>Clase genérica:</strong> Es una clase que recibe uno o más tipos como parámetros. <br />
+                <strong>Método genérico:</strong> Es un método que define sus propios parámetros de tipo y puede trabajar con diferentes tipos de datos. <br />
+                <strong>List:</strong> Es una colección ordenada que permite almacenar elementos y puede contener elementos repetidos. <br />
+                <strong>ArrayList:</strong> Es una implementación de List basada en un arreglo dinámico. Permite almacenar y acceder fácilmente a elementos mediante posiciones. <br />
+                <strong>Set:</strong> Es una colección que normalmente no permite elementos duplicados según las reglas de igualdad de los objetos. <br />
+                <strong>HashSet:</strong> Es una implementación de Set que utiliza una estructura basada en hashing para almacenar elementos. <br />
+                <strong>Map:</strong> Es una estructura que almacena asociaciones entre claves y valores. Cada clave se utiliza para localizar un valor. <br />
+                <strong>HashMap:</strong> Es una implementación de Map que almacena pares clave-valor utilizando hashing. <br />
+                <strong>Collection:</strong> Es una interfaz de Java que representa una agrupación de objetos y sirve como base para varias estructuras de colecciones. <br />
+                <strong>Iterable:</strong> Es una interfaz que permite recorrer objetos mediante mecanismos como el ciclo for-each. <br />
+                <strong>Iterator:</strong> Es un objeto utilizado para recorrer elementos de una colección de manera controlada. <br />
+                <strong>Comparable:</strong> Es una interfaz que permite definir un orden natural para objetos de una clase mediante el método compareTo(). <br />
+                <strong>Comparator:</strong> Es una interfaz que permite definir diferentes formas de comparar y ordenar objetos sin modificar necesariamente la clase de los objetos. <br />
+                <strong>compareTo():</strong> Es el método utilizado por Comparable para comparar un objeto con otro. <br />
+                <strong>Orden natural:</strong> Es la forma predeterminada en que una clase define cómo deben ordenarse sus objetos. <br />
+                <strong>Encapsulación de colecciones:</strong> Consiste en controlar el acceso a las colecciones internas de una clase para evitar modificaciones no deseadas desde fuera. <br />
+                <strong>Inyección de dependencias:</strong> Es una técnica en la que los objetos necesarios para una clase se proporcionan desde el exterior, reduciendo la responsabilidad de crear directamente esas dependencias. <br />
+                <strong>Acoplamiento:</strong> Es el grado de dependencia entre componentes. Un diseño con menor acoplamiento suele ser más flexible y fácil de mantener. <br />
+                <strong>Cohesión:</strong> Es el grado en que los elementos de una clase trabajan juntos para cumplir una responsabilidad relacionada. <br />
+                <strong>API:</strong> Es un conjunto de clases, métodos, interfaces y reglas que permite que diferentes partes de un software interactúen entre sí. <br />
+                <strong>JDK:</strong> Es el Java Development Kit. Contiene herramientas necesarias para desarrollar aplicaciones Java, incluyendo el compilador. <br />
+                <strong>JRE:</strong> Es el entorno necesario para ejecutar aplicaciones Java. En versiones modernas de Java, el concepto está integrado de forma diferente dentro de la distribución del JDK. <br />
+                <strong>JVM:</strong> Es la Java Virtual Machine, encargada de ejecutar el bytecode de Java. Permite que los programas Java puedan ejecutarse sobre diferentes sistemas operativos que tengan una JVM compatible. <br />
+                <strong>Bytecode:</strong> Es el código intermedio generado por el compilador de Java a partir del código fuente. La JVM interpreta o compila este código para ejecutarlo. <br />
+                <strong>Compilador:</strong> Es el programa que transforma el código fuente Java en bytecode. El compilador principal de Java es javac. <br />
+                <strong>Código fuente:</strong> Es el código escrito por el programador en un lenguaje como Java antes de ser compilado. <br />
+                <strong>Archivo .java:</strong> Es un archivo que contiene código fuente Java. <br />
+                <strong>Archivo .class:</strong> Es un archivo que contiene bytecode Java generado después de la compilación. <br />
+                <strong>Main:</strong> Es el método que tradicionalmente sirve como punto de entrada para ejecutar una aplicación Java independiente. <br />
+                <strong>public static void main:</strong> Es la declaración tradicional del método principal que permite iniciar la ejecución de muchas aplicaciones Java. <br />
+                <strong>Tipo de dato:</strong> Indica qué clase de información puede almacenar una variable. Puede ser primitivo o de referencia. <br />
+                <strong>Tipo primitivo:</strong> Es uno de los tipos básicos de Java que no son objetos, como int, double, char y boolean. <br />
+                <strong>Tipo de referencia:</strong> Es un tipo que permite almacenar una referencia a un objeto. Las clases, interfaces, arreglos y enums se manejan como tipos de referencia. <br />
+                <strong>Wrapper:</strong> Es una clase que representa un tipo primitivo como objeto. Por ejemplo, Integer representa int. <br />
+                <strong>Autoboxing:</strong> Es la conversión automática de un tipo primitivo a su clase wrapper correspondiente. <br />
+                <strong>Unboxing:</strong> Es la conversión automática de un objeto wrapper a su tipo primitivo correspondiente. <br />
+                <strong>String:</strong> Es una clase de Java utilizada para representar cadenas de texto. Los objetos String son inmutables. <br />
+                <strong>Inmutabilidad de String:</strong> Significa que una vez creado un objeto String, su contenido no puede cambiar. Las operaciones que parecen modificarlo realmente producen nuevos objetos. <br />
+                <strong>StringBuilder:</strong> Es una clase utilizada para construir y modificar cadenas de texto de manera eficiente cuando se realizan muchas modificaciones. <br />
+                <strong>Clase utilitaria Arrays:</strong> Proporciona métodos para trabajar con arreglos, como ordenar, buscar y comparar. <br />
+                <strong>Clase utilitaria Objects:</strong> Proporciona métodos auxiliares para trabajar con objetos, incluyendo comprobaciones de igualdad y valores nulos. <br />
+                <strong>Programación modular:</strong> Consiste en separar el sistema en componentes con responsabilidades específicas que puedan trabajar juntos. <br />
+                <strong>Arquitectura:</strong> Es la estructura general de un sistema de software y la forma en que sus componentes se relacionan. <br />
+                <strong>Capa:</strong> Es una división lógica de una aplicación según responsabilidades. Por ejemplo, presentación, lógica de negocio y acceso a datos. <br />
+                <strong>Modelo de dominio:</strong> Es la representación de los conceptos, reglas y relaciones importantes del problema que el software intenta resolver. <br />
+                <strong>Lógica de negocio:</strong> Son las reglas y procesos que determinan cómo funciona una aplicación según el problema que intenta solucionar. <br />
+                <strong>Responsabilidad de una clase:</strong> Es la tarea o conjunto de tareas relacionadas que una clase debe realizar dentro del sistema. <br />
+                <strong>Principio de mínima sorpresa:</strong> Busca que las clases y métodos se comporten de una manera coherente y esperada para quien utiliza el código. <br />
+                <strong>Refactorización:</strong> Es el proceso de mejorar la estructura interna del código sin cambiar su comportamiento externo esperado. <br />
+                <strong>Legibilidad:</strong> Es qué tan fácil resulta para otra persona comprender el código. Los nombres claros, responsabilidades bien definidas y estructuras simples mejoran la legibilidad. <br />
+                <strong>Mantenibilidad:</strong> Es la facilidad con la que un programa puede modificarse, corregirse o ampliarse. <br />
+                <strong>Escalabilidad:</strong> Es la capacidad de un sistema para crecer sin que su estructura se vuelva inmanejable. <br />
+                <strong>Test unitario:</strong> Es una prueba que verifica una parte pequeña y específica del programa, como un método o una clase. <br />
+                <strong>Mock:</strong> Es un objeto simulado utilizado durante pruebas para reemplazar temporalmente una dependencia real. <br />
+                <strong>Stub:</strong> Es un objeto o implementación simplificada que proporciona respuestas controladas durante una prueba. <br />
+                <strong>Debug:</strong> Es el proceso de encontrar y corregir errores en un programa. <br />
+                <strong>Bug:</strong> Es un error o comportamiento incorrecto dentro de un programa. <br />
+                <strong>Buenas prácticas de POO:</strong> Consisten en utilizar nombres claros, encapsular los datos, asignar responsabilidades correctamente, evitar duplicación, reducir dependencias innecesarias y utilizar abstracciones cuando realmente aporten valor. <br />
+                <strong>Clase concreta:</strong> Es una clase que puede ser instanciada directamente porque no es abstracta. <br />
+                <strong>Clase final:</strong> Es una clase declarada con final que no puede ser extendida por otras clases. <br />
+                <strong>Método final:</strong> Es un método que una subclase no puede sobrescribir. <br />
+                <strong>Variable final:</strong> Es una variable a la que solo se puede asignar un valor una vez. <br />
+                <strong>Constructor privado:</strong> Es un constructor declarado como private. Impide que otras clases creen directamente objetos utilizando ese constructor. Puede utilizarse en determinados patrones o clases utilitarias. <br />
+                <strong>Clase abstracta vs clase concreta:</strong> Una clase abstracta sirve como base y no puede instanciarse directamente, mientras que una clase concreta sí puede utilizarse para crear objetos. <br />
+                <strong>Objeto mutable vs inmutable:</strong> Un objeto mutable puede cambiar su estado después de crearse. Un objeto inmutable conserva el mismo estado durante toda su vida. <br />
+                <strong>Herencia directa:</strong> Ocurre cuando una clase extiende directamente otra clase. <br />
+                <strong>Herencia indirecta:</strong> Ocurre cuando una clase hereda de una clase que a su vez hereda de otra. <br />
+                <strong>Jerarquía de clases:</strong> Es la estructura formada por clases relacionadas mediante herencia. <br />
+                <strong>Clase base:</strong> Es una clase utilizada como punto de partida para otras clases mediante herencia. <br />
+                <strong>Especialización:</strong> Consiste en crear una clase más específica a partir de una clase general. <br />
+                <strong>Generalización:</strong> Consiste en identificar características comunes de varias clases y colocarlas en una clase más general. <br />
+                <strong>Delegación de responsabilidades:</strong> Consiste en permitir que el objeto que tiene el conocimiento adecuado sea quien realice una determinada tarea. <br />
+                <strong>Dependencia fuerte:</strong> Ocurre cuando una clase está muy ligada a una implementación específica, dificultando los cambios. <br />
+                <strong>Dependencia débil:</strong> Ocurre cuando una clase depende de abstracciones o contratos y puede trabajar con diferentes implementaciones. <br />
+                <strong>Abstracción de datos:</strong> Consiste en mostrar las operaciones importantes sobre los datos y ocultar la forma interna en que estos son almacenados o procesados. <br />
+                <strong>Abstracción de comportamiento:</strong> Consiste en definir qué puede hacer un objeto sin obligar al usuario a conocer cómo internamente realiza esa acción. <br />
+                <strong>Encapsulamiento vs abstracción:</strong> El encapsulamiento se enfoca en proteger y controlar el acceso al estado interno, mientras que la abstracción se enfoca en ocultar complejidad y mostrar solamente lo importante. <br />
+                <strong>Herencia vs composición:</strong> La herencia representa normalmente una relación "es un", mientras que la composición representa una relación "tiene un". La composición suele ofrecer mayor flexibilidad cuando no existe una verdadera relación de especialización. <br />
+                <strong>Polimorfismo por interfaz:</strong> Permite que diferentes clases implementen la misma interfaz y puedan ser utilizadas mediante una referencia del tipo de esa interfaz. <br />
+                <strong>Polimorfismo por herencia:</strong> Permite que objetos de diferentes subclases sean tratados mediante una referencia de su clase padre y respondan según su implementación concreta. <br />
+                <strong>Contrato de comportamiento:</strong> Es el conjunto de acciones que un objeto promete poder realizar mediante una interfaz o abstracción. <br />
+                <strong>Programar contra una interfaz:</strong> Significa declarar dependencias utilizando tipos abstractos como interfaces en lugar de clases concretas cuando sea apropiado. Esto facilita cambiar implementaciones. <br />
+                <strong>Principio de sustitución:</strong> Indica que una implementación concreta debería poder utilizarse en cualquier lugar donde se espera la abstracción que implementa, respetando el contrato establecido. <br />
+                <strong>Acoplamiento temporal:</strong> Ocurre cuando una clase necesita que otra realice ciertas operaciones en un orden específico para funcionar correctamente. <br />
+                <strong>Acoplamiento lógico:</strong> Ocurre cuando varias clases están relacionadas porque utilizan decisiones o estructuras internas similares, aunque no exista una relación clara de dominio. <br />
+                <strong>Diseño limpio:</strong> Busca crear software fácil de comprender, modificar, probar y mantener mediante responsabilidades claras, dependencias controladas y abstracciones adecuadas. <br />
+                <strong>Clean Code:</strong> Es un conjunto de prácticas y principios orientados a escribir código claro, simple, expresivo y mantenible. <br />
+                <strong>Nombre significativo:</strong> Es un nombre de variable, método o clase que comunica claramente qué representa o qué hace. <br />
+                <strong>Método pequeño:</strong> Es un método que tiene una responsabilidad clara y limitada, facilitando su comprensión y prueba. <br />
+                <strong>Clase con demasiadas responsabilidades:</strong> Es una clase que intenta encargarse de muchas tareas diferentes. Puede ser una señal de baja cohesión y violación del principio de responsabilidad única. <br />
+                <strong>God Object:</strong> Es una clase que concentra demasiadas responsabilidades y conocimiento del sistema. Generalmente dificulta el mantenimiento y aumenta el acoplamiento. <br />
+                <strong>Refactorización de una clase:</strong> Consiste en reorganizar una clase para mejorar su estructura, responsabilidades y legibilidad sin cambiar el comportamiento esperado. <br />
+                <strong>Acoplamiento y cohesión:</strong> Un buen diseño orientado a objetos normalmente busca bajo acoplamiento entre clases y alta cohesión dentro de cada clase. <br />
+                <strong>API pública:</strong> Es el conjunto de elementos de una clase o componente que están disponibles para ser utilizados desde fuera. <br />
+                <strong>Interfaz pública:</strong> Es la parte visible de una clase que otras partes del programa pueden utilizar sin conocer sus detalles internos. <br />
+                <strong>Implementación:</strong> Es el código interno que hace posible el comportamiento definido por una interfaz, clase o método. <br />
+                <strong>Detalle de implementación:</strong> Es una parte interna de cómo funciona una clase que no debería ser necesaria para quien solamente utiliza su interfaz pública. <br />
+                <strong>Ocultamiento de información:</strong> Consiste en esconder detalles internos que no deberían ser conocidos ni modificados directamente desde otras partes del sistema. <br />
+                <strong>API vs implementación:</strong> La API indica cómo utilizar un componente, mientras que la implementación contiene la lógica interna que hace posible su funcionamiento. <br />
+                <strong>Constructor y método:</strong> Un constructor inicializa objetos y tiene el mismo nombre de la clase sin tipo de retorno. Un método representa una operación y puede tener cualquier nombre válido y un tipo de retorno. <br />
+                <strong>Atributo y variable local:</strong> Un atributo pertenece a una clase u objeto, mientras que una variable local existe dentro de un método, constructor o bloque específico. <br />
+                <strong>Objeto y referencia:</strong> El objeto es la instancia real creada en memoria; la referencia es la variable mediante la cual podemos acceder a ese objeto. <br />
+                <strong>Clase y objeto:</strong> La clase es el molde; el objeto es una instancia concreta creada a partir de ese molde. <br />
+                <strong>Estado y comportamiento:</strong> El estado representa los datos actuales del objeto, mientras que el comportamiento representa las acciones que puede realizar. <br />
+                <strong>Mensaje:</strong> En el contexto de POO, puede entenderse como una solicitud enviada a un objeto para que realice una operación, normalmente mediante una llamada a un método. <br />
+                <strong>Pasar mensajes:</strong> Es el concepto de que los objetos interactúan solicitándose acciones mediante sus métodos. <br />
+                <strong>Colaboración entre objetos:</strong> Es la interacción entre diferentes objetos para cumplir una tarea mayor dentro del sistema. <br />
+                <strong>Delegación:</strong> Un objeto puede pedirle a otro objeto que realice una tarea específica en lugar de hacerla directamente. <br />
+                <strong>Acoplamiento entre objetos:</strong> Representa cuánto necesita un objeto conocer o depender de otros objetos para funcionar. <br />
+                <strong>Polimorfismo:</strong> Permite utilizar diferentes objetos mediante una misma abstracción y obtener comportamientos diferentes dependiendo del objeto concreto. <br />
+                <strong>Abstracción:</strong> Permite trabajar con una representación simplificada de un concepto sin preocuparse por todos sus detalles internos. <br />
+                <strong>Encapsulamiento:</strong> Protege el estado interno de los objetos y controla cómo otras partes del programa pueden interactuar con él. <br />
+                <strong>Herencia:</strong> Permite reutilizar y especializar comportamiento mediante una relación entre una clase general y una clase más específica. <br />
+                <strong>Los cuatro pilares de la POO:</strong> Son encapsulamiento, abstracción, herencia y polimorfismo. Estos principios forman una parte fundamental del pensamiento orientado a objetos. <br />
+                <strong>Encapsulamiento + abstracción + herencia + polimorfismo:</strong> En conjunto permiten construir sistemas donde los datos están protegidos, la complejidad se oculta, el comportamiento puede reutilizarse y diferentes objetos pueden responder de distintas formas ante una misma operación. <br />
+                <strong>Programación orientada a objetos en Java:</strong> Es el uso de las características de Java para representar entidades mediante clases y objetos, organizando sus datos y comportamientos y aplicando principios como encapsulamiento, abstracción, herencia y polimorfismo. <br />
+                <strong>Objetivo de la POO:</strong> El objetivo no es simplemente crear muchas clases, sino organizar el software de manera que sus responsabilidades, datos y comportamientos estén correctamente distribuidos, facilitando la reutilización, mantenimiento, comprensión y evolución del programa. <br />
+                              </p>
             </div>
           </div>
 
