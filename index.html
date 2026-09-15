@@ -1202,8 +1202,66 @@ class Gato extends Animal {
 
                 Si todo estuviera dentro de una sola clase, sería muy difícil modificar el programa. <br />
                 Con SOLID podemos separar responsabilidades y hacer que cada parte tenga una función clara. <br />
-                </p>
+                </p> <br />
 
+                <p>
+                <strong>SINGLE RESPONSIBILITY PRINCIPLE O PRINCIPIO DE RESPONSABILIDAD ÚNICA</strong> <br />
+                Este principio dice: <br />
+                <Strong>Una clase debe tener una sola responsabilidad.</Strong> <br />
+                En palabras sencillas:
+                Una clase debería encargarse de una cosa principal. <br />
+                No significa necesariamente que una clase solamente pueda tener un método. Significa que sus métodos deben estar relacionados con una misma responsabilidad. <br />
+                <br />
+
+                <Strong>Ejemplo de la vida real:</strong> <br />
+                  Imagina un restaurante, una persona puede ser: <br />
+                  Cocinero → prepara la comida. <br />
+                  Mesero → atiende a los clientes. <br />
+                  Cajero → recibe el pago. <br />
+                  No tendría mucho sentido que el cocinero también tuviera que cobrar, limpiar las mesas y administrar las cuentas. <br />
+
+                  En programación ocurre algo parecido. <br /> <br />
+                  <strong>Ejemplo en Java incorrecto:</strong> <br />
+                  <pre><code>class Usuario {
+
+    public void registrarUsuario() {
+        System.out.println("Usuario registrado");
+    }
+
+    public void enviarCorreo() {
+        System.out.println("Correo enviado");
+    }
+
+    public void guardarEnBaseDatos() {
+        System.out.println("Usuario guardado");
+    }
+}</code></pre>
+              Esta clase está haciendo demasiadas cosas: <br />
+              - Registrar usuarios. <br />
+              - Enviar correos. <br />
+              - Guardar información en una base de datos. <br />
+              Tiene varias responsabilidades. <br /> <br />
+              <Strong>Ejemplo en Java correcto:</strong> <br />
+                <pre><code>class Usuario {
+
+    public void registrar() {
+        System.out.println("Usuario registrado");
+    }
+}
+class Correo {
+
+    public void enviar() {
+        System.out.println("Correo enviado");
+    }
+}
+class UsuarioRepository {
+
+    public void guardar() {
+        System.out.println("Usuario guardado");
+    }
+}</code></pre>
+
+              </p>
 
             </div>
           </div>
