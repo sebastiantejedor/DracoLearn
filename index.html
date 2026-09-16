@@ -1259,9 +1259,83 @@ class UsuarioRepository {
     public void guardar() {
         System.out.println("Usuario guardado");
     }
-}</code></pre>
-
+}</code></pre> <br />
+Si cambia la forma de enviar correos, solamente modificamos Correo.
+Si cambia la forma de guardar usuarios, modificamos UsuarioRepository.
+No necesitamos modificar toda la aplicación. <br /> <br />
               </p>
+
+              <p>
+                <strong>OPEN/CLOSED PRINCIPLE O PRINCIPIO ABIERTO/CERRADO</strong> <br />
+                Este principio dice: <br />
+                <Strong>El código debe estar abierto a la extensión, pero cerrado a la modificación.</Strong> <br />
+                En palabras sencillas:
+                Podemos agregar nuevas funcionalidades sin cambiar el código existente. <br />
+                Esto ayuda a evitar errores y hace que el código sea más fácil de mantener. <br /> <br />
+
+                <strong>Ejemplo de la vida real:</strong> <br />
+                  Imagina un teléfono móvil. <br />
+                  Puedes instalar nuevas aplicaciones para agregar funciones, como juegos o redes sociales. <br />
+                  Pero no necesitas cambiar el sistema operativo del teléfono para hacerlo. <br />
+
+                  En programación ocurre algo parecido. <br /> <br />
+                  <strong>Ejemplo en Java incorrecto:</strong> <br />
+                  <pre><code>class Pago {
+
+    public void pagar(String metodo) {
+
+        if (metodo.equals("efectivo")) {
+            System.out.println("Pago en efectivo");
+        }
+
+        if (metodo.equals("tarjeta")) {
+            System.out.println("Pago con tarjeta");
+        }
+
+        if (metodo.equals("paypal")) {
+            System.out.println("Pago con PayPal");
+        }
+    }
+}</code></pre> <br />
+            ¿Qué sucede si queremos agregar: <br />
+            Nequi <br />
+            Daviplata <br />
+            Bitcoin <br />
+            PSE <br />
+            Tenemos que modificar constantemente la clase Pago. <br /> <br />
+            <Strong>Ejemplo en Java Correcto</Strong> <br />
+<pre><code>interface MetodoPago {
+
+    void pagar();
+}
+
+Después creamos diferentes implementaciones:
+
+class PagoTarjeta implements MetodoPago {
+
+    @Override
+    public void pagar() {
+        System.out.println("Pago realizado con tarjeta");
+    }
+}
+class PagoEfectivo implements MetodoPago {
+
+    @Override
+    public void pagar() {
+        System.out.println("Pago realizado en efectivo");
+    }
+}
+
+Y podemos agregar otra forma de pago:
+
+class PagoNequi implements MetodoPago {
+
+    @Override
+    public void pagar() {
+        System.out.println("Pago realizado con Nequi");
+    }
+}</code></pre> <br />
+No necesitamos modificar las clases anteriores. <br />
 
             </div>
           </div>
