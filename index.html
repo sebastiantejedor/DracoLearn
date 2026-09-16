@@ -1337,6 +1337,36 @@ class PagoNequi implements MetodoPago {
 }</code></pre> <br />
 No necesitamos modificar las clases anteriores. <br />
 
+              <!-- Implementacion del Quiz -->
+              <div class="topic-header" onclick="toggleTopic(this)">
+                <span class="quiz-title">Quiz Básico</span>
+              </div>
+              <div class="topic-content">
+                <div class="quiz-box">
+                  <p>
+                    ¿Qué problema aparece cuando queremos agregar un nuevo tipo de funcionalidad a una clase sin el principio de Abierto/Cerrado?
+                  </p>
+                  <button onclick="answerQuiz(1, true)">la clase seria dificil de mantener.</button>
+                  <button onclick="answerQuiz(1, false)">
+                    Estaria bien, no hay ningun problema
+                  </button>
+                  <p>¿Cómo agregas el envío de notificaciones por WhatsApp a tu sistema sin violar OCP?</p>
+                  <button onclick="answerQuiz(2, false)">Editar la clase Notificador metiendo un nuevo if para WhatsApp.</button>
+                  <button onclick="answerQuiz(2, true)">Crear una clase nueva NotificacionWhatsApp</button>
+                  <p>
+                    ¿Cómo agregas el ataque de un nuevo elemento (Lanzallamas) en un videojuego sin violar OCP?
+                  </p>
+                  <button onclick="answerQuiz(3, false)">Editar la clase Personaje metiendo un nuevo if para el Lanzallamas.</button>
+                  <button onclick="answerQuiz(3, true)">Crear una clase nueva Lanzallamas que implemente la interfaz Ataque</button>
+                 <button onclick="finishQuiz()">
+                    <span class="quiz-title-final">¡Finalizar Quiz!</span>
+                  </button>
+
+
+                </div>
+              </div>
+
+
             </div>
           </div>
 
