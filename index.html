@@ -1360,8 +1360,124 @@ No necesitamos modificar las clases anteriores. <br />
                   <button onclick="answerQuiz(3, true)">Crear una clase nueva Lanzallamas que implemente la interfaz Ataque</button>
                  <button onclick="finishQuiz()">
                     <span class="quiz-title-final">¡Finalizar Quiz!</span>
-                  </button>
+                  </button> <br />
 
+                  <p>
+                  <Strong/> LISKOV SUBSTITUTION PRINCIPLE O PRINCIPIO DE SUSTITUCIÓN DE LISKOV</Strong> <br />
+                  Este principio dice: <br />
+                <Strong>Los objetos de una clase hija deben poder utilizarse en lugar de objetos de su clase padre sin romper el funcionamiento del programa.</Strong> <br />
+                En palabras sencillas:
+                Si una clase B hereda de una clase A, deberíamos poder utilizar B donde esperamos A sin generar comportamientos inesperados. <br />
+
+
+                <strong>Ejemplo de la vida real:</strong> <br />
+                  Imagina un teléfono móvil. <br />
+                  Puedes instalar nuevas aplicaciones para agregar funciones, como juegos o redes sociales. <br />
+                  Pero no necesitas cambiar el sistema operativo del teléfono para hacerlo. <br />
+
+                  En programación ocurre algo parecido. <br /> <br />
+
+                <strong>Ejemplo de la vida real:</strong> <br />
+<p>Imagina:</p>
+
+<code>Animal
+ ├── Perro
+ └── Gato</code>
+
+<p>Todos son animales.</p>
+
+<p>Si tenemos:</p>
+
+<code>class Animal {
+
+    public void comer() {
+        System.out.println("El animal está comiendo");
+    }
+}</code>
+
+<p>Entonces:</p>
+
+<code>class Perro extends Animal {
+
+}</code>
+
+<p>Puede utilizar el comportamiento de <code>Animal</code>.</p>
+
+<code>Animal animal = new Perro();
+
+animal.comer();</code>
+
+<p>Esto funciona correctamente.</p>
+
+<h2>❌ Ejemplo problemático</h2>
+<p>Imaginemos:</p>
+
+<code>class Ave {
+
+    public void volar() {
+        System.out.println("El ave está volando");
+    }
+}</code>
+
+<p>Y hacemos:</p>
+
+<code>class Aguila extends Ave {
+
+}</code>
+
+<p>Tiene sentido porque un águila puede volar.</p>
+
+<p>Pero luego:</p>
+
+<code>class Pinguino extends Ave {
+
+    @Override
+    public void volar() {
+        throw new UnsupportedOperationException();
+    }
+}</code>
+
+<p>Tenemos un problema.</p>
+<p>Un pingüino es un ave, pero no puede realizar la operación <code>volar()</code>.</p>
+<p>Por lo tanto, nuestra jerarquía está mal diseñada.</p>
+
+<h2>¿Cómo solucionarlo?</h2>
+<p>Podemos separar las capacidades:</p>
+
+<code>class Ave {
+
+    public void comer() {
+        System.out.println("El ave está comiendo");
+    }
+}</code>
+
+<p>Y crear una interfaz para las aves que vuelan:</p>
+
+<code>interface Volador {
+
+    void volar();
+}</code>
+
+<p>El águila puede implementarla:</p>
+
+<code>class Aguila extends Ave implements Volador {
+
+    @Override
+    public void volar() {
+        System.out.println("El águila está volando");
+    }
+}</code>
+
+<p>El pingüino no necesita implementarla:</p>
+
+<code>class Pinguino extends Ave {
+
+}</code>
+
+<p>Así evitamos obligar a una clase a realizar comportamientos que no puede realizar.</p>
+
+                  En programación ocurre algo parecido. <br /> <br />
+                  </p>
 
                 </div>
               </div>
