@@ -1416,18 +1416,13 @@ animal.comer();</code>
 
                 <strong>Interface Segregation Principle o PRINCIPLO DE SEPARACIÓN DE INTERFACES</strong>
                 <p>Este principio dice:<br>
-                  Una clase no debería estar obligada a implementar métodos que no necesita.<br>
-                  <br>
+                  <strong>Una clase no debería estar obligada a implementar métodos que no necesita.</strong><br>
                   En palabras sencillas:<br>
                   Es mejor tener varias interfaces pequeñas y específicas que una interfaz gigante.<br>
-                  <br>
                   <strong>Ejemplo de la vida real</strong><br>
                   Imagina una interfaz llamada:<br>
-                  <br>
                   <code>Trabajador</code><br>
-                  <br>
                   Y contiene:<br>
-                  <br>
                   * trabajar()<br>
                   * programar()<br>
                   * cocinar()<br>
@@ -1436,16 +1431,11 @@ animal.comer();</code>
                   * vender()<br>
                   <br>
                   Sería extraño obligar a un programador a implementar <code>cocinar()</code> o a un cocinero a
-                  implementar <code>programar()</code>.<br>
-                  <br>
+                  implementar <code>programar()</code><br>
                   <strong>Ejemplo incorrecto</strong><br>
-                  <br>
                   <code>interface Trabajador {<br>
-<br>
-    void programar();<br>
-<br>
+void programar();<br>
     void cocinar();<br>
-<br>
     void conducir();<br>
 }</code><br>
                   <br>
