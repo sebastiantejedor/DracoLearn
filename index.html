@@ -1414,47 +1414,41 @@ animal.comer();</code>
 
                 En programación ocurre algo parecido. <br /> <br />
 
-                <strong>Interface Segregation Principle o PRINCIPLO DE SEPARACIÓN DE INTERFACES</strong>
+                <strong>INTERFACE SEGREGATION PRINCIPLE o PRINCIPLO DE SEPARACIÓN DE INTERFACES</strong>
                 <p>Este principio dice:<br>
                   <strong>Una clase no debería estar obligada a implementar métodos que no necesita.</strong><br>
                   En palabras sencillas:<br>
                   Es mejor tener varias interfaces pequeñas y específicas que una interfaz gigante.<br>
                   <strong>Ejemplo de la vida real</strong><br>
                   Imagina una interfaz llamada:<br>
-                  <code>Trabajador</code><br>
+                  <code>Trabajador</code>
                   Y contiene:<br>
-                  * trabajar()<br>
-                  * programar()<br>
-                  * cocinar()<br>
-                  * conducir()<br>
-                  * enseñar()<br>
-                  * vender()<br>
+                  - trabajar()<br>
+                  - programar()<br>
+                  - cocinar()<br>
+                  - conducir()<br>
+                  - enseñar()<br>
+                  - vender()<br>
                   <br>
                   Sería extraño obligar a un programador a implementar <code>cocinar()</code> o a un cocinero a
                   implementar <code>programar()</code><br>
                   <strong>Ejemplo incorrecto</strong><br>
-                  <code>interface Trabajador {<br>
-void programar();<br>
-    void cocinar();<br>
-    void conducir();<br>
+                  <code>interface Trabajador {
+ void programar();<br> void cocinar();<br> void conducir();<br>
 }</code><br>
-                  <br>
                   Un programador tendría que implementar todo:<br>
-                  <br>
-                  <code>class Programador implements Trabajador {<br>
-<br>
-    public void programar() {<br>
-        System.out.println("Programando");<br>
-    }<br>
-<br>
-    public void cocinar() {<br>
-        // No lo necesita<br>
-    }<br>
-<br>
-    public void conducir() {<br>
-        // No lo necesita<br>
-    }<br>
-}</code><br>
+
+                  <code><pre> Programador implements Trabajador {
+public void programar() {
+        System.out.println("Programando");
+    }
+public void cocinar() {
+        // No lo necesita
+    }
+public void conducir() {
+        // No lo necesita
+    }
+}</code></pre>
                   <br>
                   Esto es una mala práctica.<br>
                   <br>
