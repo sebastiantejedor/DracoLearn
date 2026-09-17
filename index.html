@@ -1369,81 +1369,58 @@ No necesitamos modificar las clases anteriores. <br />
                 En palabras sencillas:
                 Si una clase B hereda de una clase A, deberíamos poder utilizar B donde esperamos A sin generar comportamientos inesperados. <br />
 
-
                 <strong>Ejemplo de la vida real:</strong> <br />
                   Imagina un teléfono móvil. <br />
                   Puedes instalar nuevas aplicaciones para agregar funciones, como juegos o redes sociales. <br />
                   Pero no necesitas cambiar el sistema operativo del teléfono para hacerlo. <br />
-
                   En programación ocurre algo parecido. <br /> <br />
-
                 <strong>Ejemplo de la vida real:</strong> <br />
-<p>Imagina:</p>
-
-<code>Animal
- ├── Perro
- └── Gato</code>
-
-<p>Todos son animales.</p>
-
-<p>Si tenemos:</p>
-
+                <p>Imagina:</p>
+                Animal <br />
+                ├── Perro <br />
+                └── Gato <br />
+                <p>Todos son animales.</p>
+                <p>Si tenemos:</p>
 <code>class Animal {
-
     public void comer() {
         System.out.println("El animal está comiendo");
     }
 }</code>
-
-<p>Entonces:</p>
-
+            <p>Entonces:</p>
 <code>class Perro extends Animal {
-
 }</code>
-
-<p>Puede utilizar el comportamiento de <code>Animal</code>.</p>
-
+            <p>Puede utilizar el comportamiento de <code>Animal</code></p>
 <code>Animal animal = new Perro();
-
 animal.comer();</code>
 
-<p>Esto funciona correctamente.</p>
-
-<strong>Ejemplo Problematico:</strong>
-<p>Imaginemos:</p>
+          <p>Esto funciona correctamente.</p>
+          <strong>Ejemplo Problematico:</strong>
+          <p>Imaginemos:</p>
 
 <code>class Ave {
-
     public void volar() {
         System.out.println("El ave está volando");
     }
 }</code>
 
-<p>Y hacemos:</p>
-
+            <p>Y hacemos:</p>
 <code>class Aguila extends Ave {
-
 }</code>
-
-<p>Tiene sentido porque un águila puede volar.</p>
-
-<p>Pero luego:</p>
-
+          <p>Tiene sentido porque un águila puede volar.</p>
+          <p>Pero luego:</p>
 <code>class Pinguino extends Ave {
-
     @Override
     public void volar() {
         throw new UnsupportedOperationException();
     }
 }</code>
 
-<p>Tenemos un problema.</p>
-<p>Un pingüino es un ave, pero no puede realizar la operación <code>volar()</code>.</p>
-<p>Por lo tanto, nuestra jerarquía está mal diseñada.</p>
+          <p>Tenemos un problema.</p>
+          <p>Un pingüino es un ave, pero no puede realizar la operación <code>volar()</code></p>
+          <p>Por lo tanto, nuestra jerarquía está mal diseñada.</p>
 
-<strong>Como Solucionarlo:</strong>
-<p>Podemos separar las capacidades:</p>
-
+          <strong>Como Solucionarlo:</strong>
+          <p>Podemos separar las capacidades:</p>
 <code>class Ave {
 
     public void comer() {
@@ -1451,17 +1428,14 @@ animal.comer();</code>
     }
 }</code>
 
-<p>Y crear una interfaz para las aves que vuelan:</p>
+        <p>Y crear una interfaz para las aves que vuelan:</p>
 
 <code>interface Volador {
-
     void volar();
 }</code>
 
-<p>El águila puede implementarla:</p>
-
+        <p>El águila puede implementarla:</p>
 <code>class Aguila extends Ave implements Volador {
-
     @Override
     public void volar() {
         System.out.println("El águila está volando");
@@ -1469,15 +1443,14 @@ animal.comer();</code>
 }</code>
 
 <p>El pingüino no necesita implementarla:</p>
-
 <code>class Pinguino extends Ave {
-
 }</code>
-
 <p>Así evitamos obligar a una clase a realizar comportamientos que no puede realizar.</p>
 
                   En programación ocurre algo parecido. <br /> <br />
-                  </p>
+                  
+                <strong>Interface Segregation Principle o PRINCIPLO DE SEPARACIÓN DE INTERFACES</strong>
+                </p>
 
                 </div>
               </div>
