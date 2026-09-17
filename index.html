@@ -2,380 +2,367 @@
 <!-- DracoLearn Plataforma Educativa -->
 
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DracoLearn</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <div id="devPopup" class="dev-popup-overlay">
-    <div class="dev-popup-box">
-      <p>🚧 Esta opción está en desarrollo.</p>
-      <button onclick="closeDevPopup()">Cerrar</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DracoLearn</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+</head>
+
+<div id="devPopup" class="dev-popup-overlay">
+  <div class="dev-popup-box">
+    <p>🚧 Esta opción está en desarrollo.</p>
+    <button onclick="closeDevPopup()">Cerrar</button>
+  </div>
+</div>
+
+<body>
+  <!-- Pantalla splash de bienvenida -->
+  <div id="introScreen" class="intro-screen">
+    <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+      <div class="wheel"></div>
+      <div class="hamster">
+        <div class="hamster__body">
+          <div class="hamster__head">
+            <div class="hamster__ear"></div>
+            <div class="hamster__eye"></div>
+            <div class="hamster__nose"></div>
+          </div>
+          <div class="hamster__limb hamster__limb--fr"></div>
+          <div class="hamster__limb hamster__limb--fl"></div>
+          <div class="hamster__limb hamster__limb--br"></div>
+          <div class="hamster__limb hamster__limb--bl"></div>
+          <div class="hamster__tail"></div>
+        </div>
+      </div>
+      <div class="spoke"></div>
     </div>
+    <h2>Bienvenido Futuro Developer</h2>
+    <h1>DracoLearn Academy</h1>
+    <p>Tu camino para convertirte en Programador comienza aquí.</p>
+    <h3>¡Estamos en proceso de desarrollo!</h3>
+    <br />
+    <button onclick="startApp()">Comenzar</button>
   </div>
 
-  <body>
-    <!-- Pantalla splash de bienvenida -->
-    <div id="introScreen" class="intro-screen">
-      <div
-        aria-label="Orange and tan hamster running in a metal wheel"
-        role="img"
-        class="wheel-and-hamster"
-      >
-        <div class="wheel"></div>
-        <div class="hamster">
-          <div class="hamster__body">
-            <div class="hamster__head">
-              <div class="hamster__ear"></div>
-              <div class="hamster__eye"></div>
-              <div class="hamster__nose"></div>
-            </div>
-            <div class="hamster__limb hamster__limb--fr"></div>
-            <div class="hamster__limb hamster__limb--fl"></div>
-            <div class="hamster__limb hamster__limb--br"></div>
-            <div class="hamster__limb hamster__limb--bl"></div>
-            <div class="hamster__tail"></div>
-          </div>
-        </div>
-        <div class="spoke"></div>
+  <header class="navbar">
+    DRACOLEARN (Aprende desde 0)
+
+    <!-- Bton de plan pro -->
+    <button class="button" onclick="showDevPopup()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24">
+        <path d="m18 0 8 12 10-8-4 20H4L0 4l10 8 8-12z"></path>
+      </svg>
+      Desbloquear Todo
+    </button>
+  </header>
+  <section class="hud">
+    <div class="xp-box">
+      Nivel <span id="level">1</span>
+      <div class="xp-bar">
+        <div class="xp-fill" id="xp"></div>
       </div>
-      <h2>Bienvenido Futuro Developer</h2>
-      <h1>DracoLearn Academy</h1>
-      <p>Tu camino para convertirte en Programador comienza aquí.</p>
-      <h3>¡Estamos en proceso de desarrollo!</h3>
-      <br />
-      <button onclick="startApp()">Comenzar</button>
+      <button id="resetBtn" class="reset-btn">Reiniciar progreso</button>
     </div>
+    <div class="achievements" id="achievements">Modulos Completados: 0</div>
+  </section>
+  <div class="badges" id="badges"></div>
 
-    <header class="navbar">
-      DRACOLEARN (Aprende desde 0)
-
-      <!-- Bton de plan pro -->
-      <button class="button" onclick="showDevPopup()">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24">
-          <path d="m18 0 8 12 10-8-4 20H4L0 4l10 8 8-12z"></path>
-        </svg>
-        Desbloquear Todo
-      </button>
-    </header>
-    <section class="hud">
-      <div class="xp-box">
-        Nivel <span id="level">1</span>
-        <div class="xp-bar">
-          <div class="xp-fill" id="xp"></div>
-        </div>
-        <button id="resetBtn" class="reset-btn">Reiniciar progreso</button>
+  <section class="roadmap">
+    <!-- MODULO 1 -->
+    <div class="module active" data-id="1">
+      <div class="module-header" onclick="toggleModule(this)">
+        Primeros Pasos en la programacion
       </div>
-      <div class="achievements" id="achievements">Modulos Completados: 0</div>
-    </section>
-    <div class="badges" id="badges"></div>
-
-    <section class="roadmap">
-      <!-- MODULO 1 -->
-      <div class="module active" data-id="1">
-        <div class="module-header" onclick="toggleModule(this)">
-          Primeros Pasos en la programacion
-        </div>
-        <div class="module-content">
-          <!-- Seccion 1 -->
-          <div class="topic">
-            <div class="topic-header" onclick="toggleTopic(this)">
-              <strong
-                >ENTENDIENDO LAS BASES: COMO PIENSA UNA COMPUTADORA</strong
-              >
-            </div>
-            <div class="topic-content">
-              <p>
-                Programar es darle instrucciones a una computadora para que haga
-                algo.
-              </p>
-              <p>
-                Es como darle órdenes a un robot: "Suma estos números" "Muestra
-                este mensaje" "Si pasa esto, haz esto otro"
-              </p>
-              <strong>Ejemplo de la vida real:</strong>
-              <p>
-                Imagínate que haces un sándwich: Agarrar pan. Poner jamón. Poner
-                queso. Cerrar pan. Eso es un algoritmo (una lista de pasos).
-              </p>
-              <p>
-                La computadora no entiende intenciones, solo ejecuta
-                instrucciones exactas en el orden que se le indican.<br />
-                Llevando la idea a programación: <br />
-                La computadora NO piensa, solo hace exactamente lo que tú le
-                dices.
-              </p>
-              <pre><code>// Usaremos el lenguaje de Programacion Java
+      <div class="module-content">
+        <!-- Seccion 1 -->
+        <div class="topic">
+          <div class="topic-header" onclick="toggleTopic(this)">
+            <strong>ENTENDIENDO LAS BASES: COMO PIENSA UNA COMPUTADORA</strong>
+          </div>
+          <div class="topic-content">
+            <p>
+              Programar es darle instrucciones a una computadora para que haga
+              algo.
+            </p>
+            <p>
+              Es como darle órdenes a un robot: "Suma estos números" "Muestra
+              este mensaje" "Si pasa esto, haz esto otro"
+            </p>
+            <strong>Ejemplo de la vida real:</strong>
+            <p>
+              Imagínate que haces un sándwich: Agarrar pan. Poner jamón. Poner
+              queso. Cerrar pan. Eso es un algoritmo (una lista de pasos).
+            </p>
+            <p>
+              La computadora no entiende intenciones, solo ejecuta
+              instrucciones exactas en el orden que se le indican.<br />
+              Llevando la idea a programación: <br />
+              La computadora NO piensa, solo hace exactamente lo que tú le
+              dices.
+            </p>
+            <pre><code>// Usaremos el lenguaje de Programacion Java
 System.out.println("Paso 1: Tomar pan");
 System.out.println("Paso 2: Poner jamón");
 System.out.println("Paso 3: Poner queso");
 System.out.println("Paso 4: Cerrar pan");</code></pre>
-              <hr />
-              <p>
-                Errores comunes: Asegúrate de cerrar correctamente los
-                paréntesis y llaves {}, los usaremos mas adelante <br />
-                Usa comillas dobles para los textos y lo mas importante, NO
-                OLVIDES EL PUNTO Y COMA!! . <br />
-              </p>
-              <p>
-                Este sencillo programa es el primer paso para aprender Java y
-                entender su estructura básica. <br />
-              </p>
-              <strong>Nuevo Reto!</strong>
-              <p>
-                CODE PANDA: ¡Programa al Panda! <br />
-                Tu misión es ayudar a un adorable panda a encontrar el camino
-                correcto usando instrucciones como todo un crack del código.
-                <br />
-                Pero ojo… no es solo moverlo, es planear cada paso con
-                estrategia. <br />
-                ¿Qué aprenderás jugando? <br />
-                Pensamiento lógico, Resolución de problemas y Bases de
-                programación sin darte cuenta.<br />
-                Este juego demuestra que programar no es difícil… ¡solo es
-                cuestión de pensar como un pro! <br />
-                ¿Serás capaz de completar todos los niveles sin equivocarte?
-              </p>
-              <p>
-                Juegalo Aqui!
-                <a
-                  href="https://www.cokitos.com/programar-al-panda/play/"
-                  target="_blank"
-                >
-                  Code Panda Play!
-                </a>
-              </p>
+            <hr />
+            <p>
+              Errores comunes: Asegúrate de cerrar correctamente los
+              paréntesis y llaves {}, los usaremos mas adelante <br />
+              Usa comillas dobles para los textos y lo mas importante, NO
+              OLVIDES EL PUNTO Y COMA!! . <br />
+            </p>
+            <p>
+              Este sencillo programa es el primer paso para aprender Java y
+              entender su estructura básica. <br />
+            </p>
+            <strong>Nuevo Reto!</strong>
+            <p>
+              CODE PANDA: ¡Programa al Panda! <br />
+              Tu misión es ayudar a un adorable panda a encontrar el camino
+              correcto usando instrucciones como todo un crack del código.
+              <br />
+              Pero ojo… no es solo moverlo, es planear cada paso con
+              estrategia. <br />
+              ¿Qué aprenderás jugando? <br />
+              Pensamiento lógico, Resolución de problemas y Bases de
+              programación sin darte cuenta.<br />
+              Este juego demuestra que programar no es difícil… ¡solo es
+              cuestión de pensar como un pro! <br />
+              ¿Serás capaz de completar todos los niveles sin equivocarte?
+            </p>
+            <p>
+              Juegalo Aqui!
+              <a href="https://www.cokitos.com/programar-al-panda/play/" target="_blank">
+                Code Panda Play!
+              </a>
+            </p>
 
-              <!-- Implementacion del Quiz -->
+            <!-- Implementacion del Quiz -->
+            <div class="topic-header" onclick="toggleTopic(this)">
+              <span class="quiz-title">Quiz Básico</span>
+            </div>
+            <div class="topic-content">
+              <div class="quiz-box">
+                <p>¿Qué es programar?</p>
+                <button onclick="answerQuiz(1, false)">Jugar en la PC</button>
+                <button onclick="answerQuiz(1, true)">
+                  Dar instrucciones a la computadora
+                </button>
+                <p>¿Qué es un algoritmo?</p>
+                <button onclick="answerQuiz(2, false)">Un programa</button>
+                <button onclick="answerQuiz(2, true)">
+                  Una lista de pasos
+                </button>
+                <button onclick="finishQuiz()">
+                  <span class="quiz-title-final">¡Finalizar Quiz!</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Seccion 2 -->
+        <div class="topic">
+          <div class="topic-header" onclick="toggleTopic(this)">
+            <strong>VARIABLES: LA MEMORIA DE LA COMPUTADORA</strong>
+          </div>
+          <div class="topic-content">
+            <p>Una variable es como una cajita donde guardas datos.</p>
+            <p>
+              <strong>Ejemplo:</strong> <br />
+              Caja llamada "edad" → guarda 18 <br />
+              Caja llamada "nombre" → guarda "Sebastian"
+            </p>
+            <pre><code>int edad = 18;
+String nombre = "Sebastian";</code></pre>
+            <strong>Tipos de Datos Fundamentales:</strong>
+
+            <!-- Tabla modulo 1 seccion 2 -->
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Tipo</th>
+                  <th>Que Guarda</th>
+                  <th>Ejemplo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>int</td>
+                  <td>Numeros Enteros</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <td>double</td>
+                  <td>Numeros Decimales</td>
+                  <td>5.5</td>
+                </tr>
+                <tr>
+                  <td>String</td>
+                  <td>Texto</td>
+                  <td>"Hola"</td>
+                </tr>
+                <tr>
+                  <td>boolean</td>
+                  <td>Verdadero/Falso</td>
+                  <td>true</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="quiz-box">
               <div class="topic-header" onclick="toggleTopic(this)">
                 <span class="quiz-title">Quiz Básico</span>
               </div>
               <div class="topic-content">
-                <div class="quiz-box">
-                  <p>¿Qué es programar?</p>
-                  <button onclick="answerQuiz(1, false)">Jugar en la PC</button>
-                  <button onclick="answerQuiz(1, true)">
-                    Dar instrucciones a la computadora
-                  </button>
-                  <p>¿Qué es un algoritmo?</p>
-                  <button onclick="answerQuiz(2, false)">Un programa</button>
-                  <button onclick="answerQuiz(2, true)">
-                    Una lista de pasos
-                  </button>
-                  <button onclick="finishQuiz()">
-                    <span class="quiz-title-final">¡Finalizar Quiz!</span>
-                  </button>
-                </div>
+                <p>¿Qué es una variable?</p>
+                <button onclick="answerQuiz(1, true)">
+                  Un espacio para guardar datos
+                </button>
+                <button onclick="answerQuiz(1, false)">
+                  Un error del sistema
+                </button>
+                <p>Da un ejemplo de dato tipo Double</p>
+                <button onclick="answerQuiz(2, true)">2,5</button>
+                <button onclick="answerQuiz(2, false)">456</button>
+                <button onclick="finishQuiz()">
+                  <span class="quiz-title-final">¡Finalizar Quiz!</span>
+                </button>
               </div>
             </div>
-          </div>
 
-          <!-- Seccion 2 -->
-          <div class="topic">
-            <div class="topic-header" onclick="toggleTopic(this)">
-              <strong>VARIABLES: LA MEMORIA DE LA COMPUTADORA</strong>
-            </div>
-            <div class="topic-content">
-              <p>Una variable es como una cajita donde guardas datos.</p>
-              <p>
-                <strong>Ejemplo:</strong> <br />
-                Caja llamada "edad" → guarda 18 <br />
-                Caja llamada "nombre" → guarda "Sebastian"
-              </p>
-              <pre><code>int edad = 18;
-String nombre = "Sebastian";</code></pre>
-              <strong>Tipos de Datos Fundamentales:</strong>
-
-              <!-- Tabla modulo 1 seccion 2 -->
-              <table class="data-table">
-                <thead>
-                  <tr>
-                    <th>Tipo</th>
-                    <th>Que Guarda</th>
-                    <th>Ejemplo</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>int</td>
-                    <td>Numeros Enteros</td>
-                    <td>10</td>
-                  </tr>
-                  <tr>
-                    <td>double</td>
-                    <td>Numeros Decimales</td>
-                    <td>5.5</td>
-                  </tr>
-                  <tr>
-                    <td>String</td>
-                    <td>Texto</td>
-                    <td>"Hola"</td>
-                  </tr>
-                  <tr>
-                    <td>boolean</td>
-                    <td>Verdadero/Falso</td>
-                    <td>true</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="quiz-box">
-                <div class="topic-header" onclick="toggleTopic(this)">
-                  <span class="quiz-title">Quiz Básico</span>
-                </div>
-                <div class="topic-content">
-                  <p>¿Qué es una variable?</p>
-                  <button onclick="answerQuiz(1, true)">
-                    Un espacio para guardar datos
-                  </button>
-                  <button onclick="answerQuiz(1, false)">
-                    Un error del sistema
-                  </button>
-                  <p>Da un ejemplo de dato tipo Double</p>
-                  <button onclick="answerQuiz(2, true)">2,5</button>
-                  <button onclick="answerQuiz(2, false)">456</button>
-                  <button onclick="finishQuiz()">
-                    <span class="quiz-title-final">¡Finalizar Quiz!</span>
-                  </button>
-                </div>
-              </div>
-
-              <!-- Reto Practico -->
-              <div class="challenge-box">
-                <h4><span class="quiz-title">Reto Práctico</span></h4>
-                <p>¿Qué imprimiría este código?</p>
-                <pre><code>class Main {
+            <!-- Reto Practico -->
+            <div class="challenge-box">
+              <h4><span class="quiz-title">Reto Práctico</span></h4>
+              <p>¿Qué imprimiría este código?</p>
+              <pre><code>class Main {
     public static void main(String[] args) {
         String name = "Juan";
         System.out.println(name);
     }
 }
 </code></pre>
-                <input type="text" id="answer1" placeholder="Escribe aqui!" />
-                <button
-                  onclick="checkAnswer('answer1', 'juan', 'result1')"
-                  class="challenge-btn"
-                >
-                  Verificar
-                </button>
-                <p id="result1"></p>
-              </div>
+              <input type="text" id="answer1" placeholder="Escribe aqui!" />
+              <button onclick="checkAnswer('answer1', 'juan', 'result1')" class="challenge-btn">
+                Verificar
+              </button>
+              <p id="result1"></p>
             </div>
           </div>
+        </div>
 
-          <!-- Seccion 3 -->
-          <div class="topic">
-            <div class="topic-header" onclick="toggleTopic(this)">
-              <strong>CONDICIONALES: CUANDO TU PROGRAMA PIENSA</strong>
-            </div>
-            <div class="topic-content">
-              <p>
-                Los condicionales son estructuras que permiten que un programa
-                tome decisiones. <br />
-                Funcionan con una lógica simple: <br />
-                evaluar una condición y, según si se cumple o no, ejecutar
-                ciertas instrucciones. <br />
-                En otras palabras, un condicional le dice a la computadora: "si
-                pasa esto, haz esto; si no, haz otra cosa".
-              </p>
-              <strong>Ejemplo de la vida real:</strong> <br />
-              Imagina esta situación: <br />
-              Si tienes dinero, compras comida. Si no tienes dinero, no compras.
-              Aquí hay una decisión basada en una condición, la idea es esta:
-              <br />
-              <p>
-                Si (condición) entonces<br />
-                hacer algo<br />
-                si no<br />
-                hacer otra cosa
-              </p>
-              <strong>Ejemplo en programación (Java):</strong>
-              <pre><code>int dinero = 10;
+        <!-- Seccion 3 -->
+        <div class="topic">
+          <div class="topic-header" onclick="toggleTopic(this)">
+            <strong>CONDICIONALES: CUANDO TU PROGRAMA PIENSA</strong>
+          </div>
+          <div class="topic-content">
+            <p>
+              Los condicionales son estructuras que permiten que un programa
+              tome decisiones. <br />
+              Funcionan con una lógica simple: <br />
+              evaluar una condición y, según si se cumple o no, ejecutar
+              ciertas instrucciones. <br />
+              En otras palabras, un condicional le dice a la computadora: "si
+              pasa esto, haz esto; si no, haz otra cosa".
+            </p>
+            <strong>Ejemplo de la vida real:</strong> <br />
+            Imagina esta situación: <br />
+            Si tienes dinero, compras comida. Si no tienes dinero, no compras.
+            Aquí hay una decisión basada en una condición, la idea es esta:
+            <br />
+            <p>
+              Si (condición) entonces<br />
+              hacer algo<br />
+              si no<br />
+              hacer otra cosa
+            </p>
+            <strong>Ejemplo en programación (Java):</strong>
+            <pre><code>int dinero = 10;
 
 if (dinero > 5) {
     System.out.println("Puedes comprar comida");
  } else {
     System.out.println("No te alcanza");
 }</code></pre>
-              <br />
-              <code>int dinero = 10;</code> Se crea una variable que guarda
-              cuánto dinero tienes <code>if (dinero &gt; 5)</code> Se evalúa la
-              condición: ¿10 es mayor que 5?, Si! <br />
-              → Como la condición es verdadera, se ejecuta: "Puedes comprar
-              comida". <br />
-              <code>else {}</code> solo se ejecuta si la condición es falsa
-              <br />
-              <br />
-              <strong>Operadores importantes:</strong>
-              <table class="data-table">
-                <thead>
-                  <tr>
-                    <th>Operador</th>
-                    <th>Simbolo</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Mayor que</td>
-                    <td>&gt;</td>
-                  </tr>
-                  <tr>
-                    <td>Menor que</td>
-                    <td>&lt;</td>
-                  </tr>
-                  <tr>
-                    <td>Mayor o igual</td>
-                    <td>&gt;=</td>
-                  </tr>
-                  <tr>
-                    <td>Menor o igual</td>
-                    <td>&lt;=</td>
-                  </tr>
-                  <tr>
-                    <td>Igual</td>
-                    <td>==</td>
-                  </tr>
-                  <tr>
-                    <td>Diferente de</td>
-                    <td>!=</td>
-                  </tr>
-                </tbody>
-              </table>
-              <br />
-              <strong>Operadores Logicos:</strong>
-              <p>
-                <strong>(&&, ||, !)</strong> Estos operadores se usan dentro de
-                los condicionales para combinar o modificar condiciones. Piensa
-                que trabajas con respuestas de tipo verdadero o falso.
-              </p>
-              <strong>&&</strong>
-              <p>
-                verdadero && verdadero → verdadero <br />
-                verdadero && falso → falso <br />
-                falso && verdadero → falso <br />
-                falso && falso → falso
-              </p>
-              <strong>||</strong>
-              <p>
-                verdadero || verdadero → verdadero <br />
-                verdadero || falso → verdadero <br />
-                falso || verdadero → verdadero <br />
-                falso || falso → falso
-              </p>
-              <strong>! (Negacion)</strong>
-              <p>Si era falso, se vuelve verdadero y viceversa.</p>
-              <br />
-              <strong>else if (múltiples decisiones)</strong>
-              <p>
-                Se usa cuando tienes varias opciones posibles, pero solo una se
-                ejecuta.
-              </p>
-              <pre><code>int nota = 75;
+            <br />
+            <code>int dinero = 10;</code> Se crea una variable que guarda
+            cuánto dinero tienes <code>if (dinero &gt; 5)</code> Se evalúa la
+            condición: ¿10 es mayor que 5?, Si! <br />
+            → Como la condición es verdadera, se ejecuta: "Puedes comprar
+            comida". <br />
+            <code>else {}</code> solo se ejecuta si la condición es falsa
+            <br />
+            <br />
+            <strong>Operadores importantes:</strong>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Operador</th>
+                  <th>Simbolo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mayor que</td>
+                  <td>&gt;</td>
+                </tr>
+                <tr>
+                  <td>Menor que</td>
+                  <td>&lt;</td>
+                </tr>
+                <tr>
+                  <td>Mayor o igual</td>
+                  <td>&gt;=</td>
+                </tr>
+                <tr>
+                  <td>Menor o igual</td>
+                  <td>&lt;=</td>
+                </tr>
+                <tr>
+                  <td>Igual</td>
+                  <td>==</td>
+                </tr>
+                <tr>
+                  <td>Diferente de</td>
+                  <td>!=</td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            <strong>Operadores Logicos:</strong>
+            <p>
+              <strong>(&&, ||, !)</strong> Estos operadores se usan dentro de
+              los condicionales para combinar o modificar condiciones. Piensa
+              que trabajas con respuestas de tipo verdadero o falso.
+            </p>
+            <strong>&&</strong>
+            <p>
+              verdadero && verdadero → verdadero <br />
+              verdadero && falso → falso <br />
+              falso && verdadero → falso <br />
+              falso && falso → falso
+            </p>
+            <strong>||</strong>
+            <p>
+              verdadero || verdadero → verdadero <br />
+              verdadero || falso → verdadero <br />
+              falso || verdadero → verdadero <br />
+              falso || falso → falso
+            </p>
+            <strong>! (Negacion)</strong>
+            <p>Si era falso, se vuelve verdadero y viceversa.</p>
+            <br />
+            <strong>else if (múltiples decisiones)</strong>
+            <p>
+              Se usa cuando tienes varias opciones posibles, pero solo una se
+              ejecuta.
+            </p>
+            <pre><code>int nota = 75;
 
 if (nota >= 90) {
     System.out.println("Excelente");
@@ -386,17 +373,17 @@ if (nota >= 90) {
 } else {
     System.out.println("Reprobado");
 }</code></pre>
-              <p>
-                Se evalúa de arriba hacia abajo <br />
-                Cuando una condición es verdadera, se ejecuta y se detiene
-                <br />
-                Las demás ya no se revisan
-              </p>
-              <strong>if anidados (if dentro de otro if)</strong>
-              <p>
-                Se usan cuando necesitas validar algo dentro de otra condición.
-              </p>
-              <pre><code>int edad = 20;
+            <p>
+              Se evalúa de arriba hacia abajo <br />
+              Cuando una condición es verdadera, se ejecuta y se detiene
+              <br />
+              Las demás ya no se revisan
+            </p>
+            <strong>if anidados (if dentro de otro if)</strong>
+            <p>
+              Se usan cuando necesitas validar algo dentro de otra condición.
+            </p>
+            <pre><code>int edad = 20;
 boolean pago = true;
 
 if (edad >= 18) {
@@ -409,16 +396,16 @@ if (edad >= 18) {
     System.out.println("Menor de edad");
 }
 </code></pre>
-              <p>
-                Primero se evalúa una condición. Si es verdadera, entonces se
-                evalúa otra dentro.
-              </p>
+            <p>
+              Primero se evalúa una condición. Si es verdadera, entonces se
+              evalúa otra dentro.
+            </p>
 
-              <!-- Reto Practico -->
-              <div class="challenge-box">
-                <h4><span class="quiz-title">Reto Práctico</span></h4>
-                <p>¿Qué imprimiría este código?</p>
-                <pre><code>class Main {
+            <!-- Reto Practico -->
+            <div class="challenge-box">
+              <h4><span class="quiz-title">Reto Práctico</span></h4>
+              <p>¿Qué imprimiría este código?</p>
+              <pre><code>class Main {
     public static void main(String[] args) {
         int numero = 4;
 
@@ -430,29 +417,26 @@ if (numero % 2 == 0) {
   }
 }
 </code></pre>
-                <input type="text" id="answer2" placeholder="Escribe aqui!" />
-                <button
-                  onclick="checkAnswer('answer2', 'par', 'result2')"
-                  class="challenge-btn"
-                >
-                  Verificar
-                </button>
-                <p id="result2"></p>
-              </div>
-              <div class="challenge-box">
-                <h4><span class="quiz-title">Reto Práctico</span></h4>
-                <p>
-                  Si un usuario cumple dos condiciones especiales al mismo
-                  tiempo, recibe una promoción VIP <br />
-                  Apartir de ello se quiere clasificar usuarios según su
-                  actividad: <br />
-                  Si un usuario hizo compras múltiplos de 3 y múltiplos de 5 →
-                  cliente VIP <br />
-                  Si solo cumple múltiplos de 3 → cliente frecuente <br />
-                  Si solo cumple múltiplos de 5 → cliente ocasional
-                </p>
-                <p>¿Qué imprimiría este código?</p>
-                <pre><code>class Main {
+              <input type="text" id="answer2" placeholder="Escribe aqui!" />
+              <button onclick="checkAnswer('answer2', 'par', 'result2')" class="challenge-btn">
+                Verificar
+              </button>
+              <p id="result2"></p>
+            </div>
+            <div class="challenge-box">
+              <h4><span class="quiz-title">Reto Práctico</span></h4>
+              <p>
+                Si un usuario cumple dos condiciones especiales al mismo
+                tiempo, recibe una promoción VIP <br />
+                Apartir de ello se quiere clasificar usuarios según su
+                actividad: <br />
+                Si un usuario hizo compras múltiplos de 3 y múltiplos de 5 →
+                cliente VIP <br />
+                Si solo cumple múltiplos de 3 → cliente frecuente <br />
+                Si solo cumple múltiplos de 5 → cliente ocasional
+              </p>
+              <p>¿Qué imprimiría este código?</p>
+              <pre><code>class Main {
     public static void main(String[] args) {
       int num = 15;
 
@@ -466,68 +450,62 @@ if (num % 3 == 0 && num % 5 == 0) {
    }
   }
 </code></pre>
-                <input type="text" id="answer3" placeholder="Escribe aqui!" />
-                <button
-                  onclick="checkAnswer('answer3', 'cliente vip', 'result3')"
-                  class="challenge-btn"
-                >
-                  Verificar
-                </button>
-                <p id="result3"></p>
-              </div>
-              <p>
-                <code
-                  >num % 3 == 0 // significa que el número es divisible entre
-                  3</code
-                >
-                <br />
-                <code>num % 5 == 0 // divisible entre 5</code> <br />
-                <code>&& //exige que ambas se cumplan</code>
-              </p>
+              <input type="text" id="answer3" placeholder="Escribe aqui!" />
+              <button onclick="checkAnswer('answer3', 'cliente vip', 'result3')" class="challenge-btn">
+                Verificar
+              </button>
+              <p id="result3"></p>
             </div>
+            <p>
+              <code>num % 3 == 0 // significa que el número es divisible entre
+                  3</code>
+              <br />
+              <code>num % 5 == 0 // divisible entre 5</code> <br />
+              <code>&& //exige que ambas se cumplan</code>
+            </p>
           </div>
+        </div>
 
-          <!-- Seccion 4 -->
-          <div class="topic">
-            <div class="topic-header" onclick="toggleTopic(this)">
-              <strong>ESTRUCTURAS DE CONTROL: AUTOMATIZA PROCESOS </strong>
-            </div>
-            <div class="topic-content">
-              <p>
-                Las estructuras de control son fundamentales en la programación,
-                ya que permiten controlar el flujo de ejecución de un programa.
-                <br />
-                Gracias a ellas, es posible repetir instrucciones, tomar
-                decisiones y automatizar procesos. <br />
-                En esta seccion aprenderás a utilizar los ciclos repetitivos más
-                importantes: for, while y do while, además de comprender el uso
-                de contadores y acumuladores, herramientas esenciales para
-                resolver problemas de manera eficiente.
-              </p>
-              <strong>Ciclo FOR</strong>
-              <p>
-                El ciclo for se utiliza cuando sabemos cuántas veces queremos
-                repetir una instrucción.
-              </p>
-              <pre><code>for (inicialización; condición; incremento) {
+        <!-- Seccion 4 -->
+        <div class="topic">
+          <div class="topic-header" onclick="toggleTopic(this)">
+            <strong>ESTRUCTURAS DE CONTROL: AUTOMATIZA PROCESOS </strong>
+          </div>
+          <div class="topic-content">
+            <p>
+              Las estructuras de control son fundamentales en la programación,
+              ya que permiten controlar el flujo de ejecución de un programa.
+              <br />
+              Gracias a ellas, es posible repetir instrucciones, tomar
+              decisiones y automatizar procesos. <br />
+              En esta seccion aprenderás a utilizar los ciclos repetitivos más
+              importantes: for, while y do while, además de comprender el uso
+              de contadores y acumuladores, herramientas esenciales para
+              resolver problemas de manera eficiente.
+            </p>
+            <strong>Ciclo FOR</strong>
+            <p>
+              El ciclo for se utiliza cuando sabemos cuántas veces queremos
+              repetir una instrucción.
+            </p>
+            <pre><code>for (inicialización; condición; incremento) {
    // instrucciones
 }</code></pre>
-              <strong>Ejemplo Practico</strong>
-              <p>Se desea contar del 1 al 10 usando un blucle for</p>
-              <pre><code>public class Main {
+            <strong>Ejemplo Practico</strong>
+            <p>Se desea contar del 1 al 10 usando un blucle for</p>
+            <pre><code>public class Main {
     public static void main(String[] args) {
         for (int i = 1; i <= 10; i++) {
             System.out.println(i);
         }
     }
 }</code></pre>
-              <pre>
+            <pre>
 int i = 1 → inicia el contador.
 i <= 10 → condición para seguir.
-i++ → incrementa en 1.</pre
-              >
-              <p>Resultado en Terminal:</p>
-              <pre>
+i++ → incrementa en 1.</pre>
+            <p>Resultado en Terminal:</p>
+            <pre>
 1
 2
 3
@@ -537,17 +515,12 @@ i++ → incrementa en 1.</pre
 7
 8
 9
-10</pre
-              >
-              <br />
-              <strong>Video Recomendado!</strong> <br />
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/V7U96RG6MPE?si=QPdJ8uebTE5G2yin&amp;start=58"
-                title="YouTube video player"
-                frameborder="0"
-                allow="
+10</pre>
+            <br />
+            <strong>Video Recomendado!</strong> <br />
+            <iframe width="560" height="315"
+              src="https://www.youtube.com/embed/V7U96RG6MPE?si=QPdJ8uebTE5G2yin&amp;start=58"
+              title="YouTube video player" frameborder="0" allow="
                   accelerometer;
                   autoplay;
                   clipboard-write;
@@ -555,26 +528,23 @@ i++ → incrementa en 1.</pre
                   gyroscope;
                   picture-in-picture;
                   web-share;
-                "
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-              <br />
-              <!-- Implementacion del Quiz -->
-              <div class="topic-header" onclick="toggleTopic(this)">
-                <span class="quiz-title">Quiz Básico</span>
-              </div>
-              <div class="topic-content">
-                <div class="quiz-box">
-                  <p>Que quiere decir i++</p>
-                  <button onclick="answerQuiz(1, false)">
-                    Ejecuta instrucciones una sola vez
-                  </button>
-                  <button onclick="answerQuiz(1, true)">
-                    El contador Aumenta en 1
-                  </button>
-                  <p>Que imprime el siguiente Codigo Java?</p>
-                  <pre><code>public class Main {
+                " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br />
+            <!-- Implementacion del Quiz -->
+            <div class="topic-header" onclick="toggleTopic(this)">
+              <span class="quiz-title">Quiz Básico</span>
+            </div>
+            <div class="topic-content">
+              <div class="quiz-box">
+                <p>Que quiere decir i++</p>
+                <button onclick="answerQuiz(1, false)">
+                  Ejecuta instrucciones una sola vez
+                </button>
+                <button onclick="answerQuiz(1, true)">
+                  El contador Aumenta en 1
+                </button>
+                <p>Que imprime el siguiente Codigo Java?</p>
+                <pre><code>public class Main {
     public static void main(String[] args) {
         
         for (int i = 1; i <= 5; i++) {
@@ -582,30 +552,30 @@ i++ → incrementa en 1.</pre
         }
     }
 }</code></pre>
-                  <button onclick="answerQuiz(2, false)">La tabla del 5</button>
-                  <button onclick="answerQuiz(2, true)">
-                    La tabla del 7 del 0 hasta el 5
-                  </button>
-                  <button onclick="answerQuiz(2, false)">
-                    La tabla del 7 completa
-                  </button>
-                  <button onclick="finishQuiz()">
-                    <span class="quiz-title-final">¡Finalizar Quiz!</span>
-                  </button>
-                </div>
+                <button onclick="answerQuiz(2, false)">La tabla del 5</button>
+                <button onclick="answerQuiz(2, true)">
+                  La tabla del 7 del 0 hasta el 5
+                </button>
+                <button onclick="answerQuiz(2, false)">
+                  La tabla del 7 completa
+                </button>
+                <button onclick="finishQuiz()">
+                  <span class="quiz-title-final">¡Finalizar Quiz!</span>
+                </button>
               </div>
-              <br />
-              <strong>CICLO WHILE</strong>
-              <p>
-                El ciclo while repite instrucciones mientras una condición sea
-                verdadera.
-              </p>
-              <pre><code>while (condición) {
+            </div>
+            <br />
+            <strong>CICLO WHILE</strong>
+            <p>
+              El ciclo while repite instrucciones mientras una condición sea
+              verdadera.
+            </p>
+            <pre><code>while (condición) {
    // instrucciones
 }</code></pre>
-              <strong>Ejemplo Prectico</strong>
-              <p>Se desea contar de 1 al 5 usando el bucle while</p>
-              <pre><code>public class Main {
+            <strong>Ejemplo Prectico</strong>
+            <p>Se desea contar de 1 al 5 usando el bucle while</p>
+            <pre><code>public class Main {
     public static void main(String[] args) {
         int i = 1;
 
@@ -615,59 +585,60 @@ i++ → incrementa en 1.</pre
         }
     } 
 }</code></pre>
-              <br />
-              <strong>Explicacion del Ejemplo: </strong>
-              <p>
-                1. Se crea una variable llamada contador con valor 1. <br />
-                2. El ciclo verifica si contador <= 5. <br />
-                3. Si se cumple, imprime el número. <br />
-                4. Luego aumenta el contador con contador++. <br />
-                Cuando contador llega a 6, la condición ya no se cumple y el
-                ciclo termina.
-              </p>
-              <p>
-                El programa seguirá ejecutándose mientras i sea menor o igual a
-                5.
-              </p>
-              Se usa cuando no sabemos exactamente cuántas veces se repetirá una
-              acción, ya que depende de que una condición se cumpla. <br />
-              <strong>Idea clave: </strong> Primero evalúa la condición y, si es
-              verdadera, ejecuta el bloque de instrucciones. <br />
-              <strong>NO OLVIDES ESTO!</strong>
-              <p>
-                Es un error muy comun en los Principiantes "Olvidar actualizar
-                la variable."
-              </p>
-              <p>Esto esta incorrecto:</p>
-              <pre><code>int i = 1;
+            <br />
+            <strong>Explicacion del Ejemplo: </strong>
+            <p>
+              1. Se crea una variable llamada contador con valor 1. <br />
+              2. El ciclo verifica si contador
+              <= 5. <br />
+              3. Si se cumple, imprime el número. <br />
+              4. Luego aumenta el contador con contador++. <br />
+              Cuando contador llega a 6, la condición ya no se cumple y el
+              ciclo termina.
+            </p>
+            <p>
+              El programa seguirá ejecutándose mientras i sea menor o igual a
+              5.
+            </p>
+            Se usa cuando no sabemos exactamente cuántas veces se repetirá una
+            acción, ya que depende de que una condición se cumpla. <br />
+            <strong>Idea clave: </strong> Primero evalúa la condición y, si es
+            verdadera, ejecuta el bloque de instrucciones. <br />
+            <strong>NO OLVIDES ESTO!</strong>
+            <p>
+              Es un error muy comun en los Principiantes "Olvidar actualizar
+              la variable."
+            </p>
+            <p>Esto esta incorrecto:</p>
+            <pre><code>int i = 1;
 
 while (i <= 5) {
    System.out.println(i);
 }</code></pre>
-              <p>
-                Esto genera un bucle infinito porque i nunca cambia, lo q podria
-                petar tu pc 😂.
-              </p>
-              lo correcto es usar la variable <code>i++;</code>
+            <p>
+              Esto genera un bucle infinito porque i nunca cambia, lo q podria
+              petar tu pc 😂.
+            </p>
+            lo correcto es usar la variable <code>i++;</code>
 
-              <!-- Implementacion del Quiz 2 -->
-              <div class="topic-header" onclick="toggleTopic(this)">
-                <span class="quiz-title">Quiz Básico</span>
-              </div>
-              <div class="topic-content">
-                <div class="quiz-box">
-                  <p>¿Qué hace el ciclo while?</p>
-                  <button onclick="answerQuiz(1, false)">
-                    Solo sirve para sumar números
-                  </button>
-                  <button onclick="answerQuiz(1, true)">
-                    Repite instrucciones mientras una condición sea verdadera
-                  </button>
-                  <button onclick="answerQuiz(1, false)">
-                    Ejecuta instrucciones una sola vez
-                  </button>
-                  <p>Que imprime el siguiente Codigo?</p>
-                  <pre><code>public class Main {
+            <!-- Implementacion del Quiz 2 -->
+            <div class="topic-header" onclick="toggleTopic(this)">
+              <span class="quiz-title">Quiz Básico</span>
+            </div>
+            <div class="topic-content">
+              <div class="quiz-box">
+                <p>¿Qué hace el ciclo while?</p>
+                <button onclick="answerQuiz(1, false)">
+                  Solo sirve para sumar números
+                </button>
+                <button onclick="answerQuiz(1, true)">
+                  Repite instrucciones mientras una condición sea verdadera
+                </button>
+                <button onclick="answerQuiz(1, false)">
+                  Ejecuta instrucciones una sola vez
+                </button>
+                <p>Que imprime el siguiente Codigo?</p>
+                <pre><code>public class Main {
     public static void main(String[] args) {
     int i = 1;
 
@@ -677,18 +648,18 @@ while (i <= 3) {
   }
  }
 }</code></pre>
-                  <button onclick="answerQuiz(2, true)">1 2 3</button>
-                  <button onclick="answerQuiz(2, false)">1 2 3 4 5</button>
-                  <button onclick="answerQuiz(2, false)">Bucle Infinito</button>
-                  <button onclick="finishQuiz()">
-                    <span class="quiz-title-final">¡Finalizar Quiz!</span>
-                  </button>
-                  <p>
-                    Demuestra todo lo q has aprendido en esta seccion por ahora
-                    como todo un pro de Java!
-                  </p>
-                  <p>Que Imprime el siguiente Codigo?</p>
-                  <pre><code>public class Main {
+                <button onclick="answerQuiz(2, true)">1 2 3</button>
+                <button onclick="answerQuiz(2, false)">1 2 3 4 5</button>
+                <button onclick="answerQuiz(2, false)">Bucle Infinito</button>
+                <button onclick="finishQuiz()">
+                  <span class="quiz-title-final">¡Finalizar Quiz!</span>
+                </button>
+                <p>
+                  Demuestra todo lo q has aprendido en esta seccion por ahora
+                  como todo un pro de Java!
+                </p>
+                <p>Que Imprime el siguiente Codigo?</p>
+                <pre><code>public class Main {
     public static void main(String[] args) {
         int i = 1;
         int suma = 0;
@@ -703,75 +674,75 @@ while (i <= 3) {
         System.out.println(suma);
     }
 }</code></pre>
-                  <button onclick="answerQuiz(3, true)">6</button>
-                  <button onclick="answerQuiz(3, false)">No compila</button>
-                  <button onclick="answerQuiz(3, false)">10</button>
-                  <button onclick="finishQuiz()">
-                    <span class="quiz-title-final">¡Finalizar Quiz!</span>
-                  </button>
-                </div>
+                <button onclick="answerQuiz(3, true)">6</button>
+                <button onclick="answerQuiz(3, false)">No compila</button>
+                <button onclick="answerQuiz(3, false)">10</button>
+                <button onclick="finishQuiz()">
+                  <span class="quiz-title-final">¡Finalizar Quiz!</span>
+                </button>
               </div>
             </div>
           </div>
-
-          <!-- BOTÓN FINAL -->
-          <button class="start-btn" onclick="completeModule(1)">
-            Terminar módulo
-          </button>
         </div>
+
+        <!-- BOTÓN FINAL -->
+        <button class="start-btn" onclick="completeModule(1)">
+          Terminar módulo
+        </button>
       </div>
+    </div>
 
-      <!-- Modulo 2 -->
-      <div class="module locked" data-id="2">
-        <div class="module-header" onclick="toggleModule(this)">
-          Programacion Orientada a Objetos (POO)
-        </div>
-        <div class="module-content">
-          <div class="topic">
-            <div class="topic-header" onclick="toggleTopic(this)">
-              <strong>ENTENDIENDO LAS BASES</strong>
-            </div>
-            <div class="topic-content">
-              <p>
-                La Programación Orientada a Objetos (POO) es un paradigma de
-                programación que organiza el software en objetos, los cuales
-                representan entidades del mundo real mediante atributos y
-                comportamientos. Cada objeto posee características propias,
-                conocidas como atributos, y puede realizar acciones específicas,
-                llamadas métodos o comportamientos. Este enfoque permite modelar
-                problemas de una forma más cercana a la realidad, facilitando el
-                diseño, desarrollo y mantenimiento de las aplicaciones. Además,
-                la POO promueve principios como la encapsulación, la herencia,
-                el polimorfismo y la abstracción, lo que favorece la
-                reutilización del código, mejora su organización hace que los
-                programas sean más escalables y fáciles de comprender.
-              </p>
-              <strong>Que es un Objeto?</strong>
-              <p>Un objeto es una instancia de una clase.</p>
-              <strong>Por ejemplo:</strong> <br />
-              Un carro tiene atributos: color, marca, velocidad. <br />
-              Un carro tiene comportamientos: acelerar, frenar, encender. <br />
-              <strong>En Programacion: </strong>
-              <pre><code>Carro miCarro = new Carro();</code></pre>
-              <p>
-                Carro: Clase <br />
-                miCarro: Objeto
-              </p>
-              <strong>Que es una Clase</strong>
-              <p>
-                Una clase es un molde o plantilla que define las características
-                y comportamientos de un tipo de objeto. <br />
-                Es como un plano que describe cómo se ve y qué puede hacer un
-                objeto, pero no es el objeto en sí.
-              </p>
-              <strong>Ejemplo:</strong> <br />
-              La clase "Perro" podría tener atributos como "raza", "edad" y
-              "color", y métodos como "ladrar()" o "comer()". <br />
-              Cuando creas un objeto a partir de esta clase, como "miPerro", ese
-              objeto tendrá sus propios valores para esos atributos y podrá usar
-              los métodos definidos en la clase. <br />
-              <strong>Ejemplo en Java:</strong>
-              <pre><code>// 1. Definimos la clase "Perro" (El molde)
+    <!-- Modulo 2 -->
+    <div class="module locked" data-id="2">
+      <div class="module-header" onclick="toggleModule(this)">
+        Programacion Orientada a Objetos (POO)
+      </div>
+      <div class="module-content">
+        <div class="topic">
+          <div class="topic-header" onclick="toggleTopic(this)">
+            <strong>ENTENDIENDO LAS BASES</strong>
+          </div>
+          <div class="topic-content">
+            <p>
+              La Programación Orientada a Objetos (POO) es un paradigma de
+              programación que organiza el software en objetos, los cuales
+              representan entidades del mundo real mediante atributos y
+              comportamientos. Cada objeto posee características propias,
+              conocidas como atributos, y puede realizar acciones específicas,
+              llamadas métodos o comportamientos. Este enfoque permite modelar
+              problemas de una forma más cercana a la realidad, facilitando el
+              diseño, desarrollo y mantenimiento de las aplicaciones. Además,
+              la POO promueve principios como la encapsulación, la herencia,
+              el polimorfismo y la abstracción, lo que favorece la
+              reutilización del código, mejora su organización hace que los
+              programas sean más escalables y fáciles de comprender.
+            </p>
+            <strong>Que es un Objeto?</strong>
+            <p>Un objeto es una instancia de una clase.</p>
+            <strong>Por ejemplo:</strong> <br />
+            Un carro tiene atributos: color, marca, velocidad. <br />
+            Un carro tiene comportamientos: acelerar, frenar, encender. <br />
+            <strong>En Programacion: </strong>
+            <pre><code>Carro miCarro = new Carro();</code></pre>
+            <p>
+              Carro: Clase <br />
+              miCarro: Objeto
+            </p>
+            <strong>Que es una Clase</strong>
+            <p>
+              Una clase es un molde o plantilla que define las características
+              y comportamientos de un tipo de objeto. <br />
+              Es como un plano que describe cómo se ve y qué puede hacer un
+              objeto, pero no es el objeto en sí.
+            </p>
+            <strong>Ejemplo:</strong> <br />
+            La clase "Perro" podría tener atributos como "raza", "edad" y
+            "color", y métodos como "ladrar()" o "comer()". <br />
+            Cuando creas un objeto a partir de esta clase, como "miPerro", ese
+            objeto tendrá sus propios valores para esos atributos y podrá usar
+            los métodos definidos en la clase. <br />
+            <strong>Ejemplo en Java:</strong>
+            <pre><code>// 1. Definimos la clase "Perro" (El molde)
 class Perro {
     // Atributos (Características)
     String raza;
@@ -808,72 +779,72 @@ public class Main {
         miPerro.comer();
     }
 }</code></pre>
-              <div class="topic-header" onclick="toggleTopic(this)">
-                Quiz Básico
-              </div>
-              <div class="topic-content">
-                <div class="quiz-box">
-                  <p>Que es una Clase?</p>
-                  <button onclick="answerQuiz(1, false)">
-                    Es una variable especial que almacena datos en la memoria
-                    del computador
-                  </button>
-                  <button onclick="answerQuiz(1, true)">
-                    Es un molde, plantilla o plano (blueprint) en la
-                    programación orientada a objetos
-                  </button>
-                  <p>Que es un Objeto</p>
-                  <button onclick="answerQuiz(2, false)">
-                    Es la estructura de código donde se programan las funciones
-                    principales
-                  </button>
-                  <button onclick="answerQuiz(2, true)">
-                    Es una instancia concreta de una clase que tiene sus propios
-                    valores para los atributos y puede ejecutar los métodos
-                    definidos en su molde.
-                  </button>
-                  <button onclick="answerQuiz(2, false)">
-                    Ninguna de las anteriores
-                  </button>
-                  <button onclick="finishQuiz()">
-                    <span class="quiz-title-final">¡Finalizar Quiz!</span>
-                  </button>
-                </div>
+            <div class="topic-header" onclick="toggleTopic(this)">
+              Quiz Básico
+            </div>
+            <div class="topic-content">
+              <div class="quiz-box">
+                <p>Que es una Clase?</p>
+                <button onclick="answerQuiz(1, false)">
+                  Es una variable especial que almacena datos en la memoria
+                  del computador
+                </button>
+                <button onclick="answerQuiz(1, true)">
+                  Es un molde, plantilla o plano (blueprint) en la
+                  programación orientada a objetos
+                </button>
+                <p>Que es un Objeto</p>
+                <button onclick="answerQuiz(2, false)">
+                  Es la estructura de código donde se programan las funciones
+                  principales
+                </button>
+                <button onclick="answerQuiz(2, true)">
+                  Es una instancia concreta de una clase que tiene sus propios
+                  valores para los atributos y puede ejecutar los métodos
+                  definidos en su molde.
+                </button>
+                <button onclick="answerQuiz(2, false)">
+                  Ninguna de las anteriores
+                </button>
+                <button onclick="finishQuiz()">
+                  <span class="quiz-title-final">¡Finalizar Quiz!</span>
+                </button>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-              <!-- Seccion2 -->
+      <!-- Seccion2 -->
 
-        <div class="module-content">
-          <div class="topic">
-            <div class="topic-header" onclick="toggleTopic(this)">
-              <strong>PILARES FUNDAMENTALES</strong>
-            </div>
-            <div class="topic-content">
-              <p>
-                La Programación Orientada a Objetos (POO) se basa en cuatro
-                pilares que permite desarrollar programas más organizados,
-                reutilizables, seguros y fáciles de mantener, facilitando la
-                creación de aplicaciones de mayor complejidad <br />
-                Estos pilares son: <br />
-                <br />
-                <strong>ENCAPSULAMIENTO:</strong> <br />
-                El encapsulamiento consiste en proteger los datos internos de un
-                objeto, restringiendo el acceso directo y controlándolo mediante
-                métodos. <br />
-                Se logra usando: <br />
-                <br />
+      <div class="module-content">
+        <div class="topic">
+          <div class="topic-header" onclick="toggleTopic(this)">
+            <strong>PILARES FUNDAMENTALES</strong>
+          </div>
+          <div class="topic-content">
+            <p>
+              La Programación Orientada a Objetos (POO) se basa en cuatro
+              pilares que permite desarrollar programas más organizados,
+              reutilizables, seguros y fáciles de mantener, facilitando la
+              creación de aplicaciones de mayor complejidad <br />
+              Estos pilares son: <br />
+              <br />
+              <strong>ENCAPSULAMIENTO:</strong> <br />
+              El encapsulamiento consiste en proteger los datos internos de un
+              objeto, restringiendo el acceso directo y controlándolo mediante
+              métodos. <br />
+              Se logra usando: <br />
+              <br />
 
-                - private <br />
-                - public <br />
-                - getters <br />
-                - setters <br />
-                <br />
-                <strong>Ejemplo en Java:</strong> <br />
+              - private <br />
+              - public <br />
+              - getters <br />
+              - setters <br />
+              <br />
+              <strong>Ejemplo en Java:</strong> <br />
 
-                <pre><code>public class Cuenta {
+            <pre><code>public class Cuenta {
     private double saldo;
 
     public void setSaldo(double saldo) {
@@ -884,26 +855,21 @@ public class Main {
         return saldo;
     }
 }</code></pre><br />
-              </p>
-              <p>
-                1. La variable saldo es privada, lo que significa que no puede
-                ser accedida directamente desde fuera de la clase. <br />
-                2. Se proporcionan métodos públicos (setSaldo y getSaldo) para
-                permitir el acceso controlado al saldo. <br />
-                3. Esto protege la integridad de los datos y permite validar o
-                controlar cómo se accede y modifica el saldo, evitando cambios
-                no deseados o inconsistentes.
-              </p>
-              
-                <strong>Videos recomendados:</strong> <br />
+            </p>
+            <p>
+              1. La variable saldo es privada, lo que significa que no puede
+              ser accedida directamente desde fuera de la clase. <br />
+              2. Se proporcionan métodos públicos (setSaldo y getSaldo) para
+              permitir el acceso controlado al saldo. <br />
+              3. Esto protege la integridad de los datos y permite validar o
+              controlar cómo se accede y modifica el saldo, evitando cambios
+              no deseados o inconsistentes.
+            </p>
 
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/TGHJ2_PL_HU?si=8zhujbjxVg4cUILZ"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="
+            <strong>Videos recomendados:</strong> <br />
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TGHJ2_PL_HU?si=8zhujbjxVg4cUILZ"
+              title="YouTube video player" frameborder="0" allow="
                     accelerometer;
                     autoplay;
                     clipboard-write;
@@ -911,18 +877,10 @@ public class Main {
                     gyroscope;
                     picture-in-picture;
                     web-share;
-                  "
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
-                ></iframe>
-                <br />
-                <iframe
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/gR0EssHrl24?si=M-tKi0HUfZZSQOBX"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="
+                  " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br />
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gR0EssHrl24?si=M-tKi0HUfZZSQOBX"
+              title="YouTube video player" frameborder="0" allow="
                     accelerometer;
                     autoplay;
                     clipboard-write;
@@ -930,40 +888,32 @@ public class Main {
                     gyroscope;
                     picture-in-picture;
                     web-share;
-                  "
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
-                ></iframe>
-              </p>
-              <strong>ABSTRACCION:</strong> <br />
-              <p>
-                La abstracción es un principio de la programación orientada a
-                objetos que permite simplificar la complejidad de un sistema al
-                enfocarse en los aspectos esenciales y relevantes de un objeto,
-                ignorando los detalles innecesarios. <br />
-                Se logra mediante el uso de clases abstractas e interfaces,
-                permitiendo definir comportamientos y características comunes
-                sin necesidad de implementar todos los detalles, lo que facilita
-                la reutilización del código y mejora la organización del
-                software. <br />
-                ventajas: <br />
-                - Facilita la comprensión del sistema al centrarse en lo
-                esencial.
-                <br />
-                - Permite la creación de jerarquías de clases y relaciones entre
-                objetos.
-                <br />
-                - Fomenta la reutilización del código al definir comportamientos
-                comunes en clases abstractas e interfaces.
-              </p>
-              <strong>Video recomendado:</strong> <br />
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/oBO01Cx_YwQ?si=za8D9pv1LGbljNKc"
-                title="YouTube video player"
-                frameborder="0"
-                allow="
+                  " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </p>
+            <strong>ABSTRACCION:</strong> <br />
+            <p>
+              La abstracción es un principio de la programación orientada a
+              objetos que permite simplificar la complejidad de un sistema al
+              enfocarse en los aspectos esenciales y relevantes de un objeto,
+              ignorando los detalles innecesarios. <br />
+              Se logra mediante el uso de clases abstractas e interfaces,
+              permitiendo definir comportamientos y características comunes
+              sin necesidad de implementar todos los detalles, lo que facilita
+              la reutilización del código y mejora la organización del
+              software. <br />
+              ventajas: <br />
+              - Facilita la comprensión del sistema al centrarse en lo
+              esencial.
+              <br />
+              - Permite la creación de jerarquías de clases y relaciones entre
+              objetos.
+              <br />
+              - Fomenta la reutilización del código al definir comportamientos
+              comunes en clases abstractas e interfaces.
+            </p>
+            <strong>Video recomendado:</strong> <br />
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/oBO01Cx_YwQ?si=za8D9pv1LGbljNKc"
+              title="YouTube video player" frameborder="0" allow="
                   accelerometer;
                   autoplay;
                   clipboard-write;
@@ -971,17 +921,9 @@ public class Main {
                   gyroscope;
                   picture-in-picture;
                   web-share;
-                "
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-              <iframe
-                width="560"
-                height="315"
-                src="https://www.youtube.com/embed/LhXfUiTFCZw?si=_PE6zMoueXIbDR1Z"
-                title="YouTube video player"
-                frameborder="0"
-                allow="
+                " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LhXfUiTFCZw?si=_PE6zMoueXIbDR1Z"
+              title="YouTube video player" frameborder="0" allow="
                   accelerometer;
                   autoplay;
                   clipboard-write;
@@ -989,21 +931,20 @@ public class Main {
                   gyroscope;
                   picture-in-picture;
                   web-share;
-                "
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe> <br />
-              <strong>Ejemplo Real:</strong> <br />
-              <p> 
-                Un automóvil es un buen ejemplo de abstracción. <br />
-                Cuando conduces, utilizas elementos como: <br />
-                - Acelerar <br />
-                - Frenar <br />
-                - Girar <br />
-                - Encender <br /> <br />
-                Pero no necesitas saber exactamente cómo funciona el motor, cómo se inyecta el combustible o cómo funciona el sistema de frenos. Solo utilizas las funciones que necesitas y el automóvil se encarga de los procesos internos. <br /> <br />
-                <strong>Ejemplo en Java:</strong> <br />
-                <pre><code>abstract class Automovil {
+                " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> <br />
+            <strong>Ejemplo Real:</strong> <br />
+            <p>
+              Un automóvil es un buen ejemplo de abstracción. <br />
+              Cuando conduces, utilizas elementos como: <br />
+              - Acelerar <br />
+              - Frenar <br />
+              - Girar <br />
+              - Encender <br /> <br />
+              Pero no necesitas saber exactamente cómo funciona el motor, cómo se inyecta el combustible o cómo funciona
+              el sistema de frenos. Solo utilizas las funciones que necesitas y el automóvil se encarga de los procesos
+              internos. <br /> <br />
+              <strong>Ejemplo en Java:</strong> <br />
+            <pre><code>abstract class Automovil {
 // Métodos abstractos
 public abstract void acelerar();
 public abstract void frenar();
@@ -1027,72 +968,82 @@ class carro extends Automovil {
         System.out.println("El carro está encendido.");
     }
 } </code></pre>
-              </p>
-              <strong>HERENCIA:</strong> <br />
-              <p>
-                La herencia es un principio de la programación orientada a objetos
-                que permite crear nuevas clases basadas en clases existentes,
-                heredando sus atributos y métodos. <br />
-                Esto facilita la reutilización del código, ya que las clases
-                derivadas pueden aprovechar la funcionalidad de las clases base
-                y agregar o modificar comportamientos según sea necesario. <br />
-                La herencia promueve la organización jerárquica de las clases y
-                fomenta la creación de relaciones entre objetos, lo que mejora
-                la estructura y mantenibilidad del software.
-              </p>
-              <strong>Ventajas de la herencia:</strong> <br />
-              - Reutilización de código: Las clases derivadas pueden aprovechar 
-              la funcionalidad de las clases base, evitando la duplicación de
-                código. <br />
-              - Organización jerárquica: Permite estructurar las clases en una
-                jerarquía, facilitando la comprensión y el mantenimiento del
-                software. <br />
-              - Extensibilidad: Las clases derivadas pueden agregar o modificar
-                comportamientos según sea necesario, adaptándose a nuevas
-                necesidades sin afectar la clase base. <br /> <br />
-              <strong>Ejemplo en Java:</strong> <br />
-              <pre><code>class Animal {
+            </p>
+            <strong>HERENCIA:</strong> <br />
+            <p>
+              La herencia es un principio de la programación orientada a objetos
+              que permite crear nuevas clases basadas en clases existentes,
+              heredando sus atributos y métodos. <br />
+              Esto facilita la reutilización del código, ya que las clases
+              derivadas pueden aprovechar la funcionalidad de las clases base
+              y agregar o modificar comportamientos según sea necesario. <br />
+              La herencia promueve la organización jerárquica de las clases y
+              fomenta la creación de relaciones entre objetos, lo que mejora
+              la estructura y mantenibilidad del software.
+            </p>
+            <strong>Ventajas de la herencia:</strong> <br />
+            - Reutilización de código: Las clases derivadas pueden aprovechar
+            la funcionalidad de las clases base, evitando la duplicación de
+            código. <br />
+            - Organización jerárquica: Permite estructurar las clases en una
+            jerarquía, facilitando la comprensión y el mantenimiento del
+            software. <br />
+            - Extensibilidad: Las clases derivadas pueden agregar o modificar
+            comportamientos según sea necesario, adaptándose a nuevas
+            necesidades sin afectar la clase base. <br /> <br />
+            <strong>Ejemplo en Java:</strong> <br />
+            <pre><code>class Animal {
     void comer() {
         System.out.println("El animal está comiendo.");
     }
 }
 </code></pre>
-              <p>
-                En este ejemplo, la clase Animal tiene un método comer() que
-                imprime un mensaje indicando que el animal está comiendo.
-              </p>
-              <pre><code>class Perro extends Animal {
+            <p>
+              En este ejemplo, la clase Animal tiene un método comer() que
+              imprime un mensaje indicando que el animal está comiendo.
+            </p>
+            <pre><code>class Perro extends Animal {
     void ladrar() {
         System.out.println("El perro está ladrando.");
     }
 }
 </code></pre>
-              <p>
-                En este ejemplo, la clase Perro hereda de la clase Animal y agrega un método ladrar() que imprime un mensaje indicando que el perro está ladrando.
-              </p>
+            <p>
+              En este ejemplo, la clase Perro hereda de la clase Animal y agrega un método ladrar() que imprime un
+              mensaje indicando que el perro está ladrando.
+            </p>
 
-              <strong>Videos Recomendados:</strong> <br />
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/VsdxCQofUl0?si=IdewVdNnyYOGTDKk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/9NynVRpZzv4?si=Oz_5u6yw0YRKUX-D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              <p>
-                Es una buena práctica usar la herencia para modelar relaciones "es un" entre clases. Por ejemplo, un Perro "es un" Animal, por lo que tiene sentido que la clase Perro herede de la clase Animal. <br />
-                Es muy importante tener en cuenta que la herencia debe usarse con cuidado, ya que un uso excesivo o inapropiado puede llevar a una jerarquía de clases complicada y difícil de mantener. <br />
-                Es una de las características más poderosas de la programación orientada a objetos, pero también requiere un buen diseño y comprensión de las relaciones entre clases.
-              </p> <br />
-              <strong>POLIMORFISMO:</strong> <br />
-              <p>
-                El polimorfismo es un principio de la programación orientada a
-                objetos que permite que un objeto pueda tomar diferentes formas
-                o comportamientos según el contexto en el que se utilice. <br />
-                Esto significa que una misma interfaz o método puede ser
-                implementado de distintas maneras por diferentes clases, lo que
-                permite tratar a los objetos de manera uniforme y flexible. <br />
-                El polimorfismo facilita la reutilización del código, mejora la
-                extensibilidad del software y permite crear sistemas más
-                dinámicos y adaptables a cambios futuros.
-              </p>
-              <strong>Ejemplo en Java:</strong> <br />
-              <pre><code>class Animal {
+            <strong>Videos Recomendados:</strong> <br />
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VsdxCQofUl0?si=IdewVdNnyYOGTDKk"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/9NynVRpZzv4?si=Oz_5u6yw0YRKUX-D"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>
+              Es una buena práctica usar la herencia para modelar relaciones "es un" entre clases. Por ejemplo, un Perro
+              "es un" Animal, por lo que tiene sentido que la clase Perro herede de la clase Animal. <br />
+              Es muy importante tener en cuenta que la herencia debe usarse con cuidado, ya que un uso excesivo o
+              inapropiado puede llevar a una jerarquía de clases complicada y difícil de mantener. <br />
+              Es una de las características más poderosas de la programación orientada a objetos, pero también requiere
+              un buen diseño y comprensión de las relaciones entre clases.
+            </p> <br />
+            <strong>POLIMORFISMO:</strong> <br />
+            <p>
+              El polimorfismo es un principio de la programación orientada a
+              objetos que permite que un objeto pueda tomar diferentes formas
+              o comportamientos según el contexto en el que se utilice. <br />
+              Esto significa que una misma interfaz o método puede ser
+              implementado de distintas maneras por diferentes clases, lo que
+              permite tratar a los objetos de manera uniforme y flexible. <br />
+              El polimorfismo facilita la reutilización del código, mejora la
+              extensibilidad del software y permite crear sistemas más
+              dinámicos y adaptables a cambios futuros.
+            </p>
+            <strong>Ejemplo en Java:</strong> <br />
+            <pre><code>class Animal {
     void hacerSonido() {
         System.out.println("El animal hace un sonido.");
     }
@@ -1111,24 +1062,24 @@ class Gato extends Animal {
 }
 </code></pre>
 
-<!-- Implementacion del Quiz modulo 2 seccion 2 -->
-              <div class="topic-header" onclick="toggleTopic(this)">
-                <span class="quiz-title">Quiz Básico</span>
-              </div>
-              <div class="topic-content">
-                <div class="quiz-box">
-                  <p>¿Cuantos Pilares Fundamentales tiene la Programación Orientada a Objetos?</p>
-                  <button onclick="answerQuiz(1, false)">
-                    5
-                  </button>
-                  <button onclick="answerQuiz(1, true)">
-                    4
-                  </button>
-                  <button onclick="answerQuiz(1, false)">
-                    3
-                  </button>
-                  <p>Que imprime el siguiente Codigo?</p>
-                  <pre><code>public class Estudiante {
+            <!-- Implementacion del Quiz modulo 2 seccion 2 -->
+            <div class="topic-header" onclick="toggleTopic(this)">
+              <span class="quiz-title">Quiz Básico</span>
+            </div>
+            <div class="topic-content">
+              <div class="quiz-box">
+                <p>¿Cuantos Pilares Fundamentales tiene la Programación Orientada a Objetos?</p>
+                <button onclick="answerQuiz(1, false)">
+                  5
+                </button>
+                <button onclick="answerQuiz(1, true)">
+                  4
+                </button>
+                <button onclick="answerQuiz(1, false)">
+                  3
+                </button>
+                <p>Que imprime el siguiente Codigo?</p>
+                <pre><code>public class Estudiante {
     String nombre;
     String codigo;
     int semestre;
@@ -1141,7 +1092,7 @@ class Gato extends Animal {
 }
 </code></pre> <br />
 
-<pre><code>public class Main {
+                <pre><code>public class Main {
     public static void main(String[] args) {
         Estudiante estudiante1 = new Estudiante();
         estudiante1.nombre = "Esmerejildo Perez Loro";
@@ -1153,76 +1104,84 @@ class Gato extends Animal {
     }
 }
 </code></pre>
-                  <button onclick="answerQuiz(2, false)">
-                  Nombre: Nombre <br/> 
-                  Codigo: Codigo <br/>
-                  Semestre: Semestre <br/>
-                  </button>
-
-                  <button onclick="answerQuiz(2, false)">
-                  No Compila
-                  </button>
-
-                  <button onclick="answerQuiz(2, true)">
-                  Nombre: Esmerejildo Perez Loro <br/>
-                  Codigo: 89046352 <br/>
-                  Semestre: 8 <br/>
+                <button onclick="answerQuiz(2, false)">
+                  Nombre: Nombre <br />
+                  Codigo: Codigo <br />
+                  Semestre: Semestre <br />
                 </button>
 
-                  <button onclick="finishQuiz()">
-                    <span class="quiz-title-final">¡Finalizar Quiz!</span> 
-                  </button>
-                </div>
+                <button onclick="answerQuiz(2, false)">
+                  No Compila
+                </button>
+
+                <button onclick="answerQuiz(2, true)">
+                  Nombre: Esmerejildo Perez Loro <br />
+                  Codigo: 89046352 <br />
+                  Semestre: 8 <br />
+                </button>
+
+                <button onclick="finishQuiz()">
+                  <span class="quiz-title-final">¡Finalizar Quiz!</span>
+                </button>
               </div>
             </div>
           </div>
-          <!-- Seccion 3 -->
-
-<div class="topic">
-        <div class="topic-header" onclick="toggleTopic(this)">
-          <strong>PRINCIPIOS SOLID </strong>
         </div>
-              <div class="topic-content">
-                <p>
-                  Los principios SOLID son cinco reglas o recomendaciones que ayudan a escribir programas más organizados, fáciles de entender, mantener y modificar. <br />
-                  Estos principios son especialmente útiles en la Programación Orientada a Objetos (POO), ya que guían a los desarrolladores a crear clases y objetos que sean más claros, flexibles y menos propensos a errores. <br />
-                  Al seguir los principios SOLID, los programadores pueden construir software que sea más fácil de ampliar, mejorar y adaptar a cambios futuros, lo que resulta en aplicaciones más robustas y sostenibles a largo plazo. <br /> <br />
-                  <strong>La palabra SOLID viene de las iniciales de cinco principios:</strong> <br />
+        <!-- Seccion 3 -->
 
-                  <Strong>S</Strong> → Single Responsibility Principle (Principio de Responsabilidad Única) <br />
-                  <Strong>O</Strong> → Open/Closed Principle (Principio Abierto/Cerrado) <br />
-                  <Strong>L</Strong> → Liskov Substitution Principle (Principio de Sustitución de Liskov) <br />
-                  <Strong>I</Strong> → Interface Segregation Principle (Principio de Segregación de Interfaces) <br />
-                  <Strong>D</Strong> → Dependency Inversion Principle (Principio de Inversión de Dependencias) <br /> <br />
+        <div class="topic">
+          <div class="topic-header" onclick="toggleTopic(this)">
+            <strong>PRINCIPIOS SOLID </strong>
+          </div>
+          <div class="topic-content">
+            <p>
+              Los principios SOLID son cinco reglas o recomendaciones que ayudan a escribir programas más organizados,
+              fáciles de entender, mantener y modificar. <br />
+              Estos principios son especialmente útiles en la Programación Orientada a Objetos (POO), ya que guían a los
+              desarrolladores a crear clases y objetos que sean más claros, flexibles y menos propensos a errores.
+              <br />
+              Al seguir los principios SOLID, los programadores pueden construir software que sea más fácil de ampliar,
+              mejorar y adaptar a cambios futuros, lo que resulta en aplicaciones más robustas y sostenibles a largo
+              plazo. <br /> <br />
+              <strong>La palabra SOLID viene de las iniciales de cinco principios:</strong> <br />
 
-                <strong>¿Para qué sirven los principios SOLID?</strong> <br />
-                Los principios SOLID ayudan a evitar que nuestro código se vuelva difícil de mantener. <br />
-                Cuando un programa crece, es común que una clase termine haciendo demasiadas cosas, que modificar una parte rompa otra, o que muchas clases dependan directamente unas de otras. <br />
-                SOLID busca solucionar estos problemas. <br />
+              <Strong>S</Strong> → Single Responsibility Principle (Principio de Responsabilidad Única) <br />
+              <Strong>O</Strong> → Open/Closed Principle (Principio Abierto/Cerrado) <br />
+              <Strong>L</Strong> → Liskov Substitution Principle (Principio de Sustitución de Liskov) <br />
+              <Strong>I</Strong> → Interface Segregation Principle (Principio de Segregación de Interfaces) <br />
+              <Strong>D</Strong> → Dependency Inversion Principle (Principio de Inversión de Dependencias) <br /> <br />
 
-                Si todo estuviera dentro de una sola clase, sería muy difícil modificar el programa. <br />
-                Con SOLID podemos separar responsabilidades y hacer que cada parte tenga una función clara. <br />
-                </p> <br />
+              <strong>¿Para qué sirven los principios SOLID?</strong> <br />
+              Los principios SOLID ayudan a evitar que nuestro código se vuelva difícil de mantener. <br />
+              Cuando un programa crece, es común que una clase termine haciendo demasiadas cosas, que modificar una
+              parte rompa otra, o que muchas clases dependan directamente unas de otras. <br />
+              SOLID busca solucionar estos problemas. <br />
 
-                <p>
-                <strong>SINGLE RESPONSIBILITY PRINCIPLE O PRINCIPIO DE RESPONSABILIDAD ÚNICA</strong> <br />
-                Este principio dice: <br />
-                <Strong>Una clase debe tener una sola responsabilidad.</Strong> <br />
-                En palabras sencillas:
-                Una clase debería encargarse de una cosa principal. <br />
-                No significa necesariamente que una clase solamente pueda tener un método. Significa que sus métodos deben estar relacionados con una misma responsabilidad. <br />
-                <br />
+              Si todo estuviera dentro de una sola clase, sería muy difícil modificar el programa. <br />
+              Con SOLID podemos separar responsabilidades y hacer que cada parte tenga una función clara. <br />
+            </p> <br />
 
-                <Strong>Ejemplo de la vida real:</strong> <br />
-                  Imagina un restaurante, una persona puede ser: <br />
-                  Cocinero → prepara la comida. <br />
-                  Mesero → atiende a los clientes. <br />
-                  Cajero → recibe el pago. <br />
-                  No tendría mucho sentido que el cocinero también tuviera que cobrar, limpiar las mesas y administrar las cuentas. <br />
+            <p>
+              <strong>SINGLE RESPONSIBILITY PRINCIPLE O PRINCIPIO DE RESPONSABILIDAD ÚNICA</strong> <br />
+              Este principio dice: <br />
+              <Strong>Una clase debe tener una sola responsabilidad.</Strong> <br />
+              En palabras sencillas:
+              Una clase debería encargarse de una cosa principal. <br />
+              No significa necesariamente que una clase solamente pueda tener un método. Significa que sus métodos deben
+              estar relacionados con una misma responsabilidad. <br />
+              <br />
 
-                  En programación ocurre algo parecido. <br /> <br />
-                  <strong>Ejemplo en Java incorrecto:</strong> <br />
-                  <pre><code>class Usuario {
+              <Strong>Ejemplo de la vida real:</strong> <br />
+              Imagina un restaurante, una persona puede ser: <br />
+              Cocinero → prepara la comida. <br />
+              Mesero → atiende a los clientes. <br />
+              Cajero → recibe el pago. <br />
+              No tendría mucho sentido que el cocinero también tuviera que cobrar, limpiar las mesas y administrar las
+              cuentas. <br />
+
+              En programación ocurre algo parecido. <br /> <br />
+              <strong>Ejemplo en Java incorrecto:</strong> <br />
+            <pre><code>class Usuario {
 
     public void registrarUsuario() {
         System.out.println("Usuario registrado");
@@ -1236,13 +1195,13 @@ class Gato extends Animal {
         System.out.println("Usuario guardado");
     }
 }</code></pre>
-              Esta clase está haciendo demasiadas cosas: <br />
-              - Registrar usuarios. <br />
-              - Enviar correos. <br />
-              - Guardar información en una base de datos. <br />
-              Tiene varias responsabilidades. <br /> <br />
-              <Strong>Ejemplo en Java correcto:</strong> <br />
-                <pre><code>class Usuario {
+            Esta clase está haciendo demasiadas cosas: <br />
+            - Registrar usuarios. <br />
+            - Enviar correos. <br />
+            - Guardar información en una base de datos. <br />
+            Tiene varias responsabilidades. <br /> <br />
+            <Strong>Ejemplo en Java correcto:</strong> <br />
+            <pre><code>class Usuario {
 
     public void registrar() {
         System.out.println("Usuario registrado");
@@ -1260,27 +1219,27 @@ class UsuarioRepository {
         System.out.println("Usuario guardado");
     }
 }</code></pre> <br />
-Si cambia la forma de enviar correos, solamente modificamos Correo.
-Si cambia la forma de guardar usuarios, modificamos UsuarioRepository.
-No necesitamos modificar toda la aplicación. <br /> <br />
-              </p>
+            Si cambia la forma de enviar correos, solamente modificamos Correo.
+            Si cambia la forma de guardar usuarios, modificamos UsuarioRepository.
+            No necesitamos modificar toda la aplicación. <br /> <br />
+            </p>
 
-              <p>
-                <strong>OPEN/CLOSED PRINCIPLE O PRINCIPIO ABIERTO/CERRADO</strong> <br />
-                Este principio dice: <br />
-                <Strong>El código debe estar abierto a la extensión, pero cerrado a la modificación.</Strong> <br />
-                En palabras sencillas:
-                Podemos agregar nuevas funcionalidades sin cambiar el código existente. <br />
-                Esto ayuda a evitar errores y hace que el código sea más fácil de mantener. <br /> <br />
+            <p>
+              <strong>OPEN/CLOSED PRINCIPLE O PRINCIPIO ABIERTO/CERRADO</strong> <br />
+              Este principio dice: <br />
+              <Strong>El código debe estar abierto a la extensión, pero cerrado a la modificación.</Strong> <br />
+              En palabras sencillas:
+              Podemos agregar nuevas funcionalidades sin cambiar el código existente. <br />
+              Esto ayuda a evitar errores y hace que el código sea más fácil de mantener. <br /> <br />
 
-                <strong>Ejemplo de la vida real:</strong> <br />
-                  Imagina un teléfono móvil. <br />
-                  Puedes instalar nuevas aplicaciones para agregar funciones, como juegos o redes sociales. <br />
-                  Pero no necesitas cambiar el sistema operativo del teléfono para hacerlo. <br />
+              <strong>Ejemplo de la vida real:</strong> <br />
+              Imagina un teléfono móvil. <br />
+              Puedes instalar nuevas aplicaciones para agregar funciones, como juegos o redes sociales. <br />
+              Pero no necesitas cambiar el sistema operativo del teléfono para hacerlo. <br />
 
-                  En programación ocurre algo parecido. <br /> <br />
-                  <strong>Ejemplo en Java incorrecto:</strong> <br />
-                  <pre><code>class Pago {
+              En programación ocurre algo parecido. <br /> <br />
+              <strong>Ejemplo en Java incorrecto:</strong> <br />
+            <pre><code>class Pago {
 
     public void pagar(String metodo) {
 
@@ -1304,7 +1263,7 @@ No necesitamos modificar toda la aplicación. <br /> <br />
             PSE <br />
             Tenemos que modificar constantemente la clase Pago. <br /> <br />
             <Strong>Ejemplo en Java Correcto</Strong> <br />
-<pre><code>interface MetodoPago {
+            <pre><code>interface MetodoPago {
 
     void pagar();
 }
@@ -1335,400 +1294,740 @@ class PagoNequi implements MetodoPago {
         System.out.println("Pago realizado con Nequi");
     }
 }</code></pre> <br />
-No necesitamos modificar las clases anteriores. <br />
+            No necesitamos modificar las clases anteriores. <br />
 
-              <!-- Implementacion del Quiz -->
-              <div class="topic-header" onclick="toggleTopic(this)">
-                <span class="quiz-title">Quiz Básico</span>
-              </div>
-              <div class="topic-content">
-                <div class="quiz-box">
-                  <p>
-                    ¿Qué problema aparece cuando queremos agregar un nuevo tipo de funcionalidad a una clase sin el principio de Abierto/Cerrado?
-                  </p>
-                  <button onclick="answerQuiz(1, true)">la clase seria dificil de mantener.</button>
-                  <button onclick="answerQuiz(1, false)">
-                    Estaria bien, no hay ningun problema
-                  </button>
-                  <p>¿Cómo agregas el envío de notificaciones por WhatsApp a tu sistema sin violar OCP?</p>
-                  <button onclick="answerQuiz(2, false)">Editar la clase Notificador metiendo un nuevo if para WhatsApp.</button>
-                  <button onclick="answerQuiz(2, true)">Crear una clase nueva NotificacionWhatsApp</button>
-                  <p>
-                    ¿Cómo agregas el ataque de un nuevo elemento (Lanzallamas) en un videojuego sin violar OCP?
-                  </p>
-                  <button onclick="answerQuiz(3, false)">Editar la clase Personaje metiendo un nuevo if para el Lanzallamas.</button>
-                  <button onclick="answerQuiz(3, true)">Crear una clase nueva Lanzallamas que implemente la interfaz Ataque</button>
-                 <button onclick="finishQuiz()">
-                    <span class="quiz-title-final">¡Finalizar Quiz!</span>
-                  </button> <br />
+            <!-- Implementacion del Quiz -->
+            <div class="topic-header" onclick="toggleTopic(this)">
+              <span class="quiz-title">Quiz Básico</span>
+            </div>
+            <div class="topic-content">
+              <div class="quiz-box">
+                <p>
+                  ¿Qué problema aparece cuando queremos agregar un nuevo tipo de funcionalidad a una clase sin el
+                  principio de Abierto/Cerrado?
+                </p>
+                <button onclick="answerQuiz(1, true)">la clase seria dificil de mantener.</button>
+                <button onclick="answerQuiz(1, false)">
+                  Estaria bien, no hay ningun problema
+                </button>
+                <p>¿Cómo agregas el envío de notificaciones por WhatsApp a tu sistema sin violar OCP?</p>
+                <button onclick="answerQuiz(2, false)">Editar la clase Notificador metiendo un nuevo if para
+                  WhatsApp.</button>
+                <button onclick="answerQuiz(2, true)">Crear una clase nueva NotificacionWhatsApp</button>
+                <p>
+                  ¿Cómo agregas el ataque de un nuevo elemento (Lanzallamas) en un videojuego sin violar OCP?
+                </p>
+                <button onclick="answerQuiz(3, false)">Editar la clase Personaje metiendo un nuevo if para el
+                  Lanzallamas.</button>
+                <button onclick="answerQuiz(3, true)">Crear una clase nueva Lanzallamas que implemente la interfaz
+                  Ataque</button>
+                <button onclick="finishQuiz()">
+                  <span class="quiz-title-final">¡Finalizar Quiz!</span>
+                </button> <br />
 
-                  <p>
-                  <Strong/> LISKOV SUBSTITUTION PRINCIPLE O PRINCIPIO DE SUSTITUCIÓN DE LISKOV</Strong> <br />
+                <p>
+                  <Strong /> LISKOV SUBSTITUTION PRINCIPLE O PRINCIPIO DE SUSTITUCIÓN DE LISKOV</Strong> <br />
                   Este principio dice: <br />
-                <Strong>Los objetos de una clase hija deben poder utilizarse en lugar de objetos de su clase padre sin romper el funcionamiento del programa.</Strong> <br />
-                En palabras sencillas:
-                Si una clase B hereda de una clase A, deberíamos poder utilizar B donde esperamos A sin generar comportamientos inesperados. <br />
+                  <Strong>Los objetos de una clase hija deben poder utilizarse en lugar de objetos de su clase padre sin
+                    romper el funcionamiento del programa.</Strong> <br />
+                  En palabras sencillas:
+                  Si una clase B hereda de una clase A, deberíamos poder utilizar B donde esperamos A sin generar
+                  comportamientos inesperados. <br />
 
-                <strong>Ejemplo de la vida real:</strong> <br />
+                  <strong>Ejemplo de la vida real:</strong> <br />
                   Imagina un teléfono móvil. <br />
                   Puedes instalar nuevas aplicaciones para agregar funciones, como juegos o redes sociales. <br />
                   Pero no necesitas cambiar el sistema operativo del teléfono para hacerlo. <br />
                   En programación ocurre algo parecido. <br /> <br />
-                <strong>Ejemplo de la vida real:</strong> <br />
+                  <strong>Ejemplo de la vida real:</strong> <br />
                 <p>Imagina:</p>
                 Animal <br />
                 ├── Perro <br />
                 └── Gato <br />
                 <p>Todos son animales.</p>
                 <p>Si tenemos:</p>
-<code>class Animal {
+                <code>class Animal {
     public void comer() {
         System.out.println("El animal está comiendo");
     }
 }</code>
-            <p>Entonces:</p>
-<code>class Perro extends Animal {
+                <p>Entonces:</p>
+                <code>class Perro extends Animal {
 }</code>
-            <p>Puede utilizar el comportamiento de <code>Animal</code></p>
-<code>Animal animal = new Perro();
+                <p>Puede utilizar el comportamiento de <code>Animal</code></p>
+                <code>Animal animal = new Perro();
 animal.comer();</code>
 
-          <p>Esto funciona correctamente.</p>
-          <strong>Ejemplo Problematico:</strong>
-          <p>Imaginemos:</p>
+                <p>Esto funciona correctamente.</p>
+                <strong>Ejemplo Problematico:</strong>
+                <p>Imaginemos:</p>
 
-<code>class Ave {
+                <code>class Ave {
     public void volar() {
         System.out.println("El ave está volando");
     }
 }</code>
 
-            <p>Y hacemos:</p>
-<code>class Aguila extends Ave {
+                <p>Y hacemos:</p>
+                <code>class Aguila extends Ave {
 }</code>
-          <p>Tiene sentido porque un águila puede volar.</p>
-          <p>Pero luego:</p>
-<code>class Pinguino extends Ave {
+                <p>Tiene sentido porque un águila puede volar.</p>
+                <p>Pero luego:</p>
+                <code>class Pinguino extends Ave {
     @Override
     public void volar() {
         throw new UnsupportedOperationException();
     }
 }</code>
 
-          <p>Tenemos un problema.</p>
-          <p>Un pingüino es un ave, pero no puede realizar la operación <code>volar()</code></p>
-          <p>Por lo tanto, nuestra jerarquía está mal diseñada.</p>
+                <p>Tenemos un problema.</p>
+                <p>Un pingüino es un ave, pero no puede realizar la operación <code>volar()</code></p>
+                <p>Por lo tanto, nuestra jerarquía está mal diseñada.</p>
 
-          <strong>Como Solucionarlo:</strong>
-          <p>Podemos separar las capacidades:</p>
-<code>class Ave {
+                <strong>Como Solucionarlo:</strong>
+                <p>Podemos separar las capacidades:</p>
+                <code>class Ave {
 
     public void comer() {
         System.out.println("El ave está comiendo");
     }
 }</code>
 
-        <p>Y crear una interfaz para las aves que vuelan:</p>
+                <p>Y crear una interfaz para las aves que vuelan:</p>
 
-<code>interface Volador {
+                <code>interface Volador {
     void volar();
 }</code>
 
-        <p>El águila puede implementarla:</p>
-<code>class Aguila extends Ave implements Volador {
+                <p>El águila puede implementarla:</p>
+                <code>class Aguila extends Ave implements Volador {
     @Override
     public void volar() {
         System.out.println("El águila está volando");
     }
 }</code>
 
-<p>El pingüino no necesita implementarla:</p>
-<code>class Pinguino extends Ave {
+                <p>El pingüino no necesita implementarla:</p>
+                <code>class Pinguino extends Ave {
 }</code>
-<p>Así evitamos obligar a una clase a realizar comportamientos que no puede realizar.</p>
+                <p>Así evitamos obligar a una clase a realizar comportamientos que no puede realizar.</p>
 
-                  En programación ocurre algo parecido. <br /> <br />
-                  
+                En programación ocurre algo parecido. <br /> <br />
+
                 <strong>Interface Segregation Principle o PRINCIPLO DE SEPARACIÓN DE INTERFACES</strong>
+                <p>Este principio dice:<br>
+                  Una clase no debería estar obligada a implementar métodos que no necesita.<br>
+                  <br>
+                  En palabras sencillas:<br>
+                  Es mejor tener varias interfaces pequeñas y específicas que una interfaz gigante.<br>
+                  <br>
+                  <strong>Ejemplo de la vida real</strong><br>
+                  Imagina una interfaz llamada:<br>
+                  <br>
+                  <code>Trabajador</code><br>
+                  <br>
+                  Y contiene:<br>
+                  <br>
+                  * trabajar()<br>
+                  * programar()<br>
+                  * cocinar()<br>
+                  * conducir()<br>
+                  * enseñar()<br>
+                  * vender()<br>
+                  <br>
+                  Sería extraño obligar a un programador a implementar <code>cocinar()</code> o a un cocinero a
+                  implementar <code>programar()</code>.<br>
+                  <br>
+                  <strong>Ejemplo incorrecto</strong><br>
+                  <br>
+                  <code>interface Trabajador {<br>
+<br>
+    void programar();<br>
+<br>
+    void cocinar();<br>
+<br>
+    void conducir();<br>
+}</code><br>
+                  <br>
+                  Un programador tendría que implementar todo:<br>
+                  <br>
+                  <code>class Programador implements Trabajador {<br>
+<br>
+    public void programar() {<br>
+        System.out.println("Programando");<br>
+    }<br>
+<br>
+    public void cocinar() {<br>
+        // No lo necesita<br>
+    }<br>
+<br>
+    public void conducir() {<br>
+        // No lo necesita<br>
+    }<br>
+}</code><br>
+                  <br>
+                  Esto es una mala práctica.<br>
+                  <br>
+                  <strong>Aplicando ISP</strong><br>
+                  Podemos dividir las interfaces:<br>
+                  <br>
+                  <code>interface Programable {<br>
+<br>
+    void programar();<br>
+}</code><br>
+                  <br>
+                  <code>interface Cocinable {<br>
+<br>
+    void cocinar();<br>
+}</code><br>
+                  <br>
+                  <code>interface Conducible {<br>
+<br>
+    void conducir();<br>
+}</code><br>
+                  <br>
+                  Ahora cada clase implementa solamente lo que necesita.<br>
+                  <br>
+                  <code>class Programador implements Programable {<br>
+<br>
+    @Override<br>
+    public void programar() {<br>
+        System.out.println("El programador está programando");<br>
+    }<br>
+}</code><br>
+                  <br>
+                  <code>class Cocinero implements Cocinable {<br>
+<br>
+    @Override<br>
+    public void cocinar() {<br>
+        System.out.println("El cocinero está cocinando");<br>
+    }<br>
+}</code><br>
+                  <br>
+                  <strong>Ejercicio I</strong><br>
+                  Tenemos:<br>
+                  <br>
+                  <code>interface Dispositivo {<br>
+<br>
+    void imprimir();<br>
+<br>
+    void escanear();<br>
+<br>
+    void enviarFax();<br>
+}</code><br>
+                  <br>
+                  Una impresora moderna solamente necesita:<br>
+                  <br>
+                  <code>imprimir()</code><br>
+                  <br>
+                  ¿Qué problema existe?<br>
+                  La impresora estaría obligada a implementar métodos que no necesita.<br>
+                  <br>
+                  <strong>Solución</strong><br>
+                  Separar la interfaz:<br>
+                  <br>
+                  <code>interface Imprimible {<br>
+    void imprimir();<br>
+}</code><br>
+                  <br>
+                  <code>interface Escaneable {<br>
+    void escanear();<br>
+}</code><br>
+                  <br>
+                  <code>interface Fax {<br>
+    void enviarFax();<br>
+}</code><br>
+                  Ahora cada dispositivo puede elegir las capacidades que realmente necesita.
+                </p>
                 </p>
 
-                </div>
               </div>
-
-
             </div>
-          </div>
 
-          <!-- Seccion 4 -->
-      <div class="topic">
-        <div class="topic-header" onclick="toggleTopic(this)">
-          <strong>GLOSARIO COMPLETO</strong>
-        </div>
-              <div class="topic-content">
-                <p>
-                <strong>Programación Orientada a Objetos (POO):</strong> Es un paradigma de programación que organiza el código alrededor de objetos. Los objetos representan entidades que tienen datos y comportamientos. La POO permite crear programas más organizados, reutilizables, fáciles de mantener y ampliar. <br />
-                <strong>Paradigma de programación:</strong> Es una forma o estilo de organizar y desarrollar programas. La Programación Orientada a Objetos es uno de los paradigmas más utilizados. <br />
-                <strong>Clase:</strong> Es una plantilla o molde que define cómo serán los objetos. Una clase puede contener atributos, métodos y constructores. Por ejemplo, una clase Persona puede definir que todas las personas tendrán un nombre y una edad. <br />
-                <strong>Objeto:</strong> Es una instancia concreta de una clase. Si Persona es el molde, un objeto puede ser una persona específica llamada "Carlos" con 20 años. Cada objeto puede tener sus propios valores. <br />
-                <strong>Instancia:</strong> Es un objeto creado a partir de una clase. Cuando usamos new en Java normalmente estamos creando una nueva instancia de una clase. <br />
-                <strong>Estado:</strong> Es la información que tiene un objeto en un momento determinado. Está representado principalmente por sus atributos. Por ejemplo, una persona puede tener el estado: nombre = "Carlos", edad = 20. <br />
-                <strong>Comportamiento:</strong> Son las acciones que un objeto puede realizar. En Java, estas acciones normalmente se representan mediante métodos. <br />
-                <strong>Identidad:</strong> Es lo que permite distinguir un objeto de otro. Dos objetos pueden tener los mismos datos, pero seguir siendo objetos diferentes. <br />
-                <strong>Atributo:</strong> Es una variable declarada dentro de una clase que representa una característica o dato de los objetos. Por ejemplo, nombre, edad y precio pueden ser atributos. <br />
-                <strong>Variable de instancia:</strong> Es un atributo que pertenece a cada objeto individualmente. Cada objeto puede tener un valor diferente para esa variable. <br />
-                <strong>Variable de clase:</strong> Es una variable declarada con static. Pertenece a la clase y es compartida por las instancias de esa clase. <br />
-                <strong>Método:</strong> Es un bloque de código que representa una acción o comportamiento de un objeto o de una clase. Puede recibir datos mediante parámetros y puede devolver un resultado. <br />
-                <strong>Parámetro:</strong> Es una variable que aparece en la declaración de un método y recibe un valor cuando el método es llamado. <br />
-                <strong>Argumento:</strong> Es el valor que realmente enviamos a un método cuando lo llamamos. <br />
-                <strong>Valor de retorno:</strong> Es el resultado que un método devuelve mediante la palabra return. <br />
-                <strong>void:</strong> Indica que un método no devuelve ningún valor. <br />
-                <strong>Firma de un método:</strong> Está relacionada con el nombre del método y sus parámetros. En Java permite distinguir métodos sobrecargados. <br />
-                <strong>Constructor:</strong> Es un método especial utilizado para inicializar objetos. Tiene el mismo nombre de la clase y no tiene tipo de retorno. Se ejecuta cuando se utiliza new. <br />
-                <strong>Constructor por defecto:</strong> Es el constructor sin parámetros que el compilador puede proporcionar automáticamente cuando la clase no declara ningún constructor. <br />
-                <strong>Constructor personalizado:</strong> Es un constructor creado por el programador para inicializar el objeto con los datos que necesite. <br />
-                <strong>this:</strong> Es una referencia al objeto actual. Se utiliza, entre otras cosas, para diferenciar atributos de parámetros cuando tienen el mismo nombre. <br />
-                <strong>new:</strong> Es una palabra clave utilizada para crear objetos o instancias de clases. <br />
-                <strong>Referencia:</strong> Es una variable que permite acceder a un objeto almacenado en memoria. La variable no contiene directamente todo el objeto, sino una referencia al mismo. <br />
-                <strong>null:</strong> Representa la ausencia de una referencia a un objeto. Una variable de tipo objeto puede tener el valor null. <br />
-                <strong>Encapsulamiento:</strong> Es el principio que protege los datos internos de un objeto, evitando que sean modificados directamente sin control. Normalmente se logra utilizando atributos privados y métodos públicos para acceder a ellos. <br />
-                <strong>Abstracción:</strong> Permite representar solamente las características importantes de un objeto y ocultar detalles internos que no son necesarios para utilizarlo. <br />
-                <strong>Herencia:</strong> Permite crear una clase nueva a partir de otra clase existente. La nueva clase puede reutilizar atributos y métodos de la clase padre. <br />
-                <strong>Polimorfismo:</strong> Permite que una misma referencia pueda utilizar objetos de diferentes clases y que el comportamiento ejecutado dependa del objeto real. <br />
-                <strong>Clase padre:</strong> Es la clase de la que otra clase hereda características y comportamientos. También puede llamarse superclase. <br />
-                <strong>Clase hija:</strong> Es una clase que hereda de otra clase. También se conoce como subclase. <br />
-                <strong>Superclase:</strong> Es otra forma de llamar a la clase padre dentro de una relación de herencia. <br />
-                <strong>Subclase:</strong> Es otra forma de llamar a la clase hija dentro de una relación de herencia. <br />
-                <strong>super:</strong> Es una palabra clave utilizada para acceder a elementos de la clase padre, como constructores o métodos. <br />
-                <strong>extends:</strong> Es la palabra clave utilizada en Java para indicar que una clase hereda de otra clase. <br />
-                <strong>implements:</strong> Es la palabra clave utilizada cuando una clase implementa una o más interfaces. <br />
-                <strong>Interface:</strong> Es una estructura que define un contrato que las clases pueden implementar. Permite establecer comportamientos que una clase debe proporcionar. <br />
-                <strong>Contrato:</strong> Es el conjunto de reglas que una clase debe cumplir cuando implementa una interfaz. <br />
-                <strong>Clase abstracta:</strong> Es una clase que sirve como base para otras clases y que no puede ser instanciada directamente. Puede contener métodos normales y métodos abstractos. <br />
-                <strong>Método abstracto:</strong> Es un método declarado sin implementación dentro de una clase abstracta. Las clases hijas deben proporcionar su implementación cuando corresponda. <br />
-                <strong>abstract:</strong> Es una palabra clave utilizada para declarar clases y métodos abstractos. <br />
-                <strong>public:</strong> Es un modificador de acceso que permite que un elemento sea accesible desde cualquier clase que tenga acceso a él. <br />
-                <strong>private:</strong> Es un modificador de acceso que limita el acceso directo al elemento únicamente a la clase donde fue declarado. Es muy utilizado para aplicar encapsulamiento. <br />
-                <strong>protected:</strong> Permite acceder a un elemento desde la misma clase, clases del mismo paquete y clases hijas según las reglas de acceso de Java. <br />
-                <strong>default:</strong> Cuando no se escribe un modificador de acceso, el elemento tiene acceso de paquete. Puede utilizarse desde clases que pertenecen al mismo paquete. <br />
-                <strong>Modificador de acceso:</strong> Determina desde dónde puede utilizarse una clase, atributo, método o constructor. Los principales son public, private y protected, además del acceso de paquete. <br />
-                <strong>static:</strong> Indica que un atributo o método pertenece a la clase y no a una instancia específica. Puede utilizarse sin crear un objeto. <br />
-                <strong>Método estático:</strong> Es un método declarado con static. Se puede llamar utilizando el nombre de la clase. <br />
-                <strong>Atributo estático:</strong> Es un atributo compartido por todas las instancias de una clase. <br />
-                <strong>final:</strong> Indica que algo no puede modificarse de la misma manera que un elemento normal. Una variable final no puede recibir otro valor después de ser inicializada, un método final no puede sobrescribirse y una clase final no puede heredarse. <br />
-                <strong>this():</strong> Permite llamar a otro constructor de la misma clase. Debe utilizarse como primera instrucción del constructor. <br />
-                <strong>super():</strong> Permite llamar al constructor de la clase padre. Debe utilizarse como primera instrucción del constructor cuando se utiliza explícitamente. <br />
-                <strong>Sobrecarga de métodos (Overloading):</strong> Ocurre cuando una misma clase tiene varios métodos con el mismo nombre pero diferentes parámetros. Permite realizar operaciones similares con diferentes tipos o cantidades de datos. <br />
-                <strong>Sobrescritura de métodos (Overriding):</strong> Ocurre cuando una clase hija proporciona su propia implementación de un método heredado de la clase padre. <br />
-                <strong>@Override:</strong> Es una anotación que indica que un método está sobrescribiendo un método heredado. Ayuda a detectar errores en el código. <br />
-                <strong>@Overload:</strong> No es una anotación estándar necesaria en Java para sobrecarga. La sobrecarga se identifica automáticamente mediante diferentes listas de parámetros. <br />
-                <strong>Composición:</strong> Es una relación fuerte entre objetos donde un objeto contiene o está formado por otros objetos. Cuando el objeto principal desaparece, los objetos que forman parte de él normalmente dejan de tener sentido dentro de esa relación. <br />
-                <strong>Agregación:</strong> Es una relación entre objetos en la que un objeto contiene otros objetos, pero estos pueden existir independientemente del objeto que los agrupa. <br />
-                <strong>Asociación:</strong> Representa una relación general entre dos clases. Por ejemplo, un profesor puede estar relacionado con varios estudiantes. <br />
-                <strong>Dependencia:</strong> Ocurre cuando una clase utiliza temporalmente otra clase para realizar una tarea. <br />
-                <strong>Relación "es un":</strong> Representa normalmente una relación de herencia. Por ejemplo, un perro "es un" animal. <br />
-                <strong>Relación "tiene un":</strong> Representa normalmente composición o agregación. Por ejemplo, un automóvil "tiene un" motor. <br />
-                <strong>Acoplamiento:</strong> Representa el nivel de dependencia entre diferentes clases o componentes. Un bajo acoplamiento facilita modificar una parte del sistema sin afectar demasiado a las demás. <br />
-                <strong>Cohesión:</strong> Indica qué tan relacionadas están las responsabilidades de una clase. Una clase con alta cohesión normalmente tiene responsabilidades relacionadas y bien definidas. <br />
-                <strong>Responsabilidad:</strong> Es aquello que una clase debe conocer o hacer dentro de un sistema. Una buena POO busca asignar responsabilidades de manera clara. <br />
-                <strong>Inmutabilidad:</strong> Significa que el estado de un objeto no puede cambiar después de haber sido creado. Las clases inmutables suelen utilizar atributos privados y finales y no proporcionan métodos que permitan modificar su estado. <br />
-                <strong>Mutabilidad:</strong> Significa que el estado interno de un objeto puede cambiar después de haber sido creado. <br />
-                <strong>Clase inmutable:</strong> Es una clase cuyos objetos no pueden cambiar su estado después de ser creados. <br />
-                <strong>Getter:</strong> Es un método utilizado para obtener el valor de un atributo privado. Normalmente comienza con get. <br />
-                <strong>Setter:</strong> Es un método utilizado para modificar el valor de un atributo privado. Normalmente comienza con set. <br />
-                <strong>Encapsulamiento mediante getters y setters:</strong> Permite controlar cómo se consultan y modifican los atributos de una clase en lugar de permitir acceso directo a ellos. <br />
-                <strong>Validación:</strong> Es el proceso de comprobar que los datos recibidos cumplen determinadas reglas antes de almacenarlos o utilizarlos. <br />
-                <strong>Inyección de dependencias:</strong> Es una técnica en la que una clase recibe desde fuera los objetos que necesita en lugar de crearlos directamente. Esto ayuda a reducir el acoplamiento y facilita las pruebas. <br />
-                <strong>Clase interna:</strong> Es una clase declarada dentro de otra clase. Puede utilizarse cuando una clase auxiliar solo tiene sentido dentro de la clase que la contiene. <br />
-                <strong>Clase anidada estática:</strong> Es una clase declarada dentro de otra clase utilizando static. No necesita una instancia de la clase externa para ser utilizada. <br />
-                <strong>Clase interna no estática:</strong> Es una clase declarada dentro de otra clase que está asociada a una instancia de la clase externa. <br />
-                <strong>Clase local:</strong> Es una clase declarada dentro de un método o bloque de código. <br />
-                <strong>Clase anónima:</strong> Es una clase sin nombre que se crea y utiliza normalmente en el mismo lugar donde se necesita. Fue muy utilizada antes de la popularización de las expresiones lambda. <br />
-                <strong>Modularidad:</strong> Consiste en dividir un sistema grande en partes más pequeñas y organizadas que pueden desarrollarse y mantenerse de forma independiente. <br />
-                <strong>Paquete (Package):</strong> Es una forma de organizar clases e interfaces relacionadas. También ayuda a controlar el acceso y evitar conflictos entre nombres. <br />
-                <strong>Referencia a método:</strong> Permite utilizar un método existente como una implementación de una interfaz funcional mediante una sintaxis más corta. <br />
-                <strong>Método default:</strong> Es un método dentro de una interfaz que puede tener una implementación. Permite agregar comportamiento a interfaces sin obligar inmediatamente a todas las clases implementadoras a definirlo. <br />
-                <strong>Método static en una interfaz:</strong> Es un método que pertenece a la interfaz y puede ser llamado mediante el nombre de la interfaz. <br />
-                <strong>Herencia múltiple:</strong> Es la posibilidad de heredar directamente de varias clases. Java no permite que una clase extienda múltiples clases, pero sí permite implementar múltiples interfaces. <br />
-                <strong>Implementación múltiple:</strong> Una clase puede implementar varias interfaces, obteniendo diferentes contratos de comportamiento. <br />
-                <strong>Interfaz vs clase abstracta:</strong> Una interfaz representa principalmente un contrato de comportamiento, mientras que una clase abstracta puede proporcionar una base común con estado y comportamiento compartido. <br />
-                <strong>Principio de responsabilidad única:</strong> Indica que una clase debería tener una responsabilidad principal bien definida y una razón clara para cambiar. <br />
-                <strong>Principio abierto/cerrado:</strong> Indica que el software debería estar abierto para extensión pero cerrado para modificaciones innecesarias. <br />
-                <strong>Principio de sustitución de Liskov:</strong> Indica que los objetos de una clase hija deberían poder utilizarse donde se espera un objeto de la clase padre sin romper el comportamiento esperado del programa. <br />
-                <strong>Principio de segregación de interfaces:</strong> Indica que es preferible utilizar interfaces pequeñas y específicas en lugar de obligar a las clases a implementar métodos que no necesitan. <br />
-                <strong>Principio de inversión de dependencias:</strong> Indica que las partes importantes de un sistema deberían depender de abstracciones y no directamente de implementaciones concretas. <br />
-                <strong>SOLID:</strong> Es un conjunto de cinco principios de diseño orientado a objetos: responsabilidad única, abierto/cerrado, sustitución de Liskov, segregación de interfaces e inversión de dependencias. <br />
-                <strong>DRY (Don't Repeat Yourself):</strong> Principio que busca evitar repetir la misma lógica innecesariamente. La reutilización mediante métodos, clases y otras estructuras ayuda a mantener el código. <br />
-                <strong>KISS (Keep It Simple):</strong> Principio que recomienda mantener las soluciones lo más simples y claras posible, evitando complejidad innecesaria. <br />
-                <strong>YAGNI (You Aren't Gonna Need It):</strong> Principio que recomienda no desarrollar funcionalidades que actualmente no son necesarias. <br />
-                <strong>Reutilización de código:</strong> Consiste en utilizar código existente nuevamente en diferentes partes del programa en lugar de escribir la misma solución desde cero. La POO facilita esto mediante clases, métodos, herencia y composición. <br />
-                <strong>Modularización:</strong> Consiste en dividir un programa en componentes más pequeños y organizados para facilitar su comprensión y mantenimiento. <br />
-                <strong>Acoplamiento bajo:</strong> Significa que las clases dependen poco unas de otras. Esto facilita los cambios y el mantenimiento. <br />
-                <strong>Cohesión alta:</strong> Significa que los elementos de una clase están muy relacionados con una responsabilidad común. <br />
-                <strong>Delegación:</strong> Consiste en hacer que un objeto encargue una tarea a otro objeto especializado en realizarla. <br />
-                <strong>Composición sobre herencia:</strong> Es una recomendación de diseño que propone utilizar relaciones de composición cuando sea más adecuado, en lugar de crear jerarquías de herencia innecesariamente profundas. <br />
-                <strong>Diseño orientado a objetos:</strong> Es el proceso de identificar objetos, responsabilidades y relaciones para construir un sistema utilizando principios de POO. <br />
-                <strong>Modelo:</strong> Es una representación de una parte del sistema que contiene los datos y reglas necesarias para representar un concepto. <br />
-                <strong>Entidad:</strong> Es un objeto que representa algo importante dentro del dominio de una aplicación, normalmente con identidad propia. <br />
-                <strong>Objeto de valor:</strong> Es un objeto cuyo significado depende principalmente de sus valores y no de una identidad individual. <br />
-                <strong>DTO (Data Transfer Object):</strong> Es un objeto utilizado principalmente para transportar datos entre diferentes partes de una aplicación. <br />
-                <strong>POJO:</strong> Significa Plain Old Java Object. Es un objeto Java sencillo que no necesita heredar de una clase especial ni seguir un framework específico para representar sus datos y comportamiento. <br />
-                <strong>Bean:</strong> Es un término utilizado para objetos Java que siguen determinadas convenciones, como tener constructor sin argumentos y métodos de acceso. El significado exacto depende del contexto. <br />
-                <strong>JavaBean:</strong> Es una clase Java que tradicionalmente sigue convenciones como tener un constructor público sin argumentos, atributos privados y métodos getters/setters apropiados. <br />
-                <strong>Objeto anémico:</strong> Es un objeto que contiene principalmente datos y muy poco comportamiento. Puede ser apropiado en algunos casos, pero puede ser problemático si las reglas del dominio quedan completamente fuera del objeto. <br />
-                <strong>Clase utilitaria:</strong> Es una clase utilizada para agrupar métodos relacionados, normalmente estáticos, que realizan operaciones auxiliares. <br />
-                <strong>Clase singleton:</strong> Es un patrón de diseño que busca garantizar que exista una única instancia de una clase y proporcionar un punto de acceso a ella. Debe utilizarse con cuidado porque puede introducir acoplamiento global. <br />
-                <strong>Patrón de diseño:</strong> Es una solución general y reutilizable para problemas frecuentes de diseño de software. No es código que se copia literalmente, sino una idea de organización. <br />
-                <strong>Singleton:</strong> Es un patrón creacional que restringe una clase a una única instancia en un determinado contexto. <br />
-                <strong>Factory:</strong> Es un patrón utilizado para centralizar o encapsular la creación de objetos. <br />
-                <strong>Factory Method:</strong> Es un patrón que permite delegar la creación de objetos a métodos especializados o a subclases. <br />
-                <strong>Abstract Factory:</strong> Es un patrón que permite crear familias de objetos relacionados sin especificar directamente sus clases concretas. <br />
-                <strong>Builder:</strong> Es un patrón utilizado para construir objetos complejos paso a paso, especialmente cuando tienen muchos parámetros opcionales. <br />
-                <strong>Prototype:</strong> Es un patrón que crea nuevos objetos a partir de otros objetos existentes, normalmente mediante clonación o copia controlada. <br />
-                <strong>Adapter:</strong> Es un patrón estructural que permite que dos componentes con interfaces incompatibles puedan trabajar juntos. <br />
-                <strong>Decorator:</strong> Es un patrón que permite agregar responsabilidades o comportamientos a un objeto sin modificar directamente su clase. <br />
-                <strong>Facade:</strong> Es un patrón que proporciona una interfaz sencilla para utilizar un sistema o conjunto de clases más complejo. <br />
-                <strong>Proxy:</strong> Es un objeto que actúa como intermediario para controlar o gestionar el acceso a otro objeto. <br />
-                <strong>Composite:</strong> Es un patrón que permite tratar objetos individuales y grupos de objetos de una manera uniforme. <br />
-                <strong>Observer:</strong> Es un patrón que permite que varios objetos sean notificados cuando cambia el estado de otro objeto. <br />
-                <strong>Strategy:</strong> Es un patrón que permite definir diferentes algoritmos o comportamientos y elegir cuál utilizar durante la ejecución. <br />
-                <strong>State:</strong> Es un patrón que permite que el comportamiento de un objeto cambie dependiendo de su estado interno. <br />
-                <strong>Command:</strong> Es un patrón que convierte una acción o solicitud en un objeto, permitiendo almacenarla, ejecutarla o deshacerla. <br />
-                <strong>Template Method:</strong> Es un patrón que define la estructura general de un algoritmo y permite que las subclases personalicen determinados pasos. <br />
-                <strong>MVC:</strong> Es un patrón arquitectónico que separa una aplicación en Modelo, Vista y Controlador. El modelo gestiona los datos y lógica, la vista presenta información y el controlador coordina las acciones. <br />
-                <strong>Tipo genérico:</strong> Es un tipo parametrizado que permite especificar qué tipo de dato manejará una estructura. Por ejemplo, ArrayList&lt;String&gt;. <br />
-                <strong>Clase genérica:</strong> Es una clase que recibe uno o más tipos como parámetros. <br />
-                <strong>Encapsulación de colecciones:</strong> Consiste en controlar el acceso a las colecciones internas de una clase para evitar modificaciones no deseadas desde fuera. <br />
-                <strong>Inyección de dependencias:</strong> Es una técnica en la que los objetos necesarios para una clase se proporcionan desde el exterior, reduciendo la responsabilidad de crear directamente esas dependencias. <br />
-                <strong>Acoplamiento:</strong> Es el grado de dependencia entre componentes. Un diseño con menor acoplamiento suele ser más flexible y fácil de mantener. <br />
-                <strong>Cohesión:</strong> Es el grado en que los elementos de una clase trabajan juntos para cumplir una responsabilidad relacionada. <br />
-                <strong>Archivo .class:</strong> Es un archivo que contiene bytecode Java generado después de la compilación. <br />
-                <strong>Mantenibilidad:</strong> Es la facilidad con la que un programa puede modificarse, corregirse o ampliarse. <br />
-                <strong>Escalabilidad:</strong> Es la capacidad de un sistema para crecer sin que su estructura se vuelva inmanejable. <br />
-                <strong>Buenas prácticas de POO:</strong> Consisten en utilizar nombres claros, encapsular los datos, asignar responsabilidades correctamente, evitar duplicación, reducir dependencias innecesarias y utilizar abstracciones cuando realmente aporten valor. <br />
-                <strong>Clase concreta:</strong> Es una clase que puede ser instanciada directamente porque no es abstracta. <br />
-                <strong>Clase final:</strong> Es una clase declarada con final que no puede ser extendida por otras clases. <br />
-                <strong>Método final:</strong> Es un método que una subclase no puede sobrescribir. <br />
-                <strong>Variable final:</strong> Es una variable a la que solo se puede asignar un valor una vez. <br />
-                <strong>Constructor privado:</strong> Es un constructor declarado como private. Impide que otras clases creen directamente objetos utilizando ese constructor. Puede utilizarse en determinados patrones o clases utilitarias. <br />
-                <strong>Clase abstracta vs clase concreta:</strong> Una clase abstracta sirve como base y no puede instanciarse directamente, mientras que una clase concreta sí puede utilizarse para crear objetos. <br />
-                <strong>Objeto mutable vs inmutable:</strong> Un objeto mutable puede cambiar su estado después de crearse. Un objeto inmutable conserva el mismo estado durante toda su vida. <br />
-                <strong>Herencia directa:</strong> Ocurre cuando una clase extiende directamente otra clase. <br />
-                <strong>Herencia indirecta:</strong> Ocurre cuando una clase hereda de una clase que a su vez hereda de otra. <br />
-                <strong>Jerarquía de clases:</strong> Es la estructura formada por clases relacionadas mediante herencia. <br />
-                <strong>Clase base:</strong> Es una clase utilizada como punto de partida para otras clases mediante herencia. <br />
-                <strong>Delegación de responsabilidades:</strong> Consiste en permitir que el objeto que tiene el conocimiento adecuado sea quien realice una determinada tarea. <br />
-                <strong>Dependencia fuerte:</strong> Ocurre cuando una clase está muy ligada a una implementación específica, dificultando los cambios. <br />
-                <strong>Dependencia débil:</strong> Ocurre cuando una clase depende de abstracciones o contratos y puede trabajar con diferentes implementaciones. <br />
-                <strong>Abstracción de datos:</strong> Consiste en mostrar las operaciones importantes sobre los datos y ocultar la forma interna en que estos son almacenados o procesados. <br />
-                <strong>Abstracción de comportamiento:</strong> Consiste en definir qué puede hacer un objeto sin obligar al usuario a conocer cómo internamente realiza esa acción. <br />
-                <strong>Encapsulamiento vs abstracción:</strong> El encapsulamiento se enfoca en proteger y controlar el acceso al estado interno, mientras que la abstracción se enfoca en ocultar complejidad y mostrar solamente lo importante. <br />
-                <strong>Herencia vs composición:</strong> La herencia representa normalmente una relación "es un", mientras que la composición representa una relación "tiene un". La composición suele ofrecer mayor flexibilidad cuando no existe una verdadera relación de especialización. <br />
-                <strong>Polimorfismo por interfaz:</strong> Permite que diferentes clases implementen la misma interfaz y puedan ser utilizadas mediante una referencia del tipo de esa interfaz. <br />
-                <strong>Polimorfismo por herencia:</strong> Permite que objetos de diferentes subclases sean tratados mediante una referencia de su clase padre y respondan según su implementación concreta. <br />
-                <strong>Contrato de comportamiento:</strong> Es el conjunto de acciones que un objeto promete poder realizar mediante una interfaz o abstracción. <br />
-                <strong>Programar contra una interfaz:</strong> Significa declarar dependencias utilizando tipos abstractos como interfaces en lugar de clases concretas cuando sea apropiado. Esto facilita cambiar implementaciones. <br />
-                <strong>Clean Code:</strong> Es un conjunto de prácticas y principios orientados a escribir código claro, simple, expresivo y mantenible. <br />
-                <strong>Nombre significativo:</strong> Es un nombre de variable, método o clase que comunica claramente qué representa o qué hace. <br />
-                <strong>Interfaz pública:</strong> Es la parte visible de una clase que otras partes del programa pueden utilizar sin conocer sus detalles internos. <br />
-                <strong>Implementación:</strong> Es el código interno que hace posible el comportamiento definido por una interfaz, clase o método. <br />
-                <strong>Detalle de implementación:</strong> Es una parte interna de cómo funciona una clase que no debería ser necesaria para quien solamente utiliza su interfaz pública. <br />
-                <strong>Ocultamiento de información:</strong> Consiste en esconder detalles internos que no deberían ser conocidos ni modificados directamente desde otras partes del sistema. <br />
-                <strong>Constructor y método:</strong> Un constructor inicializa objetos y tiene el mismo nombre de la clase sin tipo de retorno. Un método representa una operación y puede tener cualquier nombre válido y un tipo de retorno. <br />
-                <strong>Atributo y variable local:</strong> Un atributo pertenece a una clase u objeto, mientras que una variable local existe dentro de un método, constructor o bloque específico. <br />
-                <strong>Objeto y referencia:</strong> El objeto es la instancia real creada en memoria; la referencia es la variable mediante la cual podemos acceder a ese objeto. <br />
-                <strong>Clase y objeto:</strong> La clase es el molde; el objeto es una instancia concreta creada a partir de ese molde. <br />
-                <strong>Estado y comportamiento:</strong> El estado representa los datos actuales del objeto, mientras que el comportamiento representa las acciones que puede realizar. <br />
-                <strong>Mensaje:</strong> En el contexto de POO, puede entenderse como una solicitud enviada a un objeto para que realice una operación, normalmente mediante una llamada a un método. <br />
-                <strong>Pasar mensajes:</strong> Es el concepto de que los objetos interactúan solicitándose acciones mediante sus métodos. <br />
-                <strong>Colaboración entre objetos:</strong> Es la interacción entre diferentes objetos para cumplir una tarea mayor dentro del sistema. <br />
-                <strong>Delegación:</strong> Un objeto puede pedirle a otro objeto que realice una tarea específica en lugar de hacerla directamente. <br />
-                <strong>Acoplamiento entre objetos:</strong> Representa cuánto necesita un objeto conocer o depender de otros objetos para funcionar. <br />
-                <strong>Polimorfismo:</strong> Permite utilizar diferentes objetos mediante una misma abstracción y obtener comportamientos diferentes dependiendo del objeto concreto. <br />
-                <strong>Abstracción:</strong> Permite trabajar con una representación simplificada de un concepto sin preocuparse por todos sus detalles internos. <br />
-                <strong>Encapsulamiento:</strong> Protege el estado interno de los objetos y controla cómo otras partes del programa pueden interactuar con él. <br />
-                <strong>Herencia:</strong> Permite reutilizar y especializar comportamiento mediante una relación entre una clase general y una clase más específica. <br />
-                <strong>Los cuatro pilares de la POO:</strong> Son encapsulamiento, abstracción, herencia y polimorfismo. Estos principios forman una parte fundamental del pensamiento orientado a objetos. <br />
-                <strong>Encapsulamiento + abstracción + herencia + polimorfismo:</strong> En conjunto permiten construir sistemas donde los datos están protegidos, la complejidad se oculta, el comportamiento puede reutilizarse y diferentes objetos pueden responder de distintas formas ante una misma operación. <br />
-                <strong>Programación orientada a objetos en Java:</strong> Es el uso de las características de Java para representar entidades mediante clases y objetos, organizando sus datos y comportamientos y aplicando principios como encapsulamiento, abstracción, herencia y polimorfismo. <br />
-                <strong>Objetivo de la POO:</strong> El objetivo no es simplemente crear muchas clases, sino organizar el software de manera que sus responsabilidades, datos y comportamientos estén correctamente distribuidos, facilitando la reutilización, mantenimiento, comprensión y evolución del programa. <br />
-                </p>
-            </div>
+
           </div>
-          <button class="start-btn" onclick="completeModule(2)">
-            Terminar módulo
-          </button>
         </div>
 
+        <!-- Seccion 4 -->
+        <div class="topic">
+          <div class="topic-header" onclick="toggleTopic(this)">
+            <strong>GLOSARIO COMPLETO</strong>
+          </div>
+          <div class="topic-content">
+            <p>
+              <strong>Programación Orientada a Objetos (POO):</strong> Es un paradigma de programación que organiza el
+              código alrededor de objetos. Los objetos representan entidades que tienen datos y comportamientos. La POO
+              permite crear programas más organizados, reutilizables, fáciles de mantener y ampliar. <br />
+              <strong>Paradigma de programación:</strong> Es una forma o estilo de organizar y desarrollar programas. La
+              Programación Orientada a Objetos es uno de los paradigmas más utilizados. <br />
+              <strong>Clase:</strong> Es una plantilla o molde que define cómo serán los objetos. Una clase puede
+              contener atributos, métodos y constructores. Por ejemplo, una clase Persona puede definir que todas las
+              personas tendrán un nombre y una edad. <br />
+              <strong>Objeto:</strong> Es una instancia concreta de una clase. Si Persona es el molde, un objeto puede
+              ser una persona específica llamada "Carlos" con 20 años. Cada objeto puede tener sus propios valores.
+              <br />
+              <strong>Instancia:</strong> Es un objeto creado a partir de una clase. Cuando usamos new en Java
+              normalmente estamos creando una nueva instancia de una clase. <br />
+              <strong>Estado:</strong> Es la información que tiene un objeto en un momento determinado. Está
+              representado principalmente por sus atributos. Por ejemplo, una persona puede tener el estado: nombre =
+              "Carlos", edad = 20. <br />
+              <strong>Comportamiento:</strong> Son las acciones que un objeto puede realizar. En Java, estas acciones
+              normalmente se representan mediante métodos. <br />
+              <strong>Identidad:</strong> Es lo que permite distinguir un objeto de otro. Dos objetos pueden tener los
+              mismos datos, pero seguir siendo objetos diferentes. <br />
+              <strong>Atributo:</strong> Es una variable declarada dentro de una clase que representa una característica
+              o dato de los objetos. Por ejemplo, nombre, edad y precio pueden ser atributos. <br />
+              <strong>Variable de instancia:</strong> Es un atributo que pertenece a cada objeto individualmente. Cada
+              objeto puede tener un valor diferente para esa variable. <br />
+              <strong>Variable de clase:</strong> Es una variable declarada con static. Pertenece a la clase y es
+              compartida por las instancias de esa clase. <br />
+              <strong>Método:</strong> Es un bloque de código que representa una acción o comportamiento de un objeto o
+              de una clase. Puede recibir datos mediante parámetros y puede devolver un resultado. <br />
+              <strong>Parámetro:</strong> Es una variable que aparece en la declaración de un método y recibe un valor
+              cuando el método es llamado. <br />
+              <strong>Argumento:</strong> Es el valor que realmente enviamos a un método cuando lo llamamos. <br />
+              <strong>Valor de retorno:</strong> Es el resultado que un método devuelve mediante la palabra return.
+              <br />
+              <strong>void:</strong> Indica que un método no devuelve ningún valor. <br />
+              <strong>Firma de un método:</strong> Está relacionada con el nombre del método y sus parámetros. En Java
+              permite distinguir métodos sobrecargados. <br />
+              <strong>Constructor:</strong> Es un método especial utilizado para inicializar objetos. Tiene el mismo
+              nombre de la clase y no tiene tipo de retorno. Se ejecuta cuando se utiliza new. <br />
+              <strong>Constructor por defecto:</strong> Es el constructor sin parámetros que el compilador puede
+              proporcionar automáticamente cuando la clase no declara ningún constructor. <br />
+              <strong>Constructor personalizado:</strong> Es un constructor creado por el programador para inicializar
+              el objeto con los datos que necesite. <br />
+              <strong>this:</strong> Es una referencia al objeto actual. Se utiliza, entre otras cosas, para diferenciar
+              atributos de parámetros cuando tienen el mismo nombre. <br />
+              <strong>new:</strong> Es una palabra clave utilizada para crear objetos o instancias de clases. <br />
+              <strong>Referencia:</strong> Es una variable que permite acceder a un objeto almacenado en memoria. La
+              variable no contiene directamente todo el objeto, sino una referencia al mismo. <br />
+              <strong>null:</strong> Representa la ausencia de una referencia a un objeto. Una variable de tipo objeto
+              puede tener el valor null. <br />
+              <strong>Encapsulamiento:</strong> Es el principio que protege los datos internos de un objeto, evitando
+              que sean modificados directamente sin control. Normalmente se logra utilizando atributos privados y
+              métodos públicos para acceder a ellos. <br />
+              <strong>Abstracción:</strong> Permite representar solamente las características importantes de un objeto y
+              ocultar detalles internos que no son necesarios para utilizarlo. <br />
+              <strong>Herencia:</strong> Permite crear una clase nueva a partir de otra clase existente. La nueva clase
+              puede reutilizar atributos y métodos de la clase padre. <br />
+              <strong>Polimorfismo:</strong> Permite que una misma referencia pueda utilizar objetos de diferentes
+              clases y que el comportamiento ejecutado dependa del objeto real. <br />
+              <strong>Clase padre:</strong> Es la clase de la que otra clase hereda características y comportamientos.
+              También puede llamarse superclase. <br />
+              <strong>Clase hija:</strong> Es una clase que hereda de otra clase. También se conoce como subclase.
+              <br />
+              <strong>Superclase:</strong> Es otra forma de llamar a la clase padre dentro de una relación de herencia.
+              <br />
+              <strong>Subclase:</strong> Es otra forma de llamar a la clase hija dentro de una relación de herencia.
+              <br />
+              <strong>super:</strong> Es una palabra clave utilizada para acceder a elementos de la clase padre, como
+              constructores o métodos. <br />
+              <strong>extends:</strong> Es la palabra clave utilizada en Java para indicar que una clase hereda de otra
+              clase. <br />
+              <strong>implements:</strong> Es la palabra clave utilizada cuando una clase implementa una o más
+              interfaces. <br />
+              <strong>Interface:</strong> Es una estructura que define un contrato que las clases pueden implementar.
+              Permite establecer comportamientos que una clase debe proporcionar. <br />
+              <strong>Contrato:</strong> Es el conjunto de reglas que una clase debe cumplir cuando implementa una
+              interfaz. <br />
+              <strong>Clase abstracta:</strong> Es una clase que sirve como base para otras clases y que no puede ser
+              instanciada directamente. Puede contener métodos normales y métodos abstractos. <br />
+              <strong>Método abstracto:</strong> Es un método declarado sin implementación dentro de una clase
+              abstracta. Las clases hijas deben proporcionar su implementación cuando corresponda. <br />
+              <strong>abstract:</strong> Es una palabra clave utilizada para declarar clases y métodos abstractos.
+              <br />
+              <strong>public:</strong> Es un modificador de acceso que permite que un elemento sea accesible desde
+              cualquier clase que tenga acceso a él. <br />
+              <strong>private:</strong> Es un modificador de acceso que limita el acceso directo al elemento únicamente
+              a la clase donde fue declarado. Es muy utilizado para aplicar encapsulamiento. <br />
+              <strong>protected:</strong> Permite acceder a un elemento desde la misma clase, clases del mismo paquete y
+              clases hijas según las reglas de acceso de Java. <br />
+              <strong>default:</strong> Cuando no se escribe un modificador de acceso, el elemento tiene acceso de
+              paquete. Puede utilizarse desde clases que pertenecen al mismo paquete. <br />
+              <strong>Modificador de acceso:</strong> Determina desde dónde puede utilizarse una clase, atributo, método
+              o constructor. Los principales son public, private y protected, además del acceso de paquete. <br />
+              <strong>static:</strong> Indica que un atributo o método pertenece a la clase y no a una instancia
+              específica. Puede utilizarse sin crear un objeto. <br />
+              <strong>Método estático:</strong> Es un método declarado con static. Se puede llamar utilizando el nombre
+              de la clase. <br />
+              <strong>Atributo estático:</strong> Es un atributo compartido por todas las instancias de una clase.
+              <br />
+              <strong>final:</strong> Indica que algo no puede modificarse de la misma manera que un elemento normal.
+              Una variable final no puede recibir otro valor después de ser inicializada, un método final no puede
+              sobrescribirse y una clase final no puede heredarse. <br />
+              <strong>this():</strong> Permite llamar a otro constructor de la misma clase. Debe utilizarse como primera
+              instrucción del constructor. <br />
+              <strong>super():</strong> Permite llamar al constructor de la clase padre. Debe utilizarse como primera
+              instrucción del constructor cuando se utiliza explícitamente. <br />
+              <strong>Sobrecarga de métodos (Overloading):</strong> Ocurre cuando una misma clase tiene varios métodos
+              con el mismo nombre pero diferentes parámetros. Permite realizar operaciones similares con diferentes
+              tipos o cantidades de datos. <br />
+              <strong>Sobrescritura de métodos (Overriding):</strong> Ocurre cuando una clase hija proporciona su propia
+              implementación de un método heredado de la clase padre. <br />
+              <strong>@Override:</strong> Es una anotación que indica que un método está sobrescribiendo un método
+              heredado. Ayuda a detectar errores en el código. <br />
+              <strong>@Overload:</strong> No es una anotación estándar necesaria en Java para sobrecarga. La sobrecarga
+              se identifica automáticamente mediante diferentes listas de parámetros. <br />
+              <strong>Composición:</strong> Es una relación fuerte entre objetos donde un objeto contiene o está formado
+              por otros objetos. Cuando el objeto principal desaparece, los objetos que forman parte de él normalmente
+              dejan de tener sentido dentro de esa relación. <br />
+              <strong>Agregación:</strong> Es una relación entre objetos en la que un objeto contiene otros objetos,
+              pero estos pueden existir independientemente del objeto que los agrupa. <br />
+              <strong>Asociación:</strong> Representa una relación general entre dos clases. Por ejemplo, un profesor
+              puede estar relacionado con varios estudiantes. <br />
+              <strong>Dependencia:</strong> Ocurre cuando una clase utiliza temporalmente otra clase para realizar una
+              tarea. <br />
+              <strong>Relación "es un":</strong> Representa normalmente una relación de herencia. Por ejemplo, un perro
+              "es un" animal. <br />
+              <strong>Relación "tiene un":</strong> Representa normalmente composición o agregación. Por ejemplo, un
+              automóvil "tiene un" motor. <br />
+              <strong>Acoplamiento:</strong> Representa el nivel de dependencia entre diferentes clases o componentes.
+              Un bajo acoplamiento facilita modificar una parte del sistema sin afectar demasiado a las demás. <br />
+              <strong>Cohesión:</strong> Indica qué tan relacionadas están las responsabilidades de una clase. Una clase
+              con alta cohesión normalmente tiene responsabilidades relacionadas y bien definidas. <br />
+              <strong>Responsabilidad:</strong> Es aquello que una clase debe conocer o hacer dentro de un sistema. Una
+              buena POO busca asignar responsabilidades de manera clara. <br />
+              <strong>Inmutabilidad:</strong> Significa que el estado de un objeto no puede cambiar después de haber
+              sido creado. Las clases inmutables suelen utilizar atributos privados y finales y no proporcionan métodos
+              que permitan modificar su estado. <br />
+              <strong>Mutabilidad:</strong> Significa que el estado interno de un objeto puede cambiar después de haber
+              sido creado. <br />
+              <strong>Clase inmutable:</strong> Es una clase cuyos objetos no pueden cambiar su estado después de ser
+              creados. <br />
+              <strong>Getter:</strong> Es un método utilizado para obtener el valor de un atributo privado. Normalmente
+              comienza con get. <br />
+              <strong>Setter:</strong> Es un método utilizado para modificar el valor de un atributo privado.
+              Normalmente comienza con set. <br />
+              <strong>Encapsulamiento mediante getters y setters:</strong> Permite controlar cómo se consultan y
+              modifican los atributos de una clase en lugar de permitir acceso directo a ellos. <br />
+              <strong>Validación:</strong> Es el proceso de comprobar que los datos recibidos cumplen determinadas
+              reglas antes de almacenarlos o utilizarlos. <br />
+              <strong>Inyección de dependencias:</strong> Es una técnica en la que una clase recibe desde fuera los
+              objetos que necesita en lugar de crearlos directamente. Esto ayuda a reducir el acoplamiento y facilita
+              las pruebas. <br />
+              <strong>Clase interna:</strong> Es una clase declarada dentro de otra clase. Puede utilizarse cuando una
+              clase auxiliar solo tiene sentido dentro de la clase que la contiene. <br />
+              <strong>Clase anidada estática:</strong> Es una clase declarada dentro de otra clase utilizando static. No
+              necesita una instancia de la clase externa para ser utilizada. <br />
+              <strong>Clase interna no estática:</strong> Es una clase declarada dentro de otra clase que está asociada
+              a una instancia de la clase externa. <br />
+              <strong>Clase local:</strong> Es una clase declarada dentro de un método o bloque de código. <br />
+              <strong>Clase anónima:</strong> Es una clase sin nombre que se crea y utiliza normalmente en el mismo
+              lugar donde se necesita. Fue muy utilizada antes de la popularización de las expresiones lambda. <br />
+              <strong>Modularidad:</strong> Consiste en dividir un sistema grande en partes más pequeñas y organizadas
+              que pueden desarrollarse y mantenerse de forma independiente. <br />
+              <strong>Paquete (Package):</strong> Es una forma de organizar clases e interfaces relacionadas. También
+              ayuda a controlar el acceso y evitar conflictos entre nombres. <br />
+              <strong>Referencia a método:</strong> Permite utilizar un método existente como una implementación de una
+              interfaz funcional mediante una sintaxis más corta. <br />
+              <strong>Método default:</strong> Es un método dentro de una interfaz que puede tener una implementación.
+              Permite agregar comportamiento a interfaces sin obligar inmediatamente a todas las clases implementadoras
+              a definirlo. <br />
+              <strong>Método static en una interfaz:</strong> Es un método que pertenece a la interfaz y puede ser
+              llamado mediante el nombre de la interfaz. <br />
+              <strong>Herencia múltiple:</strong> Es la posibilidad de heredar directamente de varias clases. Java no
+              permite que una clase extienda múltiples clases, pero sí permite implementar múltiples interfaces. <br />
+              <strong>Implementación múltiple:</strong> Una clase puede implementar varias interfaces, obteniendo
+              diferentes contratos de comportamiento. <br />
+              <strong>Interfaz vs clase abstracta:</strong> Una interfaz representa principalmente un contrato de
+              comportamiento, mientras que una clase abstracta puede proporcionar una base común con estado y
+              comportamiento compartido. <br />
+              <strong>Principio de responsabilidad única:</strong> Indica que una clase debería tener una
+              responsabilidad principal bien definida y una razón clara para cambiar. <br />
+              <strong>Principio abierto/cerrado:</strong> Indica que el software debería estar abierto para extensión
+              pero cerrado para modificaciones innecesarias. <br />
+              <strong>Principio de sustitución de Liskov:</strong> Indica que los objetos de una clase hija deberían
+              poder utilizarse donde se espera un objeto de la clase padre sin romper el comportamiento esperado del
+              programa. <br />
+              <strong>Principio de segregación de interfaces:</strong> Indica que es preferible utilizar interfaces
+              pequeñas y específicas en lugar de obligar a las clases a implementar métodos que no necesitan. <br />
+              <strong>Principio de inversión de dependencias:</strong> Indica que las partes importantes de un sistema
+              deberían depender de abstracciones y no directamente de implementaciones concretas. <br />
+              <strong>SOLID:</strong> Es un conjunto de cinco principios de diseño orientado a objetos: responsabilidad
+              única, abierto/cerrado, sustitución de Liskov, segregación de interfaces e inversión de dependencias.
+              <br />
+              <strong>DRY (Don't Repeat Yourself):</strong> Principio que busca evitar repetir la misma lógica
+              innecesariamente. La reutilización mediante métodos, clases y otras estructuras ayuda a mantener el
+              código. <br />
+              <strong>KISS (Keep It Simple):</strong> Principio que recomienda mantener las soluciones lo más simples y
+              claras posible, evitando complejidad innecesaria. <br />
+              <strong>YAGNI (You Aren't Gonna Need It):</strong> Principio que recomienda no desarrollar funcionalidades
+              que actualmente no son necesarias. <br />
+              <strong>Reutilización de código:</strong> Consiste en utilizar código existente nuevamente en diferentes
+              partes del programa en lugar de escribir la misma solución desde cero. La POO facilita esto mediante
+              clases, métodos, herencia y composición. <br />
+              <strong>Modularización:</strong> Consiste en dividir un programa en componentes más pequeños y organizados
+              para facilitar su comprensión y mantenimiento. <br />
+              <strong>Acoplamiento bajo:</strong> Significa que las clases dependen poco unas de otras. Esto facilita
+              los cambios y el mantenimiento. <br />
+              <strong>Cohesión alta:</strong> Significa que los elementos de una clase están muy relacionados con una
+              responsabilidad común. <br />
+              <strong>Delegación:</strong> Consiste en hacer que un objeto encargue una tarea a otro objeto
+              especializado en realizarla. <br />
+              <strong>Composición sobre herencia:</strong> Es una recomendación de diseño que propone utilizar
+              relaciones de composición cuando sea más adecuado, en lugar de crear jerarquías de herencia
+              innecesariamente profundas. <br />
+              <strong>Diseño orientado a objetos:</strong> Es el proceso de identificar objetos, responsabilidades y
+              relaciones para construir un sistema utilizando principios de POO. <br />
+              <strong>Modelo:</strong> Es una representación de una parte del sistema que contiene los datos y reglas
+              necesarias para representar un concepto. <br />
+              <strong>Entidad:</strong> Es un objeto que representa algo importante dentro del dominio de una
+              aplicación, normalmente con identidad propia. <br />
+              <strong>Objeto de valor:</strong> Es un objeto cuyo significado depende principalmente de sus valores y no
+              de una identidad individual. <br />
+              <strong>DTO (Data Transfer Object):</strong> Es un objeto utilizado principalmente para transportar datos
+              entre diferentes partes de una aplicación. <br />
+              <strong>POJO:</strong> Significa Plain Old Java Object. Es un objeto Java sencillo que no necesita heredar
+              de una clase especial ni seguir un framework específico para representar sus datos y comportamiento.
+              <br />
+              <strong>Bean:</strong> Es un término utilizado para objetos Java que siguen determinadas convenciones,
+              como tener constructor sin argumentos y métodos de acceso. El significado exacto depende del contexto.
+              <br />
+              <strong>JavaBean:</strong> Es una clase Java que tradicionalmente sigue convenciones como tener un
+              constructor público sin argumentos, atributos privados y métodos getters/setters apropiados. <br />
+              <strong>Objeto anémico:</strong> Es un objeto que contiene principalmente datos y muy poco comportamiento.
+              Puede ser apropiado en algunos casos, pero puede ser problemático si las reglas del dominio quedan
+              completamente fuera del objeto. <br />
+              <strong>Clase utilitaria:</strong> Es una clase utilizada para agrupar métodos relacionados, normalmente
+              estáticos, que realizan operaciones auxiliares. <br />
+              <strong>Clase singleton:</strong> Es un patrón de diseño que busca garantizar que exista una única
+              instancia de una clase y proporcionar un punto de acceso a ella. Debe utilizarse con cuidado porque puede
+              introducir acoplamiento global. <br />
+              <strong>Patrón de diseño:</strong> Es una solución general y reutilizable para problemas frecuentes de
+              diseño de software. No es código que se copia literalmente, sino una idea de organización. <br />
+              <strong>Singleton:</strong> Es un patrón creacional que restringe una clase a una única instancia en un
+              determinado contexto. <br />
+              <strong>Factory:</strong> Es un patrón utilizado para centralizar o encapsular la creación de objetos.
+              <br />
+              <strong>Factory Method:</strong> Es un patrón que permite delegar la creación de objetos a métodos
+              especializados o a subclases. <br />
+              <strong>Abstract Factory:</strong> Es un patrón que permite crear familias de objetos relacionados sin
+              especificar directamente sus clases concretas. <br />
+              <strong>Builder:</strong> Es un patrón utilizado para construir objetos complejos paso a paso,
+              especialmente cuando tienen muchos parámetros opcionales. <br />
+              <strong>Prototype:</strong> Es un patrón que crea nuevos objetos a partir de otros objetos existentes,
+              normalmente mediante clonación o copia controlada. <br />
+              <strong>Adapter:</strong> Es un patrón estructural que permite que dos componentes con interfaces
+              incompatibles puedan trabajar juntos. <br />
+              <strong>Decorator:</strong> Es un patrón que permite agregar responsabilidades o comportamientos a un
+              objeto sin modificar directamente su clase. <br />
+              <strong>Facade:</strong> Es un patrón que proporciona una interfaz sencilla para utilizar un sistema o
+              conjunto de clases más complejo. <br />
+              <strong>Proxy:</strong> Es un objeto que actúa como intermediario para controlar o gestionar el acceso a
+              otro objeto. <br />
+              <strong>Composite:</strong> Es un patrón que permite tratar objetos individuales y grupos de objetos de
+              una manera uniforme. <br />
+              <strong>Observer:</strong> Es un patrón que permite que varios objetos sean notificados cuando cambia el
+              estado de otro objeto. <br />
+              <strong>Strategy:</strong> Es un patrón que permite definir diferentes algoritmos o comportamientos y
+              elegir cuál utilizar durante la ejecución. <br />
+              <strong>State:</strong> Es un patrón que permite que el comportamiento de un objeto cambie dependiendo de
+              su estado interno. <br />
+              <strong>Command:</strong> Es un patrón que convierte una acción o solicitud en un objeto, permitiendo
+              almacenarla, ejecutarla o deshacerla. <br />
+              <strong>Template Method:</strong> Es un patrón que define la estructura general de un algoritmo y permite
+              que las subclases personalicen determinados pasos. <br />
+              <strong>MVC:</strong> Es un patrón arquitectónico que separa una aplicación en Modelo, Vista y
+              Controlador. El modelo gestiona los datos y lógica, la vista presenta información y el controlador
+              coordina las acciones. <br />
+              <strong>Tipo genérico:</strong> Es un tipo parametrizado que permite especificar qué tipo de dato manejará
+              una estructura. Por ejemplo, ArrayList&lt;String&gt;. <br />
+              <strong>Clase genérica:</strong> Es una clase que recibe uno o más tipos como parámetros. <br />
+              <strong>Encapsulación de colecciones:</strong> Consiste en controlar el acceso a las colecciones internas
+              de una clase para evitar modificaciones no deseadas desde fuera. <br />
+              <strong>Inyección de dependencias:</strong> Es una técnica en la que los objetos necesarios para una clase
+              se proporcionan desde el exterior, reduciendo la responsabilidad de crear directamente esas dependencias.
+              <br />
+              <strong>Acoplamiento:</strong> Es el grado de dependencia entre componentes. Un diseño con menor
+              acoplamiento suele ser más flexible y fácil de mantener. <br />
+              <strong>Cohesión:</strong> Es el grado en que los elementos de una clase trabajan juntos para cumplir una
+              responsabilidad relacionada. <br />
+              <strong>Archivo .class:</strong> Es un archivo que contiene bytecode Java generado después de la
+              compilación. <br />
+              <strong>Mantenibilidad:</strong> Es la facilidad con la que un programa puede modificarse, corregirse o
+              ampliarse. <br />
+              <strong>Escalabilidad:</strong> Es la capacidad de un sistema para crecer sin que su estructura se vuelva
+              inmanejable. <br />
+              <strong>Buenas prácticas de POO:</strong> Consisten en utilizar nombres claros, encapsular los datos,
+              asignar responsabilidades correctamente, evitar duplicación, reducir dependencias innecesarias y utilizar
+              abstracciones cuando realmente aporten valor. <br />
+              <strong>Clase concreta:</strong> Es una clase que puede ser instanciada directamente porque no es
+              abstracta. <br />
+              <strong>Clase final:</strong> Es una clase declarada con final que no puede ser extendida por otras
+              clases. <br />
+              <strong>Método final:</strong> Es un método que una subclase no puede sobrescribir. <br />
+              <strong>Variable final:</strong> Es una variable a la que solo se puede asignar un valor una vez. <br />
+              <strong>Constructor privado:</strong> Es un constructor declarado como private. Impide que otras clases
+              creen directamente objetos utilizando ese constructor. Puede utilizarse en determinados patrones o clases
+              utilitarias. <br />
+              <strong>Clase abstracta vs clase concreta:</strong> Una clase abstracta sirve como base y no puede
+              instanciarse directamente, mientras que una clase concreta sí puede utilizarse para crear objetos. <br />
+              <strong>Objeto mutable vs inmutable:</strong> Un objeto mutable puede cambiar su estado después de
+              crearse. Un objeto inmutable conserva el mismo estado durante toda su vida. <br />
+              <strong>Herencia directa:</strong> Ocurre cuando una clase extiende directamente otra clase. <br />
+              <strong>Herencia indirecta:</strong> Ocurre cuando una clase hereda de una clase que a su vez hereda de
+              otra. <br />
+              <strong>Jerarquía de clases:</strong> Es la estructura formada por clases relacionadas mediante herencia.
+              <br />
+              <strong>Clase base:</strong> Es una clase utilizada como punto de partida para otras clases mediante
+              herencia. <br />
+              <strong>Delegación de responsabilidades:</strong> Consiste en permitir que el objeto que tiene el
+              conocimiento adecuado sea quien realice una determinada tarea. <br />
+              <strong>Dependencia fuerte:</strong> Ocurre cuando una clase está muy ligada a una implementación
+              específica, dificultando los cambios. <br />
+              <strong>Dependencia débil:</strong> Ocurre cuando una clase depende de abstracciones o contratos y puede
+              trabajar con diferentes implementaciones. <br />
+              <strong>Abstracción de datos:</strong> Consiste en mostrar las operaciones importantes sobre los datos y
+              ocultar la forma interna en que estos son almacenados o procesados. <br />
+              <strong>Abstracción de comportamiento:</strong> Consiste en definir qué puede hacer un objeto sin obligar
+              al usuario a conocer cómo internamente realiza esa acción. <br />
+              <strong>Encapsulamiento vs abstracción:</strong> El encapsulamiento se enfoca en proteger y controlar el
+              acceso al estado interno, mientras que la abstracción se enfoca en ocultar complejidad y mostrar solamente
+              lo importante. <br />
+              <strong>Herencia vs composición:</strong> La herencia representa normalmente una relación "es un",
+              mientras que la composición representa una relación "tiene un". La composición suele ofrecer mayor
+              flexibilidad cuando no existe una verdadera relación de especialización. <br />
+              <strong>Polimorfismo por interfaz:</strong> Permite que diferentes clases implementen la misma interfaz y
+              puedan ser utilizadas mediante una referencia del tipo de esa interfaz. <br />
+              <strong>Polimorfismo por herencia:</strong> Permite que objetos de diferentes subclases sean tratados
+              mediante una referencia de su clase padre y respondan según su implementación concreta. <br />
+              <strong>Contrato de comportamiento:</strong> Es el conjunto de acciones que un objeto promete poder
+              realizar mediante una interfaz o abstracción. <br />
+              <strong>Programar contra una interfaz:</strong> Significa declarar dependencias utilizando tipos
+              abstractos como interfaces en lugar de clases concretas cuando sea apropiado. Esto facilita cambiar
+              implementaciones. <br />
+              <strong>Clean Code:</strong> Es un conjunto de prácticas y principios orientados a escribir código claro,
+              simple, expresivo y mantenible. <br />
+              <strong>Nombre significativo:</strong> Es un nombre de variable, método o clase que comunica claramente
+              qué representa o qué hace. <br />
+              <strong>Interfaz pública:</strong> Es la parte visible de una clase que otras partes del programa pueden
+              utilizar sin conocer sus detalles internos. <br />
+              <strong>Implementación:</strong> Es el código interno que hace posible el comportamiento definido por una
+              interfaz, clase o método. <br />
+              <strong>Detalle de implementación:</strong> Es una parte interna de cómo funciona una clase que no debería
+              ser necesaria para quien solamente utiliza su interfaz pública. <br />
+              <strong>Ocultamiento de información:</strong> Consiste en esconder detalles internos que no deberían ser
+              conocidos ni modificados directamente desde otras partes del sistema. <br />
+              <strong>Constructor y método:</strong> Un constructor inicializa objetos y tiene el mismo nombre de la
+              clase sin tipo de retorno. Un método representa una operación y puede tener cualquier nombre válido y un
+              tipo de retorno. <br />
+              <strong>Atributo y variable local:</strong> Un atributo pertenece a una clase u objeto, mientras que una
+              variable local existe dentro de un método, constructor o bloque específico. <br />
+              <strong>Objeto y referencia:</strong> El objeto es la instancia real creada en memoria; la referencia es
+              la variable mediante la cual podemos acceder a ese objeto. <br />
+              <strong>Clase y objeto:</strong> La clase es el molde; el objeto es una instancia concreta creada a partir
+              de ese molde. <br />
+              <strong>Estado y comportamiento:</strong> El estado representa los datos actuales del objeto, mientras que
+              el comportamiento representa las acciones que puede realizar. <br />
+              <strong>Mensaje:</strong> En el contexto de POO, puede entenderse como una solicitud enviada a un objeto
+              para que realice una operación, normalmente mediante una llamada a un método. <br />
+              <strong>Pasar mensajes:</strong> Es el concepto de que los objetos interactúan solicitándose acciones
+              mediante sus métodos. <br />
+              <strong>Colaboración entre objetos:</strong> Es la interacción entre diferentes objetos para cumplir una
+              tarea mayor dentro del sistema. <br />
+              <strong>Delegación:</strong> Un objeto puede pedirle a otro objeto que realice una tarea específica en
+              lugar de hacerla directamente. <br />
+              <strong>Acoplamiento entre objetos:</strong> Representa cuánto necesita un objeto conocer o depender de
+              otros objetos para funcionar. <br />
+              <strong>Polimorfismo:</strong> Permite utilizar diferentes objetos mediante una misma abstracción y
+              obtener comportamientos diferentes dependiendo del objeto concreto. <br />
+              <strong>Abstracción:</strong> Permite trabajar con una representación simplificada de un concepto sin
+              preocuparse por todos sus detalles internos. <br />
+              <strong>Encapsulamiento:</strong> Protege el estado interno de los objetos y controla cómo otras partes
+              del programa pueden interactuar con él. <br />
+              <strong>Herencia:</strong> Permite reutilizar y especializar comportamiento mediante una relación entre
+              una clase general y una clase más específica. <br />
+              <strong>Los cuatro pilares de la POO:</strong> Son encapsulamiento, abstracción, herencia y polimorfismo.
+              Estos principios forman una parte fundamental del pensamiento orientado a objetos. <br />
+              <strong>Encapsulamiento + abstracción + herencia + polimorfismo:</strong> En conjunto permiten construir
+              sistemas donde los datos están protegidos, la complejidad se oculta, el comportamiento puede reutilizarse
+              y diferentes objetos pueden responder de distintas formas ante una misma operación. <br />
+              <strong>Programación orientada a objetos en Java:</strong> Es el uso de las características de Java para
+              representar entidades mediante clases y objetos, organizando sus datos y comportamientos y aplicando
+              principios como encapsulamiento, abstracción, herencia y polimorfismo. <br />
+              <strong>Objetivo de la POO:</strong> El objetivo no es simplemente crear muchas clases, sino organizar el
+              software de manera que sus responsabilidades, datos y comportamientos estén correctamente distribuidos,
+              facilitando la reutilización, mantenimiento, comprensión y evolución del programa. <br />
+            </p>
+          </div>
+        </div>
+        <button class="start-btn" onclick="completeModule(2)">
+          Terminar módulo
+        </button>
       </div>
 
-      <!-- Modulo 3 -->
-      <div class="module locked" data-id="3">
-        <div class="module-header" onclick="toggleModule(this)">
-          Git y Github (Versionamiento de Proyectos)
-        </div>
-        <div class="module-content">
-          <div class="topic">
-            <div class="topic-header" onclick="toggleTopic(this)">
-             Entendiendo Git 
-            </div>
-            <div class="topic-content">
-              <p>Proximamente</p>
-            </div>
-          </div>
-          <button class="start-btn" onclick="completeModule(3)">
-            Terminar módulo
-          </button>
-        </div>
-      </div>
-      <div class="module locked" data-id="4">
-        <div class="module-header" onclick="toggleModule(this)">
-          Proximamente
-        </div>
-        <div class="module-content">
-          <div class="topic">
-            <div class="topic-header" onclick="toggleTopic(this)">
-              Proximamente
-            </div>
-            <div class="topic-content">
-              <p>Proximamente</p>
-            </div>
-          </div>
-          <button class="start-btn" onclick="completeModule(4)">
-            Terminar módulo
-          </button>
-        </div>
-      </div>
-      <div class="module locked" data-id="5">
-        <div class="module-header" onclick="toggleModule(this)">
-          Proyecto Final de Modulo
-        </div>
-        <div class="module-content">
-          <div class="topic">
-            <div class="topic-header" onclick="toggleTopic(this)">
-              Proximamente
-            </div>
-            <div class="topic-content">
-              <p>Proximamente</p>
-            </div>
-          </div>
-          <button class="start-btn" onclick="completeModule(5)">
-            Terminar módulo
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <div id="popup" class="popup"></div>
-    <div id="levelUp" class="levelup">LEVEL UP 🔥</div>
-    <div id="winScreen" class="win-screen">
-      <h2>🎉 MÓDULO COMPLETADO</h2>
-      <p>+80 XP ganado</p>
     </div>
-    <script src="script.js"></script>
-  </body>
-  <footer>
-    <p>&copy; 2026 DracoSoft. Todos los derechos reservados.</p>
-  </footer>
+
+    <!-- Modulo 3 -->
+    <div class="module locked" data-id="3">
+      <div class="module-header" onclick="toggleModule(this)">
+        Git y Github (Versionamiento de Proyectos)
+      </div>
+      <div class="module-content">
+        <div class="topic">
+          <div class="topic-header" onclick="toggleTopic(this)">
+            Entendiendo Git
+          </div>
+          <div class="topic-content">
+            <p>Proximamente</p>
+          </div>
+        </div>
+        <button class="start-btn" onclick="completeModule(3)">
+          Terminar módulo
+        </button>
+      </div>
+    </div>
+    <div class="module locked" data-id="4">
+      <div class="module-header" onclick="toggleModule(this)">
+        Proximamente
+      </div>
+      <div class="module-content">
+        <div class="topic">
+          <div class="topic-header" onclick="toggleTopic(this)">
+            Proximamente
+          </div>
+          <div class="topic-content">
+            <p>Proximamente</p>
+          </div>
+        </div>
+        <button class="start-btn" onclick="completeModule(4)">
+          Terminar módulo
+        </button>
+      </div>
+    </div>
+    <div class="module locked" data-id="5">
+      <div class="module-header" onclick="toggleModule(this)">
+        Proyecto Final de Modulo
+      </div>
+      <div class="module-content">
+        <div class="topic">
+          <div class="topic-header" onclick="toggleTopic(this)">
+            Proximamente
+          </div>
+          <div class="topic-content">
+            <p>Proximamente</p>
+          </div>
+        </div>
+        <button class="start-btn" onclick="completeModule(5)">
+          Terminar módulo
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <div id="popup" class="popup"></div>
+  <div id="levelUp" class="levelup">LEVEL UP 🔥</div>
+  <div id="winScreen" class="win-screen">
+    <h2>🎉 MÓDULO COMPLETADO</h2>
+    <p>+80 XP ganado</p>
+  </div>
+  <script src="script.js"></script>
+</body>
+<footer>
+  <p>&copy; 2026 DracoSoft. Todos los derechos reservados.</p>
+</footer>
+
 </html>
 
 <!-- Secciones individuales
