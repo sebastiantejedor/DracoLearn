@@ -1421,7 +1421,7 @@ animal.comer();</code>
                   Es mejor tener varias interfaces pequeñas y específicas que una interfaz gigante.<br>
                   <strong>Ejemplo de la vida real</strong><br>
                   Imagina una interfaz llamada:<br>
-                  <code>Trabajador</code>
+                  Trabajador <br>
                   Y contiene:<br>
                   - trabajar()<br>
                   - programar()<br>
@@ -1434,90 +1434,59 @@ animal.comer();</code>
                   implementar <code>programar()</code><br>
                   <strong>Ejemplo incorrecto</strong><br>
                   <code>interface Trabajador {
- void programar();<br> void cocinar();<br> void conducir();<br>
+ void programar();<br> void cocinar();<br> void conducir();
 }</code><br>
-                  Un programador tendría que implementar todo:<br>
-
-                  <code><pre> Programador implements Trabajador {
-public void programar() {
-        System.out.println("Programando");
-    }
-public void cocinar() {
-        // No lo necesita
-    }
-public void conducir() {
-        // No lo necesita
-    }
-}</code></pre>
-                  <br>
-                  Esto es una mala práctica.<br>
-                  <br>
                   <strong>Aplicando ISP</strong><br>
                   Podemos dividir las interfaces:<br>
-                  <br>
-                  <code>interface Programable {<br>
-<br>
+                  
+                  <code>interface Programable {
     void programar();<br>
+}</code>
+                  <code>interface Cocinable {
+    void cocinar();
 }</code><br>
-                  <br>
-                  <code>interface Cocinable {<br>
-<br>
-    void cocinar();<br>
-}</code><br>
-                  <br>
-                  <code>interface Conducible {<br>
-<br>
-    void conducir();<br>
-}</code><br>
+                  
+                  <code>interface Conducible {
+    void conducir();
+}</code>
                   <br>
                   Ahora cada clase implementa solamente lo que necesita.<br>
-                  <br>
+                
                   <code>class Programador implements Programable {<br>
-<br>
     @Override<br>
     public void programar() {<br>
         System.out.println("El programador está programando");<br>
-    }<br>
+    }
 }</code><br>
-                  <br>
                   <code>class Cocinero implements Cocinable {<br>
-<br>
     @Override<br>
     public void cocinar() {<br>
         System.out.println("El cocinero está cocinando");<br>
     }<br>
 }</code><br>
                   <br>
-                  <strong>Ejercicio I</strong><br>
+                  <strong>Ejemplo facil</strong><br>
                   Tenemos:<br>
                   <br>
                   <code>interface Dispositivo {<br>
-<br>
     void imprimir();<br>
-<br>
     void escanear();<br>
-<br>
     void enviarFax();<br>
 }</code><br>
-                  <br>
                   Una impresora moderna solamente necesita:<br>
                   <br>
                   <code>imprimir()</code><br>
-                  <br>
                   ¿Qué problema existe?<br>
                   La impresora estaría obligada a implementar métodos que no necesita.<br>
                   <br>
                   <strong>Solución</strong><br>
                   Separar la interfaz:<br>
-                  <br>
                   <code>interface Imprimible {<br>
     void imprimir();<br>
 }</code><br>
-                  <br>
                   <code>interface Escaneable {<br>
     void escanear();<br>
 }</code><br>
-                  <br>
                   <code>interface Fax {<br>
     void enviarFax();<br>
 }</code><br>
