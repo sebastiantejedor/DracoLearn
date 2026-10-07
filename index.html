@@ -284,7 +284,7 @@ String nombre = "Sebastian";</code></pre>
             <strong>Ejemplo en programación (Java):</strong>
             <pre><code>int dinero = 10;
 
-if (dinero > 5) {
+if (dinero &gt; 5) {
     System.out.println("Puedes comprar comida");
  } else {
     System.out.println("No te alcanza");
@@ -364,11 +364,11 @@ if (dinero > 5) {
             </p>
             <pre><code>int nota = 75;
 
-if (nota >= 90) {
+if (nota &gt;= 90) {
     System.out.println("Excelente");
-} else if (nota >= 70) {
+} else if (nota &gt;= 70) {
     System.out.println("Aprobado");
-} else if (nota >= 50) {
+} else if (nota &gt;= 50) {
     System.out.println("Regular");
 } else {
     System.out.println("Reprobado");
@@ -386,7 +386,7 @@ if (nota >= 90) {
             <pre><code>int edad = 20;
 boolean pago = true;
 
-if (edad >= 18) {
+if (edad &gt;= 18) {
     if (pago == true) {
         System.out.println("Puede entrar");
     } else {
@@ -495,14 +495,14 @@ if (num % 3 == 0 && num % 5 == 0) {
             <p>Se desea contar del 1 al 10 usando un blucle for</p>
             <pre><code>public class Main {
     public static void main(String[] args) {
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i &lt;= 10; i++) {
             System.out.println(i);
         }
     }
 }</code></pre>
             <pre>
 int i = 1 → inicia el contador.
-i <= 10 → condición para seguir.
+i &lt;= 10 → condición para seguir.
 i++ → incrementa en 1.</pre>
             <p>Resultado en Terminal:</p>
             <pre>
@@ -547,7 +547,7 @@ i++ → incrementa en 1.</pre>
                 <pre><code>public class Main {
     public static void main(String[] args) {
         
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i &lt;= 5; i++) {
             System.out.println("7 x " + i + " = " + (7 * i));
         }
     }
@@ -579,7 +579,7 @@ i++ → incrementa en 1.</pre>
     public static void main(String[] args) {
         int i = 1;
 
-        while (i <= 5) {
+        while (i &lt;= 5) {
             System.out.println(i);
             i++;
         }
@@ -590,7 +590,7 @@ i++ → incrementa en 1.</pre>
             <p>
               1. Se crea una variable llamada contador con valor 1. <br />
               2. El ciclo verifica si contador
-              <= 5. <br />
+              &lt;= 5. <br />
               3. Si se cumple, imprime el número. <br />
               4. Luego aumenta el contador con contador++. <br />
               Cuando contador llega a 6, la condición ya no se cumple y el
@@ -612,7 +612,7 @@ i++ → incrementa en 1.</pre>
             <p>Esto esta incorrecto:</p>
             <pre><code>int i = 1;
 
-while (i <= 5) {
+while (i &lt;= 5) {
    System.out.println(i);
 }</code></pre>
             <p>
@@ -642,7 +642,7 @@ while (i <= 5) {
     public static void main(String[] args) {
     int i = 1;
 
-while (i <= 3) {
+while (i &lt;= 3) {
     System.out.println(i);
     i++;
   }
@@ -664,7 +664,7 @@ while (i <= 3) {
         int i = 1;
         int suma = 0;
 
-        while (i <= 5) {
+        while (i &lt;= 5) {
             if (i % 2 == 0) {
                 suma += i;
             }
@@ -889,7 +889,7 @@ public class Main {
                     picture-in-picture;
                     web-share;
                   " referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </p>
+            
             <strong>ABSTRACCION:</strong> <br />
             <p>
               La abstracción es un principio de la programación orientada a
@@ -1145,11 +1145,11 @@ class Gato extends Animal {
               plazo. <br /> <br />
               <strong>La palabra SOLID viene de las iniciales de cinco principios:</strong> <br />
 
-              <Strong>S</Strong> → Single Responsibility Principle (Principio de Responsabilidad Única) <br />
-              <Strong>O</Strong> → Open/Closed Principle (Principio Abierto/Cerrado) <br />
-              <Strong>L</Strong> → Liskov Substitution Principle (Principio de Sustitución de Liskov) <br />
-              <Strong>I</Strong> → Interface Segregation Principle (Principio de Segregación de Interfaces) <br />
-              <Strong>D</Strong> → Dependency Inversion Principle (Principio de Inversión de Dependencias) <br /> <br />
+              <strong>S</strong> → Single Responsibility Principle (Principio de Responsabilidad Única) <br />
+              <strong>O</strong> → Open/Closed Principle (Principio Abierto/Cerrado) <br />
+              <strong>L</strong> → Liskov Substitution Principle (Principio de Sustitución de Liskov) <br />
+              <strong>I</strong> → Interface Segregation Principle (Principio de Segregación de Interfaces) <br />
+              <strong>D</strong> → Dependency Inversion Principle (Principio de Inversión de Dependencias) <br /> <br />
 
               <strong>¿Para qué sirven los principios SOLID?</strong> <br />
               Los principios SOLID ayudan a evitar que nuestro código se vuelva difícil de mantener. <br />
@@ -1164,14 +1164,14 @@ class Gato extends Animal {
             <p>
               <strong>SINGLE RESPONSIBILITY PRINCIPLE O PRINCIPIO DE RESPONSABILIDAD ÚNICA</strong> <br />
               Este principio dice: <br />
-              <Strong>Una clase debe tener una sola responsabilidad.</Strong> <br />
+              <strong>Una clase debe tener una sola responsabilidad.</strong> <br />
               En palabras sencillas:
               Una clase debería encargarse de una cosa principal. <br />
               No significa necesariamente que una clase solamente pueda tener un método. Significa que sus métodos deben
               estar relacionados con una misma responsabilidad. <br />
               <br />
 
-              <Strong>Ejemplo de la vida real:</strong> <br />
+              <strong>Ejemplo de la vida real:</strong> <br />
               Imagina un restaurante, una persona puede ser: <br />
               Cocinero → prepara la comida. <br />
               Mesero → atiende a los clientes. <br />
@@ -1200,7 +1200,7 @@ class Gato extends Animal {
             - Enviar correos. <br />
             - Guardar información en una base de datos. <br />
             Tiene varias responsabilidades. <br /> <br />
-            <Strong>Ejemplo en Java correcto:</strong> <br />
+            <strong>Ejemplo en Java correcto:</strong> <br />
             <pre><code>class Usuario {
 
     public void registrar() {
@@ -1227,11 +1227,11 @@ class UsuarioRepository {
             <p>
               <strong>OPEN/CLOSED PRINCIPLE O PRINCIPIO ABIERTO/CERRADO</strong> <br />
               Este principio dice: <br />
-              <Strong>El código debe estar abierto a la extensión, pero cerrado a la modificación.</Strong> <br />
+              <strong>El código debe estar abierto a la extensión, pero cerrado a la modificación.</strong> <br />
               En palabras sencillas:
               Podemos agregar nuevas funcionalidades sin cambiar el código existente. <br />
               Esto ayuda a evitar errores y hace que el código sea más fácil de mantener. <br /> <br />
-
+			</p>
               <strong>Ejemplo de la vida real:</strong> <br />
               Imagina un teléfono móvil. <br />
               Puedes instalar nuevas aplicaciones para agregar funciones, como juegos o redes sociales. <br />
@@ -1262,7 +1262,7 @@ class UsuarioRepository {
             Bitcoin <br />
             PSE <br />
             Tenemos que modificar constantemente la clase Pago. <br /> <br />
-            <Strong>Ejemplo en Java Correcto</Strong> <br />
+            <strong>Ejemplo en Java Correcto</strong> <br />
             <pre><code>interface MetodoPago {
 
     void pagar();
@@ -1326,10 +1326,10 @@ class PagoNequi implements MetodoPago {
                 </button> <br />
 
                 <p>
-                  <Strong /> LISKOV SUBSTITUTION PRINCIPLE O PRINCIPIO DE SUSTITUCIÓN DE LISKOV</Strong> <br />
+                  <strong> LISKOV SUBSTITUTION PRINCIPLE O PRINCIPIO DE SUSTITUCIÓN DE LISKOV</strong> <br />
                   Este principio dice: <br />
-                  <Strong>Los objetos de una clase hija deben poder utilizarse en lugar de objetos de su clase padre sin
-                    romper el funcionamiento del programa.</Strong> <br />
+                  <strong>Los objetos de una clase hija deben poder utilizarse en lugar de objetos de su clase padre sin
+                    romper el funcionamiento del programa.</strong> <br />
                   En palabras sencillas:
                   Si una clase B hereda de una clase A, deberíamos poder utilizar B donde esperamos A sin generar
                   comportamientos inesperados. <br />
@@ -1982,8 +1982,8 @@ animal.comer();</code>
 </footer>
 
 </html>
-
-<!-- Secciones individuales
+<!--
+ Secciones individuales
       <div class="topic">
         <div class="topic-header" onclick="toggleTopic(this)">
           <strong>Tema</strong>
@@ -1994,3 +1994,4 @@ animal.comer();</code>
               </p>
             </div>
           </div>         -->
+
